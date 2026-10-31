@@ -2,7 +2,7 @@
 
 归屿是一款面向非技术华语使用者的本地AI助手。用中文交代目标，在授权工作区内查资料、处理工作簿、核对数字与日期，最后预览和导出表格、文稿或脱敏副本。
 
-当前提交演示版本为 **0.27.0**，以 **Apple Silicon 32GB** 为基础，默认 **Qwen3.6 35B A3B MLX 4bit**。BGE中文检索、AstrLink Guard与OpenAI Privacy Filter是独立功能组件。实测设备是M5 32GB，macOS27.2；当前不把旧16GB方案作为该版本支持承诺。
+当前提交演示版本为 **0.27.1**，以 **Apple Silicon 32GB** 为基础，默认 **Qwen3.6 35B A3B MLX 4bit**。BGE中文检索、AstrLink Guard与OpenAI Privacy Filter是独立功能组件。实测设备是M5 32GB，macOS27.2；当前不把旧16GB方案作为该版本支持承诺。
 
 ## 打开演示
 
@@ -11,9 +11,9 @@
 3. 选择目标后按 **Return发送**，**Shift+Return换行**。中文输入法选词不会发送。工具由Agent安排，修改原文件仍须预览与独立确认。
 4. 表格任务完成后可以追问“只要第一名，其他口径、排序和列不变，不用Word”。成果可预览，并导出XLSX、CSV、Word等常见格式。
 
-[下载演示版本](https://github.com/Huazhao-nine/guiyu/releases/tag/v0.27.0) · [使用与复现说明](docs/SUBMISSION_DEMO_V0_27.md) · [实际导出成果](qa/v0.27/examples/README.md) · [本地成果页面](qa/v0.27/examples/index.html)
+[下载演示版本](https://github.com/Huazhao-nine/guiyu/releases/tag/v0.27.1) · [使用与复现说明](docs/SUBMISSION_DEMO_V0_27_1.md) · [当前界面实际成果](qa/v0.27.1/outputs/) · [此前后端成果页面](qa/v0.27/examples/index.html)
 
-![真实本地界面 使用虚构资料](qa/v0.27/native/workbook-table.png)
+![真实本地界面 使用虚构资料](qa/v0.27.1/native/workbook-table.png)
 
 ## 本地资料与隐私
 
@@ -27,22 +27,24 @@
 
 保留未过滤文字资料的版本与沿用关系，使检索、计算、日历和写作共享已核对事实；规划提示不能授权新数字，错误反馈不能改写原目标。同类型待执行步骤接收反馈，减少重复。新增自然日、日期与星期对应、未经来源支持的退款时间检查，改进文稿自动修订与Word呈现。
 
-本轮五项交付首次3/5，修订与逐页交付复核分别记录。日期评分器曾把正确的中文日期格式判为缺失，原报告和同一输出的格式纠正均保留；随后实际文稿审阅又发现错误星期和新加退还条件，另行记录并修正。最终成绩、源哈希和七项已知回归见 [本轮评估](qa/v0.27/evaluation.json)。这些是开发者组织的有限虚构案例，不是任意新资料成功率或独立用户研究。
+此前0.27后端五项交付首次3/5，修订与逐页交付复核分别记录。日期评分器曾把正确的中文日期格式判为缺失，原报告和同一输出的格式纠正均保留；随后实际文稿审阅又发现错误星期和新加退还条件，另行记录并修正。最终成绩、源哈希和七项已知回归见 [本轮评估](qa/v0.27/evaluation.json)。这些是开发者组织的有限虚构案例，不是任意新资料成功率或独立用户研究。
 
-707项Python检查通过，原生代码检查覆盖范围与历史、自动执行、隐私组件串行取消、Return与中文输入法。模型任务禁网，原文件哈希保留。Word逐页渲染与内容检查见 [交付文件验证](qa/v0.27/word-validation.json)，打包后的干净源码重建结果另附于同版本的 `qa/v0.27-delivery-checks.json`。
+741项Python检查通过，原生代码检查覆盖范围与历史、自动执行、隐私组件串行取消、Return与中文输入法。模型任务禁网，原文件哈希保留。Word逐页渲染与内容检查见 [交付文件验证](qa/v0.27.1/word-validation.json)，当前版本的打包与干净源码重建收据由Release的validation JSON提供。
 
-真实原生交互使用独立验收应用和虚构资料，工作簿、短追问、普通聊天与返回资料任务分别记录。首次界面验证发现仅改Word交付时丢失原筛选结果，新增精确结果复用与来源重放校验；原始失败保留，后续验证见 [原生验收](qa/v0.27-native-report.json) 与 [交付复用回归](qa/v0.27/format-reuse-regression.json)。修复后的UI复测因再次锁屏暂未执行，程序检查与CPU回放不替代这一项。应用以macOS14为编译目标，当前实测macOS27.2，使用临时签名，尚未做Apple公证。
+0.27.1进一步保留日期步骤、分离工具目标，重复成功的计算或日期调用会转入独立交付核对。文稿复核使用实际草稿引用和受限结构，修改意见先对照原要求与已写内容核验；实际工具的计算、子表达式和日历结果重新执行，防止正确结果被复核误报反复改坏。源文未提供的付款时间与退还条件仍会阻止交付。
+
+真实原生交互使用独立验收应用与虚构资料。0.27发布源码的六个已知目标首次5/6，综合任务失败；0.27.1中间失败、源哈希与最终复测分别保留在 [原生验收](qa/v0.27.1/native-evaluation.json)。最终同组六项原生修复复测6/6；这不代表任意新资料成功率。程序检查、模型运行、真实界面和实际Word渲染分别记录，详见 [当前版本证据](docs/SUBMISSION_DEMO_V0_27_1.md)。应用以macOS14为编译目标，实测macOS27.2，使用临时签名，尚未做Apple公证。
 
 ## 构建与验证
 
 ```sh
-zsh scripts/build_model_demo_v27.sh
+zsh scripts/build_model_demo_v27_1.sh
 python -m unittest discover -s tests -q
 zsh scripts/check_native.sh
 python scripts/check_delivery_reuse_v27.py  # CPU回放，文稿事实选择使用桩
 ```
 
-Python需安装requirements.lock对应依赖。真实模型复现用GuiyuRuntime的Python运行 `scripts/check_submission_v27.py --label reproduction`，会创建新的独立虚构工作区并使用禁网沙箱。期望值不传入模型。模型测试须串行；模型权重、Python环境、正常工作记录和私有原始轨迹不随分发包提供。
+Python需安装requirements.lock对应依赖。真实模型复现用GuiyuRuntime的Python运行 `scripts/check_submission_patch_v27_1.py --label reproduction`，会创建新的独立虚构工作区并使用禁网沙箱。期望值不传入模型。模型测试须串行；模型权重、Python环境、正常工作记录和私有原始轨迹不随分发包提供。
 
 ## 开放与申请
 

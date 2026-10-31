@@ -358,7 +358,7 @@ class OfficeAgent:
             if any(x in prompt for x in ('写一','写份','写个','写成','起草','撰写','改写','润色','翻译','简报','邮件','通知稿')):tools.append('write')
             if any(x in prompt for x in ('整理文件','文件整理','重命名','改名','文件归类')):tools.append('organize')
             if re.search(r'计算(?!技术研究所|机|所)|差额|剩余预算|平摊|均摊|折后|百分比|通过率',prompt):tools.append('calculate')
-            if re.search(r'相隔|日历天|几天后|天后|天前|下周|星期|提前\s*\d+\s*天|往[前后]\s*\d+\s*天',prompt):tools.append('calendar')
+            if control.requires_calendar(prompt):tools.append('calendar')
             if 'calculate' in tools and not structured and not needs_filter and not re.search(r'台账|统计|平均',prompt):
                 tools=[t for t in tools if t!='statistics']
             if needs_filter and 'organize' not in tools:tools.append('filter')
@@ -390,8 +390,8 @@ class OfficeAgent:
             'filter':prompt,
             'statistics':'对筛选后的数据计算合计、平均值与范围；按已显示的分组执行。',
             'summary':prompt,'compare':prompt,'write':prompt+'\n使用前面已核对的结果生成文稿。','answer':prompt,
-            'calculate':'；'.join(c for c in re.split(r'[，。；\n]',prompt) if re.search(r'计算|差额|剩余|平摊|均摊|折后|百分比|通过率|预算',c))+'。只计算数值，日期和写作由后续步骤完成。',
-            'calendar':'；'.join(c for c in re.split(r'[，。；\n]',prompt) if re.search(r'相隔|星期|天[前后]|提前.*[天日]|日期|截止|培训时间|活动时间',c))+'。只核对日期，写作由后续步骤完成。',
+            'calculate':control.general_instruction('calculate',prompt),
+            'calendar':control.general_instruction('calendar',prompt),
             'organize':prompt+'\n只生成整理预览，等待我另行确认。',
         }
         identifier=str(uuid.uuid4())
@@ -445,6 +445,7 @@ class OfficeAgent:
                     self._validate_sequence(proposed,plan['paths'],reused)
                     if any(s['tool']=='compare' for s in proposed) and not 2<=len(files)<=6:raise ValueError('对比范围不合适')
                     plan['steps']=proposed;plan['title']=recipe['title'];plan['planner_source']='model'
+                    if recipe.get('normalizations'):plan['planner_normalizations']=recipe['normalizations']
                 except (ValueError,TypeError,KeyError) as error:plan['planner_fallback']=str(error)[:160]
             plan['planning_note']='先按目标安排本地工具；执行中检查结果，必要时补查或重试。原文件整理会先给你预览。'
             control.event(plan,'planned','已安排步骤，开始后会检查中间结果')
@@ -472,6 +473,7 @@ class OfficeAgent:
             instruction=str(edit.get('instruction',step['instruction'])).strip()[:2000]
             if enabled and not instruction:raise ValueError('请填写这一步的具体要求。')
             if step['tool']=='filter' and instruction!=step['instruction']:plan['query_edited']=True
+            if instruction!=step['instruction']:step['user_instruction']=True
             step.update(enabled=enabled,instruction=instruction)
             if enabled and step['state']=='skipped':step['state']='pending'
         self._validate_sequence(plan['steps'],plan['paths'],plan.get('reused_table',False))
@@ -655,6 +657,9 @@ class OfficeAgent:
         tool=decision['tool'];identifier='step-'+str(max(int(s['id'].split('-')[1]) for s in plan['steps'])+1)
         addition=dict(id=identifier,tool=tool,title=TOOLS[tool]['title'],description=TOOLS[tool]['description'],effect=TOOLS[tool]['effect'],
                       instruction=decision['quote']+'\n'+decision['instruction'],enabled=True,state='pending',summary='',output='',attempts=0,seconds=0.0,adaptive_added=True)
+        if tool in ('calculate','calendar'):
+            addition['planning_hint']=addition['instruction']
+            addition['instruction']=control.general_instruction(tool,plan['prompt'])
         dependent=[s for s in plan['steps'] if s['tool']=='write' and s['enabled'] and s['state']=='completed'] if tool in ('calculate','calendar') else []
         if any(s['attempts']>=3 for s in dependent):
             plan['completion_check']={'state':'partial','message':'仍缺核对结果，文稿已达到本轮修订上限，请重新规划。'};return False
@@ -676,7 +681,7 @@ class OfficeAgent:
         self.save(plan);self.emit(plan);return True
 
     def checked_step(self,step,context,plan):
-        before=deepcopy(context);failed_draft='';failed_reference='';patch_repair=False
+        before=deepcopy(context);failed_draft='';failed_reference='';patch_repair=False;usable_patch=False
         for turn in range(3 if step['tool']=='write' else 2):
             self.validate_scope(plan,plan['paths'])
             if step['attempts']>=3:raise ValueError('这一步已尝试三次，请调整要求后重新规划。')
@@ -685,12 +690,15 @@ class OfficeAgent:
             if step.get('repair_hint'):execution['instruction']+='\n上次输出未通过检查：'+step['repair_hint']+'。请严格遵守原任务与结果格式，减少重复，不增加原文没有的事实。'
             if failed_draft:execution['instruction']+='\n\n请修订以下未通过的草稿（不是事实依据），删除错误标题和自我更正过程，只输出修正后的简洁成稿：\n'+failed_draft
             result=None
+            repair_strategy='draft'
             try:
                 child=plan['id']+'-'+step['id']+'-'+uuid.uuid4().hex[:8]
                 if patch_repair or (turn==2 and step['tool']=='write' and failed_draft):
-                    if turn==2:
+                    if turn==2 and not usable_patch:
+                        repair_strategy='rebuild'
                         text,stats=control.rebuild_writing(self.agent.model,plan['prompt']+'\n当前步骤：'+step['instruction'],step['repair_hint'],failed_reference)
                     else:
+                        repair_strategy='patch'
                         text,stats=control.repair_writing(self.agent.model,self.core.parse_json,failed_draft,step['repair_hint'],failed_reference,plan['prompt'])
                     from document_tables import protect_tables
                     text=protect_tables(plain_office_math(text),context)
@@ -698,6 +706,7 @@ class OfficeAgent:
                     path=folder/'办公文稿.docx';export_docx(text,path,context['docs'])
                     markdown=folder/'办公文稿.md';markdown.write_text(text);markdown.chmod(0o600)
                     result={'text':text,'stats':stats,'summary':'文稿已按检查结果修订。','_review_reference':failed_reference,'artifacts':[{'name':path.name,'path':str(path),'type':'docx'},{'name':markdown.name,'path':str(markdown),'type':'md'}]}
+                    usable_patch=repair_strategy=='patch'
                 else:result=self.tool(execution,context,plan,child)
                 current_reference=result.get('_review_reference','')
                 self.validate_scope(plan,plan['paths'])
@@ -710,6 +719,8 @@ class OfficeAgent:
                     facts=fact_guard.check_writing(result['text'],requirements,context['docs'],context.get('table'),context['results'],context.get('query')) if context['docs'] else {'issues':[],'user_requirements_only':True}
                     issues=list(facts['issues'])
                     check['facts']={k:v for k,v in facts.items() if k!='issues'}
+                    check['facts']['verified_tool_equations']=fact_guard.tool_equations(context['results'])
+                    check['facts']['verified_tool_calendars']=fact_guard.tool_calendars(context['results'])
                     # Reuse the exact current input and tool context, including row filters.
                     reference=result.pop('_review_reference','')
                     if context['docs'] and not reference.startswith(('{"原文事实":','{"本轮数据":')):
@@ -723,6 +734,7 @@ class OfficeAgent:
                     else:
                         if review['action']=='revise' and not control.optional_omission(review,requirements):issues.append('本地文稿复核：'+review['reason'])
                         if review.get('review_note'):check['review_note']=review['review_note']
+                        if review.get('claim_review'):check['claim_review']=review['claim_review']
                         check.update(content_review='model',message='已核对金额与已识别条件，并做本地文稿复核')
                     self.validate_scope(plan,plan['paths'])
                     if issues:raise control.OutputCheckError('资料核对发现：'+'；'.join(issues))
@@ -733,7 +745,7 @@ class OfficeAgent:
                 return result
             except Exception as error:
                 if not control.recoverable(error,step['tool']):raise
-                step.setdefault('repair_history',[]).append({'attempt':step['attempts'],'strategy':'rebuild' if turn==2 else 'patch' if patch_repair else 'draft','issue':str(error)[:800]})
+                step.setdefault('repair_history',[]).append({'attempt':step['attempts'],'strategy':repair_strategy,'issue':str(error)[:800]})
                 if turn>=(2 if step['tool']=='write' else 1) or step['attempts']>=3:
                     if step['tool']!='write' or not context['docs']:raise
                     self.validate_scope(plan,plan['paths'])
@@ -806,6 +818,9 @@ class OfficeAgent:
             if allowed:
                 identifier='step-'+str(max(int(s['id'].split('-')[1]) for s in plan['steps'])+1)
                 addition=dict(id=identifier,tool=tool,title=TOOLS[tool]['title'],description=TOOLS[tool]['description'],effect=TOOLS[tool]['effect'],instruction=instruction,enabled=True,state='pending',summary='',output='',attempts=0,seconds=0.0,adaptive_added=True)
+                if tool in ('calculate','calendar'):
+                    addition['planning_hint']=instruction
+                    addition['instruction']=control.general_instruction(tool,plan['prompt'])
                 candidate=plan['steps'][:index+1]+[addition]+plan['steps'][index+1:]
                 try:self._validate_sequence(candidate,plan['paths'],plan.get('reused_table',False))
                 except ValueError:allowed=False
@@ -857,6 +872,9 @@ class OfficeAgent:
         result={'id':child_id,'kind':tool,'artifacts':[],'columns':[],'rows':[],'transaction':None,'stats':{}}
         if tool in ('calculate','calendar'):
             from general_assistant import GeneralAssistant
+            if step.get('adaptive_added') and not step.get('user_instruction'):
+                step.setdefault('planning_hint',instruction)
+                instruction=step['instruction']=control.general_instruction(tool,plan['prompt'])
             source_docs,computed=fact_guard.current_evidence(docs,context.get('table'),context['results'])
             # An unfiltered extraction may contain only costs. Preserve the
             # original date clauses for calendar steps; filtered scopes still
@@ -867,6 +885,8 @@ class OfficeAgent:
             # excluded rows cannot become fresh calculator operands.
             facts='用户完整目标（当前步骤只处理其中相关要求）：\n'+plan['prompt'][:4000]+'\n当前授权资料：\n'
             facts+=json.dumps([{'source':d['id'],'text':d['text'][:4500]} for d in source_docs],ensure_ascii=False)[:9000]
+            if step.get('user_instruction'):
+                facts+='\n用户在执行前直接修改的本步要求：\n'+instruction[:2000]
             facts+='\n当前统计：\n'+computed
             facts+='\n已核对步骤：\n'+'\n'.join(r['text'][:2500] for name,r in context['results'] if name in ('calculate','calendar'))
             with redirect_stdout(io.StringIO()):

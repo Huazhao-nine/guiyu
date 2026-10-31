@@ -1,0 +1,244 @@
+{
+  "version": "0.27.0",
+  "scope": "Real native UI known-task acceptance on released source, not unseen-data evaluation",
+  "passed": 5,
+  "total": 6,
+  "backend_hashes": {
+    "structured_output.py": "7960a53bd816fbd0f1940a7ab57a3c91da9fd56e4d09deb7c4639b1764deb268",
+    "worker.py": "879bf7cff54b9ad715236926c23899d1433a9d76f0add5dd6db61cb354bd8c8a",
+    "agent_control.py": "c2097da4729359c39485d82e954e811bddd6bb38ef32763188a2c3e5d2ae5574",
+    "money_subtotals.py": "3f69877035132e87a756b16cfbb33876eb80d1d9f0edd424b9115debdd2a54ee",
+    "workbook_agent.py": "f47d2ea6c47861b97cc5665d9655497e7e93c54f9cc8c7484c2f767757df34a2",
+    "workbook_writing.py": "5ddd5a39dcb8557d077939a5f0d141147beac2287a457cfad0cf8475cf1826b9",
+    "workbook_edits.py": "7d8dd9169b2739fafa62622a2d2bb8f21518e76152541a761924b638c073d219",
+    "workbook_recovery.py": "ad905941301310128736730e5d931a49ff56d7610ece443ff12136ea731e05d3",
+    "personal_tools.py": "c8ed42cd828d67ebfbd03c2cdf144894b553cb009a0cf2beebe77f590af016e1",
+    "workbook_data.py": "bc6902625ecb69300fd8497fba0d8cb734ea8372ccf97a46d2c6d1a231e5b408",
+    "structured_tables.py": "3ecc86af63b74c35b9b768b780d06db7b33f6f435717457fa44ae382923798f8",
+    "runtime_policy.py": "422cef9d111bca844c37e71ace3b6be37fd9b6b81bbd3b0967e73b4aaaa10a22",
+    "local_query.py": "4f37344fb04fc31bd3537598867b3a27d78d74dc26bae2dbe16a1a5330864f28",
+    "workbook_schema.py": "1f640f62ea196fdb4c038293ac0ee3b69c19cfe10b237891d7bec0bc46e951a1",
+    "privacy_filter.py": "3a65fc2029085463408981b36a7faa2cc8d8cdb19689b3628d11d42ba41b7f1c",
+    "table_program.py": "4033e2c10eabc02461f233ee21b35be7432df3f5f4809d6ff79213a9401561cd",
+    "request_router.py": "6cc7b450900d2042adf313a94c9c480717874d735fe3dfddcf37f3df7c0073ce",
+    "workbook_requirements.py": "cb463959fd78b875dc34481044e5779cf5ceec0760ea75fba6ae65c38f46e83d",
+    "workbook_flow.py": "351883cea4c767811bf570999e170863a7985a147a7c19fee873ebbb5a615b92",
+    "workbook_intent.py": "39140c0dbe9064d7a687ec568f6bbd14a0be2378b806769fbfd658203248a983",
+    "model_info.py": "f5d5c937a391d1ffd1ab86374c1b8f0794f8fe67870a7b8a54bccb2834ede9ca",
+    "general_assistant.py": "eb074624b8c90a6c49956721b31a3b285448cadff13372f642555961b4862890",
+    "workbook_revision.py": "eb13bed15f2b6360f6d35fe9600acdc59e900060b5928fc97e0c08b94f30946e",
+    "bge_embedding.py": "f51ee3f63d3e46fa08ac7de6ba7380b7e87d8ab8b627338439cf55714efd687d",
+    "general_tools.py": "79fe507a1d2a0a3e8c74cd9889bf4eaece3a01ba61c80b9b388fa1db47d1a7d0",
+    "table_semantics.py": "2d164c333efef02d6188d03d6112ba9834e37a4ed6ed6c95d82697b41eec6a43",
+    "document_tables.py": "ceee11df6cfd07453001aa57f1648a5967b557b322a8c9659e9e19e16f0dcfc7",
+    "workbook_export.py": "e9f2f52986ef54811e8d36eb4c492795557a6d8765885c91e0080e316d6d2c0f",
+    "workbook_qualifiers.py": "0e20093e35c7eb1b3c34516eed78ca76579d3ba5630f60487faacec2af7d4b45",
+    "fact_guard.py": "45ace387a98d874bbb5d075eeb7b345409531254b508031bb40bbbc6f4382cd6",
+    "privacy_models.py": "dd160bac36ddfb6d6393c5a8bdb90f95571d2e5bbc7374d6d43bcafad9e045b2",
+    "share_agent.py": "b41eb80b564c678fc99bb304391ac4432e78d01d5188cc9eebe7dff44db812d5",
+    "model_output.py": "83fba58b74d38dbe1c4b43f91695e0ea2c3ba2a79d6edc988ddc9c4a2db2c4c5",
+    "workspace_index.py": "4c9038a1c90e24a6b18d8fab96e017088abdd4c81009217e4cbc32f814aa8911",
+    "office_agent.py": "9b159d934dae02cab4863c364aa8387d3d7504097d601cdb91b147901c000c4e"
+  },
+  "cases": [
+    {
+      "case": "workbook",
+      "id": "f48b3ea4-a6af-4ddb-af62-331f3702dd4b",
+      "prompt": "处理支持日志.xlsx，按线上、线下的顺序合并，先按TicketID保留首次记录。ClosedDate从2028年4月1日（含）到7月1日（不含），Category为保修，或者Category为回访且Confirmed为true；每条Cost至少50元。按Owner汇总累计时长、支出和记录数，累计时长用小时、支出用万元显示，按支出降序，同金额按Owner升序。只保留Owner、累计时长、支出、记录数四列，另存一份Word，标题“支持工作汇总”。",
+      "rows": [
+        [
+          "白组",
+          "3",
+          "0.033",
+          "2"
+        ],
+        [
+          "青组",
+          "2",
+          "0.025",
+          "2"
+        ],
+        [
+          "灰组",
+          "1",
+          "0.0145",
+          "2"
+        ]
+      ],
+      "seconds": 37.92,
+      "source_parent_id": null,
+      "conversation_parent_id": null,
+      "source_count": 1,
+      "passed": true,
+      "grounded_delivery": false,
+      "tools": [
+        "workbook",
+        "write"
+      ],
+      "repair_history": []
+    },
+    {
+      "case": "top_followup",
+      "id": "68458a3f-630d-4314-8019-b229b2e06478",
+      "prompt": "只要第一名，其他口径、排序和列不变，不用Word。",
+      "rows": [
+        [
+          "白组",
+          "3",
+          "0.033",
+          "2"
+        ]
+      ],
+      "seconds": 14.54,
+      "source_parent_id": "f48b3ea4-a6af-4ddb-af62-331f3702dd4b",
+      "conversation_parent_id": "f48b3ea4-a6af-4ddb-af62-331f3702dd4b",
+      "source_count": 1,
+      "passed": true,
+      "grounded_delivery": false,
+      "tools": [
+        "workbook",
+        "write"
+      ],
+      "repair_history": []
+    },
+    {
+      "case": "identity",
+      "id": "6745D8CF-1903-47DB-B825-274E7B5A65A6",
+      "prompt": "你是谁？",
+      "rows": [],
+      "seconds": 2.42,
+      "source_parent_id": null,
+      "conversation_parent_id": "68458a3f-630d-4314-8019-b229b2e06478",
+      "source_count": 0,
+      "passed": true,
+      "grounded_delivery": false,
+      "tools": [],
+      "repair_history": []
+    },
+    {
+      "case": "return_word",
+      "id": "0a1dc959-47c4-4ea1-a9fb-3842523d3a8e",
+      "prompt": "回到刚才的支持汇总，给第一名的结果再导出一份Word，其他口径和列不变。",
+      "rows": [
+        [
+          "白组",
+          "3",
+          "0.033",
+          "2"
+        ]
+      ],
+      "seconds": 3.27,
+      "source_parent_id": "68458a3f-630d-4314-8019-b229b2e06478",
+      "conversation_parent_id": "6745D8CF-1903-47DB-B825-274E7B5A65A6",
+      "source_count": 1,
+      "passed": true,
+      "grounded_delivery": false,
+      "tools": [
+        "workbook",
+        "write"
+      ],
+      "repair_history": []
+    },
+    {
+      "case": "office",
+      "id": "e7ffe98b-46cb-412a-a39c-1cd5e8ca85d8",
+      "prompt": "结合共享工位安排和最新通知，按最新版本整理一份Word，说明活动费用、预算余额和最晚确认日期。可退押金单独说明，不计入活动费用，保留未付款状态，列出费用明细和出处。",
+      "rows": [
+        [
+          "未提供",
+          "未付款",
+          "52元",
+          "S1",
+          "请核对原文"
+        ],
+        [
+          "未提供",
+          "费用尚未支付",
+          "1800元",
+          "S2",
+          "请核对原文"
+        ],
+        [
+          "未提供",
+          "费用尚未支付",
+          "48元",
+          "S2",
+          "请核对原文"
+        ],
+        [
+          "未提供",
+          "费用尚未支付",
+          "400元",
+          "S2",
+          "请核对原文"
+        ],
+        [
+          "未提供",
+          "费用尚未支付",
+          "210元",
+          "S2",
+          "请核对原文"
+        ],
+        [
+          "未提供",
+          "尚未支付",
+          "200元",
+          "S2",
+          "请核对原文"
+        ]
+      ],
+      "seconds": 66.31,
+      "source_parent_id": null,
+      "conversation_parent_id": null,
+      "source_count": 2,
+      "passed": false,
+      "grounded_delivery": true,
+      "tools": [
+        "answer",
+        "table",
+        "calculate",
+        "write"
+      ],
+      "repair_history": [
+        [
+          {
+            "attempt": 1,
+            "strategy": "draft",
+            "issue": "资料核对发现：本地文稿复核：草稿中“最晚确认日期”标注为“【日期待补充】”，但原文S2明确给出“需提前3个自然日完成确认”且S1规定活动日期为2028-07-16。根据规则，应结合两份资料计算出具体日期（2028-07-13），而非保留待补充状态。"
+          },
+          {
+            "attempt": 2,
+            "strategy": "patch",
+            "issue": "资料核对发现：本地文稿复核：草稿将押金200元列入费用明细并计入总费用974元，违反S2“不计入本次费用”及S1“沿用原安排”的要求。应移除押金至明细外，总费用仅含资料包、场地及设备费。"
+          },
+          {
+            "attempt": 3,
+            "strategy": "rebuild",
+            "issue": "资料核对发现：本地文稿复核：草稿将S1的52元/份直接列为364元，未体现S2原48元/份及7份的原始数据，导致费用明细与S2原文不符。应保留S2的48元/份及7份数据，并说明S1仅变更单价为52元，以准确反映费用构成及出处。"
+          }
+        ]
+      ]
+    },
+    {
+      "case": "share",
+      "id": "179d123f-3549-4921-a7d1-ff38551a940f",
+      "prompt": "把客户跟进纪要.md整理成可分享版本，保留全部正文、预算、办公日期和尚未付款的条件，给我Word副本。",
+      "rows": [],
+      "seconds": 2.24,
+      "source_parent_id": null,
+      "conversation_parent_id": null,
+      "source_count": 1,
+      "passed": true,
+      "grounded_delivery": false,
+      "tools": [
+        "share"
+      ],
+      "repair_history": []
+    }
+  ],
+  "source_mutations": false,
+  "return_word_data_and_binary_verified": true,
+  "failure": "Calendar obligation was placed inside a mixed calculation instruction, then lost when calculation scope was normalized; no calendar step ran and writing fell back after three attempts.",
+  "original_failure_retained": true,
+  "qa_app_quit_after_completed_tasks": true
+}

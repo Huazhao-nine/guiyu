@@ -19,6 +19,6 @@ if [[ ! -x "$RUNTIME_DIR/python/bin/python" ]]; then
 fi
 "$UV_BIN" pip sync --python "$RUNTIME_DIR/python/bin/python" "$TASK_ROOT/requirements.lock"
 "$RUNTIME_DIR/python/bin/python" "$TASK_ROOT/scripts/prepare_model.py" --root "$TASK_ROOT" --runtime "$RUNTIME_DIR"
-if [[ ! -x "$TASK_ROOT/dist/Guiyu-0.27.0.app/Contents/MacOS/Guiyu" ]]; then zsh "$TASK_ROOT/scripts/build.sh"; fi
-"$TASK_ROOT/dist/Guiyu-0.27.0.app/Contents/MacOS/Guiyu" --privacy-probe
+if [[ ! -x "$TASK_ROOT/dist/Guiyu-0.27.1.app/Contents/MacOS/Guiyu" ]]; then zsh "$TASK_ROOT/scripts/build_model_demo_v27_1.sh"; fi
+"$TASK_ROOT/dist/Guiyu-0.27.1.app/Contents/MacOS/Guiyu" --privacy-probe
 print '准备完成。现在可以双击「打开归屿.command」，以后处理资料无需联网。'

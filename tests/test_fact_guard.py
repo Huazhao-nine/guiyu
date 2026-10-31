@@ -15,6 +15,16 @@ DOCS=[{'id':'S1','name':'01_梧桐空间.txt','text':'方案名称：梧桐空�
 
 
 class FactChecks(unittest.TestCase):
+    def test_unpaid_status_does_not_authorize_a_new_payment_timeline(self):
+        issues=guard.calendar_and_refund_issues('确认后将按流程支付。','需提前三天确认，费用尚未支付。')
+        self.assertTrue(any('付款时间条件' in v for v in issues))
+
+    def test_explicit_source_payment_timeline_is_preserved(self):
+        self.assertEqual(guard.calendar_and_refund_issues('审批完成后付款。','费用审批完成后付款。'),[])
+
+    def test_payment_timing_question_can_remain_explicitly_unconfirmed(self):
+        self.assertEqual(guard.calendar_and_refund_issues('是否确认后付款，待确认。','费用尚未支付。'),[])
+
     def issues(self,text,instruction='写一份场地说明。',**kwargs):return guard.check_writing(text,instruction,DOCS,**kwargs)['issues']
     def test_chinese_adjacent_amount_and_decimal_normalization(self):
         self.assertEqual([(x['value'],x['unit']) for x in guard.amounts('合计为1,200.00元及0.5万元，另有$2.5')],[(1200,'元'),(5000,'元'),(2.5,'USD')])
@@ -116,6 +126,98 @@ class FactChecks(unittest.TestCase):
 
 
 class PatchChecks(unittest.TestCase):
+    def claim_review(self,verdict):
+        import json
+        class Model:
+            supports_structured_output=True
+            def generate(self,system,user,**kwargs):
+                if '审查意见核验器' in system:
+                    return json.dumps(verdict,ensure_ascii=False),{'finish_reason':'stop'}
+                return json.dumps({'action':'revise','reason':'草稿未列出明细。','quote':'材料费37元，共6份。'},ensure_ascii=False),{'finish_reason':'stop'}
+        return control.review_writing(Model(),json.loads,'列出费用明细。','材料费37元，共6份。','材料费37元，共6份。')
+
+    def test_unsupported_edit_claim_keeps_existing_draft_and_audit(self):
+        result=self.claim_review({'verdict':'unsupported','reason':'草稿中已列出明细，意见不成立。'})
+        self.assertEqual(result['action'],'accept')
+        self.assertEqual(result['claim_review']['original_reason'],'草稿未列出明细。')
+
+    def test_supported_claim_still_requires_revision(self):
+        result=self.claim_review({'verdict':'supported','reason':'还缺原文明确要求的另一项。'})
+        self.assertEqual(result['action'],'revise')
+
+    def test_invalid_claim_adjudication_cannot_release_revision(self):
+        result=self.claim_review({'action':'accept'})
+        self.assertEqual(result['action'],'revise')
+
+    def test_calendar_false_alarm_requires_replayed_target_and_correct_weekday(self):
+        from general_tools import run_tool
+        args={'operation':'date_shift','date':'2032-02-09','days':3}
+        data=run_tool('calendar',args)['data']
+        proof={'verified_tool_calendars':[{'arguments':args,'data':data}]}
+        text=f"确认日期：{data['date']}（{data['weekday']}）。"
+        review={'reason':f"最晚确认日期计算错误，应为{data['date']}。",'quote':text}
+        self.assertTrue(control.proven_calendar_criticism(review,text,proof))
+        self.assertFalse(control.proven_calendar_criticism(review,text.replace(data['weekday'],'星期一'),proof))
+        self.assertFalse(control.proven_calendar_criticism(review,'确认日期：2032-02-13。',proof))
+
+    def test_calendar_proof_never_overrules_source_or_business_day_error(self):
+        from general_tools import run_tool
+        args={'operation':'date_shift','date':'2032-02-09','days':3}
+        proof={'verified_tool_calendars':[{'arguments':args,'data':run_tool('calendar',args)['data']}]}
+        for reason in ('日期计算错误，应按最新版本。','日期计算错误，起始日期选错。','日期计算错误，应按工作日。'):
+            self.assertFalse(control.proven_calendar_criticism({'reason':reason,'quote':'2032-02-12'},'2032-02-12',proof))
+
+    def test_calendar_review_replay_rejects_tampered_and_clock_relative_results(self):
+        from general_tools import run_tool
+        args={'operation':'date_shift','date':'2032-02-09','days':3}
+        result=run_tool('calendar',args)
+        call={'tool':'calendar','state':'completed','arguments':args,'result':result}
+        self.assertEqual(len(guard.tool_calendars([('calendar',{'tool_calls':[call]})])),1)
+        result['data']['date']='2032-02-15'
+        self.assertEqual(guard.tool_calendars([('calendar',{'tool_calls':[call]})]),[])
+        call.update(arguments={'operation':'date_shift','days':3},result=run_tool('calendar',{'operation':'date_shift','days':3}))
+        self.assertEqual(guard.tool_calendars([('calendar',{'tool_calls':[call]})]),[])
+
+    def test_arithmetic_false_alarm_requires_matching_verified_equation(self):
+        proof={'verified_tool_equations':[{'expression':'37*6','result':'222'}]}
+        review={'reason':'费用计算错误，乘积需要核对。','quote':'* **材料费**：37元/份 × 6份 = 222元'}
+        self.assertTrue(control.proven_arithmetic_criticism(review,proof))
+        self.assertFalse(control.proven_arithmetic_criticism(dict(review,quote='37元/份 × 6份 = 223元'),proof))
+        self.assertFalse(control.proven_arithmetic_criticism(review,{}))
+
+    def test_correct_arithmetic_never_overrules_source_unit_or_scope_errors(self):
+        proof={'verified_tool_equations':[{'expression':'37*6','result':'222'}]}
+        for reason in ('计算错误，单价应采用最新通知。','计算错误，计入了排除项目。','计算错误，单位换算不正确。','合计错误，遗漏另一项费用。'):
+            self.assertFalse(control.proven_arithmetic_criticism({'reason':reason,'quote':'37*6=222'},proof))
+
+    def test_review_reuse_reexecutes_tool_equations_and_ignores_tampering(self):
+        from general_tools import run_tool
+        good=run_tool('calculate',{'expression':'37*6'})
+        results=[('calculate',{'tool_calls':[{'tool':'calculate','state':'completed','arguments':{'expression':'37*6'},'result':good}],
+            'verified_subtotals':[{'expression':'30+2','value':'999'}]})]
+        self.assertEqual(guard.tool_equations(results),[{'expression':'37*6','result':'222'}])
+        good['data']['result']='999'
+        self.assertEqual(guard.tool_equations(results),[])
+
+    def test_review_grammar_only_allows_quotes_from_current_draft(self):
+        import json
+        from structured_output import JSONGrammar
+        grammar=JSONGrammar(control.writing_review_schema('交通费用128.50元。\n\n付款状态待确认。'))
+        self.assertEqual(grammar.status('{"action":"accept"}'),(True,True))
+        self.assertEqual(grammar.status(json.dumps({'action':'revise','reason':'需核对','quote':'付款状态待确认。'},ensure_ascii=False)),(True,True))
+        self.assertFalse(grammar.status(json.dumps({'action':'revise','reason':'需核对','quote':'不存在的句子'},ensure_ascii=False))[0])
+
+    def test_capable_local_model_receives_constrained_deterministic_review(self):
+        import json
+        calls=[]
+        class Model:
+            supports_structured_output=True
+            def generate(self,system,user,**kwargs):
+                calls.append(kwargs);return '{"action":"accept"}',{'finish_reason':'stop'}
+        self.assertEqual(control.review_writing(Model(),json.loads,'写说明','原文摘录。','原文摘录。'),{'action':'accept'})
+        self.assertEqual(calls[0]['temperature'],0)
+        self.assertIn('oneOf',calls[0]['response_schema'])
+
     def test_optional_omission_cannot_add_unrequested_requirements(self):
         review={'reason':'草稿未标注缺失的容量与可用时间信息，请补充。'}
         self.assertTrue(control.optional_omission(review,'对比费用与设备，核对取消规则并写说明。'))
@@ -174,6 +276,17 @@ class RecoveryChecks(unittest.TestCase):
         result=self.execute(self.plan('写一份说明。',kind='write'))
         self.assertEqual(result['plan']['steps'][0]['attempts'],3)
         self.assertFalse(result['plan'].get('grounded_delivery',False));self.assertNotIn('999',result['text'])
+
+    def test_valid_patch_gets_a_second_local_patch_instead_of_full_rewrite(self):
+        self.agent.model.responses=[('交通费用999元。','stop'),('交通费用128.50元。','stop'),('交通费用128.50元。【S1】','stop')]
+        self.agent.model.draft_checks=[{'action':'accept'},
+            {'action':'revise','reason':'当前要求需要出处','quote':'交通费用128.50元。'}, {'action':'accept'}]
+        result=self.execute(self.plan('写一份带出处的说明。',kind='write'))
+        step=result['plan']['steps'][0]
+        self.assertEqual(step['attempts'],3)
+        self.assertEqual([r['strategy'] for r in step['repair_history']],['draft','patch'])
+        self.assertFalse(result['plan'].get('grounded_delivery',False))
+        self.assertIn('128.50',result['text'])
 
 
 if __name__=='__main__':unittest.main()

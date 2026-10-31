@@ -101,6 +101,57 @@ class ComposedTests(unittest.TestCase):
         with patch.object(control,'review_next',return_value={'action':'insert','tool':'calendar','instruction':'补充确认日期','reason':'写作需要日期'}):
             with redirect_stdout(io.StringIO()):self.office.adapt_after_result(self.plan,first,{'text':'已核对费用'},self.context)
         self.assertEqual(self.plan['steps'],[first,pending])
+
+    def test_adaptive_calculator_hint_cannot_authorize_invented_values(self):
+        first={'id':'step-1','tool':'answer','state':'completed','enabled':True,'instruction':'读原文'}
+        pending={'id':'step-2','tool':'write','state':'pending','enabled':True,'instruction':'写说明'}
+        self.plan['steps']=[first,pending]
+        with patch.object(control,'review_next',return_value={'action':'insert','tool':'calculate','instruction':'费用按9999元计算','reason':'补充金额'}):
+            with redirect_stdout(io.StringIO()):self.office.adapt_after_result(self.plan,first,{'text':'已摘录原文'},self.context)
+        addition=next(s for s in self.plan['steps'] if s['tool']=='calculate')
+        self.assertNotIn('9999',addition['instruction']);self.assertIn('9999',addition['planning_hint'])
+        self.model.actions=[json.dumps({'action':'call','tool':'calculate','arguments':{'expression':'9999+1'}})]*6
+        with redirect_stdout(io.StringIO()),self.assertRaises(control.OutputCheckError):
+            self.office.tool(addition,self.context,self.plan,'hint-injection')
+
+    def test_final_delivery_calendar_hint_keeps_original_user_date_scope(self):
+        step={'id':'step-1','tool':'write','state':'completed','enabled':True,'instruction':'写说明','attempts':1,'output':'旧稿'}
+        self.plan.update(steps=[step],adaptive=True,paths=[str(self.path.resolve())],snapshot={str(self.path.resolve()):core.digest(self.path)})
+        old={'text':'旧稿','artifacts':[]};results={'step-1':old};self.context['results']=[('write',old)]
+        with patch.object(control,'review_delivery',return_value={'action':'complete','tool':'calendar','quote':'核对提前7天日期','instruction':'用2099-01-01提前30天'}):
+            with redirect_stdout(io.StringIO()):self.assertTrue(self.office.complete_delivery(self.plan,self.context,results))
+        addition=self.plan['steps'][0]
+        self.assertEqual(addition['tool'],'calendar');self.assertIn('提前7天',addition['instruction'])
+        self.assertNotIn('2099',addition['instruction']);self.assertIn('2099',addition['planning_hint'])
+
+    def test_completion_reviewer_sees_authorized_source_scope(self):
+        generate=self.model.generate;seen=[]
+        def capture(system,user,**kwargs):
+            if system.startswith('你是归屿的本地交付核对器'):
+                seen.append(json.loads(user)['verified_source_facts'])
+            return generate(system,user,**kwargs)
+        self.model.actions=[json.dumps({'action':'call','tool':'calculate','arguments':{'expression':'1200+35*24+480'}}),'{"action":"answer","text":"已核对费用。"}']
+        with patch.object(self.model,'generate',side_effect=capture):self.tool('calculate','计算费用。')
+        self.assertEqual(len(seen),1);self.assertIn('交通480元',seen[0]);self.assertNotIn(str(self.path),seen[0])
+
+    def test_excluded_costs_remain_in_evidence_after_request_partition(self):
+        self.plan['prompt']='核算费用和余额，押金不计入费用，列出费用明细与出处。'
+        step={'tool':'calculate','instruction':'补充费用与明细','adaptive_added':True}
+        self.model.actions=[json.dumps({'action':'call','tool':'calculate','arguments':{'expression':'1200+35*24+480'}}),'{"action":"answer","text":"已核对费用。"}']
+        with redirect_stdout(io.StringIO()):self.office.tool(step,self.context,self.plan,'scope-constraints')
+        payload=json.loads(self.model.calls[0][1])
+        self.assertNotIn('明细',payload['current_request'])
+        self.assertIn('押金不计入费用',payload['verified_source_facts'])
+        self.assertIn('列出费用明细与出处',payload['verified_source_facts'])
+
+    def test_explicit_user_step_edit_remains_authorized(self):
+        step={'id':'step-1','tool':'calculate','state':'pending','enabled':True,'instruction':'核对费用','adaptive_added':True}
+        self.plan['steps']=[step]
+        self.office.update(self.plan,[{'id':'step-1','instruction':'计算42+1'}])
+        self.assertTrue(step['user_instruction'])
+        self.model.actions=[json.dumps({'action':'call','tool':'calculate','arguments':{'expression':'42+1'}}),'{"action":"answer","text":"已核对。"}']
+        with redirect_stdout(io.StringIO()):result=self.office.tool(step,self.context,self.plan,'user-edit')
+        self.assertIn('43',result['text'])
     def test_missing_calculation_reopens_dependent_draft_after_new_tool(self):
         step={'id':'step-1','tool':'write','state':'completed','enabled':True,'instruction':'写说明','attempts':1,'output':'旧稿'}
         self.plan.update(steps=[step],adaptive=True,paths=[str(self.path.resolve())],snapshot={str(self.path.resolve()):core.digest(self.path)})

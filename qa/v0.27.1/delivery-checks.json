@@ -1,0 +1,22 @@
+{
+  "version": "0.27.1",
+  "status": "PASS_PUBLICATION_ARCHIVES_EXTRACTED_SOURCE_TESTS_NATIVE_REBUILD_AND_PRIVACY_PROBES",
+  "unit_tests": 741,
+  "shipped_app": {
+    "signature_verified": true,
+    "network_denied": true,
+    "helper_private_reads_denied": true
+  },
+  "independently_rebuilt_app": {
+    "signature_verified": true,
+    "network_denied": true,
+    "helper_private_reads_denied": true
+  },
+  "portable_office_agent_xlsx_word_replay": true,
+  "all_archive_crcs_and_hashes_verified": true,
+  "historical_source_snapshots_verified": true,
+  "four_bundled_fictional_sources_match": true,
+  "normal_user_data_not_opened": true,
+  "native_passed": 6,
+  "native_execution": "qa/v0.27.1/native-evaluation.json; actual native execution of six known fictional goals; failures preserved separately."
+}

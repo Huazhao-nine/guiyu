@@ -1,0 +1,30 @@
+{
+  "version": "0.27.1",
+  "archives": {
+    "source": {
+      "path": "releases/v0.27.1-published/Guiyu-0.27.1-source.zip",
+      "bytes": 17035034,
+      "sha256": "acd7afc20a168f3d3a0aed6ae2aed9a631fb703f57c59977c7d94b98c10b24a5",
+      "members": 1229,
+      "crc_and_hashes_verified": true
+    },
+    "demo": {
+      "path": "releases/v0.27.1-published/Guiyu-0.27.1-AppleSilicon-32GB.zip",
+      "bytes": 10644081,
+      "sha256": "328a110467e7af96ad279f276822e1622dfd42b98759297b51edad3b4f4e14d1",
+      "members": 248,
+      "crc_and_hashes_verified": true
+    },
+    "application": {
+      "path": "releases/v0.27.1-published/Guiyu-GCC-Cohort4-application-v0.27.1.zip",
+      "bytes": 4386266,
+      "sha256": "1af0cf3e5fd9ac6a2ad7e83a9e34bbc36f3481b67057deaa4facc6c00beb3c2e",
+      "members": 49,
+      "crc_and_hashes_verified": true
+    }
+  },
+  "historical_archives_and_apps_preserved": true,
+  "models_runtime_private_traces_and_user_history_excluded": true,
+  "native_passed": 6,
+  "scope": "Known fictional task native acceptance; not arbitrary new-data success. Ad hoc signed, not Apple-notarized. GCC application not submitted."
+}

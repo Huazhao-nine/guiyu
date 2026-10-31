@@ -68,6 +68,48 @@ class ControllerTests(unittest.TestCase):
         self.assertEqual([s['tool'] for s in plan['steps']],['summary','write'])
         self.assertEqual(plan['steps'][0]['instruction'],'先核对交通资料要点')
 
+    def test_implicit_intervals_still_require_calendar_for_latest_date(self):
+        for goal in ('给出最晚提交日期，再写一份说明。','计算材料费和最早付款时间。','推算到期日期。','提前五个自然日确认。','Find the latest submission date.'):
+            self.assertTrue(control.requires_calendar(goal),goal)
+
+    def test_date_extraction_and_negated_date_work_do_not_add_calendar(self):
+        for goal in ('列出通知中的活动日期。','提取付款日期成表格。','不要推算日期，只摘录原文。','计算费用，不用计算日期。'):
+            self.assertFalse(control.requires_calendar(goal),goal)
+
+    def test_mixed_calculation_cannot_lose_independently_requested_date(self):
+        self.agent.model.recipe={'title':'核对与成稿','steps':[{'tool':'answer','instruction':'摘录费用和时间规则'},{'tool':'calculate','instruction':'计算合计并推算最晚提交日期'},{'tool':'write','instruction':'生成说明'}]}
+        plan=self.plan('核对费用和最晚提交日期，写一份说明。')
+        self.assertEqual([s['tool'] for s in plan['steps']],['answer','calculate','calendar','write'])
+        self.assertIn('最晚提交日期',plan['steps'][2]['instruction'])
+        self.assertIn('required_calendar_before_delivery',plan['planner_normalizations'])
+        self.assertEqual(plan['paths'],[str(self.source.resolve())])
+
+    def test_existing_calendar_is_not_duplicated_or_replaced(self):
+        self.agent.model.recipe={'title':'核对日期','steps':[{'tool':'answer','instruction':'读时间要求'},{'tool':'calendar','instruction':'核对最晚日期'},{'tool':'write','instruction':'生成说明'}]}
+        plan=self.plan('给出最晚提交日期，写一份说明。')
+        self.assertEqual([s['tool'] for s in plan['steps']],['answer','calendar','write'])
+        self.assertNotIn('planner_normalizations',plan)
+
+    def test_coordinated_amount_and_date_goals_have_distinct_tool_requests(self):
+        goal='说明费用、预算余额和最晚提交日期，生成Word。'
+        calculation=control.general_instruction('calculate',goal)
+        calendar=control.general_instruction('calendar',goal)
+        self.assertIn('费用',calculation);self.assertIn('预算余额',calculation)
+        self.assertNotIn('日期',calculation);self.assertNotIn('Word',calculation)
+        self.assertIn('最晚提交日期',calendar)
+        self.assertNotIn('费用',calendar);self.assertNotIn('预算余额',calendar)
+
+    def test_scope_partition_keeps_constraints_out_of_calculator_delivery_list(self):
+        goal='核算含税总额和最晚提交日期，押金不计入总额。'
+        calculation=control.general_instruction('calculate',goal)
+        self.assertIn('含税总额',calculation);self.assertNotIn('押金不计入总额',calculation)
+        self.assertNotIn('提交日期',calculation)
+
+    def test_detail_and_source_listing_does_not_become_a_calculation_result(self):
+        request=control.general_instruction('calculate','说明费用和预算余额，列出费用明细和出处，可退押金单独说明，不计入费用。')
+        self.assertIn('预算余额',request);self.assertIn('费用',request)
+        self.assertNotIn('明细',request);self.assertNotIn('出处',request);self.assertNotIn('押金',request)
+
     def test_goal_review_completes_one_missing_delivery_and_keeps_previous_outputs(self):
         self.agent.model.deliveries=[{'action':'complete','tool':'write','quote':'另写一份简短说明','instruction':'只补充简短说明，不重复邮件。'},{'action':'accept'}]
         result=self.execute(self.plan('查找“交通”，写一封邮件，另写一份简短说明。'))

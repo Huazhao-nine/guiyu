@@ -1,0 +1,45 @@
+{
+  "version": "0.27.1",
+  "passed": true,
+  "source_bound_native_cases": 6,
+  "unit_tests": 741,
+  "application_pdf_pages": 4,
+  "deck_slides": 8,
+  "all_final_pages_and_slides_visually_reviewed": true,
+  "blank_draft_page_fixed_before_delivery": true,
+  "editable_native_tables": 2,
+  "budget_u": 8000,
+  "tranches_u": [
+    2400,
+    1600,
+    2000,
+    2000
+  ],
+  "budget_and_percentages_reconciled": true,
+  "name_school_and_email_match_user_authorization": true,
+  "evm_address_pending": true,
+  "web_application_not_submitted": true,
+  "rendering": "DOCX through packaged renderer; slide PNG rendering composed into reading PDF, with editable PPTX retained. Not tested in native Microsoft PowerPoint.",
+  "files": [
+    {
+      "path": "grant/归屿_GCC_Cohort4_申请说明_v0.27.1.docx",
+      "sha256": "c1c5864b774864313e0a3885bb1e3c8d264bc97b4635f2fded334146a1d42379",
+      "bytes": 43293
+    },
+    {
+      "path": "grant/归屿_GCC_Cohort4_申请说明_v0.27.1.pdf",
+      "sha256": "9275b760f007191aff002bf6d91bbd1e3e0797d84d3702594743d311436413ce",
+      "bytes": 322852
+    },
+    {
+      "path": "grant/归屿_GCC_Cohort4_路演_v0.27.1.pptx",
+      "sha256": "5aebc77c34759c28a5a699764186bc56f994edb73e2499476ea0677086114ce7",
+      "bytes": 52889
+    },
+    {
+      "path": "grant/归屿_GCC_Cohort4_路演_v0.27.1.pdf",
+      "sha256": "38bcec4eff042c01804d8d888b32371b5910022c46ab655927936db94d9e95ad",
+      "bytes": 769834
+    }
+  ]
+}

@@ -26,7 +26,8 @@ class Model:
     def generate(self, system, user, **kwargs):
         self.calls.append((system, user))
         if system.startswith('你是归屿的本地交付核对器'):
-            return self.reviews.pop(0) if self.reviews else '{"state":"complete"}', {'tokens':10,'seconds':.1}
+            value = self.reviews.pop(0) if self.reviews else '{"state":"complete"}'
+            return value if isinstance(value,tuple) else (value, {'tokens':10,'seconds':.1})
         return self.outputs.pop(0) if self.outputs else '{"action":"ask","question":"请补充条件"}', {'tokens': 10, 'seconds': .1}
 
 
@@ -51,6 +52,71 @@ class GeneralAssistantTests(unittest.TestCase):
         self.assertEqual(result['tool_calls'][0]['result']['data']['result'], '164.50')
         self.assertEqual(result['sources'], [])
         self.assertEqual(json.loads((self.data/'Outputs'/result['id']/'task.json').read_text()), result)
+
+    def test_truncated_review_is_repaired_without_repeating_correct_tool(self):
+        result, assistant = self.run_assistant('2029年5月20日提前4天是哪天', [
+            action('calendar', {'operation':'date_shift','date':'2029-05-20','days':-4}),
+            '{"action":"answer","text":"已核对日期。"}'],
+            review_outputs=[('{"state":"complete"}',{'finish_reason':'length','tokens':240,'seconds':.1}),
+                            '{"state":"complete"}'])
+        self.assertEqual(len(result['tool_calls']),1)
+        self.assertEqual(result['completion_check']['state'],'passed')
+        self.assertEqual([r['state'] for r in result['review_history']],['invalid','complete'])
+        producers=[c for c in assistant.agent.model.calls if not c[0].startswith('你是归屿的本地交付核对器')]
+        self.assertEqual(len(producers),2)
+
+    def test_repeated_successful_call_triggers_independent_completion_review(self):
+        call=action('calendar',{'operation':'date_shift','date':'2031-08-18','days':-5})
+        result, _ = self.run_assistant('2031年8月18日提前5天是哪天',[call,call])
+        self.assertEqual(len(result['tool_calls']),1)
+        self.assertEqual(result['completion_check']['state'],'passed')
+        self.assertEqual(result['review_history'][0]['state'],'complete')
+        self.assertEqual(result['producer_recoveries'][0]['reason'],'repeated_completed_tool')
+
+    def test_duplicate_does_not_hide_missing_numeric_delivery(self):
+        spent=action('calculate',{'expression':'30+20'})
+        result, _ = self.run_assistant('预算120，花30和20，计算已花总额和剩余预算',[
+            spent,spent,action('calculate',{'expression':'120-50'}),
+            '{"action":"answer","text":"已核对。"}'],
+            review_outputs=['{"state":"missing","quote":"剩余预算","reason":"还缺剩余预算"}',
+                            '{"state":"complete"}'])
+        self.assertEqual(result['completion_check']['state'],'passed')
+        self.assertEqual([c['result']['data']['result'] for c in result['tool_calls']],['50','70'])
+        self.assertEqual([r['state'] for r in result['review_history']],['missing','complete'])
+
+    def test_repeated_failed_call_never_becomes_completed(self):
+        call=action('calculate',{'expression':'999+20'})
+        result, _ = self.run_assistant('计算30加20',[call]*6)
+        self.assertFalse(any(c['state']=='completed' for c in result['tool_calls']))
+        self.assertEqual(result['producer_recoveries'],[])
+        self.assertEqual(result['completion_check']['state'],'unavailable')
+
+    def test_invalid_review_quote_is_repaired_by_reviewer_not_execution(self):
+        result, _ = self.run_assistant('计算76加24', [
+            action('calculate', {'expression':'76+24'}),'{"action":"answer","text":"已核对。"}'],
+            review_outputs=['{"state":"missing","quote":"顺便算退款日期","reason":"遗漏"}',
+                            '{"state":"complete"}'])
+        self.assertEqual(result['completion_check']['state'],'passed')
+        self.assertEqual(len(result['tool_calls']),1)
+        self.assertEqual(result['review_history'][0]['state'],'invalid')
+
+    def test_invalid_reviews_never_release_unchecked_completion(self):
+        result, _ = self.run_assistant('计算76加24', [
+            action('calculate', {'expression':'76+24'}),'{"action":"answer","text":"已核对。"}'],
+            review_outputs=['not json','{"state":"complete","unchecked":true}'])
+        self.assertEqual(result['completion_check']['state'],'unavailable')
+        self.assertEqual(len(result['tool_calls']),1)
+        self.assertEqual(len(result['review_history']),2)
+        self.assertIn('未完成整项目标核对',result['text'])
+
+    def test_repeated_missing_review_cannot_be_bypassed_when_budget_ends(self):
+        result, _ = self.run_assistant('计算已花总额和剩余预算：100元预算，花20元', [
+            action('calculate', {'expression':'100-20'}),
+            *['{"action":"answer","text":"已核对。"}']*5],
+            review_outputs=['{"state":"missing","quote":"已花总额","reason":"未算已花总额"}']*4)
+        self.assertEqual(result['completion_check']['state'],'partial')
+        self.assertEqual(len(result['review_history']),4)
+        self.assertIn('未算已花总额',result['text'])
 
     def test_chinese_discount_and_people_are_grounded(self):
         result, _ = self.run_assistant('199元买三件，八五折，加20元运费', [

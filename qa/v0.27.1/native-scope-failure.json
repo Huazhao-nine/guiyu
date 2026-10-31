@@ -1,0 +1,6 @@
+{
+  "status": "REATTRIBUTED_TO_VERIFIED_OLDER_QA_PROCESS",
+  "actual_version": "0.27.0",
+  "report": "qa/v0.27/native-retest/extra-scope-failure.json",
+  "not_counted_as_patch_execution": true
+}

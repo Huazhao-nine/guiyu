@@ -1,0 +1,102 @@
+{
+  "version": "0.27.1",
+  "tests": 719,
+  "backend_hashes": {
+    "structured_output.py": "7960a53bd816fbd0f1940a7ab57a3c91da9fd56e4d09deb7c4639b1764deb268",
+    "worker.py": "879bf7cff54b9ad715236926c23899d1433a9d76f0add5dd6db61cb354bd8c8a",
+    "agent_control.py": "97737ded744e8f039225b92bf8b7013baaf248293918fc964112024d21674078",
+    "money_subtotals.py": "3f69877035132e87a756b16cfbb33876eb80d1d9f0edd424b9115debdd2a54ee",
+    "workbook_agent.py": "f47d2ea6c47861b97cc5665d9655497e7e93c54f9cc8c7484c2f767757df34a2",
+    "workbook_writing.py": "5ddd5a39dcb8557d077939a5f0d141147beac2287a457cfad0cf8475cf1826b9",
+    "workbook_edits.py": "7d8dd9169b2739fafa62622a2d2bb8f21518e76152541a761924b638c073d219",
+    "workbook_recovery.py": "ad905941301310128736730e5d931a49ff56d7610ece443ff12136ea731e05d3",
+    "personal_tools.py": "c8ed42cd828d67ebfbd03c2cdf144894b553cb009a0cf2beebe77f590af016e1",
+    "workbook_data.py": "bc6902625ecb69300fd8497fba0d8cb734ea8372ccf97a46d2c6d1a231e5b408",
+    "structured_tables.py": "3ecc86af63b74c35b9b768b780d06db7b33f6f435717457fa44ae382923798f8",
+    "runtime_policy.py": "422cef9d111bca844c37e71ace3b6be37fd9b6b81bbd3b0967e73b4aaaa10a22",
+    "local_query.py": "4f37344fb04fc31bd3537598867b3a27d78d74dc26bae2dbe16a1a5330864f28",
+    "workbook_schema.py": "1f640f62ea196fdb4c038293ac0ee3b69c19cfe10b237891d7bec0bc46e951a1",
+    "privacy_filter.py": "3a65fc2029085463408981b36a7faa2cc8d8cdb19689b3628d11d42ba41b7f1c",
+    "table_program.py": "4033e2c10eabc02461f233ee21b35be7432df3f5f4809d6ff79213a9401561cd",
+    "request_router.py": "6cc7b450900d2042adf313a94c9c480717874d735fe3dfddcf37f3df7c0073ce",
+    "workbook_requirements.py": "cb463959fd78b875dc34481044e5779cf5ceec0760ea75fba6ae65c38f46e83d",
+    "workbook_flow.py": "351883cea4c767811bf570999e170863a7985a147a7c19fee873ebbb5a615b92",
+    "workbook_intent.py": "39140c0dbe9064d7a687ec568f6bbd14a0be2378b806769fbfd658203248a983",
+    "model_info.py": "f5d5c937a391d1ffd1ab86374c1b8f0794f8fe67870a7b8a54bccb2834ede9ca",
+    "general_assistant.py": "3d971c7123e65b74a128430105963146464da61262832f5e1940f6c18e05e6a1",
+    "workbook_revision.py": "eb13bed15f2b6360f6d35fe9600acdc59e900060b5928fc97e0c08b94f30946e",
+    "bge_embedding.py": "f51ee3f63d3e46fa08ac7de6ba7380b7e87d8ab8b627338439cf55714efd687d",
+    "general_tools.py": "79fe507a1d2a0a3e8c74cd9889bf4eaece3a01ba61c80b9b388fa1db47d1a7d0",
+    "table_semantics.py": "2d164c333efef02d6188d03d6112ba9834e37a4ed6ed6c95d82697b41eec6a43",
+    "document_tables.py": "ceee11df6cfd07453001aa57f1648a5967b557b322a8c9659e9e19e16f0dcfc7",
+    "workbook_export.py": "e9f2f52986ef54811e8d36eb4c492795557a6d8765885c91e0080e316d6d2c0f",
+    "workbook_qualifiers.py": "0e20093e35c7eb1b3c34516eed78ca76579d3ba5630f60487faacec2af7d4b45",
+    "fact_guard.py": "45ace387a98d874bbb5d075eeb7b345409531254b508031bb40bbbc6f4382cd6",
+    "privacy_models.py": "dd160bac36ddfb6d6393c5a8bdb90f95571d2e5bbc7374d6d43bcafad9e045b2",
+    "share_agent.py": "b41eb80b564c678fc99bb304391ac4432e78d01d5188cc9eebe7dff44db812d5",
+    "model_output.py": "83fba58b74d38dbe1c4b43f91695e0ea2c3ba2a79d6edc988ddc9c4a2db2c4c5",
+    "workspace_index.py": "4c9038a1c90e24a6b18d8fab96e017088abdd4c81009217e4cbc32f814aa8911",
+    "office_agent.py": "badd153e4852bc215c1ddd1da9b74bd6830bbef2cb83a6fd6efc9cbdac9d5952"
+  },
+  "case": "office",
+  "task_id": "576ee50c-bc99-4262-8551-135a8a06a8f6",
+  "passed": false,
+  "scope": "Known-task native repair verification",
+  "state": "failed",
+  "steps": [
+    {
+      "tool": "answer",
+      "state": "completed",
+      "summary": "找到 2 段可核对原文。",
+      "repair_history": []
+    },
+    {
+      "tool": "calculate",
+      "state": "completed",
+      "summary": "已根据当前资料与前序结果核对。",
+      "repair_history": []
+    },
+    {
+      "tool": "answer",
+      "state": "completed",
+      "summary": "找到 2 段可核对原文。",
+      "repair_history": []
+    },
+    {
+      "tool": "table",
+      "state": "completed",
+      "summary": "已从 2 份资料中整理出 2 条记录。",
+      "repair_history": []
+    },
+    {
+      "tool": "calendar",
+      "state": "failed",
+      "summary": "本地工具尚未核对完整要求：2028-07-16 移动 -3 天后是 2028-07-13（星期四）。\n\n> 已保留核对结果，本次未完成整项目标核对。",
+      "repair_history": [
+        {
+          "attempt": 1,
+          "strategy": "draft",
+          "issue": "本地工具尚未核对完整要求：2028-07-16 移动 -3 天后是 2028-07-13（星期四）。\n\n> 已保留核对结果，本次未完成整项目标核对。"
+        },
+        {
+          "attempt": 2,
+          "strategy": "draft",
+          "issue": "本地工具尚未核对完整要求：2028-07-16 移动 -3 天后是 2028-07-13（星期四）。\n\n> 已保留核对结果，本次未完成整项目标核对。"
+        }
+      ]
+    },
+    {
+      "tool": "write",
+      "state": "pending",
+      "summary": "",
+      "repair_history": []
+    }
+  ],
+  "correct_calculations": [
+    974,
+    826
+  ],
+  "correct_calendar_result": "2028-07-13",
+  "issue": "Calendar calculation correct; completion reviewer did not produce a valid complete review, so writing did not run.",
+  "original_sources_unchanged": true
+}

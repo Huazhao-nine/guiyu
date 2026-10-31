@@ -168,6 +168,12 @@ def calendar_and_refund_issues(text,reference=''):
         if not re.search(r'退还|退款',clause) or re.search(r'是否|待确认|待补充|建议.{0,10}(?:询问|确认)|需.{0,5}核实',clause):continue
         for event in re.findall(phases,clause):
             if event not in refund_reference:issues.append(f'退还条件“{event}”未在当前退款或押金依据中找到，不能自行补写退还时间；请只保留已有性质与条件。')
+    payment_reference='\n'.join(c for c in re.split(r'[。；\n]',reference) if re.search(r'支付|付款|结算',c))
+    payment_events=r'(?:完成确认|确认|审批|签约|验收(?:通过)?|活动结束|提交资料|收到发票)(?:完成)?后'
+    for clause in re.split(r'[。；\n]',plain):
+        if not re.search(r'支付|付款|结算',clause) or re.search(r'是否|待确认|待补充|建议.{0,10}(?:询问|确认)|需.{0,5}核实',clause):continue
+        for event in re.findall(payment_events,clause):
+            if event not in payment_reference:issues.append(f'付款时间条件“{event}”没有当前依据，不能从尚未付款自行补出后续付款流程。')
     return issues
 
 
@@ -321,6 +327,49 @@ def grounded_brief(instruction,docs,table,results,catalog_builder):
         pieces.append('## 当前资料中的原文')
         for item in list(catalog.values())[:24]:pieces.append(f'【{item["source_id"]}】{item["name"]} · 第{item["line"]}行\n\n{item["quote"]}')
     return '\n\n'.join(pieces)
+
+
+def tool_equations(results):
+    """Re-execute local tool calculations and subtotals before review reuse."""
+    from general_tools import run_tool
+    from decimal import Decimal,InvalidOperation
+    equations=[];seen=set()
+    for name,result in results:
+        if name!='calculate' or not isinstance(result,dict):continue
+        candidates=[]
+        for call in result.get('tool_calls',[])[:4]:
+            if call.get('state')=='completed' and call.get('tool')=='calculate':
+                candidates.append((call.get('arguments',{}),call.get('result',{}).get('data',{}).get('result')))
+        candidates += [({'expression':v.get('expression')},v.get('value')) for v in result.get('verified_subtotals',[])[:12] if isinstance(v,dict)]
+        for arguments,value in candidates:
+            try:
+                actual=run_tool('calculate',arguments)['data']['result']
+                expression=arguments['expression']
+                if Decimal(actual)!=Decimal(str(value)) or expression in seen:continue
+            except (ValueError,TypeError,KeyError,InvalidOperation):continue
+            equations.append({'expression':expression,'result':actual});seen.add(expression)
+            if len(equations)>=16:return equations
+    return equations
+
+
+def tool_calendars(results):
+    """Only expose calendar results that reproduce exactly from actual calls."""
+    from general_tools import run_tool
+    verified=[]
+    for name,result in results:
+        if name!='calendar' or not isinstance(result,dict):continue
+        for call in result.get('tool_calls',[])[:4]:
+            if call.get('state')!='completed' or call.get('tool')!='calendar':continue
+            arguments=call.get('arguments',{})
+            # Relative clock calls need their original reference. Do not replay
+            # them against the current clock or turn an inferred date into fact.
+            if not any(k in arguments for k in ('date','start')):continue
+            try:actual=run_tool('calendar',arguments)['data']
+            except (ValueError,TypeError):continue
+            if actual!=call.get('result',{}).get('data'):continue
+            verified.append({'arguments':arguments,'data':actual})
+            if len(verified)>=8:return verified
+    return verified
 
 
 def evidence_sheet(instruction,docs,table=None,results=()):

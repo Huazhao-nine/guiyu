@@ -1,0 +1,86 @@
+{
+  "format": "Actual CUA native-operation screenshots composed into a silent video, not a continuous screen recording. Fictional materials; waits compressed. No generated UI screenshots.",
+  "frames": [
+    {
+      "order": 0,
+      "captured_at": "2026-10-31T06:21:49.991Z",
+      "label": "最终版演示工作区",
+      "screenshot_sha256": "222329d6f69934158fc6b4bbc60cab1c7dbca34d887f661c219aafb0b0cc5d01",
+      "phase": "final-source-bound-native-validation"
+    },
+    {
+      "order": 1,
+      "captured_at": "2026-10-31T06:23:33.568Z",
+      "label": "检索、计算与日历工具自动协作",
+      "screenshot_sha256": "e144586e68ce6ba29ed48829606ad819afc67d4095127934a6ad3a61c24a2793",
+      "phase": "final-source-bound-native-validation"
+    },
+    {
+      "order": 2,
+      "captured_at": "2026-10-31T06:24:51.113Z",
+      "label": "完整Word副本预览：费用、余额、日期和未付款条件",
+      "screenshot_sha256": "6f7799f1547ba0b88e77b0653d3937e165fc8dcd4154f3d35644b133f8e486b4",
+      "phase": "final-source-bound-native-validation"
+    },
+    {
+      "order": 3,
+      "captured_at": "2026-10-31T06:26:50.453Z",
+      "label": "多表去重、复杂条件、单位换算后的三组实际结果",
+      "screenshot_sha256": "2b30e048b9e90238bf39be889540439a82d91592577b20bb46962e00ffeb2e1b",
+      "phase": "final-source-bound-native-validation"
+    },
+    {
+      "order": 4,
+      "captured_at": "2026-10-31T06:28:20.075Z",
+      "label": "短追问只保留第一名，未生成Word",
+      "screenshot_sha256": "41aeed38abd68d5087f43381f16b67e5792a1816936157131fdc0d5a08f1499e",
+      "phase": "final-source-bound-native-validation"
+    },
+    {
+      "order": 5,
+      "captured_at": "2026-10-31T06:29:18.671Z",
+      "label": "普通聊天自主回答，本轮未读取资料",
+      "screenshot_sha256": "c83f78dc90dd626889b24af1a490bf6462e423a30360e64f0a90e1372620cbd7",
+      "phase": "final-source-bound-native-validation"
+    },
+    {
+      "order": 6,
+      "captured_at": "2026-10-31T06:30:19.443Z",
+      "label": "聊天后返回第一名结果，仅变更Word交付，数据与来源保持",
+      "screenshot_sha256": "3c76d42b085451650bf29c7c800833285becbfd28bc7a043a30db93585dea1bd",
+      "phase": "final-source-bound-native-validation"
+    },
+    {
+      "order": 7,
+      "captured_at": "2026-10-31T06:31:20.401Z",
+      "label": "对话式脱敏副本：五类隐私已遮盖，预算日期和未付款条件保留",
+      "screenshot_sha256": "c8f79122056686ddab763263976ef23a08ba835093bb3ae7f3e89a7b6a8a076b",
+      "phase": "final-source-bound-native-validation"
+    },
+    {
+      "order": 8,
+      "captured_at": "2026-10-31T06:31:41.356Z",
+      "label": "可导出的脱敏Word副本，金额日期与原条件保留",
+      "screenshot_sha256": "718529d7f981b163d09c0e2a90af201ee93ca8ece00c9ad273dec11ad4f344c9",
+      "phase": "final-source-bound-native-validation"
+    }
+  ],
+  "video": "qa/v0.27.1/native/Guiyu-0.27.1-demo.mp4",
+  "video_sha256": "502412bed3432be84c72c7df531c1e7551d196976b9e50f3a200f5b1de13cda1",
+  "metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1920,
+        "height": 1360
+      }
+    ],
+    "format": {
+      "duration": "55.000000",
+      "size": "1290126"
+    }
+  },
+  "normal_user_files_not_shown": true
+}
