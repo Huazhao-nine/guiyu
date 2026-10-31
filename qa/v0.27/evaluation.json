@@ -1,0 +1,66 @@
+{
+  "version": "0.27.0",
+  "model": "qwen3.6-35b-a3b",
+  "baseline": "Apple Silicon 32GB; measured Apple M5 32GB, macOS27.2",
+  "submission_initial": {
+    "passed": 3,
+    "total": 5,
+    "report": "qa/v0.27/reports/first-20261031T101720-c6e32a.json",
+    "all_sources_unchanged": true
+  },
+  "submission_latest": {
+    "passed": 5,
+    "total": 5,
+    "report": "qa/v0.27/reports/delivery-final-20261031T104000-eec503.json",
+    "all_sources_unchanged": true
+  },
+  "raw_adapted_score": {
+    "passed": 4,
+    "total": 5,
+    "report": "qa/v0.27/reports/adapted-20261031T102446-2dcf4f.json",
+    "correction": "Chinese-date/ISO formatting accepted on preserved, reread Word; no regenerated outputs."
+  },
+  "unit_tests": 701,
+  "native_code_checks": [
+    "history, scopes, auto-execution and tool traces",
+    "privacy worker serial cancellation",
+    "Return sends, Shift-Return newline, IME marked text preserved"
+  ],
+  "peak_mlx_gb": 20.1,
+  "peak_process_rss_gb": 11.635,
+  "memory_note": "Overlapping metrics; do not add. Neither is total system usage. Privacy subprocess not included in parent RSS.",
+  "network_denied": true,
+  "backend_unchanged": true,
+  "case_seconds": {
+    "transfer_support": 27.18,
+    "transfer_top_followup": 11.35,
+    "transfer_office_notice": 116.87,
+    "fresh_training_notice": 68.75,
+    "local_share_copy": 1.99
+  },
+  "limits": "Five developer-authored fictional goals, three known transfer regression goals plus a fresh versioned-training case and a privacy regression. No independent user study or arbitrary-new-file success rate. GUI verification separately recorded.",
+  "known_regression": {
+    "passed": 7,
+    "total": 7,
+    "report": "qa/v0.27/regression-reports/primary-qwen3.6-35b-a3b-20261031T104453-e71d75.json",
+    "scope": "Previously seen goals including chat and return to source task; final backend hashes match submission run."
+  },
+  "previous_retest": {
+    "passed": 5,
+    "total": 5,
+    "report": "qa/v0.27/reports/adapted-date-formats.json",
+    "all_sources_unchanged": true
+  },
+  "pre_semantic_review": {
+    "passed": 4,
+    "total": 5,
+    "report": "qa/v0.27/pre-semantic-delivery-review.json",
+    "reason": "Additional delivery review found wrong adjacent weekday and unsupported refund timing after the initial narrower checks."
+  },
+  "known_regression_previous": {
+    "passed": 7,
+    "total": 7,
+    "report": "qa/v0.27/regression-reports/primary-qwen3.6-35b-a3b-20261031T103045-985cf9.json",
+    "scope": "Previously seen goals including chat and return to a source task, not new-file generalization."
+  }
+}

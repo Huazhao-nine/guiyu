@@ -1,0 +1,22 @@
+{
+  "time": "2026-10-30T22:34:15.871319+08:00",
+  "development_ids": [
+    "tickets_dual_date_word",
+    "ticket_team_followup",
+    "visits_range_duration",
+    "visit_region_followup",
+    "packaging_detail_word"
+  ],
+  "reserved_goal_ids": [
+    "identity_between_tasks",
+    "return_packaging_threshold"
+  ],
+  "model_runs_at_freeze": 0,
+  "hashes": {
+    "fixtures/primary_model_v25/tasks.json": "8da1b8aa87b492cf5bb13c0951ab3785a92f482ea2d330a314665da308366f61",
+    "fixtures/primary_model_v25/workspace/包装物料.xlsx": "be14dcd2e46ef49049de6bff0eda60e389fe3b0fed5186b30c21f69c4dfbe66e",
+    "fixtures/primary_model_v25/workspace/预约随访.csv": "1616873ea0d964b7556e3eb9110b5f640db86d2f475e535ea6a1c6bd73172321",
+    "fixtures/primary_model_v25/workspace/工单结算.xlsx": "3bcd819c5511f555d83bf1fc6ae2bc61a218f6c43062c9dec39731d65b0666a0"
+  },
+  "gold_method": "Independent Decimal/date logic from fictional source records; no production table tools or model-generated answers."
+}

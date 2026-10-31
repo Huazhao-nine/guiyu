@@ -1,0 +1,29 @@
+{
+  "version": "0.27.0",
+  "archives": {
+    "source": {
+      "path": "releases/Guiyu-0.27.0-source.zip",
+      "bytes": 6014405,
+      "sha256": "992c56364616f85a3b4074ca653efaae43defc740ecbfc4cc6a21d36e4e7fde8",
+      "members": 733,
+      "crc_and_hashes_verified": true
+    },
+    "demo": {
+      "path": "releases/Guiyu-0.27.0-AppleSilicon-32GB.zip",
+      "bytes": 2396115,
+      "sha256": "e1eca857cb18553be804ccb02f1cc03771829fb135c4a52c3677f3663399f73b",
+      "members": 148,
+      "crc_and_hashes_verified": true
+    },
+    "application": {
+      "path": "releases/Guiyu-GCC-Cohort4-application-v0.27.0.zip",
+      "bytes": 1361452,
+      "sha256": "a7b190bbd7135ab90755a6dba59409f6cd4d165d0e907c0a5c7b3e59b1ce14eb",
+      "members": 43,
+      "crc_and_hashes_verified": true
+    }
+  },
+  "old_archives_and_apps_preserved": true,
+  "model_runtime_user_history_private_traces_and_original_third_party_doc_excluded": true,
+  "distribution": "Apple Silicon32GB baseline; ad hoc signed; not Apple-notarized; no external publication or application submission."
+}

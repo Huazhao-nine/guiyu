@@ -1,0 +1,261 @@
+{
+  "version": "0.27.0",
+  "origin": "Actual local model outputs on fictional frozen inputs, preserved without regeneration. Not live GUI execution.",
+  "items": [
+    {
+      "id": "transfer_support",
+      "title": "工作簿汇总与Word",
+      "prompt": "处理支持日志.xlsx，按线上、线下的顺序合并，先按TicketID保留首次记录。ClosedDate从2028年4月1日（含）到7月1日（不含），Category为保修，或者Category为回访且Confirmed为true；每条Cost至少50元。按Owner汇总累计时长、支出和记录数，累计时长用小时、支出用万元显示，按支出降序，同金额按Owner升序。只保留Owner、累计时长、支出、记录数四列，另存一份Word，标题“支持工作汇总”。",
+      "seconds": 27.18,
+      "checks": {
+        "completed": true,
+        "checked": true,
+        "no_grounded_fallback": true,
+        "word_requested": true,
+        "no_unrequested_word": true,
+        "no_original_mutation": true,
+        "originals_unchanged": true,
+        "expected_rows": true,
+        "expected_columns": true,
+        "preview_matches_xlsx": true,
+        "csv_matches_xlsx": true,
+        "summary_values": true,
+        "word_values": true,
+        "all_required_dates": true
+      },
+      "artifacts": [
+        {
+          "name": "工作簿处理结果.xlsx",
+          "type": "xlsx",
+          "path": "qa/v0.27/examples/transfer_support/工作簿处理结果.xlsx",
+          "sha256": "9d3462373332c02c31784e400976892044c291aebba06b84975027891c84cc5c"
+        },
+        {
+          "name": "工作簿处理结果.csv",
+          "type": "csv",
+          "path": "qa/v0.27/examples/transfer_support/工作簿处理结果.csv",
+          "sha256": "8cacf67460ca55655e9ee97f8e85219bfaf36c050f7be876a3d8ca5d3c5ff877"
+        },
+        {
+          "name": "工作簿说明.docx",
+          "type": "docx",
+          "path": "qa/v0.27/examples/transfer_support/工作簿说明.docx",
+          "sha256": "ecf153396f4cf10c13eeaec7ad5214e9e3e1c828ea1abac277402a6fa5032422"
+        },
+        {
+          "name": "工作簿说明.md",
+          "type": "md",
+          "path": "qa/v0.27/examples/transfer_support/工作簿说明.md",
+          "sha256": "a8638e25effbd59e0d7c297481f58d8d589edc6f53da8e99eb8c0c92b19c6143"
+        }
+      ],
+      "previews": [
+        {
+          "name": "工作簿说明.pdf",
+          "type": "pdf",
+          "path": "qa/v0.27/examples/transfer_support/工作簿说明.pdf",
+          "sha256": "9165dc17e00692d0ce4d6fbdd4d05e422296171c1cd90d9839d9d38f3e7d1dfe"
+        }
+      ],
+      "source_names": [
+        "支持日志.xlsx"
+      ]
+    },
+    {
+      "id": "transfer_top_followup",
+      "title": "简短追问只保留第一名",
+      "prompt": "只要第一名，其他口径、排序和列不变，不用Word。",
+      "seconds": 11.35,
+      "checks": {
+        "completed": true,
+        "checked": true,
+        "no_grounded_fallback": true,
+        "word_requested": true,
+        "no_unrequested_word": true,
+        "no_original_mutation": true,
+        "originals_unchanged": true,
+        "expected_rows": true,
+        "expected_columns": true,
+        "preview_matches_xlsx": true,
+        "csv_matches_xlsx": true,
+        "summary_values": true,
+        "word_values": true,
+        "all_required_dates": true
+      },
+      "artifacts": [
+        {
+          "name": "工作簿处理结果.xlsx",
+          "type": "xlsx",
+          "path": "qa/v0.27/examples/transfer_top_followup/工作簿处理结果.xlsx",
+          "sha256": "125fdcdcad3b7b0aecf48c9bc12abdc960add701ee6408f5f40f7dc497d73613"
+        },
+        {
+          "name": "工作簿处理结果.csv",
+          "type": "csv",
+          "path": "qa/v0.27/examples/transfer_top_followup/工作簿处理结果.csv",
+          "sha256": "ea27bd03844768ced48c3f9e90999cee0e7a848f020d57ae7a838fefede25a7a"
+        },
+        {
+          "name": "工作簿说明.md",
+          "type": "md",
+          "path": "qa/v0.27/examples/transfer_top_followup/工作簿说明.md",
+          "sha256": "3fcedc2490bdce9a1ed58d483e6db393b565161fb2102ae8c3b4c07d22ceb23b"
+        }
+      ],
+      "previews": [],
+      "source_names": [
+        "支持日志.xlsx"
+      ]
+    },
+    {
+      "id": "transfer_office_notice",
+      "title": "最新通知费用与日期",
+      "prompt": "结合共享工位安排和最新通知，按最新版本整理一份Word，说明活动费用、预算余额和最晚确认日期。可退押金单独说明，不计入活动费用，保留未付款状态，列出费用明细和出处。",
+      "seconds": 116.87,
+      "checks": {
+        "completed": true,
+        "checked": true,
+        "no_grounded_fallback": true,
+        "word_requested": true,
+        "no_unrequested_word": true,
+        "no_original_mutation": true,
+        "originals_unchanged": true,
+        "numbers": true,
+        "dates": true,
+        "patterns": true,
+        "condition": true,
+        "all_required_dates": true
+      },
+      "artifacts": [
+        {
+          "name": "资料提取表.xlsx",
+          "type": "xlsx",
+          "path": "qa/v0.27/examples/transfer_office_notice/资料提取表.xlsx",
+          "sha256": "6e045133aa45b7cc78d4a87e2b29f367bbd84d0751686450838767edd5dc573d"
+        },
+        {
+          "name": "办公文稿.docx",
+          "type": "docx",
+          "path": "qa/v0.27/examples/transfer_office_notice/办公文稿.docx",
+          "sha256": "8b38c5fca0199ecf2f7b9a2027257fd21500beb22a3d55694c6f95390289ac8b"
+        },
+        {
+          "name": "办公文稿.md",
+          "type": "md",
+          "path": "qa/v0.27/examples/transfer_office_notice/办公文稿.md",
+          "sha256": "87eb86de774b429ea1fbbc071bc374cdb932646eac0596bbe4363f2d7ddaa6b1"
+        }
+      ],
+      "previews": [
+        {
+          "name": "办公文稿.pdf",
+          "type": "pdf",
+          "path": "qa/v0.27/examples/transfer_office_notice/办公文稿.pdf",
+          "sha256": "db141972a7754f228010fea73369f66b322ccaea3e08efa4241b04c46e4d4aa0"
+        }
+      ],
+      "source_names": [
+        "共享工位最新通知.txt",
+        "共享工位安排.md"
+      ]
+    },
+    {
+      "id": "fresh_training_notice",
+      "title": "新培训资料的迁移验证",
+      "prompt": "请结合志愿者培训方案和培训补充通知，以最新安排写一份Word费用说明。核算材料等各项费用、合计和剩余预算，说明培训时间、最晚确认日期和可退押金，保留付款条件，附资料出处。",
+      "seconds": 68.75,
+      "checks": {
+        "completed": true,
+        "checked": true,
+        "no_grounded_fallback": true,
+        "word_requested": true,
+        "no_unrequested_word": true,
+        "no_original_mutation": true,
+        "originals_unchanged": true,
+        "numbers": true,
+        "dates": true,
+        "patterns": true,
+        "condition": true,
+        "all_required_dates": true
+      },
+      "artifacts": [
+        {
+          "name": "办公文稿.docx",
+          "type": "docx",
+          "path": "qa/v0.27/examples/fresh_training_notice/办公文稿.docx",
+          "sha256": "10b7df8ac56538d44dea51d51031a141f182ce19e1cd19990639067a5faaa44a"
+        },
+        {
+          "name": "办公文稿.md",
+          "type": "md",
+          "path": "qa/v0.27/examples/fresh_training_notice/办公文稿.md",
+          "sha256": "a1e96ceb5a69e0238bad94da2342e729779166f05a8e82e6bd3c7d22cbba1626"
+        }
+      ],
+      "previews": [
+        {
+          "name": "办公文稿.pdf",
+          "type": "pdf",
+          "path": "qa/v0.27/examples/fresh_training_notice/办公文稿.pdf",
+          "sha256": "bbaf1afd7b8dbc917f4dfdc0df9edbe1c36afaa33cc26c6138a09d9b31d37347"
+        }
+      ],
+      "source_names": [
+        "志愿者培训方案.md",
+        "培训补充通知.txt"
+      ]
+    },
+    {
+      "id": "local_share_copy",
+      "title": "本地脱敏分享副本",
+      "prompt": "把客户跟进纪要.md整理成可分享版本，保留全部正文、预算、办公日期和尚未付款的条件，给我Word副本。",
+      "seconds": 1.99,
+      "checks": {
+        "completed": true,
+        "checked": true,
+        "no_grounded_fallback": true,
+        "word_requested": true,
+        "no_unrequested_word": true,
+        "no_original_mutation": true,
+        "originals_unchanged": true,
+        "privacy_passed": true,
+        "all_three_formats": true,
+        "sensitive_values_absent": true,
+        "office_values_retained": true,
+        "checked_source_count": true,
+        "all_required_dates": true
+      },
+      "artifacts": [
+        {
+          "name": "可分享副本.md",
+          "type": "md",
+          "path": "qa/v0.27/examples/local_share_copy/可分享副本.md",
+          "sha256": "72efc4f699511b1fe9ca2cd35de8df3d70a6f4030caab1bf05e2a1e0d60a70a7"
+        },
+        {
+          "name": "可分享副本.txt",
+          "type": "txt",
+          "path": "qa/v0.27/examples/local_share_copy/可分享副本.txt",
+          "sha256": "72efc4f699511b1fe9ca2cd35de8df3d70a6f4030caab1bf05e2a1e0d60a70a7"
+        },
+        {
+          "name": "可分享副本.docx",
+          "type": "docx",
+          "path": "qa/v0.27/examples/local_share_copy/可分享副本.docx",
+          "sha256": "edffa8944f479cea8ac9d879106562fe0ddbb6469ccc069fe7a5fab91a0b1e22"
+        }
+      ],
+      "previews": [
+        {
+          "name": "可分享副本.pdf",
+          "type": "pdf",
+          "path": "qa/v0.27/examples/local_share_copy/可分享副本.pdf",
+          "sha256": "879477b6dce1d5a80f989811ab2c38b554ff5ab74e299187e8f79966c59ae23f"
+        }
+      ],
+      "source_names": [
+        "客户跟进纪要.md"
+      ]
+    }
+  ]
+}

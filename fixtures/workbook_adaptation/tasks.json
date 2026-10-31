@@ -1,0 +1,125 @@
+{
+  "version": "0.18.0",
+  "frozen_before_first_execution": true,
+  "purpose": "New fictional schemas and a numeric/column-order perturbation pair; first end-to-end evaluation follows backend freeze, no independent-user-study claim.",
+  "metamorphic_pair": {
+    "before": "readiness_word",
+    "after": "readiness_changed_values_and_columns",
+    "expected_total_delta": "51",
+    "same_ids": true
+  },
+  "cases": [
+    {
+      "id": "grant_new_units",
+      "prompt": "微光项目拨付的登记里，先排除终止项目，只看批准日期在2026年11月1日至11月30日（含两天）而且还有尾款的项目。待拨金额按资助额减已付算，统一用元，挑出待拨不少于11000元的，按批准日期从晚到早，只保留项目编号、待拨金额。",
+      "rows": [
+        [
+          "R71",
+          "12000"
+        ]
+      ]
+    },
+    {
+      "id": "grant_relaxed_followup",
+      "parent": "grant_new_units",
+      "prompt": "把待拨门槛放宽到9000元，其余筛选条件、排序和输出字段保持不变。",
+      "rows": [
+        [
+          "R76",
+          "10000"
+        ],
+        [
+          "R72",
+          "10000"
+        ],
+        [
+          "R71",
+          "12000"
+        ]
+      ]
+    },
+    {
+      "id": "volunteer_distinct_hours",
+      "prompt": "社区服务签到里两站的数据放在一起，把退出的去掉，再剔除联系号没填的。联系号相同只留表中最先出现的一条，不要自行排序再去重。看看每个服务点的独立人数和服务时数合计，时数用小时显示；按人数由多到少，同人数按服务点升序。",
+      "rows": [
+        [
+          "东站",
+          "2",
+          "3.5"
+        ],
+        [
+          "西站",
+          "2",
+          "5"
+        ]
+      ]
+    },
+    {
+      "id": "readiness_word",
+      "prompt": "看看设备准备.xlsx：只处理启用的资产，把现有数量少于需求的找出来，需补数量按需求减现有算，需补金额按需补数量乘单价算。按需补金额从高到低，只保留资产代号、需补数量、需补金额。每条明细要留下，另外给出这批的金额合计和条数，再写一段准备说明并导出Word，不增加采购日期或供应商。",
+      "rows": [
+        [
+          "K41",
+          "3",
+          "51"
+        ],
+        [
+          "K44",
+          "2",
+          "46"
+        ],
+        [
+          "K46",
+          "2",
+          "0"
+        ]
+      ],
+      "summary_values": [
+        "97",
+        "3"
+      ],
+      "word_numbers": [
+        "97"
+      ],
+      "word": true
+    },
+    {
+      "id": "readiness_changed_values_and_columns",
+      "prompt": "看看设备准备调整.xlsx：只处理启用的资产，把现有数量少于需求的找出来，需补数量按需求减现有算，需补金额按需补数量乘单价算。按需补金额从高到低，只保留资产代号、需补数量、需补金额。每条明细要留下，另外给出这批的金额合计和条数，再写一段准备说明并导出Word，不增加采购日期或供应商。",
+      "rows": [
+        [
+          "K41",
+          "3",
+          "102"
+        ],
+        [
+          "K44",
+          "2",
+          "46"
+        ],
+        [
+          "K46",
+          "2",
+          "0"
+        ]
+      ],
+      "summary_values": [
+        "148",
+        "3"
+      ],
+      "word_numbers": [
+        "148"
+      ],
+      "word": true
+    },
+    {
+      "id": "empty_result_word",
+      "prompt": "在设备准备调整.xlsx中，只看未启用而且现有数量已经不少于需求的资产，只保留资产代号。如果没有符合的记录，也请明确写一段核对说明并导出Word，不要补造名单。",
+      "rows": [],
+      "word": true,
+      "word_numbers": [
+        "0"
+      ]
+    }
+  ]
+}

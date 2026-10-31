@@ -1,0 +1,19 @@
+{
+  "model": "qwen3-coder-30b-a3b",
+  "time": "2026-10-30T20:24:18.514632+08:00",
+  "passed": false,
+  "network_denied": true,
+  "checks": {
+    "native_template_nonthinking": true,
+    "complete_schema_output": false,
+    "calculator_expression_correct": false
+  },
+  "error": "Source-free constrained JSON generation degenerated and stopped at the120-token cap. No tool executed.",
+  "evidence": [
+    "qa/v0.24/qwen3-coder-initial-compatibility-error.json",
+    "qa/v0.24/qwen3-coder-corrected-compatibility-error.json",
+    "qa/v0.24/coder-compatibility-diagnostic.json"
+  ],
+  "office_inference_runs": 0,
+  "scope": "Not admitted to office screening under this interface; not6 individually failed office goals."
+}

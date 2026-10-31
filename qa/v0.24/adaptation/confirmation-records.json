@@ -1,0 +1,50 @@
+[
+  {
+    "suite": "variants",
+    "model": "qwen3.6-35b-a3b",
+    "exit_code": 0,
+    "elapsed": 50.522,
+    "report": "qa/v0.24/adaptation/reports/variants-qwen3.6-35b-a3b-20261030T205150-abb9b6.json",
+    "reused_screen": true
+  },
+  {
+    "suite": "fresh",
+    "model": "qwen3.6-35b-a3b",
+    "exit_code": 0,
+    "elapsed": 77.35,
+    "report": "qa/v0.24/adaptation/reports/fresh-qwen3.6-35b-a3b-20261030T205407-897e28.json",
+    "reused_screen": true
+  },
+  {
+    "suite": "unseen",
+    "model": "qwen3.6-35b-a3b",
+    "report": "qa/v0.24/adaptation/reports/unseen-qwen3.6-35b-a3b-20261030T210420-a3c668.json",
+    "exit_code": 0,
+    "elapsed": 209.975,
+    "reused_screen": false
+  },
+  {
+    "suite": "regression",
+    "model": "qwen3.6-35b-a3b",
+    "report": "qa/v0.24/adaptation/reports/regression-qwen3.6-35b-a3b-20261030T210750-fbf516.json",
+    "exit_code": 1,
+    "elapsed": 521.888,
+    "reused_screen": false
+  },
+  {
+    "suite": "followups",
+    "model": "qwen3.6-35b-a3b",
+    "report": "qa/v0.24/adaptation/reports/followups-qwen3.6-35b-a3b-20261030T211632-7c0d5c.json",
+    "exit_code": 0,
+    "elapsed": 84.351,
+    "reused_screen": false
+  },
+  {
+    "suite": "novel",
+    "model": "qwen3.6-35b-a3b",
+    "report": "qa/v0.24/adaptation/reports/novel-qwen3.6-35b-a3b-20261030T211756-63fe9d.json",
+    "exit_code": 1,
+    "elapsed": 375.439,
+    "reused_screen": false
+  }
+]

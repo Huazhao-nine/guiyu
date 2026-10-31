@@ -1,0 +1,243 @@
+{
+  "version": "0.26.0",
+  "selected": "qwen3.6-35b-a3b",
+  "baseline_gb": 32,
+  "hardware": "Apple M5 32GB; macOS27.2",
+  "unit_tests": 690,
+  "network_policy": "All model and retrieval runs inside deny-network sandbox; no cloud API.",
+  "initial": {
+    "report": "qa/v0.26/reports/initial-20261030T233403-b3f4e7.json",
+    "sha256": "20abd8bd3d2afa162c0a63e9f5f583113af65f97a39b9b065328d08c58a2d8a2",
+    "passed": 1,
+    "total": 8,
+    "scope": "First8 developer-created goals on new files",
+    "failed_cases": [
+      "stock_zero_followup",
+      "public_quote_conditions",
+      "quote_price_followup",
+      "service_mixed_units",
+      "service_hours_followup",
+      "event_latest_plan",
+      "public_document_word"
+    ],
+    "model_executed": 7,
+    "dependency_blocked": 1,
+    "network_denied": true,
+    "sources_unchanged_after_run": true,
+    "backend_unchanged": true
+  },
+  "first_adaptation": {
+    "report": "qa/v0.26/reports/adapted-20261030T235420-a5817b.json",
+    "sha256": "d3e4f412db89ec16332817197f99e1d8d63ed966e3ef38cefac9e558d03f0f8d",
+    "passed": 3,
+    "total": 8,
+    "scope": "Known development retest",
+    "failed_cases": [
+      "stock_zero_followup",
+      "public_quote_conditions",
+      "quote_price_followup",
+      "service_hours_followup",
+      "public_document_word"
+    ],
+    "model_executed": 7,
+    "dependency_blocked": 1,
+    "network_denied": true,
+    "sources_unchanged_after_run": true,
+    "backend_unchanged": true
+  },
+  "recovery": {
+    "report": "qa/v0.26/reports/recovery-20261031T001253-63b600.json",
+    "sha256": "685d4cf149b6de2391bc064e8d8820c1dbe46aefe06ec8fb96b89db3bb93e280",
+    "passed": 5,
+    "total": 8,
+    "scope": "Known development retest",
+    "failed_cases": [
+      "quote_price_followup",
+      "service_hours_followup",
+      "public_document_word"
+    ],
+    "model_executed": 8,
+    "dependency_blocked": 0,
+    "network_denied": true,
+    "sources_unchanged_after_run": true,
+    "backend_unchanged": true
+  },
+  "dependency": {
+    "report": "qa/v0.26/reports/dependency-20261031T002141-95b49f.json",
+    "sha256": "94258e07d4a9ab3a86e02cabbd81aa4634bb11628944cb72533b821e7b7a4a94",
+    "passed": 4,
+    "total": 8,
+    "scope": "Known development retest",
+    "failed_cases": [
+      "stock_zero_followup",
+      "quote_price_followup",
+      "service_hours_followup",
+      "public_document_word"
+    ],
+    "model_executed": 8,
+    "dependency_blocked": 0,
+    "network_denied": true,
+    "sources_unchanged_after_run": true,
+    "backend_unchanged": true
+  },
+  "focused": {
+    "report": "qa/v0.26/reports/focused-20261031T003018-8fb3e3.json",
+    "sha256": "941a188d68ee747af563bab506ca562038fa25063fd1c69d3bfb95c4c2890281",
+    "passed": 8,
+    "total": 8,
+    "scope": "Known development retest",
+    "failed_cases": [],
+    "model_executed": 8,
+    "dependency_blocked": 0,
+    "network_denied": true,
+    "sources_unchanged_after_run": true,
+    "backend_unchanged": true
+  },
+  "confirmation_first": {
+    "report": "qa/v0.26/reports/confirmation-first-20261031T003557-7acb67.json",
+    "sha256": "1562a563265f641c21ae7c787c0d7e7eae61fc2a83ff28756bcf00163e515285",
+    "passed": 0,
+    "total": 5,
+    "scope": "Two reserved files first use;2 mains failed and3 followups blocked",
+    "failed_cases": [
+      "reserved_training",
+      "reserved_training_march",
+      "reserved_dispatch",
+      "reserved_dispatch_chat",
+      "reserved_dispatch_north"
+    ],
+    "model_executed": 2,
+    "dependency_blocked": 3,
+    "network_denied": true,
+    "sources_unchanged_after_run": true,
+    "backend_unchanged": true
+  },
+  "confirmation_retest": {
+    "report": "qa/v0.26/reports/confirmation-retest-20261031T004231-350316.json",
+    "sha256": "63c70ff8aec50b9aab561255546987f5d76b3542b187129aff9f20abd3e2e3b4",
+    "passed": 4,
+    "total": 5,
+    "scope": "Known reserved-file retest",
+    "failed_cases": [
+      "reserved_training_march"
+    ],
+    "model_executed": 5,
+    "dependency_blocked": 0,
+    "network_denied": true,
+    "sources_unchanged_after_run": true,
+    "backend_unchanged": true
+  },
+  "confirmation_before_date_contract": {
+    "report": "qa/v0.26/reports/confirmation-final-20261031T004820-0130b1.json",
+    "sha256": "b8b78ed8776bd9f2bdf55e4fdf52a224ec2ed760147fe96f9400a07cd437c871",
+    "passed": 4,
+    "total": 5,
+    "scope": "Known reserved-file retest",
+    "failed_cases": [
+      "reserved_training_march"
+    ],
+    "model_executed": 5,
+    "dependency_blocked": 0,
+    "network_denied": true,
+    "sources_unchanged_after_run": true,
+    "backend_unchanged": true
+  },
+  "development_before_date_contract": {
+    "report": "qa/v0.26/reports/development-final-20261031T005109-149662.json",
+    "sha256": "c6f155d04f748da7f44f1a6444ded8e2b7f9e2277bea837a60d438d350464395",
+    "passed": 8,
+    "total": 8,
+    "scope": "Known development retest before final Word layout",
+    "failed_cases": [],
+    "model_executed": 8,
+    "dependency_blocked": 0,
+    "network_denied": true,
+    "sources_unchanged_after_run": true,
+    "backend_unchanged": true
+  },
+  "transfer_first": {
+    "report": "qa/v0.26/reports/transfer-first-20261031T004633-632df0.json",
+    "sha256": "a5de6ad7c426cc5f11e39c49c968aa7ec6a97b5a998de0fe9ab8a6b7f147a445",
+    "passed": 2,
+    "total": 3,
+    "scope": "Additional new support workbook and office text first use",
+    "failed_cases": [
+      "transfer_office_notice"
+    ],
+    "model_executed": 3,
+    "dependency_blocked": 0,
+    "network_denied": true,
+    "sources_unchanged_after_run": true,
+    "backend_unchanged": true
+  },
+  "known_regression": {
+    "report": "qa/v0.26/regression-reports/primary-qwen3.6-35b-a3b-20261031T005612-753877.json",
+    "sha256": "f1bafa85a7e98dc5f5f65276c713e0dcc33e778d862fe6fb66532ce2ba0fe81f",
+    "passed": 7,
+    "total": 7,
+    "scope": "Previous7 known goals before final output-proof/layout change",
+    "failed_cases": [],
+    "model_executed": 6,
+    "dependency_blocked": 0,
+    "network_denied": true,
+    "sources_unchanged_after_run": true,
+    "backend_unchanged": true
+  },
+  "confirmation_latest": {
+    "report": "qa/v0.26/reports/delivery-final-20261031T010304-aa26a7.json",
+    "sha256": "2c58a868fae1834a1a14eafaf87cc98318c1069f6ad18a8a4b253d1c8d740458",
+    "passed": 5,
+    "total": 5,
+    "scope": "Final source; known reserved-file retest",
+    "failed_cases": [],
+    "model_executed": 5,
+    "dependency_blocked": 0,
+    "network_denied": true,
+    "sources_unchanged_after_run": true,
+    "backend_unchanged": true
+  },
+  "development_latest": {
+    "report": "qa/v0.26/reports/development-delivery-final-20261031T010450-54bb00.json",
+    "sha256": "657a560e85b473e270c1ed567dabcb0886e97c6faa4a8c2f7912b20da03914d2",
+    "passed": 8,
+    "total": 8,
+    "scope": "Final source; known development retest",
+    "failed_cases": [],
+    "model_executed": 8,
+    "dependency_blocked": 0,
+    "network_denied": true,
+    "sources_unchanged_after_run": true,
+    "backend_unchanged": true
+  },
+  "measurement": {
+    "median_office_goal_seconds": 35.02,
+    "peak_mlx_gb": 20.116,
+    "peak_process_rss_gb": 11.489,
+    "note": "MLX and RSS overlap; never add, neither is whole-system memory. Median only these12 office goals; no general latency promise."
+  },
+  "followup_example": {
+    "case": "reserved_training_march",
+    "before": {
+      "completed": false,
+      "seconds": 88.03,
+      "model_calls": 16
+    },
+    "after": {
+      "completed": true,
+      "seconds": 39.15,
+      "model_calls": 8
+    }
+  },
+  "remaining_failure": {
+    "case": "transfer_office_notice",
+    "first_use_report": "qa/v0.26/reports/transfer-first-20261031T004633-632df0.json",
+    "issue": "Latest unit price and event date were not consistently carried into calculation and calendar execution. Task stopped without a verified final Word.",
+    "delivered_verified_word": false
+  },
+  "limits": [
+    "Developer-authored fictional tasks and public structures; not independent user research or an arbitrary-document success rate.",
+    "Retests do not replace first scores. Transfer files first use2/3; separate source hashes retained.",
+    "Earlier seven-goal regression source precedes only the final conditional-output proof and Word layout; final-source13 goals passed.",
+    "GUI execution separate; no desktop success claimed without actual unlocked UI."
+  ]
+}

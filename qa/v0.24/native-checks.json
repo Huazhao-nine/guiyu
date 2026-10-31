@@ -1,0 +1,12 @@
+{
+  "status": "PASS_NATIVE_EXECUTABLE_STATE_CHECKS",
+  "checks": [
+    "32GB large-model admission and16GB daily compatibility",
+    "workspace/source authorization and history compatibility",
+    "privacy scan cancellation and single-process lifecycle",
+    "Return sends; Shift+Return newline; Chinese IME marked text never submits"
+  ],
+  "actual_gui_tasks": 0,
+  "gui_status": "BLOCKED_MAC_LOCKED",
+  "scope": "Executable code-level checks, separate from real model tasks and GUI clicking."
+}

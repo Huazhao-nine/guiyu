@@ -1,0 +1,106 @@
+{
+  "version": "0.24-model-search",
+  "suite": "variants",
+  "time": "2026-10-30T20:24:23.936943+08:00",
+  "model": "glm-4.7-flash",
+  "structured_temperature": 0,
+  "seed": 20261029,
+  "hardware": "Apple M5 32GB; user-selected32GB baseline",
+  "load_seconds": 5.13,
+  "model_info": {
+    "name": "glm-4.7-flash",
+    "architecture": "glm4_moe_lite",
+    "bits": 4,
+    "bytes": 16852441819,
+    "runtime_policy": {
+      "name": "extended-32gb",
+      "input_tokens": 8192,
+      "output_tokens": 1800,
+      "prefill_tokens": 256,
+      "memory_bytes": 21474836480,
+      "cache_bytes": 268435456
+    }
+  },
+  "thinking_enabled": false,
+  "common_token_limits": {
+    "input": 8192,
+    "output": 1800
+  },
+  "network_denied": true,
+  "source_hashes": {
+    "structured_output.py": "7960a53bd816fbd0f1940a7ab57a3c91da9fd56e4d09deb7c4639b1764deb268",
+    "worker.py": "930b5109619e44913f7f16dafeb11e9654aa901f6b1f939380acd4050214dc79",
+    "agent_control.py": "7524801210603dab72a6b0b375fd84bfd20750bdca563f2d7cec335a859edf6d",
+    "money_subtotals.py": "3f69877035132e87a756b16cfbb33876eb80d1d9f0edd424b9115debdd2a54ee",
+    "workbook_agent.py": "51c7fbbc7a312f4896c2643a0a490734fcb76cecd31d5184316e7bed7951e62e",
+    "workbook_writing.py": "5ddd5a39dcb8557d077939a5f0d141147beac2287a457cfad0cf8475cf1826b9",
+    "workbook_edits.py": "7d8dd9169b2739fafa62622a2d2bb8f21518e76152541a761924b638c073d219",
+    "personal_tools.py": "c8ed42cd828d67ebfbd03c2cdf144894b553cb009a0cf2beebe77f590af016e1",
+    "workbook_data.py": "bc6902625ecb69300fd8497fba0d8cb734ea8372ccf97a46d2c6d1a231e5b408",
+    "structured_tables.py": "9868f4316fdba81ddf435bba47b7284343fbafe10b608ff29cadce949580597b",
+    "runtime_policy.py": "e9bfb35041802aa961f39a674cea6bd59c85a65bf7c6ceac0841a33ec7d19bbb",
+    "local_query.py": "bbe2091085564d19740e1bc81c7ca6c59b8fef20ee329e356ff433184b5f0bd3",
+    "workbook_schema.py": "1f640f62ea196fdb4c038293ac0ee3b69c19cfe10b237891d7bec0bc46e951a1",
+    "privacy_filter.py": "3a65fc2029085463408981b36a7faa2cc8d8cdb19689b3628d11d42ba41b7f1c",
+    "table_program.py": "b989f1b9e065f9d856a103299e58dfc4b86c3fa3cf63ce1b3f9b9d939cfb75f1",
+    "request_router.py": "6cc7b450900d2042adf313a94c9c480717874d735fe3dfddcf37f3df7c0073ce",
+    "workbook_requirements.py": "cb463959fd78b875dc34481044e5779cf5ceec0760ea75fba6ae65c38f46e83d",
+    "workbook_flow.py": "7ebe5fb1b411558c0f058c96c66a5c25d1a1718fe8f188b7cfdfd1b5fbe248a6",
+    "workbook_intent.py": "2c7d6407b6da8e58122890beabc0eb334b251a76920694eb648c2b0f3b6407fb",
+    "model_info.py": "f5d5c937a391d1ffd1ab86374c1b8f0794f8fe67870a7b8a54bccb2834ede9ca",
+    "general_assistant.py": "709754ff9ab5e2aa6e81f1281c93212084793b1462d5bcc62dd5391cf5d6cdb8",
+    "workbook_revision.py": "4f09083b8aef2b8993d9e55c8baf2ce53f16d8e154a27742f8ec929e7d1677d7",
+    "bge_embedding.py": "f51ee3f63d3e46fa08ac7de6ba7380b7e87d8ab8b627338439cf55714efd687d",
+    "general_tools.py": "79fe507a1d2a0a3e8c74cd9889bf4eaece3a01ba61c80b9b388fa1db47d1a7d0",
+    "table_semantics.py": "2d164c333efef02d6188d03d6112ba9834e37a4ed6ed6c95d82697b41eec6a43",
+    "workbook_export.py": "e9f2f52986ef54811e8d36eb4c492795557a6d8765885c91e0080e316d6d2c0f",
+    "workbook_qualifiers.py": "0e20093e35c7eb1b3c34516eed78ca76579d3ba5630f60487faacec2af7d4b45",
+    "fact_guard.py": "071b2764597edbb9ee79045dddc3b9c2f14d9993c01b0f5887b3b4ac2b2a181c",
+    "privacy_models.py": "dd160bac36ddfb6d6393c5a8bdb90f95571d2e5bbc7374d6d43bcafad9e045b2",
+    "share_agent.py": "b41eb80b564c678fc99bb304391ac4432e78d01d5188cc9eebe7dff44db812d5",
+    "model_output.py": "83fba58b74d38dbe1c4b43f91695e0ea2c3ba2a79d6edc988ddc9c4a2db2c4c5",
+    "workspace_index.py": "4c9038a1c90e24a6b18d8fab96e017088abdd4c81009217e4cbc32f814aa8911",
+    "office_agent.py": "b49adcfd302155180688f505afbef15e76a8650ec000fb4005289aff5e1b0653"
+  },
+  "fixture_hashes": {
+    "合同付款日历.xlsx": "3eb17795ac8c3d04ba103602953cfbd62d6480a1609095365a92f9b1f0a9bce8",
+    "城市活动登记.xlsx": "8a35dafedaf7ae72e44755e76be13ba8043b3d3a5a7159049394281dd040200b",
+    "差旅领用.xlsx": "2e9222f7dafb5aac23942d73b793afaa92b779dd1aec58000dedf75433eb0589",
+    "差旅领用调整.xlsx": "48121046857b3b80b5b24432631768f1b38fae2f7ae6be690f3e7f5be0284af7"
+  },
+  "suite_hashes": {
+    "fixtures/workbook_variants_v19/tasks.json": "891fa52a9a99557583b4b8a7a3d13b868b6c734d174896c34e10bee73221e7c3"
+  },
+  "runner_sha256": "7a7516e790bc9833c0f330510dfdaf09cb60825d543ac9d19396c69ccae857ed",
+  "cases": [
+    {
+      "id": "new_multisheet_dedup",
+      "prompt": "城市活动登记的两个场次合并，剔除取消和联系方式没填的记录；同一联系方式只留原表第一次出现的，不要先排序。按片区汇总独立人数和服务时长合计，时长用小时显示；结果按时长由多到少排列，只要片区、人数、时长三列。",
+      "authorized_file_count": 4,
+      "passed": false,
+      "error": "工作簿结构尚未确定：选中的数据表字段不同或单位量纲不同；不猜测缺失单位、汇率或跨表关联。",
+      "seconds": 9.0,
+      "model_calls": 2,
+      "model_executed": true,
+      "dependency_blocked": false,
+      "input_tokens": 2074
+    },
+    {
+      "id": "new_aggregate_followup",
+      "prompt": "只保留累计时长不少于3小时的片区，其他要求不变。",
+      "passed": false,
+      "error": "上一任务未完成，未伪造后续上下文。",
+      "seconds": 0.0,
+      "model_calls": 0,
+      "model_executed": false,
+      "dependency_blocked": true,
+      "input_tokens": 0
+    }
+  ],
+  "passed": 0,
+  "total": 2,
+  "peak_mlx_gb": 17.272,
+  "peak_process_rss_gb": 10.464,
+  "source_hashes_unchanged": true,
+  "limits": "Paired known fictional tasks on the unchanged v0.22 backend. Same prompts, tools, temperature0, seed, argument validation and repair limits; thinking disabled as in current product. All tasks are now known, not fresh holdout or user research. Checkpoint generation, size, tokenizer and quantization differ; this is not a pure parameter-count causal experiment. Native GUI and normal user data are not operated."
+}

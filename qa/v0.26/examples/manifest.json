@@ -1,0 +1,868 @@
+{
+  "version": "0.26.0",
+  "scope": "Actual local model and tool outputs, fictional inputs plus a short public document summary. Failed cases remain in evaluation reports. No manual edits to generated documents or tables.",
+  "items": [
+    {
+      "case": "public_stock_detail",
+      "label": "八月低库存",
+      "report": "qa/v0.26/reports/development-delivery-final-20261031T010450-54bb00.json",
+      "backend_hashes": {
+        "structured_output.py": "7960a53bd816fbd0f1940a7ab57a3c91da9fd56e4d09deb7c4639b1764deb268",
+        "worker.py": "879bf7cff54b9ad715236926c23899d1433a9d76f0add5dd6db61cb354bd8c8a",
+        "agent_control.py": "978c4603f58173303696e39db589596d92bc9cdb2df42587983f940073b55265",
+        "money_subtotals.py": "3f69877035132e87a756b16cfbb33876eb80d1d9f0edd424b9115debdd2a54ee",
+        "workbook_agent.py": "f47d2ea6c47861b97cc5665d9655497e7e93c54f9cc8c7484c2f767757df34a2",
+        "workbook_writing.py": "5ddd5a39dcb8557d077939a5f0d141147beac2287a457cfad0cf8475cf1826b9",
+        "workbook_edits.py": "7d8dd9169b2739fafa62622a2d2bb8f21518e76152541a761924b638c073d219",
+        "workbook_recovery.py": "ad905941301310128736730e5d931a49ff56d7610ece443ff12136ea731e05d3",
+        "personal_tools.py": "c8ed42cd828d67ebfbd03c2cdf144894b553cb009a0cf2beebe77f590af016e1",
+        "workbook_data.py": "bc6902625ecb69300fd8497fba0d8cb734ea8372ccf97a46d2c6d1a231e5b408",
+        "structured_tables.py": "3ecc86af63b74c35b9b768b780d06db7b33f6f435717457fa44ae382923798f8",
+        "runtime_policy.py": "422cef9d111bca844c37e71ace3b6be37fd9b6b81bbd3b0967e73b4aaaa10a22",
+        "local_query.py": "4f37344fb04fc31bd3537598867b3a27d78d74dc26bae2dbe16a1a5330864f28",
+        "workbook_schema.py": "1f640f62ea196fdb4c038293ac0ee3b69c19cfe10b237891d7bec0bc46e951a1",
+        "privacy_filter.py": "3a65fc2029085463408981b36a7faa2cc8d8cdb19689b3628d11d42ba41b7f1c",
+        "table_program.py": "4033e2c10eabc02461f233ee21b35be7432df3f5f4809d6ff79213a9401561cd",
+        "request_router.py": "6cc7b450900d2042adf313a94c9c480717874d735fe3dfddcf37f3df7c0073ce",
+        "workbook_requirements.py": "cb463959fd78b875dc34481044e5779cf5ceec0760ea75fba6ae65c38f46e83d",
+        "workbook_flow.py": "530fecd628810ec97fd35ab4ff99cd0ce96489785676ea54a71a3059fd5b5cdd",
+        "workbook_intent.py": "39140c0dbe9064d7a687ec568f6bbd14a0be2378b806769fbfd658203248a983",
+        "model_info.py": "f5d5c937a391d1ffd1ab86374c1b8f0794f8fe67870a7b8a54bccb2834ede9ca",
+        "general_assistant.py": "709754ff9ab5e2aa6e81f1281c93212084793b1462d5bcc62dd5391cf5d6cdb8",
+        "workbook_revision.py": "3d7b6fc7542636488dc98421b5827a1f63f99efa50dc609a11347a48fa70b450",
+        "bge_embedding.py": "f51ee3f63d3e46fa08ac7de6ba7380b7e87d8ab8b627338439cf55714efd687d",
+        "general_tools.py": "79fe507a1d2a0a3e8c74cd9889bf4eaece3a01ba61c80b9b388fa1db47d1a7d0",
+        "table_semantics.py": "2d164c333efef02d6188d03d6112ba9834e37a4ed6ed6c95d82697b41eec6a43",
+        "document_tables.py": "ceee11df6cfd07453001aa57f1648a5967b557b322a8c9659e9e19e16f0dcfc7",
+        "workbook_export.py": "e9f2f52986ef54811e8d36eb4c492795557a6d8765885c91e0080e316d6d2c0f",
+        "workbook_qualifiers.py": "0e20093e35c7eb1b3c34516eed78ca76579d3ba5630f60487faacec2af7d4b45",
+        "fact_guard.py": "53150da937578d9188be8fd9d9c97b8668b92c5fff614145d12cefd34b39469e",
+        "privacy_models.py": "dd160bac36ddfb6d6393c5a8bdb90f95571d2e5bbc7374d6d43bcafad9e045b2",
+        "share_agent.py": "b41eb80b564c678fc99bb304391ac4432e78d01d5188cc9eebe7dff44db812d5",
+        "model_output.py": "83fba58b74d38dbe1c4b43f91695e0ea2c3ba2a79d6edc988ddc9c4a2db2c4c5",
+        "workspace_index.py": "4c9038a1c90e24a6b18d8fab96e017088abdd4c81009217e4cbc32f814aa8911",
+        "office_agent.py": "39d13ad150c3248fe7b3c0c6234549134097ce29f412a97c72ed8a775b3c6f69"
+      },
+      "files": [
+        {
+          "path": "qa/v0.26/examples/八月低库存_结果.xlsx",
+          "sha256": "916a94fc291976d1c7dc239c941344f029fa6d4a88c7a8c722bc93553533e99d"
+        },
+        {
+          "path": "qa/v0.26/examples/八月低库存_结果.csv",
+          "sha256": "8765c74dfb214bd07f72a893b16725dcec422f979408ce1633fc215668a95ab7"
+        },
+        {
+          "path": "qa/v0.26/examples/八月低库存_说明.docx",
+          "sha256": "b27f161dc36d8d7c0b98b799a75774aced8875948c556826c016a299c49c0c18"
+        },
+        {
+          "path": "qa/v0.26/examples/八月低库存_page-1.png",
+          "sha256": "8629a33456ebd813146c9a89b78ab85ca92d03563f138cbca1f1dc429f1e12e2",
+          "rendered_page": true
+        },
+        {
+          "path": "qa/v0.26/examples/八月低库存_说明.pdf",
+          "sha256": "927b3ca1b323355d95158011ec69b3ee9829a1351f9f72efcb6bf7c5d3e75c3f"
+        },
+        {
+          "path": "qa/v0.26/examples/八月低库存_说明.md",
+          "sha256": "443d7d675269272e44ac4a72d47d7e8056052d0287ec46872f9c5422165d075e"
+        }
+      ]
+    },
+    {
+      "case": "stock_zero_followup",
+      "label": "去掉零库存追问",
+      "report": "qa/v0.26/reports/development-delivery-final-20261031T010450-54bb00.json",
+      "backend_hashes": {
+        "structured_output.py": "7960a53bd816fbd0f1940a7ab57a3c91da9fd56e4d09deb7c4639b1764deb268",
+        "worker.py": "879bf7cff54b9ad715236926c23899d1433a9d76f0add5dd6db61cb354bd8c8a",
+        "agent_control.py": "978c4603f58173303696e39db589596d92bc9cdb2df42587983f940073b55265",
+        "money_subtotals.py": "3f69877035132e87a756b16cfbb33876eb80d1d9f0edd424b9115debdd2a54ee",
+        "workbook_agent.py": "f47d2ea6c47861b97cc5665d9655497e7e93c54f9cc8c7484c2f767757df34a2",
+        "workbook_writing.py": "5ddd5a39dcb8557d077939a5f0d141147beac2287a457cfad0cf8475cf1826b9",
+        "workbook_edits.py": "7d8dd9169b2739fafa62622a2d2bb8f21518e76152541a761924b638c073d219",
+        "workbook_recovery.py": "ad905941301310128736730e5d931a49ff56d7610ece443ff12136ea731e05d3",
+        "personal_tools.py": "c8ed42cd828d67ebfbd03c2cdf144894b553cb009a0cf2beebe77f590af016e1",
+        "workbook_data.py": "bc6902625ecb69300fd8497fba0d8cb734ea8372ccf97a46d2c6d1a231e5b408",
+        "structured_tables.py": "3ecc86af63b74c35b9b768b780d06db7b33f6f435717457fa44ae382923798f8",
+        "runtime_policy.py": "422cef9d111bca844c37e71ace3b6be37fd9b6b81bbd3b0967e73b4aaaa10a22",
+        "local_query.py": "4f37344fb04fc31bd3537598867b3a27d78d74dc26bae2dbe16a1a5330864f28",
+        "workbook_schema.py": "1f640f62ea196fdb4c038293ac0ee3b69c19cfe10b237891d7bec0bc46e951a1",
+        "privacy_filter.py": "3a65fc2029085463408981b36a7faa2cc8d8cdb19689b3628d11d42ba41b7f1c",
+        "table_program.py": "4033e2c10eabc02461f233ee21b35be7432df3f5f4809d6ff79213a9401561cd",
+        "request_router.py": "6cc7b450900d2042adf313a94c9c480717874d735fe3dfddcf37f3df7c0073ce",
+        "workbook_requirements.py": "cb463959fd78b875dc34481044e5779cf5ceec0760ea75fba6ae65c38f46e83d",
+        "workbook_flow.py": "530fecd628810ec97fd35ab4ff99cd0ce96489785676ea54a71a3059fd5b5cdd",
+        "workbook_intent.py": "39140c0dbe9064d7a687ec568f6bbd14a0be2378b806769fbfd658203248a983",
+        "model_info.py": "f5d5c937a391d1ffd1ab86374c1b8f0794f8fe67870a7b8a54bccb2834ede9ca",
+        "general_assistant.py": "709754ff9ab5e2aa6e81f1281c93212084793b1462d5bcc62dd5391cf5d6cdb8",
+        "workbook_revision.py": "3d7b6fc7542636488dc98421b5827a1f63f99efa50dc609a11347a48fa70b450",
+        "bge_embedding.py": "f51ee3f63d3e46fa08ac7de6ba7380b7e87d8ab8b627338439cf55714efd687d",
+        "general_tools.py": "79fe507a1d2a0a3e8c74cd9889bf4eaece3a01ba61c80b9b388fa1db47d1a7d0",
+        "table_semantics.py": "2d164c333efef02d6188d03d6112ba9834e37a4ed6ed6c95d82697b41eec6a43",
+        "document_tables.py": "ceee11df6cfd07453001aa57f1648a5967b557b322a8c9659e9e19e16f0dcfc7",
+        "workbook_export.py": "e9f2f52986ef54811e8d36eb4c492795557a6d8765885c91e0080e316d6d2c0f",
+        "workbook_qualifiers.py": "0e20093e35c7eb1b3c34516eed78ca76579d3ba5630f60487faacec2af7d4b45",
+        "fact_guard.py": "53150da937578d9188be8fd9d9c97b8668b92c5fff614145d12cefd34b39469e",
+        "privacy_models.py": "dd160bac36ddfb6d6393c5a8bdb90f95571d2e5bbc7374d6d43bcafad9e045b2",
+        "share_agent.py": "b41eb80b564c678fc99bb304391ac4432e78d01d5188cc9eebe7dff44db812d5",
+        "model_output.py": "83fba58b74d38dbe1c4b43f91695e0ea2c3ba2a79d6edc988ddc9c4a2db2c4c5",
+        "workspace_index.py": "4c9038a1c90e24a6b18d8fab96e017088abdd4c81009217e4cbc32f814aa8911",
+        "office_agent.py": "39d13ad150c3248fe7b3c0c6234549134097ce29f412a97c72ed8a775b3c6f69"
+      },
+      "files": [
+        {
+          "path": "qa/v0.26/examples/去掉零库存追问_结果.xlsx",
+          "sha256": "d490185577db9e1fb37d1662442f04ec7adc40eaf326545b7fb1dd65214d12e8"
+        },
+        {
+          "path": "qa/v0.26/examples/去掉零库存追问_结果.csv",
+          "sha256": "946bf7c41cd895c6ffc8c7ee46205c6b7b27d2c42e1107f4bb23a7414ce651ec"
+        }
+      ]
+    },
+    {
+      "case": "public_quote_conditions",
+      "label": "设备报价",
+      "report": "qa/v0.26/reports/development-delivery-final-20261031T010450-54bb00.json",
+      "backend_hashes": {
+        "structured_output.py": "7960a53bd816fbd0f1940a7ab57a3c91da9fd56e4d09deb7c4639b1764deb268",
+        "worker.py": "879bf7cff54b9ad715236926c23899d1433a9d76f0add5dd6db61cb354bd8c8a",
+        "agent_control.py": "978c4603f58173303696e39db589596d92bc9cdb2df42587983f940073b55265",
+        "money_subtotals.py": "3f69877035132e87a756b16cfbb33876eb80d1d9f0edd424b9115debdd2a54ee",
+        "workbook_agent.py": "f47d2ea6c47861b97cc5665d9655497e7e93c54f9cc8c7484c2f767757df34a2",
+        "workbook_writing.py": "5ddd5a39dcb8557d077939a5f0d141147beac2287a457cfad0cf8475cf1826b9",
+        "workbook_edits.py": "7d8dd9169b2739fafa62622a2d2bb8f21518e76152541a761924b638c073d219",
+        "workbook_recovery.py": "ad905941301310128736730e5d931a49ff56d7610ece443ff12136ea731e05d3",
+        "personal_tools.py": "c8ed42cd828d67ebfbd03c2cdf144894b553cb009a0cf2beebe77f590af016e1",
+        "workbook_data.py": "bc6902625ecb69300fd8497fba0d8cb734ea8372ccf97a46d2c6d1a231e5b408",
+        "structured_tables.py": "3ecc86af63b74c35b9b768b780d06db7b33f6f435717457fa44ae382923798f8",
+        "runtime_policy.py": "422cef9d111bca844c37e71ace3b6be37fd9b6b81bbd3b0967e73b4aaaa10a22",
+        "local_query.py": "4f37344fb04fc31bd3537598867b3a27d78d74dc26bae2dbe16a1a5330864f28",
+        "workbook_schema.py": "1f640f62ea196fdb4c038293ac0ee3b69c19cfe10b237891d7bec0bc46e951a1",
+        "privacy_filter.py": "3a65fc2029085463408981b36a7faa2cc8d8cdb19689b3628d11d42ba41b7f1c",
+        "table_program.py": "4033e2c10eabc02461f233ee21b35be7432df3f5f4809d6ff79213a9401561cd",
+        "request_router.py": "6cc7b450900d2042adf313a94c9c480717874d735fe3dfddcf37f3df7c0073ce",
+        "workbook_requirements.py": "cb463959fd78b875dc34481044e5779cf5ceec0760ea75fba6ae65c38f46e83d",
+        "workbook_flow.py": "530fecd628810ec97fd35ab4ff99cd0ce96489785676ea54a71a3059fd5b5cdd",
+        "workbook_intent.py": "39140c0dbe9064d7a687ec568f6bbd14a0be2378b806769fbfd658203248a983",
+        "model_info.py": "f5d5c937a391d1ffd1ab86374c1b8f0794f8fe67870a7b8a54bccb2834ede9ca",
+        "general_assistant.py": "709754ff9ab5e2aa6e81f1281c93212084793b1462d5bcc62dd5391cf5d6cdb8",
+        "workbook_revision.py": "3d7b6fc7542636488dc98421b5827a1f63f99efa50dc609a11347a48fa70b450",
+        "bge_embedding.py": "f51ee3f63d3e46fa08ac7de6ba7380b7e87d8ab8b627338439cf55714efd687d",
+        "general_tools.py": "79fe507a1d2a0a3e8c74cd9889bf4eaece3a01ba61c80b9b388fa1db47d1a7d0",
+        "table_semantics.py": "2d164c333efef02d6188d03d6112ba9834e37a4ed6ed6c95d82697b41eec6a43",
+        "document_tables.py": "ceee11df6cfd07453001aa57f1648a5967b557b322a8c9659e9e19e16f0dcfc7",
+        "workbook_export.py": "e9f2f52986ef54811e8d36eb4c492795557a6d8765885c91e0080e316d6d2c0f",
+        "workbook_qualifiers.py": "0e20093e35c7eb1b3c34516eed78ca76579d3ba5630f60487faacec2af7d4b45",
+        "fact_guard.py": "53150da937578d9188be8fd9d9c97b8668b92c5fff614145d12cefd34b39469e",
+        "privacy_models.py": "dd160bac36ddfb6d6393c5a8bdb90f95571d2e5bbc7374d6d43bcafad9e045b2",
+        "share_agent.py": "b41eb80b564c678fc99bb304391ac4432e78d01d5188cc9eebe7dff44db812d5",
+        "model_output.py": "83fba58b74d38dbe1c4b43f91695e0ea2c3ba2a79d6edc988ddc9c4a2db2c4c5",
+        "workspace_index.py": "4c9038a1c90e24a6b18d8fab96e017088abdd4c81009217e4cbc32f814aa8911",
+        "office_agent.py": "39d13ad150c3248fe7b3c0c6234549134097ce29f412a97c72ed8a775b3c6f69"
+      },
+      "files": [
+        {
+          "path": "qa/v0.26/examples/设备报价_结果.xlsx",
+          "sha256": "3215b207a6531da9a2025ea2fa6a4f6ea8f9cc8a4a7a918cc4051cdb642d98a6"
+        },
+        {
+          "path": "qa/v0.26/examples/设备报价_结果.csv",
+          "sha256": "bafa79af5ff68f5cf3579a2617f3f57904db6a2c9a7543ebf106f9abb7b54bc4"
+        },
+        {
+          "path": "qa/v0.26/examples/设备报价_说明.docx",
+          "sha256": "ce30b5196b8208209084263be529bb6fe175b7f7c4d4a1a8e8b76857b2dfcd34"
+        },
+        {
+          "path": "qa/v0.26/examples/设备报价_page-1.png",
+          "sha256": "0c96a4a92fd5572bd1734bdd49a6f14e96fe28e8ea4e42c5c077f89bbc55a832",
+          "rendered_page": true
+        },
+        {
+          "path": "qa/v0.26/examples/设备报价_说明.pdf",
+          "sha256": "1ae022e2dc8fd22e22f9385011c62181d42a47b47e19c5198f6170fa4d50a749"
+        },
+        {
+          "path": "qa/v0.26/examples/设备报价_说明.md",
+          "sha256": "e8abea04d4ea6445dad920afec93b484b0f6d84a9713aab0a9d4cfdba394c368"
+        }
+      ]
+    },
+    {
+      "case": "quote_price_followup",
+      "label": "报价追问",
+      "report": "qa/v0.26/reports/development-delivery-final-20261031T010450-54bb00.json",
+      "backend_hashes": {
+        "structured_output.py": "7960a53bd816fbd0f1940a7ab57a3c91da9fd56e4d09deb7c4639b1764deb268",
+        "worker.py": "879bf7cff54b9ad715236926c23899d1433a9d76f0add5dd6db61cb354bd8c8a",
+        "agent_control.py": "978c4603f58173303696e39db589596d92bc9cdb2df42587983f940073b55265",
+        "money_subtotals.py": "3f69877035132e87a756b16cfbb33876eb80d1d9f0edd424b9115debdd2a54ee",
+        "workbook_agent.py": "f47d2ea6c47861b97cc5665d9655497e7e93c54f9cc8c7484c2f767757df34a2",
+        "workbook_writing.py": "5ddd5a39dcb8557d077939a5f0d141147beac2287a457cfad0cf8475cf1826b9",
+        "workbook_edits.py": "7d8dd9169b2739fafa62622a2d2bb8f21518e76152541a761924b638c073d219",
+        "workbook_recovery.py": "ad905941301310128736730e5d931a49ff56d7610ece443ff12136ea731e05d3",
+        "personal_tools.py": "c8ed42cd828d67ebfbd03c2cdf144894b553cb009a0cf2beebe77f590af016e1",
+        "workbook_data.py": "bc6902625ecb69300fd8497fba0d8cb734ea8372ccf97a46d2c6d1a231e5b408",
+        "structured_tables.py": "3ecc86af63b74c35b9b768b780d06db7b33f6f435717457fa44ae382923798f8",
+        "runtime_policy.py": "422cef9d111bca844c37e71ace3b6be37fd9b6b81bbd3b0967e73b4aaaa10a22",
+        "local_query.py": "4f37344fb04fc31bd3537598867b3a27d78d74dc26bae2dbe16a1a5330864f28",
+        "workbook_schema.py": "1f640f62ea196fdb4c038293ac0ee3b69c19cfe10b237891d7bec0bc46e951a1",
+        "privacy_filter.py": "3a65fc2029085463408981b36a7faa2cc8d8cdb19689b3628d11d42ba41b7f1c",
+        "table_program.py": "4033e2c10eabc02461f233ee21b35be7432df3f5f4809d6ff79213a9401561cd",
+        "request_router.py": "6cc7b450900d2042adf313a94c9c480717874d735fe3dfddcf37f3df7c0073ce",
+        "workbook_requirements.py": "cb463959fd78b875dc34481044e5779cf5ceec0760ea75fba6ae65c38f46e83d",
+        "workbook_flow.py": "530fecd628810ec97fd35ab4ff99cd0ce96489785676ea54a71a3059fd5b5cdd",
+        "workbook_intent.py": "39140c0dbe9064d7a687ec568f6bbd14a0be2378b806769fbfd658203248a983",
+        "model_info.py": "f5d5c937a391d1ffd1ab86374c1b8f0794f8fe67870a7b8a54bccb2834ede9ca",
+        "general_assistant.py": "709754ff9ab5e2aa6e81f1281c93212084793b1462d5bcc62dd5391cf5d6cdb8",
+        "workbook_revision.py": "3d7b6fc7542636488dc98421b5827a1f63f99efa50dc609a11347a48fa70b450",
+        "bge_embedding.py": "f51ee3f63d3e46fa08ac7de6ba7380b7e87d8ab8b627338439cf55714efd687d",
+        "general_tools.py": "79fe507a1d2a0a3e8c74cd9889bf4eaece3a01ba61c80b9b388fa1db47d1a7d0",
+        "table_semantics.py": "2d164c333efef02d6188d03d6112ba9834e37a4ed6ed6c95d82697b41eec6a43",
+        "document_tables.py": "ceee11df6cfd07453001aa57f1648a5967b557b322a8c9659e9e19e16f0dcfc7",
+        "workbook_export.py": "e9f2f52986ef54811e8d36eb4c492795557a6d8765885c91e0080e316d6d2c0f",
+        "workbook_qualifiers.py": "0e20093e35c7eb1b3c34516eed78ca76579d3ba5630f60487faacec2af7d4b45",
+        "fact_guard.py": "53150da937578d9188be8fd9d9c97b8668b92c5fff614145d12cefd34b39469e",
+        "privacy_models.py": "dd160bac36ddfb6d6393c5a8bdb90f95571d2e5bbc7374d6d43bcafad9e045b2",
+        "share_agent.py": "b41eb80b564c678fc99bb304391ac4432e78d01d5188cc9eebe7dff44db812d5",
+        "model_output.py": "83fba58b74d38dbe1c4b43f91695e0ea2c3ba2a79d6edc988ddc9c4a2db2c4c5",
+        "workspace_index.py": "4c9038a1c90e24a6b18d8fab96e017088abdd4c81009217e4cbc32f814aa8911",
+        "office_agent.py": "39d13ad150c3248fe7b3c0c6234549134097ce29f412a97c72ed8a775b3c6f69"
+      },
+      "files": [
+        {
+          "path": "qa/v0.26/examples/报价追问_结果.xlsx",
+          "sha256": "31c9c68d648a3da38fdbbbf5ee00bbbed0be4e6167fd49a5e3c3c34593f47818"
+        },
+        {
+          "path": "qa/v0.26/examples/报价追问_结果.csv",
+          "sha256": "74eed702da0025aa94ce798067011db5e454606ccf54bdb79e056e35d2c9895d"
+        }
+      ]
+    },
+    {
+      "case": "service_mixed_units",
+      "label": "服务统计",
+      "report": "qa/v0.26/reports/development-delivery-final-20261031T010450-54bb00.json",
+      "backend_hashes": {
+        "structured_output.py": "7960a53bd816fbd0f1940a7ab57a3c91da9fd56e4d09deb7c4639b1764deb268",
+        "worker.py": "879bf7cff54b9ad715236926c23899d1433a9d76f0add5dd6db61cb354bd8c8a",
+        "agent_control.py": "978c4603f58173303696e39db589596d92bc9cdb2df42587983f940073b55265",
+        "money_subtotals.py": "3f69877035132e87a756b16cfbb33876eb80d1d9f0edd424b9115debdd2a54ee",
+        "workbook_agent.py": "f47d2ea6c47861b97cc5665d9655497e7e93c54f9cc8c7484c2f767757df34a2",
+        "workbook_writing.py": "5ddd5a39dcb8557d077939a5f0d141147beac2287a457cfad0cf8475cf1826b9",
+        "workbook_edits.py": "7d8dd9169b2739fafa62622a2d2bb8f21518e76152541a761924b638c073d219",
+        "workbook_recovery.py": "ad905941301310128736730e5d931a49ff56d7610ece443ff12136ea731e05d3",
+        "personal_tools.py": "c8ed42cd828d67ebfbd03c2cdf144894b553cb009a0cf2beebe77f590af016e1",
+        "workbook_data.py": "bc6902625ecb69300fd8497fba0d8cb734ea8372ccf97a46d2c6d1a231e5b408",
+        "structured_tables.py": "3ecc86af63b74c35b9b768b780d06db7b33f6f435717457fa44ae382923798f8",
+        "runtime_policy.py": "422cef9d111bca844c37e71ace3b6be37fd9b6b81bbd3b0967e73b4aaaa10a22",
+        "local_query.py": "4f37344fb04fc31bd3537598867b3a27d78d74dc26bae2dbe16a1a5330864f28",
+        "workbook_schema.py": "1f640f62ea196fdb4c038293ac0ee3b69c19cfe10b237891d7bec0bc46e951a1",
+        "privacy_filter.py": "3a65fc2029085463408981b36a7faa2cc8d8cdb19689b3628d11d42ba41b7f1c",
+        "table_program.py": "4033e2c10eabc02461f233ee21b35be7432df3f5f4809d6ff79213a9401561cd",
+        "request_router.py": "6cc7b450900d2042adf313a94c9c480717874d735fe3dfddcf37f3df7c0073ce",
+        "workbook_requirements.py": "cb463959fd78b875dc34481044e5779cf5ceec0760ea75fba6ae65c38f46e83d",
+        "workbook_flow.py": "530fecd628810ec97fd35ab4ff99cd0ce96489785676ea54a71a3059fd5b5cdd",
+        "workbook_intent.py": "39140c0dbe9064d7a687ec568f6bbd14a0be2378b806769fbfd658203248a983",
+        "model_info.py": "f5d5c937a391d1ffd1ab86374c1b8f0794f8fe67870a7b8a54bccb2834ede9ca",
+        "general_assistant.py": "709754ff9ab5e2aa6e81f1281c93212084793b1462d5bcc62dd5391cf5d6cdb8",
+        "workbook_revision.py": "3d7b6fc7542636488dc98421b5827a1f63f99efa50dc609a11347a48fa70b450",
+        "bge_embedding.py": "f51ee3f63d3e46fa08ac7de6ba7380b7e87d8ab8b627338439cf55714efd687d",
+        "general_tools.py": "79fe507a1d2a0a3e8c74cd9889bf4eaece3a01ba61c80b9b388fa1db47d1a7d0",
+        "table_semantics.py": "2d164c333efef02d6188d03d6112ba9834e37a4ed6ed6c95d82697b41eec6a43",
+        "document_tables.py": "ceee11df6cfd07453001aa57f1648a5967b557b322a8c9659e9e19e16f0dcfc7",
+        "workbook_export.py": "e9f2f52986ef54811e8d36eb4c492795557a6d8765885c91e0080e316d6d2c0f",
+        "workbook_qualifiers.py": "0e20093e35c7eb1b3c34516eed78ca76579d3ba5630f60487faacec2af7d4b45",
+        "fact_guard.py": "53150da937578d9188be8fd9d9c97b8668b92c5fff614145d12cefd34b39469e",
+        "privacy_models.py": "dd160bac36ddfb6d6393c5a8bdb90f95571d2e5bbc7374d6d43bcafad9e045b2",
+        "share_agent.py": "b41eb80b564c678fc99bb304391ac4432e78d01d5188cc9eebe7dff44db812d5",
+        "model_output.py": "83fba58b74d38dbe1c4b43f91695e0ea2c3ba2a79d6edc988ddc9c4a2db2c4c5",
+        "workspace_index.py": "4c9038a1c90e24a6b18d8fab96e017088abdd4c81009217e4cbc32f814aa8911",
+        "office_agent.py": "39d13ad150c3248fe7b3c0c6234549134097ce29f412a97c72ed8a775b3c6f69"
+      },
+      "files": [
+        {
+          "path": "qa/v0.26/examples/服务统计_结果.xlsx",
+          "sha256": "47a7ab6ad6085c3ce9f70f71cf7b325e48953a88c81cb1c2dbbadfcd728f12f7"
+        },
+        {
+          "path": "qa/v0.26/examples/服务统计_结果.csv",
+          "sha256": "379e7efcb5193dcd04c0d54df0f3f151afbd4492351fb5c592492fea303561b1"
+        },
+        {
+          "path": "qa/v0.26/examples/服务统计_说明.docx",
+          "sha256": "c55c0baa0a4b5b0695a83a650f1b5f7e4d3549d8341123f4eca04cf07bd83017"
+        },
+        {
+          "path": "qa/v0.26/examples/服务统计_page-1.png",
+          "sha256": "3561ec20a770c1b4c83ca5ea6d67d7fb5fbc8c012ff2d88509ae5d56265abaae",
+          "rendered_page": true
+        },
+        {
+          "path": "qa/v0.26/examples/服务统计_说明.pdf",
+          "sha256": "43e09e23f6bab29fb689c889d8f8b6d74f78579fbe3f213ccea15c375b216f57"
+        },
+        {
+          "path": "qa/v0.26/examples/服务统计_说明.md",
+          "sha256": "c91177c659b2924c6cf367e7230514ed0d2e62a11a2d1f2d4d4515deed0f3a32"
+        }
+      ]
+    },
+    {
+      "case": "service_hours_followup",
+      "label": "累计工时追问",
+      "report": "qa/v0.26/reports/development-delivery-final-20261031T010450-54bb00.json",
+      "backend_hashes": {
+        "structured_output.py": "7960a53bd816fbd0f1940a7ab57a3c91da9fd56e4d09deb7c4639b1764deb268",
+        "worker.py": "879bf7cff54b9ad715236926c23899d1433a9d76f0add5dd6db61cb354bd8c8a",
+        "agent_control.py": "978c4603f58173303696e39db589596d92bc9cdb2df42587983f940073b55265",
+        "money_subtotals.py": "3f69877035132e87a756b16cfbb33876eb80d1d9f0edd424b9115debdd2a54ee",
+        "workbook_agent.py": "f47d2ea6c47861b97cc5665d9655497e7e93c54f9cc8c7484c2f767757df34a2",
+        "workbook_writing.py": "5ddd5a39dcb8557d077939a5f0d141147beac2287a457cfad0cf8475cf1826b9",
+        "workbook_edits.py": "7d8dd9169b2739fafa62622a2d2bb8f21518e76152541a761924b638c073d219",
+        "workbook_recovery.py": "ad905941301310128736730e5d931a49ff56d7610ece443ff12136ea731e05d3",
+        "personal_tools.py": "c8ed42cd828d67ebfbd03c2cdf144894b553cb009a0cf2beebe77f590af016e1",
+        "workbook_data.py": "bc6902625ecb69300fd8497fba0d8cb734ea8372ccf97a46d2c6d1a231e5b408",
+        "structured_tables.py": "3ecc86af63b74c35b9b768b780d06db7b33f6f435717457fa44ae382923798f8",
+        "runtime_policy.py": "422cef9d111bca844c37e71ace3b6be37fd9b6b81bbd3b0967e73b4aaaa10a22",
+        "local_query.py": "4f37344fb04fc31bd3537598867b3a27d78d74dc26bae2dbe16a1a5330864f28",
+        "workbook_schema.py": "1f640f62ea196fdb4c038293ac0ee3b69c19cfe10b237891d7bec0bc46e951a1",
+        "privacy_filter.py": "3a65fc2029085463408981b36a7faa2cc8d8cdb19689b3628d11d42ba41b7f1c",
+        "table_program.py": "4033e2c10eabc02461f233ee21b35be7432df3f5f4809d6ff79213a9401561cd",
+        "request_router.py": "6cc7b450900d2042adf313a94c9c480717874d735fe3dfddcf37f3df7c0073ce",
+        "workbook_requirements.py": "cb463959fd78b875dc34481044e5779cf5ceec0760ea75fba6ae65c38f46e83d",
+        "workbook_flow.py": "530fecd628810ec97fd35ab4ff99cd0ce96489785676ea54a71a3059fd5b5cdd",
+        "workbook_intent.py": "39140c0dbe9064d7a687ec568f6bbd14a0be2378b806769fbfd658203248a983",
+        "model_info.py": "f5d5c937a391d1ffd1ab86374c1b8f0794f8fe67870a7b8a54bccb2834ede9ca",
+        "general_assistant.py": "709754ff9ab5e2aa6e81f1281c93212084793b1462d5bcc62dd5391cf5d6cdb8",
+        "workbook_revision.py": "3d7b6fc7542636488dc98421b5827a1f63f99efa50dc609a11347a48fa70b450",
+        "bge_embedding.py": "f51ee3f63d3e46fa08ac7de6ba7380b7e87d8ab8b627338439cf55714efd687d",
+        "general_tools.py": "79fe507a1d2a0a3e8c74cd9889bf4eaece3a01ba61c80b9b388fa1db47d1a7d0",
+        "table_semantics.py": "2d164c333efef02d6188d03d6112ba9834e37a4ed6ed6c95d82697b41eec6a43",
+        "document_tables.py": "ceee11df6cfd07453001aa57f1648a5967b557b322a8c9659e9e19e16f0dcfc7",
+        "workbook_export.py": "e9f2f52986ef54811e8d36eb4c492795557a6d8765885c91e0080e316d6d2c0f",
+        "workbook_qualifiers.py": "0e20093e35c7eb1b3c34516eed78ca76579d3ba5630f60487faacec2af7d4b45",
+        "fact_guard.py": "53150da937578d9188be8fd9d9c97b8668b92c5fff614145d12cefd34b39469e",
+        "privacy_models.py": "dd160bac36ddfb6d6393c5a8bdb90f95571d2e5bbc7374d6d43bcafad9e045b2",
+        "share_agent.py": "b41eb80b564c678fc99bb304391ac4432e78d01d5188cc9eebe7dff44db812d5",
+        "model_output.py": "83fba58b74d38dbe1c4b43f91695e0ea2c3ba2a79d6edc988ddc9c4a2db2c4c5",
+        "workspace_index.py": "4c9038a1c90e24a6b18d8fab96e017088abdd4c81009217e4cbc32f814aa8911",
+        "office_agent.py": "39d13ad150c3248fe7b3c0c6234549134097ce29f412a97c72ed8a775b3c6f69"
+      },
+      "files": [
+        {
+          "path": "qa/v0.26/examples/累计工时追问_结果.xlsx",
+          "sha256": "6de22a3a5f9517433d63f0f7840146776f9e52bf59c695653b0f262ecda46494"
+        },
+        {
+          "path": "qa/v0.26/examples/累计工时追问_结果.csv",
+          "sha256": "360ac536161c8443120cf82aee941f7c4ed73edc848654ad49ba9aae68f9a7ed"
+        }
+      ]
+    },
+    {
+      "case": "event_latest_plan",
+      "label": "读书会最新方案",
+      "report": "qa/v0.26/reports/development-delivery-final-20261031T010450-54bb00.json",
+      "backend_hashes": {
+        "structured_output.py": "7960a53bd816fbd0f1940a7ab57a3c91da9fd56e4d09deb7c4639b1764deb268",
+        "worker.py": "879bf7cff54b9ad715236926c23899d1433a9d76f0add5dd6db61cb354bd8c8a",
+        "agent_control.py": "978c4603f58173303696e39db589596d92bc9cdb2df42587983f940073b55265",
+        "money_subtotals.py": "3f69877035132e87a756b16cfbb33876eb80d1d9f0edd424b9115debdd2a54ee",
+        "workbook_agent.py": "f47d2ea6c47861b97cc5665d9655497e7e93c54f9cc8c7484c2f767757df34a2",
+        "workbook_writing.py": "5ddd5a39dcb8557d077939a5f0d141147beac2287a457cfad0cf8475cf1826b9",
+        "workbook_edits.py": "7d8dd9169b2739fafa62622a2d2bb8f21518e76152541a761924b638c073d219",
+        "workbook_recovery.py": "ad905941301310128736730e5d931a49ff56d7610ece443ff12136ea731e05d3",
+        "personal_tools.py": "c8ed42cd828d67ebfbd03c2cdf144894b553cb009a0cf2beebe77f590af016e1",
+        "workbook_data.py": "bc6902625ecb69300fd8497fba0d8cb734ea8372ccf97a46d2c6d1a231e5b408",
+        "structured_tables.py": "3ecc86af63b74c35b9b768b780d06db7b33f6f435717457fa44ae382923798f8",
+        "runtime_policy.py": "422cef9d111bca844c37e71ace3b6be37fd9b6b81bbd3b0967e73b4aaaa10a22",
+        "local_query.py": "4f37344fb04fc31bd3537598867b3a27d78d74dc26bae2dbe16a1a5330864f28",
+        "workbook_schema.py": "1f640f62ea196fdb4c038293ac0ee3b69c19cfe10b237891d7bec0bc46e951a1",
+        "privacy_filter.py": "3a65fc2029085463408981b36a7faa2cc8d8cdb19689b3628d11d42ba41b7f1c",
+        "table_program.py": "4033e2c10eabc02461f233ee21b35be7432df3f5f4809d6ff79213a9401561cd",
+        "request_router.py": "6cc7b450900d2042adf313a94c9c480717874d735fe3dfddcf37f3df7c0073ce",
+        "workbook_requirements.py": "cb463959fd78b875dc34481044e5779cf5ceec0760ea75fba6ae65c38f46e83d",
+        "workbook_flow.py": "530fecd628810ec97fd35ab4ff99cd0ce96489785676ea54a71a3059fd5b5cdd",
+        "workbook_intent.py": "39140c0dbe9064d7a687ec568f6bbd14a0be2378b806769fbfd658203248a983",
+        "model_info.py": "f5d5c937a391d1ffd1ab86374c1b8f0794f8fe67870a7b8a54bccb2834ede9ca",
+        "general_assistant.py": "709754ff9ab5e2aa6e81f1281c93212084793b1462d5bcc62dd5391cf5d6cdb8",
+        "workbook_revision.py": "3d7b6fc7542636488dc98421b5827a1f63f99efa50dc609a11347a48fa70b450",
+        "bge_embedding.py": "f51ee3f63d3e46fa08ac7de6ba7380b7e87d8ab8b627338439cf55714efd687d",
+        "general_tools.py": "79fe507a1d2a0a3e8c74cd9889bf4eaece3a01ba61c80b9b388fa1db47d1a7d0",
+        "table_semantics.py": "2d164c333efef02d6188d03d6112ba9834e37a4ed6ed6c95d82697b41eec6a43",
+        "document_tables.py": "ceee11df6cfd07453001aa57f1648a5967b557b322a8c9659e9e19e16f0dcfc7",
+        "workbook_export.py": "e9f2f52986ef54811e8d36eb4c492795557a6d8765885c91e0080e316d6d2c0f",
+        "workbook_qualifiers.py": "0e20093e35c7eb1b3c34516eed78ca76579d3ba5630f60487faacec2af7d4b45",
+        "fact_guard.py": "53150da937578d9188be8fd9d9c97b8668b92c5fff614145d12cefd34b39469e",
+        "privacy_models.py": "dd160bac36ddfb6d6393c5a8bdb90f95571d2e5bbc7374d6d43bcafad9e045b2",
+        "share_agent.py": "b41eb80b564c678fc99bb304391ac4432e78d01d5188cc9eebe7dff44db812d5",
+        "model_output.py": "83fba58b74d38dbe1c4b43f91695e0ea2c3ba2a79d6edc988ddc9c4a2db2c4c5",
+        "workspace_index.py": "4c9038a1c90e24a6b18d8fab96e017088abdd4c81009217e4cbc32f814aa8911",
+        "office_agent.py": "39d13ad150c3248fe7b3c0c6234549134097ce29f412a97c72ed8a775b3c6f69"
+      },
+      "files": [
+        {
+          "path": "qa/v0.26/examples/读书会最新方案_说明.docx",
+          "sha256": "0db9da42f76f7f6b95317586d5f980675069f91f91d67273979342f758da9c90"
+        },
+        {
+          "path": "qa/v0.26/examples/读书会最新方案_page-1.png",
+          "sha256": "d4ea6aa5caf14b4a0a420fff9a3d7bedad908a4bef396da0f3e15a328e097822",
+          "rendered_page": true
+        },
+        {
+          "path": "qa/v0.26/examples/读书会最新方案_说明.pdf",
+          "sha256": "388c6f6c577992d135fc7123e585359b0a363161a43f4151d072ad278aeaffe0"
+        },
+        {
+          "path": "qa/v0.26/examples/读书会最新方案_说明.md",
+          "sha256": "1224b3141931468a3fc0d5cc9976939155f4d619b119c8868ad2e3ea8ae7df49"
+        }
+      ]
+    },
+    {
+      "case": "public_document_word",
+      "label": "公开需求摘要",
+      "report": "qa/v0.26/reports/development-delivery-final-20261031T010450-54bb00.json",
+      "backend_hashes": {
+        "structured_output.py": "7960a53bd816fbd0f1940a7ab57a3c91da9fd56e4d09deb7c4639b1764deb268",
+        "worker.py": "879bf7cff54b9ad715236926c23899d1433a9d76f0add5dd6db61cb354bd8c8a",
+        "agent_control.py": "978c4603f58173303696e39db589596d92bc9cdb2df42587983f940073b55265",
+        "money_subtotals.py": "3f69877035132e87a756b16cfbb33876eb80d1d9f0edd424b9115debdd2a54ee",
+        "workbook_agent.py": "f47d2ea6c47861b97cc5665d9655497e7e93c54f9cc8c7484c2f767757df34a2",
+        "workbook_writing.py": "5ddd5a39dcb8557d077939a5f0d141147beac2287a457cfad0cf8475cf1826b9",
+        "workbook_edits.py": "7d8dd9169b2739fafa62622a2d2bb8f21518e76152541a761924b638c073d219",
+        "workbook_recovery.py": "ad905941301310128736730e5d931a49ff56d7610ece443ff12136ea731e05d3",
+        "personal_tools.py": "c8ed42cd828d67ebfbd03c2cdf144894b553cb009a0cf2beebe77f590af016e1",
+        "workbook_data.py": "bc6902625ecb69300fd8497fba0d8cb734ea8372ccf97a46d2c6d1a231e5b408",
+        "structured_tables.py": "3ecc86af63b74c35b9b768b780d06db7b33f6f435717457fa44ae382923798f8",
+        "runtime_policy.py": "422cef9d111bca844c37e71ace3b6be37fd9b6b81bbd3b0967e73b4aaaa10a22",
+        "local_query.py": "4f37344fb04fc31bd3537598867b3a27d78d74dc26bae2dbe16a1a5330864f28",
+        "workbook_schema.py": "1f640f62ea196fdb4c038293ac0ee3b69c19cfe10b237891d7bec0bc46e951a1",
+        "privacy_filter.py": "3a65fc2029085463408981b36a7faa2cc8d8cdb19689b3628d11d42ba41b7f1c",
+        "table_program.py": "4033e2c10eabc02461f233ee21b35be7432df3f5f4809d6ff79213a9401561cd",
+        "request_router.py": "6cc7b450900d2042adf313a94c9c480717874d735fe3dfddcf37f3df7c0073ce",
+        "workbook_requirements.py": "cb463959fd78b875dc34481044e5779cf5ceec0760ea75fba6ae65c38f46e83d",
+        "workbook_flow.py": "530fecd628810ec97fd35ab4ff99cd0ce96489785676ea54a71a3059fd5b5cdd",
+        "workbook_intent.py": "39140c0dbe9064d7a687ec568f6bbd14a0be2378b806769fbfd658203248a983",
+        "model_info.py": "f5d5c937a391d1ffd1ab86374c1b8f0794f8fe67870a7b8a54bccb2834ede9ca",
+        "general_assistant.py": "709754ff9ab5e2aa6e81f1281c93212084793b1462d5bcc62dd5391cf5d6cdb8",
+        "workbook_revision.py": "3d7b6fc7542636488dc98421b5827a1f63f99efa50dc609a11347a48fa70b450",
+        "bge_embedding.py": "f51ee3f63d3e46fa08ac7de6ba7380b7e87d8ab8b627338439cf55714efd687d",
+        "general_tools.py": "79fe507a1d2a0a3e8c74cd9889bf4eaece3a01ba61c80b9b388fa1db47d1a7d0",
+        "table_semantics.py": "2d164c333efef02d6188d03d6112ba9834e37a4ed6ed6c95d82697b41eec6a43",
+        "document_tables.py": "ceee11df6cfd07453001aa57f1648a5967b557b322a8c9659e9e19e16f0dcfc7",
+        "workbook_export.py": "e9f2f52986ef54811e8d36eb4c492795557a6d8765885c91e0080e316d6d2c0f",
+        "workbook_qualifiers.py": "0e20093e35c7eb1b3c34516eed78ca76579d3ba5630f60487faacec2af7d4b45",
+        "fact_guard.py": "53150da937578d9188be8fd9d9c97b8668b92c5fff614145d12cefd34b39469e",
+        "privacy_models.py": "dd160bac36ddfb6d6393c5a8bdb90f95571d2e5bbc7374d6d43bcafad9e045b2",
+        "share_agent.py": "b41eb80b564c678fc99bb304391ac4432e78d01d5188cc9eebe7dff44db812d5",
+        "model_output.py": "83fba58b74d38dbe1c4b43f91695e0ea2c3ba2a79d6edc988ddc9c4a2db2c4c5",
+        "workspace_index.py": "4c9038a1c90e24a6b18d8fab96e017088abdd4c81009217e4cbc32f814aa8911",
+        "office_agent.py": "39d13ad150c3248fe7b3c0c6234549134097ce29f412a97c72ed8a775b3c6f69"
+      },
+      "files": [
+        {
+          "path": "qa/v0.26/examples/公开需求摘要_结果.xlsx",
+          "sha256": "37160631081bdd146527bbb986a01dc3c88a4e455e4c955c42ea932c4d76d55d"
+        },
+        {
+          "path": "qa/v0.26/examples/公开需求摘要_结果.csv",
+          "sha256": "405b66d6ba348f28320b2e7f94512769ef8eda045a8f3eac6ff77956fe71a6d2"
+        },
+        {
+          "path": "qa/v0.26/examples/公开需求摘要_说明.docx",
+          "sha256": "ebaa0c824a842c8f5a63f6d299ff8ed8cf6eef95f4a04993363efda72b480665"
+        },
+        {
+          "path": "qa/v0.26/examples/公开需求摘要_page-1.png",
+          "sha256": "1d6acdff8a0c7d6d3598e38a707b32e4999a9e990ffe4b0f4ec84993d731d5f5",
+          "rendered_page": true
+        },
+        {
+          "path": "qa/v0.26/examples/公开需求摘要_说明.pdf",
+          "sha256": "eba7040917b154a3a56e55a46fdffe1d5b4f84fd4d4f5c5aceeb3847d86ae815"
+        },
+        {
+          "path": "qa/v0.26/examples/公开需求摘要_说明.md",
+          "sha256": "a6201fe1b28b6880a86b4fe44182fb37f0ba0ab3cdb9e366e932cef1af9261a8"
+        }
+      ]
+    },
+    {
+      "case": "reserved_training",
+      "label": "季度培训",
+      "report": "qa/v0.26/reports/delivery-final-20261031T010304-aa26a7.json",
+      "backend_hashes": {
+        "structured_output.py": "7960a53bd816fbd0f1940a7ab57a3c91da9fd56e4d09deb7c4639b1764deb268",
+        "worker.py": "879bf7cff54b9ad715236926c23899d1433a9d76f0add5dd6db61cb354bd8c8a",
+        "agent_control.py": "978c4603f58173303696e39db589596d92bc9cdb2df42587983f940073b55265",
+        "money_subtotals.py": "3f69877035132e87a756b16cfbb33876eb80d1d9f0edd424b9115debdd2a54ee",
+        "workbook_agent.py": "f47d2ea6c47861b97cc5665d9655497e7e93c54f9cc8c7484c2f767757df34a2",
+        "workbook_writing.py": "5ddd5a39dcb8557d077939a5f0d141147beac2287a457cfad0cf8475cf1826b9",
+        "workbook_edits.py": "7d8dd9169b2739fafa62622a2d2bb8f21518e76152541a761924b638c073d219",
+        "workbook_recovery.py": "ad905941301310128736730e5d931a49ff56d7610ece443ff12136ea731e05d3",
+        "personal_tools.py": "c8ed42cd828d67ebfbd03c2cdf144894b553cb009a0cf2beebe77f590af016e1",
+        "workbook_data.py": "bc6902625ecb69300fd8497fba0d8cb734ea8372ccf97a46d2c6d1a231e5b408",
+        "structured_tables.py": "3ecc86af63b74c35b9b768b780d06db7b33f6f435717457fa44ae382923798f8",
+        "runtime_policy.py": "422cef9d111bca844c37e71ace3b6be37fd9b6b81bbd3b0967e73b4aaaa10a22",
+        "local_query.py": "4f37344fb04fc31bd3537598867b3a27d78d74dc26bae2dbe16a1a5330864f28",
+        "workbook_schema.py": "1f640f62ea196fdb4c038293ac0ee3b69c19cfe10b237891d7bec0bc46e951a1",
+        "privacy_filter.py": "3a65fc2029085463408981b36a7faa2cc8d8cdb19689b3628d11d42ba41b7f1c",
+        "table_program.py": "4033e2c10eabc02461f233ee21b35be7432df3f5f4809d6ff79213a9401561cd",
+        "request_router.py": "6cc7b450900d2042adf313a94c9c480717874d735fe3dfddcf37f3df7c0073ce",
+        "workbook_requirements.py": "cb463959fd78b875dc34481044e5779cf5ceec0760ea75fba6ae65c38f46e83d",
+        "workbook_flow.py": "530fecd628810ec97fd35ab4ff99cd0ce96489785676ea54a71a3059fd5b5cdd",
+        "workbook_intent.py": "39140c0dbe9064d7a687ec568f6bbd14a0be2378b806769fbfd658203248a983",
+        "model_info.py": "f5d5c937a391d1ffd1ab86374c1b8f0794f8fe67870a7b8a54bccb2834ede9ca",
+        "general_assistant.py": "709754ff9ab5e2aa6e81f1281c93212084793b1462d5bcc62dd5391cf5d6cdb8",
+        "workbook_revision.py": "3d7b6fc7542636488dc98421b5827a1f63f99efa50dc609a11347a48fa70b450",
+        "bge_embedding.py": "f51ee3f63d3e46fa08ac7de6ba7380b7e87d8ab8b627338439cf55714efd687d",
+        "general_tools.py": "79fe507a1d2a0a3e8c74cd9889bf4eaece3a01ba61c80b9b388fa1db47d1a7d0",
+        "table_semantics.py": "2d164c333efef02d6188d03d6112ba9834e37a4ed6ed6c95d82697b41eec6a43",
+        "document_tables.py": "ceee11df6cfd07453001aa57f1648a5967b557b322a8c9659e9e19e16f0dcfc7",
+        "workbook_export.py": "e9f2f52986ef54811e8d36eb4c492795557a6d8765885c91e0080e316d6d2c0f",
+        "workbook_qualifiers.py": "0e20093e35c7eb1b3c34516eed78ca76579d3ba5630f60487faacec2af7d4b45",
+        "fact_guard.py": "53150da937578d9188be8fd9d9c97b8668b92c5fff614145d12cefd34b39469e",
+        "privacy_models.py": "dd160bac36ddfb6d6393c5a8bdb90f95571d2e5bbc7374d6d43bcafad9e045b2",
+        "share_agent.py": "b41eb80b564c678fc99bb304391ac4432e78d01d5188cc9eebe7dff44db812d5",
+        "model_output.py": "83fba58b74d38dbe1c4b43f91695e0ea2c3ba2a79d6edc988ddc9c4a2db2c4c5",
+        "workspace_index.py": "4c9038a1c90e24a6b18d8fab96e017088abdd4c81009217e4cbc32f814aa8911",
+        "office_agent.py": "39d13ad150c3248fe7b3c0c6234549134097ce29f412a97c72ed8a775b3c6f69"
+      },
+      "files": [
+        {
+          "path": "qa/v0.26/examples/季度培训_结果.xlsx",
+          "sha256": "b9ed1b4604e36a2588fd4cd238b2f6ae1eaec9db332440e51ca06e403fc76e7a"
+        },
+        {
+          "path": "qa/v0.26/examples/季度培训_结果.csv",
+          "sha256": "b8b55b356accc6f4ee8fbadf2f6ffb7517081cb69ce5bc8d19f9a3dd5b031ab7"
+        },
+        {
+          "path": "qa/v0.26/examples/季度培训_说明.docx",
+          "sha256": "2b4faa259dfa9fbac1a5e61cbc8e2cf2ec01760b2a81ec16af6b622b561f2589"
+        },
+        {
+          "path": "qa/v0.26/examples/季度培训_page-1.png",
+          "sha256": "5555369b67b384f30cf15259523ff8f449bb0ab03845ef7c44a41a2049160a66",
+          "rendered_page": true
+        },
+        {
+          "path": "qa/v0.26/examples/季度培训_说明.pdf",
+          "sha256": "d3e085ac767565cb54e9b6726bacbac3fd32c5ffdbfba65a6107d41f8416943e"
+        },
+        {
+          "path": "qa/v0.26/examples/季度培训_说明.md",
+          "sha256": "26a28d878fb731cbc79444a213350571f1e2c3c82dea5db176f5f26a4cd0c950"
+        }
+      ]
+    },
+    {
+      "case": "reserved_training_march",
+      "label": "三月培训追问",
+      "report": "qa/v0.26/reports/delivery-final-20261031T010304-aa26a7.json",
+      "backend_hashes": {
+        "structured_output.py": "7960a53bd816fbd0f1940a7ab57a3c91da9fd56e4d09deb7c4639b1764deb268",
+        "worker.py": "879bf7cff54b9ad715236926c23899d1433a9d76f0add5dd6db61cb354bd8c8a",
+        "agent_control.py": "978c4603f58173303696e39db589596d92bc9cdb2df42587983f940073b55265",
+        "money_subtotals.py": "3f69877035132e87a756b16cfbb33876eb80d1d9f0edd424b9115debdd2a54ee",
+        "workbook_agent.py": "f47d2ea6c47861b97cc5665d9655497e7e93c54f9cc8c7484c2f767757df34a2",
+        "workbook_writing.py": "5ddd5a39dcb8557d077939a5f0d141147beac2287a457cfad0cf8475cf1826b9",
+        "workbook_edits.py": "7d8dd9169b2739fafa62622a2d2bb8f21518e76152541a761924b638c073d219",
+        "workbook_recovery.py": "ad905941301310128736730e5d931a49ff56d7610ece443ff12136ea731e05d3",
+        "personal_tools.py": "c8ed42cd828d67ebfbd03c2cdf144894b553cb009a0cf2beebe77f590af016e1",
+        "workbook_data.py": "bc6902625ecb69300fd8497fba0d8cb734ea8372ccf97a46d2c6d1a231e5b408",
+        "structured_tables.py": "3ecc86af63b74c35b9b768b780d06db7b33f6f435717457fa44ae382923798f8",
+        "runtime_policy.py": "422cef9d111bca844c37e71ace3b6be37fd9b6b81bbd3b0967e73b4aaaa10a22",
+        "local_query.py": "4f37344fb04fc31bd3537598867b3a27d78d74dc26bae2dbe16a1a5330864f28",
+        "workbook_schema.py": "1f640f62ea196fdb4c038293ac0ee3b69c19cfe10b237891d7bec0bc46e951a1",
+        "privacy_filter.py": "3a65fc2029085463408981b36a7faa2cc8d8cdb19689b3628d11d42ba41b7f1c",
+        "table_program.py": "4033e2c10eabc02461f233ee21b35be7432df3f5f4809d6ff79213a9401561cd",
+        "request_router.py": "6cc7b450900d2042adf313a94c9c480717874d735fe3dfddcf37f3df7c0073ce",
+        "workbook_requirements.py": "cb463959fd78b875dc34481044e5779cf5ceec0760ea75fba6ae65c38f46e83d",
+        "workbook_flow.py": "530fecd628810ec97fd35ab4ff99cd0ce96489785676ea54a71a3059fd5b5cdd",
+        "workbook_intent.py": "39140c0dbe9064d7a687ec568f6bbd14a0be2378b806769fbfd658203248a983",
+        "model_info.py": "f5d5c937a391d1ffd1ab86374c1b8f0794f8fe67870a7b8a54bccb2834ede9ca",
+        "general_assistant.py": "709754ff9ab5e2aa6e81f1281c93212084793b1462d5bcc62dd5391cf5d6cdb8",
+        "workbook_revision.py": "3d7b6fc7542636488dc98421b5827a1f63f99efa50dc609a11347a48fa70b450",
+        "bge_embedding.py": "f51ee3f63d3e46fa08ac7de6ba7380b7e87d8ab8b627338439cf55714efd687d",
+        "general_tools.py": "79fe507a1d2a0a3e8c74cd9889bf4eaece3a01ba61c80b9b388fa1db47d1a7d0",
+        "table_semantics.py": "2d164c333efef02d6188d03d6112ba9834e37a4ed6ed6c95d82697b41eec6a43",
+        "document_tables.py": "ceee11df6cfd07453001aa57f1648a5967b557b322a8c9659e9e19e16f0dcfc7",
+        "workbook_export.py": "e9f2f52986ef54811e8d36eb4c492795557a6d8765885c91e0080e316d6d2c0f",
+        "workbook_qualifiers.py": "0e20093e35c7eb1b3c34516eed78ca76579d3ba5630f60487faacec2af7d4b45",
+        "fact_guard.py": "53150da937578d9188be8fd9d9c97b8668b92c5fff614145d12cefd34b39469e",
+        "privacy_models.py": "dd160bac36ddfb6d6393c5a8bdb90f95571d2e5bbc7374d6d43bcafad9e045b2",
+        "share_agent.py": "b41eb80b564c678fc99bb304391ac4432e78d01d5188cc9eebe7dff44db812d5",
+        "model_output.py": "83fba58b74d38dbe1c4b43f91695e0ea2c3ba2a79d6edc988ddc9c4a2db2c4c5",
+        "workspace_index.py": "4c9038a1c90e24a6b18d8fab96e017088abdd4c81009217e4cbc32f814aa8911",
+        "office_agent.py": "39d13ad150c3248fe7b3c0c6234549134097ce29f412a97c72ed8a775b3c6f69"
+      },
+      "files": [
+        {
+          "path": "qa/v0.26/examples/三月培训追问_结果.xlsx",
+          "sha256": "834ad06a31848612faa91a3ad5ca1d53e4493a69c934f2f4797c31492c03ac1b"
+        },
+        {
+          "path": "qa/v0.26/examples/三月培训追问_结果.csv",
+          "sha256": "da98265a9f62ae3b08ed31d73d170c8d1e03b797e63534ee3e030cebb498868f"
+        }
+      ]
+    },
+    {
+      "case": "reserved_dispatch",
+      "label": "配送统计",
+      "report": "qa/v0.26/reports/delivery-final-20261031T010304-aa26a7.json",
+      "backend_hashes": {
+        "structured_output.py": "7960a53bd816fbd0f1940a7ab57a3c91da9fd56e4d09deb7c4639b1764deb268",
+        "worker.py": "879bf7cff54b9ad715236926c23899d1433a9d76f0add5dd6db61cb354bd8c8a",
+        "agent_control.py": "978c4603f58173303696e39db589596d92bc9cdb2df42587983f940073b55265",
+        "money_subtotals.py": "3f69877035132e87a756b16cfbb33876eb80d1d9f0edd424b9115debdd2a54ee",
+        "workbook_agent.py": "f47d2ea6c47861b97cc5665d9655497e7e93c54f9cc8c7484c2f767757df34a2",
+        "workbook_writing.py": "5ddd5a39dcb8557d077939a5f0d141147beac2287a457cfad0cf8475cf1826b9",
+        "workbook_edits.py": "7d8dd9169b2739fafa62622a2d2bb8f21518e76152541a761924b638c073d219",
+        "workbook_recovery.py": "ad905941301310128736730e5d931a49ff56d7610ece443ff12136ea731e05d3",
+        "personal_tools.py": "c8ed42cd828d67ebfbd03c2cdf144894b553cb009a0cf2beebe77f590af016e1",
+        "workbook_data.py": "bc6902625ecb69300fd8497fba0d8cb734ea8372ccf97a46d2c6d1a231e5b408",
+        "structured_tables.py": "3ecc86af63b74c35b9b768b780d06db7b33f6f435717457fa44ae382923798f8",
+        "runtime_policy.py": "422cef9d111bca844c37e71ace3b6be37fd9b6b81bbd3b0967e73b4aaaa10a22",
+        "local_query.py": "4f37344fb04fc31bd3537598867b3a27d78d74dc26bae2dbe16a1a5330864f28",
+        "workbook_schema.py": "1f640f62ea196fdb4c038293ac0ee3b69c19cfe10b237891d7bec0bc46e951a1",
+        "privacy_filter.py": "3a65fc2029085463408981b36a7faa2cc8d8cdb19689b3628d11d42ba41b7f1c",
+        "table_program.py": "4033e2c10eabc02461f233ee21b35be7432df3f5f4809d6ff79213a9401561cd",
+        "request_router.py": "6cc7b450900d2042adf313a94c9c480717874d735fe3dfddcf37f3df7c0073ce",
+        "workbook_requirements.py": "cb463959fd78b875dc34481044e5779cf5ceec0760ea75fba6ae65c38f46e83d",
+        "workbook_flow.py": "530fecd628810ec97fd35ab4ff99cd0ce96489785676ea54a71a3059fd5b5cdd",
+        "workbook_intent.py": "39140c0dbe9064d7a687ec568f6bbd14a0be2378b806769fbfd658203248a983",
+        "model_info.py": "f5d5c937a391d1ffd1ab86374c1b8f0794f8fe67870a7b8a54bccb2834ede9ca",
+        "general_assistant.py": "709754ff9ab5e2aa6e81f1281c93212084793b1462d5bcc62dd5391cf5d6cdb8",
+        "workbook_revision.py": "3d7b6fc7542636488dc98421b5827a1f63f99efa50dc609a11347a48fa70b450",
+        "bge_embedding.py": "f51ee3f63d3e46fa08ac7de6ba7380b7e87d8ab8b627338439cf55714efd687d",
+        "general_tools.py": "79fe507a1d2a0a3e8c74cd9889bf4eaece3a01ba61c80b9b388fa1db47d1a7d0",
+        "table_semantics.py": "2d164c333efef02d6188d03d6112ba9834e37a4ed6ed6c95d82697b41eec6a43",
+        "document_tables.py": "ceee11df6cfd07453001aa57f1648a5967b557b322a8c9659e9e19e16f0dcfc7",
+        "workbook_export.py": "e9f2f52986ef54811e8d36eb4c492795557a6d8765885c91e0080e316d6d2c0f",
+        "workbook_qualifiers.py": "0e20093e35c7eb1b3c34516eed78ca76579d3ba5630f60487faacec2af7d4b45",
+        "fact_guard.py": "53150da937578d9188be8fd9d9c97b8668b92c5fff614145d12cefd34b39469e",
+        "privacy_models.py": "dd160bac36ddfb6d6393c5a8bdb90f95571d2e5bbc7374d6d43bcafad9e045b2",
+        "share_agent.py": "b41eb80b564c678fc99bb304391ac4432e78d01d5188cc9eebe7dff44db812d5",
+        "model_output.py": "83fba58b74d38dbe1c4b43f91695e0ea2c3ba2a79d6edc988ddc9c4a2db2c4c5",
+        "workspace_index.py": "4c9038a1c90e24a6b18d8fab96e017088abdd4c81009217e4cbc32f814aa8911",
+        "office_agent.py": "39d13ad150c3248fe7b3c0c6234549134097ce29f412a97c72ed8a775b3c6f69"
+      },
+      "files": [
+        {
+          "path": "qa/v0.26/examples/配送统计_结果.xlsx",
+          "sha256": "8f483996bb720e0f8a440c5cb97dd93430695dc6d0c250a8611c291df9dc4f73"
+        },
+        {
+          "path": "qa/v0.26/examples/配送统计_结果.csv",
+          "sha256": "3ac6fdde05d0ceff964796f6410125443cf72256fba9962cc92953330a5087bf"
+        },
+        {
+          "path": "qa/v0.26/examples/配送统计_说明.docx",
+          "sha256": "2f8e10c11570698bf5f69da0e4ea5b50d792e9295de636286a2b2cd1fb325951"
+        },
+        {
+          "path": "qa/v0.26/examples/配送统计_page-1.png",
+          "sha256": "6b3d0f8b2c8ac412cde62aeede3cd277db72f80d933b2cc85d145b7cbfab0ed5",
+          "rendered_page": true
+        },
+        {
+          "path": "qa/v0.26/examples/配送统计_说明.pdf",
+          "sha256": "b9c25416afadab9b9fa80ef9062fce1d2f4d0fa4972b247cd00b0d0d9057dca3"
+        },
+        {
+          "path": "qa/v0.26/examples/配送统计_说明.md",
+          "sha256": "4d500c1ceef6c584eb422f8c6ce00599b43e9be88f32d89ca9332b3b550063c2"
+        }
+      ]
+    },
+    {
+      "case": "reserved_dispatch_north",
+      "label": "聊天后返回北区",
+      "report": "qa/v0.26/reports/delivery-final-20261031T010304-aa26a7.json",
+      "backend_hashes": {
+        "structured_output.py": "7960a53bd816fbd0f1940a7ab57a3c91da9fd56e4d09deb7c4639b1764deb268",
+        "worker.py": "879bf7cff54b9ad715236926c23899d1433a9d76f0add5dd6db61cb354bd8c8a",
+        "agent_control.py": "978c4603f58173303696e39db589596d92bc9cdb2df42587983f940073b55265",
+        "money_subtotals.py": "3f69877035132e87a756b16cfbb33876eb80d1d9f0edd424b9115debdd2a54ee",
+        "workbook_agent.py": "f47d2ea6c47861b97cc5665d9655497e7e93c54f9cc8c7484c2f767757df34a2",
+        "workbook_writing.py": "5ddd5a39dcb8557d077939a5f0d141147beac2287a457cfad0cf8475cf1826b9",
+        "workbook_edits.py": "7d8dd9169b2739fafa62622a2d2bb8f21518e76152541a761924b638c073d219",
+        "workbook_recovery.py": "ad905941301310128736730e5d931a49ff56d7610ece443ff12136ea731e05d3",
+        "personal_tools.py": "c8ed42cd828d67ebfbd03c2cdf144894b553cb009a0cf2beebe77f590af016e1",
+        "workbook_data.py": "bc6902625ecb69300fd8497fba0d8cb734ea8372ccf97a46d2c6d1a231e5b408",
+        "structured_tables.py": "3ecc86af63b74c35b9b768b780d06db7b33f6f435717457fa44ae382923798f8",
+        "runtime_policy.py": "422cef9d111bca844c37e71ace3b6be37fd9b6b81bbd3b0967e73b4aaaa10a22",
+        "local_query.py": "4f37344fb04fc31bd3537598867b3a27d78d74dc26bae2dbe16a1a5330864f28",
+        "workbook_schema.py": "1f640f62ea196fdb4c038293ac0ee3b69c19cfe10b237891d7bec0bc46e951a1",
+        "privacy_filter.py": "3a65fc2029085463408981b36a7faa2cc8d8cdb19689b3628d11d42ba41b7f1c",
+        "table_program.py": "4033e2c10eabc02461f233ee21b35be7432df3f5f4809d6ff79213a9401561cd",
+        "request_router.py": "6cc7b450900d2042adf313a94c9c480717874d735fe3dfddcf37f3df7c0073ce",
+        "workbook_requirements.py": "cb463959fd78b875dc34481044e5779cf5ceec0760ea75fba6ae65c38f46e83d",
+        "workbook_flow.py": "530fecd628810ec97fd35ab4ff99cd0ce96489785676ea54a71a3059fd5b5cdd",
+        "workbook_intent.py": "39140c0dbe9064d7a687ec568f6bbd14a0be2378b806769fbfd658203248a983",
+        "model_info.py": "f5d5c937a391d1ffd1ab86374c1b8f0794f8fe67870a7b8a54bccb2834ede9ca",
+        "general_assistant.py": "709754ff9ab5e2aa6e81f1281c93212084793b1462d5bcc62dd5391cf5d6cdb8",
+        "workbook_revision.py": "3d7b6fc7542636488dc98421b5827a1f63f99efa50dc609a11347a48fa70b450",
+        "bge_embedding.py": "f51ee3f63d3e46fa08ac7de6ba7380b7e87d8ab8b627338439cf55714efd687d",
+        "general_tools.py": "79fe507a1d2a0a3e8c74cd9889bf4eaece3a01ba61c80b9b388fa1db47d1a7d0",
+        "table_semantics.py": "2d164c333efef02d6188d03d6112ba9834e37a4ed6ed6c95d82697b41eec6a43",
+        "document_tables.py": "ceee11df6cfd07453001aa57f1648a5967b557b322a8c9659e9e19e16f0dcfc7",
+        "workbook_export.py": "e9f2f52986ef54811e8d36eb4c492795557a6d8765885c91e0080e316d6d2c0f",
+        "workbook_qualifiers.py": "0e20093e35c7eb1b3c34516eed78ca76579d3ba5630f60487faacec2af7d4b45",
+        "fact_guard.py": "53150da937578d9188be8fd9d9c97b8668b92c5fff614145d12cefd34b39469e",
+        "privacy_models.py": "dd160bac36ddfb6d6393c5a8bdb90f95571d2e5bbc7374d6d43bcafad9e045b2",
+        "share_agent.py": "b41eb80b564c678fc99bb304391ac4432e78d01d5188cc9eebe7dff44db812d5",
+        "model_output.py": "83fba58b74d38dbe1c4b43f91695e0ea2c3ba2a79d6edc988ddc9c4a2db2c4c5",
+        "workspace_index.py": "4c9038a1c90e24a6b18d8fab96e017088abdd4c81009217e4cbc32f814aa8911",
+        "office_agent.py": "39d13ad150c3248fe7b3c0c6234549134097ce29f412a97c72ed8a775b3c6f69"
+      },
+      "files": [
+        {
+          "path": "qa/v0.26/examples/聊天后返回北区_结果.xlsx",
+          "sha256": "621e6cb70e849e336d23c81be999e16a92d35a429d43df94c7563f800c5633a9"
+        },
+        {
+          "path": "qa/v0.26/examples/聊天后返回北区_结果.csv",
+          "sha256": "c02c000e04681cf25b930a59c6a57b071499334516b7fd36d978b847617cb742"
+        }
+      ]
+    },
+    {
+      "case": "transfer_support",
+      "label": "新支持日志",
+      "report": "qa/v0.26/reports/transfer-first-20261031T004633-632df0.json",
+      "backend_hashes": {
+        "structured_output.py": "7960a53bd816fbd0f1940a7ab57a3c91da9fd56e4d09deb7c4639b1764deb268",
+        "worker.py": "879bf7cff54b9ad715236926c23899d1433a9d76f0add5dd6db61cb354bd8c8a",
+        "agent_control.py": "978c4603f58173303696e39db589596d92bc9cdb2df42587983f940073b55265",
+        "money_subtotals.py": "3f69877035132e87a756b16cfbb33876eb80d1d9f0edd424b9115debdd2a54ee",
+        "workbook_agent.py": "52aecbad014be6b880ddb1bb85d99aa9724a51af0205c099724443215ef699a6",
+        "workbook_writing.py": "5ddd5a39dcb8557d077939a5f0d141147beac2287a457cfad0cf8475cf1826b9",
+        "workbook_edits.py": "7d8dd9169b2739fafa62622a2d2bb8f21518e76152541a761924b638c073d219",
+        "workbook_recovery.py": "ad905941301310128736730e5d931a49ff56d7610ece443ff12136ea731e05d3",
+        "personal_tools.py": "c8ed42cd828d67ebfbd03c2cdf144894b553cb009a0cf2beebe77f590af016e1",
+        "workbook_data.py": "bc6902625ecb69300fd8497fba0d8cb734ea8372ccf97a46d2c6d1a231e5b408",
+        "structured_tables.py": "3ecc86af63b74c35b9b768b780d06db7b33f6f435717457fa44ae382923798f8",
+        "runtime_policy.py": "422cef9d111bca844c37e71ace3b6be37fd9b6b81bbd3b0967e73b4aaaa10a22",
+        "local_query.py": "4f37344fb04fc31bd3537598867b3a27d78d74dc26bae2dbe16a1a5330864f28",
+        "workbook_schema.py": "1f640f62ea196fdb4c038293ac0ee3b69c19cfe10b237891d7bec0bc46e951a1",
+        "privacy_filter.py": "3a65fc2029085463408981b36a7faa2cc8d8cdb19689b3628d11d42ba41b7f1c",
+        "table_program.py": "4033e2c10eabc02461f233ee21b35be7432df3f5f4809d6ff79213a9401561cd",
+        "request_router.py": "6cc7b450900d2042adf313a94c9c480717874d735fe3dfddcf37f3df7c0073ce",
+        "workbook_requirements.py": "cb463959fd78b875dc34481044e5779cf5ceec0760ea75fba6ae65c38f46e83d",
+        "workbook_flow.py": "06319c8f883d1edffd2367ec9620309426088e3319407deea8d59aeceeee4eb5",
+        "workbook_intent.py": "226503ed58b860096200b57a693a3c921fe9124f003b0801cdbbf5d7b128fda0",
+        "model_info.py": "f5d5c937a391d1ffd1ab86374c1b8f0794f8fe67870a7b8a54bccb2834ede9ca",
+        "general_assistant.py": "709754ff9ab5e2aa6e81f1281c93212084793b1462d5bcc62dd5391cf5d6cdb8",
+        "workbook_revision.py": "3d7b6fc7542636488dc98421b5827a1f63f99efa50dc609a11347a48fa70b450",
+        "bge_embedding.py": "f51ee3f63d3e46fa08ac7de6ba7380b7e87d8ab8b627338439cf55714efd687d",
+        "general_tools.py": "79fe507a1d2a0a3e8c74cd9889bf4eaece3a01ba61c80b9b388fa1db47d1a7d0",
+        "table_semantics.py": "2d164c333efef02d6188d03d6112ba9834e37a4ed6ed6c95d82697b41eec6a43",
+        "document_tables.py": "ceee11df6cfd07453001aa57f1648a5967b557b322a8c9659e9e19e16f0dcfc7",
+        "workbook_export.py": "e9f2f52986ef54811e8d36eb4c492795557a6d8765885c91e0080e316d6d2c0f",
+        "workbook_qualifiers.py": "0e20093e35c7eb1b3c34516eed78ca76579d3ba5630f60487faacec2af7d4b45",
+        "fact_guard.py": "53150da937578d9188be8fd9d9c97b8668b92c5fff614145d12cefd34b39469e",
+        "privacy_models.py": "dd160bac36ddfb6d6393c5a8bdb90f95571d2e5bbc7374d6d43bcafad9e045b2",
+        "share_agent.py": "b41eb80b564c678fc99bb304391ac4432e78d01d5188cc9eebe7dff44db812d5",
+        "model_output.py": "83fba58b74d38dbe1c4b43f91695e0ea2c3ba2a79d6edc988ddc9c4a2db2c4c5",
+        "workspace_index.py": "4c9038a1c90e24a6b18d8fab96e017088abdd4c81009217e4cbc32f814aa8911",
+        "office_agent.py": "4189c5a6a40638b2cd30cbbd375e506e451b64ef9e86891a34a1a41dade699cb"
+      },
+      "files": [
+        {
+          "path": "qa/v0.26/examples/新支持日志_结果.xlsx",
+          "sha256": "1a56b1634fdcaabac1c8ab933e5aaa1833ce67f7f9935530a2f7e7250b29a2bb"
+        },
+        {
+          "path": "qa/v0.26/examples/新支持日志_结果.csv",
+          "sha256": "8cacf67460ca55655e9ee97f8e85219bfaf36c050f7be876a3d8ca5d3c5ff877"
+        },
+        {
+          "path": "qa/v0.26/examples/新支持日志_说明.docx",
+          "sha256": "ee4ae4ae69989788dd30fc66ed1ee137dad60a083c5711d0db7efee86a6a3d66"
+        },
+        {
+          "path": "qa/v0.26/examples/新支持日志_page-1.png",
+          "sha256": "81ffaf7790e7940a617d366b2682cbf00f59fc3b0977bab3040be94e1eb2a7ee",
+          "rendered_page": true
+        },
+        {
+          "path": "qa/v0.26/examples/新支持日志_说明.pdf",
+          "sha256": "7b4acd7a108ac5acfdb4c5858693133a9cd6855dfb06b90c8a5e1ecbb0ad8a25"
+        },
+        {
+          "path": "qa/v0.26/examples/新支持日志_说明.md",
+          "sha256": "a8638e25effbd59e0d7c297481f58d8d589edc6f53da8e99eb8c0c92b19c6143"
+        }
+      ]
+    },
+    {
+      "case": "transfer_top_followup",
+      "label": "第一名追问",
+      "report": "qa/v0.26/reports/transfer-first-20261031T004633-632df0.json",
+      "backend_hashes": {
+        "structured_output.py": "7960a53bd816fbd0f1940a7ab57a3c91da9fd56e4d09deb7c4639b1764deb268",
+        "worker.py": "879bf7cff54b9ad715236926c23899d1433a9d76f0add5dd6db61cb354bd8c8a",
+        "agent_control.py": "978c4603f58173303696e39db589596d92bc9cdb2df42587983f940073b55265",
+        "money_subtotals.py": "3f69877035132e87a756b16cfbb33876eb80d1d9f0edd424b9115debdd2a54ee",
+        "workbook_agent.py": "52aecbad014be6b880ddb1bb85d99aa9724a51af0205c099724443215ef699a6",
+        "workbook_writing.py": "5ddd5a39dcb8557d077939a5f0d141147beac2287a457cfad0cf8475cf1826b9",
+        "workbook_edits.py": "7d8dd9169b2739fafa62622a2d2bb8f21518e76152541a761924b638c073d219",
+        "workbook_recovery.py": "ad905941301310128736730e5d931a49ff56d7610ece443ff12136ea731e05d3",
+        "personal_tools.py": "c8ed42cd828d67ebfbd03c2cdf144894b553cb009a0cf2beebe77f590af016e1",
+        "workbook_data.py": "bc6902625ecb69300fd8497fba0d8cb734ea8372ccf97a46d2c6d1a231e5b408",
+        "structured_tables.py": "3ecc86af63b74c35b9b768b780d06db7b33f6f435717457fa44ae382923798f8",
+        "runtime_policy.py": "422cef9d111bca844c37e71ace3b6be37fd9b6b81bbd3b0967e73b4aaaa10a22",
+        "local_query.py": "4f37344fb04fc31bd3537598867b3a27d78d74dc26bae2dbe16a1a5330864f28",
+        "workbook_schema.py": "1f640f62ea196fdb4c038293ac0ee3b69c19cfe10b237891d7bec0bc46e951a1",
+        "privacy_filter.py": "3a65fc2029085463408981b36a7faa2cc8d8cdb19689b3628d11d42ba41b7f1c",
+        "table_program.py": "4033e2c10eabc02461f233ee21b35be7432df3f5f4809d6ff79213a9401561cd",
+        "request_router.py": "6cc7b450900d2042adf313a94c9c480717874d735fe3dfddcf37f3df7c0073ce",
+        "workbook_requirements.py": "cb463959fd78b875dc34481044e5779cf5ceec0760ea75fba6ae65c38f46e83d",
+        "workbook_flow.py": "06319c8f883d1edffd2367ec9620309426088e3319407deea8d59aeceeee4eb5",
+        "workbook_intent.py": "226503ed58b860096200b57a693a3c921fe9124f003b0801cdbbf5d7b128fda0",
+        "model_info.py": "f5d5c937a391d1ffd1ab86374c1b8f0794f8fe67870a7b8a54bccb2834ede9ca",
+        "general_assistant.py": "709754ff9ab5e2aa6e81f1281c93212084793b1462d5bcc62dd5391cf5d6cdb8",
+        "workbook_revision.py": "3d7b6fc7542636488dc98421b5827a1f63f99efa50dc609a11347a48fa70b450",
+        "bge_embedding.py": "f51ee3f63d3e46fa08ac7de6ba7380b7e87d8ab8b627338439cf55714efd687d",
+        "general_tools.py": "79fe507a1d2a0a3e8c74cd9889bf4eaece3a01ba61c80b9b388fa1db47d1a7d0",
+        "table_semantics.py": "2d164c333efef02d6188d03d6112ba9834e37a4ed6ed6c95d82697b41eec6a43",
+        "document_tables.py": "ceee11df6cfd07453001aa57f1648a5967b557b322a8c9659e9e19e16f0dcfc7",
+        "workbook_export.py": "e9f2f52986ef54811e8d36eb4c492795557a6d8765885c91e0080e316d6d2c0f",
+        "workbook_qualifiers.py": "0e20093e35c7eb1b3c34516eed78ca76579d3ba5630f60487faacec2af7d4b45",
+        "fact_guard.py": "53150da937578d9188be8fd9d9c97b8668b92c5fff614145d12cefd34b39469e",
+        "privacy_models.py": "dd160bac36ddfb6d6393c5a8bdb90f95571d2e5bbc7374d6d43bcafad9e045b2",
+        "share_agent.py": "b41eb80b564c678fc99bb304391ac4432e78d01d5188cc9eebe7dff44db812d5",
+        "model_output.py": "83fba58b74d38dbe1c4b43f91695e0ea2c3ba2a79d6edc988ddc9c4a2db2c4c5",
+        "workspace_index.py": "4c9038a1c90e24a6b18d8fab96e017088abdd4c81009217e4cbc32f814aa8911",
+        "office_agent.py": "4189c5a6a40638b2cd30cbbd375e506e451b64ef9e86891a34a1a41dade699cb"
+      },
+      "files": [
+        {
+          "path": "qa/v0.26/examples/第一名追问_结果.xlsx",
+          "sha256": "67e8a2fbe426165c3f21b41343ecc13ac2c599ee6e26b3c41c0fe67e39cdebdb"
+        },
+        {
+          "path": "qa/v0.26/examples/第一名追问_结果.csv",
+          "sha256": "ea27bd03844768ced48c3f9e90999cee0e7a848f020d57ae7a838fefede25a7a"
+        },
+        {
+          "path": "qa/v0.26/examples/第一名追问_说明.md",
+          "sha256": "3fcedc2490bdce9a1ed58d483e6db393b565161fb2102ae8c3b4c07d22ceb23b"
+        }
+      ]
+    }
+  ],
+  "visual_review_completed": true,
+  "review_note": "All8 rendered pages inspected. Fresh render directories and PDF page counts prevent stale-page capture. No clipped text, missing Chinese glyphs or orphan source-only pages in delivered previews."
+}

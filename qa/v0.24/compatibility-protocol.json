@@ -1,0 +1,10 @@
+{
+  "time": "2026-10-30T20:17:00.995093+08:00",
+  "runner_sha256": "70de38df648954d2b226ee0607930039bcd5c9a95f6a1aeffdfd9f61653c4611",
+  "first_office_task_runs": 0,
+  "change": "Document the same calculator character contract for both candidates after a source-free syntax failure. Preserve initial evidence; workbook runner, prompts, backend, input fixtures and grading unchanged.",
+  "models": [
+    "glm-4.7-flash",
+    "qwen3-coder-30b-a3b"
+  ]
+}

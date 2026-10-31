@@ -1,0 +1,14 @@
+{
+  "transfer_office_notice": {
+    "required_dates_all": [
+      "2028-07-13",
+      "2028-07-16"
+    ]
+  },
+  "fresh_training_notice": {
+    "required_dates_all": [
+      "2027-09-20",
+      "2027-09-25"
+    ]
+  }
+}

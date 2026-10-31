@@ -1,0 +1,9 @@
+{
+  "event_latest_plan": {
+    "required_dates_all": [
+      "2027[-/年]0?3[-/月]21",
+      "2027[-/年]0?3[-/月]14"
+    ]
+  },
+  "note": "Stricter date coverage: initial any-date check could mistake the old activity date for the requested new confirmation date. Original report remains unchanged and the first overall score remains1/8; new checks require both dates. No source inputs, user goals or expected numeric values changed."
+}

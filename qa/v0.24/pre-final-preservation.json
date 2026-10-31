@@ -1,0 +1,12 @@
+{
+  "time": "2026-10-30T20:33:36.590500+08:00",
+  "archives": {
+    "releases/Guiyu-GCC-Cohort4-application-v0.22.0-update.zip": "1cddc8c3212bf377145daaf3c59fe1d9b1582d3e15a5b3ef02e7ecd23b47c271",
+    "releases/Guiyu-0.22.0-source.zip": "10dfc2c995cdca9cf5b0e5140b0102ad76db79d43fdfced00d634bfc9c7b1661",
+    "releases/Guiyu-0.22.0-AppleSilicon-demo.zip": "3fae008250d42496a38a2b99bfb91637a81a4968933eea8df54c3e520328fb79",
+    "releases/Guiyu-32GB-model-comparison-20261030.zip": "cb8392499ac20b07797d1462eb0dedfea824bedf0f4d8771d336a9dbfc734343"
+  },
+  "production_binary_sha256": "7f13f6fa1a8f95a9413959ca7f56a57d81a8427790e5f3967fd196cf551d8c7b",
+  "production_backend_sha256": "930b5109619e44913f7f16dafeb11e9654aa901f6b1f939380acd4050214dc79",
+  "scope": "Current source v0.22 and older releases preserved while researching new models. No normal application/history writes or launches by these model-study scripts."
+}

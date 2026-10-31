@@ -1,0 +1,8 @@
+[
+  {
+    "model": "qwen3-coder-30b-a3b",
+    "reason": "source_free_compatibility_failed",
+    "report": "qa/v0.24/qwen3-coder-30b-a3b-compatibility.json",
+    "office_goals_executed": 0
+  }
+]

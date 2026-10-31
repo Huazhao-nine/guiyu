@@ -1,0 +1,107 @@
+{
+  "executed": true,
+  "removed_directories": [
+    {
+      "location": "Library/Application Support/GuiyuModels/Research/qwen3-coder-30b-a3b",
+      "bytes": 17197092050,
+      "allocated_bytes": 17197191168,
+      "files": 45
+    },
+    {
+      "location": "Library/Application Support/GuiyuModels/Research/glm-4.7-flash",
+      "bytes": 16872851633,
+      "allocated_bytes": 16872923136,
+      "files": 33
+    },
+    {
+      "location": "Library/Application Support/GuiyuModels/Installed/gpt-oss-20b",
+      "bytes": 12104215943,
+      "allocated_bytes": 12104245248,
+      "files": 11
+    },
+    {
+      "location": "Library/Application Support/GuiyuModels/Installed/qwen3-0.6b",
+      "bytes": 351384592,
+      "allocated_bytes": 351416320,
+      "files": 11
+    },
+    {
+      "location": "Library/Application Support/GuiyuModels/Installed/qwen3-8b",
+      "bytes": 4623783500,
+      "allocated_bytes": 4623810560,
+      "files": 11
+    },
+    {
+      "location": "Library/Application Support/GuiyuModels/Installed/qwen3-1.7b",
+      "bytes": 984014218,
+      "allocated_bytes": 984043520,
+      "files": 11
+    },
+    {
+      "location": "Library/Application Support/GuiyuModels/Installed/gemma4-e4b",
+      "bytes": 5179239456,
+      "allocated_bytes": 5179260928,
+      "files": 9
+    },
+    {
+      "location": "Library/Application Support/GuiyuModels/Installed/qwen3.5-9b",
+      "bytes": 5977071170,
+      "allocated_bytes": 5977104384,
+      "files": 12
+    },
+    {
+      "location": "Library/Application Support/GuiyuRuntime/model",
+      "bytes": 2278973893,
+      "allocated_bytes": 2279059456,
+      "files": 39
+    },
+    {
+      "location": "Desktop/code/gcc_demo/.runtime/models/qwen3-4b",
+      "bytes": 2278973893,
+      "allocated_bytes": 2279059456,
+      "files": 39
+    },
+    {
+      "location": ".lmstudio/models/lmstudio-community/Qwen3.5-9B-GGUF",
+      "bytes": 6548748736,
+      "allocated_bytes": 6548754432,
+      "files": 2
+    },
+    {
+      "location": ".lmstudio/models/lmstudio-community/Qwen3.8-27B-MLX-4bit",
+      "bytes": 16081498220,
+      "allocated_bytes": 16081534976,
+      "files": 13
+    },
+    {
+      "location": ".lmstudio/models/lmstudio-community/gemma-4-E2B-it-GGUF",
+      "bytes": 4414710944,
+      "allocated_bytes": 4414717952,
+      "files": 2
+    },
+    {
+      "location": ".lmstudio/models/lmstudio-community/gemma-4-E4B-it-MLX-4bit",
+      "bytes": 6861838804,
+      "allocated_bytes": 6861856768,
+      "files": 9
+    }
+  ],
+  "directory_count": 14,
+  "removed_logical_bytes": 101754397052,
+  "removed_allocated_bytes": 101754978304,
+  "disk_free_before_bytes": 471818907648,
+  "disk_free_after_bytes": 571295334400,
+  "all_targets_absent": true,
+  "protected_models_verified": true,
+  "protected_models": [
+    "qwen3.6-35b-a3b",
+    "bge-small-zh-v1.5",
+    "astrlink-guard",
+    "openai-privacy-filter"
+  ],
+  "primary_model_preferences_migrated": true,
+  "old_model_preferences_backed_up_privately": true,
+  "lmstudio_models_loaded": false,
+  "normal_history_workspaces_and_documents_not_read_or_modified": true,
+  "notes": "Only the enumerated model directories and retired status metadata were removed. Other scientific/HuggingFace caches were not broadly purged. Disk free changes also reflect APFS/background activity."
+}

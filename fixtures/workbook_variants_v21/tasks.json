@@ -1,0 +1,31 @@
+{
+  "purpose": "New fictional numeric and structural checks frozen before first model run, after unit/display implementation. Expected answers are never provided to the model.",
+  "cases": [
+    {
+      "id": "site_hours_word",
+      "prompt": "在场地巡检里，只看已完成的记录，按Case去重保留原表首次，再按小组汇总人数与时长。时长用小时显示，按时长从高到低，只保留小组、人数、时长三列。写一段简短说明并导出Word。",
+      "rows": [["巡检甲", "2", "2"], ["巡检乙", "1", "1.5"]],
+      "word": true,
+      "word_numbers": ["2", "1.5"]
+    },
+    {
+      "id": "balance_display_wan",
+      "prompt": "在款项列中，只看正常记录，复核日期在2026-12-01至2026-12-31，含两端。剩余金额按月度上限减已用算，只要剩余金额不少于6500元的。按剩余金额从高到低，保留记录、剩余金额两列，金额用万元显示。逐条明细保留，另给这批剩余金额合计和条数，写简短说明并导出Word。",
+      "rows": [["R01", "1.4"], ["R02", "0.65"]],
+      "summary_values": ["2.05", "2"],
+      "summary_rows": [["2.05", "2"]],
+      "word": true,
+      "word_numbers": ["2.05"]
+    },
+    {
+      "id": "balance_display_relaxed",
+      "parent": "balance_display_wan",
+      "prompt": "把剩余金额门槛放宽到6000元，其他要求不变。",
+      "rows": [["R01", "1.4"], ["R02", "0.65"], ["R05", "0.6"]],
+      "summary_values": ["2.65", "3"],
+      "summary_rows": [["2.65", "3"]],
+      "word": true,
+      "word_numbers": ["2.65"]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "time": "2026-10-30T21:54:29.959480+08:00",
+  "models": [
+    {
+      "id": "glm-4.7-flash",
+      "files": 10,
+      "all_sha256_unchanged": true
+    },
+    {
+      "id": "qwen3-coder-30b-a3b",
+      "files": 14,
+      "all_sha256_unchanged": true
+    },
+    {
+      "id": "qwen3.6-35b-a3b",
+      "files": 15,
+      "all_sha256_unchanged": true
+    },
+    {
+      "id": "qwen3.5-9b",
+      "files": 11,
+      "all_sha256_unchanged": true
+    }
+  ],
+  "hardware": {
+    "cpu": "Apple M5",
+    "memory_bytes": 34359738368,
+    "macos": "27.2"
+  },
+  "selected_model_registered_for_new_preview": true,
+  "registration_marker_created": true,
+  "existing_selection_and_history_not_modified": true,
+  "old_application_and_archives_unchanged": true,
+  "scope": "Registration writes only verified public model metadata in Research. The new app discovers it at next launch; existing app/model preference/history remain untouched."
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "fees_and_entities",
+    "prompt": "资料【S1】：方案名称：梧桐空间；场地费用600元/半天，容量30人，提供投影仪、白板、无线麦克风；提前48小时可免费取消。资料【S2】：方案名称：青禾客厅；场地费用450元/半天，容量20人，只提供白板，不提供投影仪和麦克风；预订确认后取消收取100元。只返回JSON，字段wutong_yuan、qinghe_yuan、cheaper。金额是数字，cheaper使用场地全名。",
+    "expected": {"wutong_yuan": 600, "qinghe_yuan": 450, "cheaper": "青禾客厅"}
+  },
+  {
+    "id": "combined_constraints",
+    "prompt": "梧桐空间600元，最多30人，有投影仪；青禾客厅450元，最多20人，没有投影仪。我的硬性要求是预算不超过500元、25人参加、必须有投影仪。只返回JSON：eligible是同时满足所有条件的场地全名数组，need_new_option是是否需要另找场地的布尔值。不得放宽硬性要求。",
+    "expected": {"eligible": [], "need_new_option": true}
+  },
+  {
+    "id": "conditional_cancellation",
+    "prompt": "原文：梧桐空间提前48小时可免费取消，其他情况是否退款未提供；青禾客厅预订确认后取消收取100元。请核对“梧桐空间随时免费取消”的说法。只返回JSON，字段claim_correct（布尔值）、min_notice_hours（数字）、qinghe_cancel_fee_yuan（数字）、wutong_late_refund（未提供的信息写未提供）。",
+    "expected": {"claim_correct": false, "min_notice_hours": 48, "qinghe_cancel_fee_yuan": 100, "wutong_late_refund": "未提供"}
+  },
+  {
+    "id": "filtered_ledger",
+    "prompt": "虚构台账：林晓，资料128.50元，待报销；陈雨，设备180.00元，待报销；陈雨，场地260.00元，待付款；林晓，打印35.00元，已报销；周宁，交通43.20元，待报销。只统计状态为待报销且金额大于100元的记录。只返回JSON，字段matched_rows、lin_yuan、chen_yuan、total_yuan，值使用数字。",
+    "expected": {"matched_rows": 2, "lin_yuan": 128.5, "chen_yuan": 180, "total_yuan": 308.5}
+  },
+  {
+    "id": "latest_turn_overrides_old",
+    "prompt": "上轮原台账陈雨的设备费是180元，本轮最新原台账已更新为280元，状态仍为待报销。其他记录：林晓128.50元待报销，陈雨260元待付款。沿用状态待报销、金额大于100元的条件，本次只统计陈雨。只返回JSON，字段current_chen_yuan、matched_rows。旧轮次金额不能进入本次结果。",
+    "expected": {"current_chen_yuan": 280, "matched_rows": 1}
+  },
+  {
+    "id": "missing_record",
+    "prompt": "本轮资料只含“读书会场地费用600元”和“交通费128.50元”，没有其他记录。任务是找到编号ZXQ654321的记录再写说明。只返回JSON，字段has_record和can_write_fact_report，均为布尔值；不允许推断或编造记录。",
+    "expected": {"has_record": false, "can_write_fact_report": false}
+  },
+  {
+    "id": "repair_chinese_draft",
+    "prompt": "资料【S1】：梧桐空间600元/半天，有投影仪；提前48小时可免费取消。资料【S2】：青禾客厅450元/半天，没有投影仪；确认预订后取消收取100元。错误草稿：“梧桐空间费用更低，450元，而且随时免费取消。青禾客厅600元。”请修订为不超过180字的中文选择说明，预算优先时选更便宜的场地，需要投影仪时另作有条件建议；保留取消条件和【S1】【S2】出处。不增加新金额。不返回JSON，只给修正后的正文。",
+    "oracle": "chinese_repair"
+  }
+]

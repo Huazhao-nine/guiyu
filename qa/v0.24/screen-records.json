@@ -1,0 +1,30 @@
+[
+  {
+    "suite": "variants",
+    "model": "glm-4.7-flash",
+    "exit_code": 1,
+    "elapsed": 14.536,
+    "report": "qa/v0.24/reports/variants-glm-4.7-flash-20261030T202418-39099c.json"
+  },
+  {
+    "suite": "fresh",
+    "model": "glm-4.7-flash",
+    "exit_code": 0,
+    "elapsed": 49.047,
+    "report": "qa/v0.24/reports/fresh-glm-4.7-flash-20261030T202433-2c2a91.json"
+  },
+  {
+    "suite": "unseen",
+    "model": "glm-4.7-flash",
+    "exit_code": 1,
+    "elapsed": 227.942,
+    "report": "qa/v0.24/reports/unseen-glm-4.7-flash-20261030T202522-2dfc8c.json"
+  },
+  {
+    "suite": "followups",
+    "model": "glm-4.7-flash",
+    "exit_code": 1,
+    "elapsed": 123.508,
+    "report": "qa/v0.24/reports/followups-glm-4.7-flash-20261030T202910-7558eb.json"
+  }
+]

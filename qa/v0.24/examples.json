@@ -1,0 +1,73 @@
+{
+  "fictional": true,
+  "source": "qa/v0.24/release/evaluation.json",
+  "copies": [
+    {
+      "case": "detail_summary_write",
+      "file": "qa/v0.24/examples/明细与合计说明.xlsx",
+      "sha256": "5709b1f2ad52e9bdc6cec733fd2e4e14370dc05cdb7d0901e435be6cb64da3cd"
+    },
+    {
+      "case": "detail_summary_write",
+      "file": "qa/v0.24/examples/明细与合计说明.csv",
+      "sha256": "7102150d71b2e7ac3fd636c40b95e7ca43a84fdc638f63d6b850fa241c2ae38f"
+    },
+    {
+      "case": "detail_summary_write",
+      "file": "qa/v0.24/examples/明细与合计说明.docx",
+      "sha256": "3d73b02e1dc090660167c1f6fa9db24ababcf211e0d8b2b5b62e0d64914140de"
+    },
+    {
+      "case": "travel_union_word",
+      "file": "qa/v0.24/examples/七月差旅待付说明.xlsx",
+      "sha256": "6f0a3fd38ed934bb7d9cc21e9986f6861e914723a737fbe94c2d0c9dd1b3119a"
+    },
+    {
+      "case": "travel_union_word",
+      "file": "qa/v0.24/examples/七月差旅待付说明.csv",
+      "sha256": "483aeef08dd100c8b1abfb98b7499d1bf93d6edbfa772ec64b8da997b4875bdb"
+    },
+    {
+      "case": "travel_union_word",
+      "file": "qa/v0.24/examples/七月差旅待付说明.docx",
+      "sha256": "6e158b37e0f2149c4ada6a4742fe7f3e7e5d24385299425146666899ac5b0632"
+    },
+    {
+      "case": "travel_short_followup",
+      "file": "qa/v0.24/examples/技术支持部待付表.xlsx",
+      "sha256": "4ec4b4db0bdd8fdcb33c3fc678026d43fe91358ca80a24ab8f8bb78b2fa49f90"
+    },
+    {
+      "case": "travel_short_followup",
+      "file": "qa/v0.24/examples/技术支持部待付表.csv",
+      "sha256": "e10fb996295bd85e77d7898051d89b0a883bd98a24ec55cd7e4f6cab02387ade"
+    },
+    {
+      "case": "english_monthly_duration",
+      "file": "qa/v0.24/examples/八月服务工时.xlsx",
+      "sha256": "6fa09ca31e587fd438bf1ebb15a730cce89d4f44bbb0ebe13711128f01ee9cb4"
+    },
+    {
+      "case": "english_monthly_duration",
+      "file": "qa/v0.24/examples/八月服务工时.csv",
+      "sha256": "7feba53338a2cc989f1b85d4a58d569f799c9598a221c00f8668df03b4888f50"
+    },
+    {
+      "case": "office_stock_detail_word",
+      "file": "qa/v0.24/examples/办公补充计划.xlsx",
+      "sha256": "a851c488ef533760aea4d836b9cbc50f8d8eaff27ac9759c5094aced0081eeab"
+    },
+    {
+      "case": "office_stock_detail_word",
+      "file": "qa/v0.24/examples/办公补充计划.csv",
+      "sha256": "15c74143fd8ef9cf29d56fae0616de83eb951bde5525ecfcd457ca6f837ebad1"
+    },
+    {
+      "case": "office_stock_detail_word",
+      "file": "qa/v0.24/examples/办公补充计划.docx",
+      "sha256": "403f276fb0e08c1043c352769e63ac07a8ec8201380c919a40eda4315276b314"
+    }
+  ],
+  "original_hashes_match": true,
+  "no_machine_paths_in_office_xml": true
+}

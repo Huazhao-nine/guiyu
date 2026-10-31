@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "description": "Fixed fictional general-agent development goals; no real documents or external actions.",
+  "cases": [
+    {
+      "id": "meeting_multi_delivery",
+      "prompt": "根据项目例会纪要，先提取负责人、任务、截止日期和出处成表格，再分别写一封给团队的跟进邮件和一段给负责人的简短进度说明。不虚构已发送、已完成或已批准。",
+      "files": ["01_行政/项目例会纪要.md"],
+      "must": ["林晓", "陈雨", "周宁", "10-23|10月23", "10-22|10月22", "10-24|10月24"],
+      "minimum_docx": 2,
+      "minimum_xlsx": 1
+    },
+    {
+      "id": "project_customer_email",
+      "prompt": "根据项目周报与客户沟通记录，先把已完成、阻塞和待确认事项提取成表格，再写一封客户沟通邮件。保留演示时间和接口文档风险，不得虚构已验收或已付款。",
+      "files": ["03_项目/项目周报.md", "03_项目/客户沟通记录.txt"],
+      "must": ["接口文档", "10-26|10月26", "14:00|14：00", "参会"],
+      "minimum_docx": 1,
+      "minimum_xlsx": 1
+    },
+    {
+      "id": "personal_prepare_plan",
+      "prompt": "我下周一至周五每天只有30分钟，准备一场10分钟的内部分享。请给我五天准备计划，再写一条邀请同事提建议的消息。日期、主题和参会人未定时用待补充，不替我发送。",
+      "files": [],
+      "must": ["周一|第一天", "周五|第五天", "30", "10", "待补充"],
+      "minimum_docx": 1,
+      "minimum_xlsx": 0
+    }
+  ]
+}

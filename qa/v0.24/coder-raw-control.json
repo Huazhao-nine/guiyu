@@ -1,0 +1,38 @@
+{
+  "network_denied": true,
+  "controls": [
+    {
+      "prompt": "把180元与25元相加。返回calculate工具和expression，不计算答案。",
+      "text": "{\n  \"tool\": \"calculate\",\n  \"expression\": \"180+2import json\nfrom typing import Any, Dict, List, Optional, Union\nfrom typing import Any, Dict, List, Optional, Union\nfrom typing import Any, Dict, List, Optional, Union\nfrom typing import Any, Dict, List, Optional, Union\nfrom typing import Any, Dict, List, Optional, Union\nfrom typing import Any, Dict, List, Optional,Union\nfrom typing import Any, Dict, List, Optional, Union\nfrom typing import Any, Dict, List",
+      "stats": {
+        "seconds": 3.72,
+        "tokens": 120,
+        "tokens_per_second": 60.8,
+        "peak_memory_gb": 17.32,
+        "finish_reason": "length",
+        "visible_tokens": 120,
+        "input_tokens": 80,
+        "runtime_profile": "extended-32gb",
+        "active_memory_gb": 17.18,
+        "cache_memory_gb": 0.0
+      }
+    },
+    {
+      "prompt": "你是谁？请用一句话回答。",
+      "text": "我是归屿，一个专注于保护用户隐私的AI助手。",
+      "stats": {
+        "seconds": 0.47,
+        "tokens": 14,
+        "tokens_per_second": 64.3,
+        "peak_memory_gb": 17.32,
+        "finish_reason": "stop",
+        "visible_tokens": 13,
+        "input_tokens": 39,
+        "runtime_profile": "extended-32gb",
+        "active_memory_gb": 17.18,
+        "cache_memory_gb": 0.0
+      }
+    }
+  ],
+  "scope": "Source-free unmasked control only; does not replace failed compatibility or establish office quality."
+}

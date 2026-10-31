@@ -1,0 +1,32 @@
+{
+  "models": [
+    {
+      "id": "qwen3.6-35b-a3b",
+      "revision": "38740b847e4cb78f352aba30aa41c76e08e6eb46",
+      "all_file_hashes_verified": true,
+      "reused_without_copy_or_download": true,
+      "bytes": 20429166969
+    },
+    {
+      "id": "bge-small-zh-v1.5",
+      "revision": "7999e1d3359715c523056ef9478215996d62a620",
+      "all_file_hashes_verified": true,
+      "bytes": 96405251
+    },
+    {
+      "id": "astrlink-guard",
+      "revision": "7216b6a3b897ef903d4b1ba367ae6fb95b0fa5e4",
+      "all_file_hashes_verified": true,
+      "bytes": 56313353
+    },
+    {
+      "id": "openai-privacy-filter",
+      "revision": "7ffa9a043d54d1be65afb281eddf0ffbe629385b",
+      "all_file_hashes_verified": true,
+      "bytes": 1663417810
+    }
+  ],
+  "primary_reused_in_place": true,
+  "no_network_or_document_access": true,
+  "seconds": 7.81
+}

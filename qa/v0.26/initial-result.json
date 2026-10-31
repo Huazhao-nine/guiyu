@@ -1,0 +1,8 @@
+{
+  "report": "qa/v0.26/reports/initial-20261030T233403-b3f4e7.json",
+  "passed": 1,
+  "total": 8,
+  "wrong_delivered_tables": 2,
+  "missed_summary_deliveries": 1,
+  "scope": "First-use development run; three new workbook structures and two office-document goals. Confirmation files not indexed or supplied to this run."
+}

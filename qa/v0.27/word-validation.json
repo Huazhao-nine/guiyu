@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "word_files": 4,
+  "pages": 4,
+  "all_pages_visually_inspected": true,
+  "artifacts": [
+    {
+      "case": "transfer_support",
+      "docx": "qa/v0.27/examples/transfer_support/工作簿说明.docx",
+      "sha256": "ecf153396f4cf10c13eeaec7ad5214e9e3e1c828ea1abac277402a6fa5032422",
+      "pages": 1,
+      "visual_review": "passed",
+      "weekday_and_refund_scope_checks": "passed"
+    },
+    {
+      "case": "transfer_office_notice",
+      "docx": "qa/v0.27/examples/transfer_office_notice/办公文稿.docx",
+      "sha256": "8b38c5fca0199ecf2f7b9a2027257fd21500beb22a3d55694c6f95390289ac8b",
+      "pages": 1,
+      "visual_review": "passed",
+      "weekday_and_refund_scope_checks": "passed"
+    },
+    {
+      "case": "fresh_training_notice",
+      "docx": "qa/v0.27/examples/fresh_training_notice/办公文稿.docx",
+      "sha256": "10b7df8ac56538d44dea51d51031a141f182ce19e1cd19990639067a5faaa44a",
+      "pages": 1,
+      "visual_review": "passed",
+      "weekday_and_refund_scope_checks": "passed"
+    },
+    {
+      "case": "local_share_copy",
+      "docx": "qa/v0.27/examples/local_share_copy/可分享副本.docx",
+      "sha256": "edffa8944f479cea8ac9d879106562fe0ddbb6469ccc069fe7a5fab91a0b1e22",
+      "pages": 1,
+      "visual_review": "passed",
+      "weekday_and_refund_scope_checks": "passed"
+    }
+  ],
+  "note": "Actual generated Word and tables reviewed; no manual edits to model outputs. PDF previews separately rendered. Earlier content defects and source fixes retained."
+}

@@ -1,0 +1,913 @@
+{
+  "version": "0.24-model-adaptation",
+  "suite": "unseen",
+  "time": "2026-10-30T21:04:29.721506+08:00",
+  "model": "qwen3.6-35b-a3b",
+  "structured_temperature": 0,
+  "seed": 20261029,
+  "hardware": "Apple M5 32GB; user-selected32GB baseline",
+  "load_seconds": 9.191,
+  "model_info": {
+    "name": "qwen3.6-35b-a3b",
+    "architecture": "qwen3_5_moe",
+    "bits": 4,
+    "bytes": 20402204271,
+    "runtime_policy": {
+      "name": "extended-32gb",
+      "input_tokens": 8192,
+      "output_tokens": 1800,
+      "prefill_tokens": 256,
+      "memory_bytes": 21474836480,
+      "cache_bytes": 268435456
+    }
+  },
+  "thinking_enabled": false,
+  "common_token_limits": {
+    "input": 8192,
+    "output": 1800
+  },
+  "network_denied": true,
+  "source_hashes": {
+    "structured_output.py": "7960a53bd816fbd0f1940a7ab57a3c91da9fd56e4d09deb7c4639b1764deb268",
+    "worker.py": "930b5109619e44913f7f16dafeb11e9654aa901f6b1f939380acd4050214dc79",
+    "agent_control.py": "7524801210603dab72a6b0b375fd84bfd20750bdca563f2d7cec335a859edf6d",
+    "money_subtotals.py": "3f69877035132e87a756b16cfbb33876eb80d1d9f0edd424b9115debdd2a54ee",
+    "workbook_agent.py": "1b9a8f34dac8908a266c09b8ed95b7fa0fadd5a5c4aaf49cd5fb86900312c3f9",
+    "workbook_writing.py": "5ddd5a39dcb8557d077939a5f0d141147beac2287a457cfad0cf8475cf1826b9",
+    "workbook_edits.py": "7d8dd9169b2739fafa62622a2d2bb8f21518e76152541a761924b638c073d219",
+    "personal_tools.py": "c8ed42cd828d67ebfbd03c2cdf144894b553cb009a0cf2beebe77f590af016e1",
+    "workbook_data.py": "bc6902625ecb69300fd8497fba0d8cb734ea8372ccf97a46d2c6d1a231e5b408",
+    "structured_tables.py": "9868f4316fdba81ddf435bba47b7284343fbafe10b608ff29cadce949580597b",
+    "runtime_policy.py": "e9bfb35041802aa961f39a674cea6bd59c85a65bf7c6ceac0841a33ec7d19bbb",
+    "local_query.py": "bbe2091085564d19740e1bc81c7ca6c59b8fef20ee329e356ff433184b5f0bd3",
+    "workbook_schema.py": "1f640f62ea196fdb4c038293ac0ee3b69c19cfe10b237891d7bec0bc46e951a1",
+    "privacy_filter.py": "3a65fc2029085463408981b36a7faa2cc8d8cdb19689b3628d11d42ba41b7f1c",
+    "table_program.py": "b989f1b9e065f9d856a103299e58dfc4b86c3fa3cf63ce1b3f9b9d939cfb75f1",
+    "request_router.py": "6cc7b450900d2042adf313a94c9c480717874d735fe3dfddcf37f3df7c0073ce",
+    "workbook_requirements.py": "cb463959fd78b875dc34481044e5779cf5ceec0760ea75fba6ae65c38f46e83d",
+    "workbook_flow.py": "1450efa906bd8ef68944d9ad8238907c139115e06c86a1d4358ba23727e2b9dd",
+    "workbook_intent.py": "2c7d6407b6da8e58122890beabc0eb334b251a76920694eb648c2b0f3b6407fb",
+    "model_info.py": "f5d5c937a391d1ffd1ab86374c1b8f0794f8fe67870a7b8a54bccb2834ede9ca",
+    "general_assistant.py": "709754ff9ab5e2aa6e81f1281c93212084793b1462d5bcc62dd5391cf5d6cdb8",
+    "workbook_revision.py": "4f09083b8aef2b8993d9e55c8baf2ce53f16d8e154a27742f8ec929e7d1677d7",
+    "bge_embedding.py": "f51ee3f63d3e46fa08ac7de6ba7380b7e87d8ab8b627338439cf55714efd687d",
+    "general_tools.py": "79fe507a1d2a0a3e8c74cd9889bf4eaece3a01ba61c80b9b388fa1db47d1a7d0",
+    "table_semantics.py": "2d164c333efef02d6188d03d6112ba9834e37a4ed6ed6c95d82697b41eec6a43",
+    "workbook_export.py": "e9f2f52986ef54811e8d36eb4c492795557a6d8765885c91e0080e316d6d2c0f",
+    "workbook_qualifiers.py": "0e20093e35c7eb1b3c34516eed78ca76579d3ba5630f60487faacec2af7d4b45",
+    "fact_guard.py": "071b2764597edbb9ee79045dddc3b9c2f14d9993c01b0f5887b3b4ac2b2a181c",
+    "privacy_models.py": "dd160bac36ddfb6d6393c5a8bdb90f95571d2e5bbc7374d6d43bcafad9e045b2",
+    "share_agent.py": "b41eb80b564c678fc99bb304391ac4432e78d01d5188cc9eebe7dff44db812d5",
+    "model_output.py": "83fba58b74d38dbe1c4b43f91695e0ea2c3ba2a79d6edc988ddc9c4a2db2c4c5",
+    "workspace_index.py": "4c9038a1c90e24a6b18d8fab96e017088abdd4c81009217e4cbc32f814aa8911",
+    "office_agent.py": "b49adcfd302155180688f505afbef15e76a8650ec000fb4005289aff5e1b0653"
+  },
+  "fixture_hashes": {
+    "采购一部.xlsx": "421b663f7fcad657a497529c76742bc067934a37be0ccc8b0b1f3ae75d8f1c67",
+    "样品称量.xlsx": "92aaec375494532f3928b573c1ce9f1e5131cf10d0c2323f9d5713ceeda7df59",
+    "采购二部.xlsx": "0b32c120b5397321802b7533a2427b8ca3ee2b4bec1d2573744e49151762322a",
+    "跟进记录.csv": "3a9e3e068c16f9403fc029708c3a7bf4d297ffae48e7bd196faee2fe466574d9"
+  },
+  "suite_hashes": {
+    "fixtures/workbook_confirmation_v22/tasks.json": "4fca823a35e9472120f46cce8e39b1fd2a768940e1002d7b3df9ee2cb5fe0125"
+  },
+  "runner_sha256": "d02bc6ee8252b37d6213afc38bd2fa187c31c24ea6d133bc7593714b8fecb6cb",
+  "cases": [
+    {
+      "id": "claims_first_scope",
+      "prompt": "合并采购二部和采购一部的登记表，保持这个合并顺序。先按ClaimID保留原表首次记录，之后只看BookedOn在2027-04-01至2027-04-30且含两端的记录，状态为已核准，或者状态为补交中并且可预付为是。待付按申请额减Settled计算，只看待付不少于900元的。按Team汇总待付合计和票数，按待付合计降序；只要Team、待付合计、票数三列，写Word说明，不添加审批结论。",
+      "authorized_file_count": 4,
+      "passed": true,
+      "checks": {
+        "incremental_tools": true,
+        "expected_rows": true,
+        "expected_columns": true,
+        "preview_matches_xlsx": true,
+        "csv_matches_xlsx": true,
+        "required_summary": true,
+        "typed_summary_rows": true,
+        "word_if_requested": true,
+        "word_values": true,
+        "no_unrequested_word": true,
+        "completed": true,
+        "checked_delivery": true,
+        "no_original_transaction": true,
+        "originals_unchanged": true
+      },
+      "rows": [
+        [
+          "行政协调",
+          "5000",
+          "2"
+        ],
+        [
+          "设备支持",
+          "4100",
+          "2"
+        ],
+        [
+          "算力运维",
+          "3200",
+          "1"
+        ]
+      ],
+      "columns": [
+        "Team",
+        "待付合计（元）",
+        "票数"
+      ],
+      "summaries": [],
+      "word_text": "工作簿处理说明\n本次按要求从12条原始记录中整理出3条结果。\n明细\n数据说明\n采购一部.xlsx / 登记：申请额（千元）：按单元格显式单位优先、表头单位兜底，统一为元；未改变原文件。\n资料来源\n【S1】采购一部.xlsx\nTeam | 待付合计（元） | 票数\n行政协调 | 5000 | 2\n设备支持 | 4100 | 2\n算力运维 | 3200 | 1",
+      "graph": [
+        {
+          "id": "V1",
+          "input": "V0",
+          "operation": {
+            "op": "distinct",
+            "columns": [
+              "ClaimID"
+            ]
+          }
+        },
+        {
+          "id": "V2",
+          "input": "V1",
+          "operation": {
+            "op": "filter",
+            "where": {
+              "all": [
+                {
+                  "column": "BookedOn",
+                  "operator": "gte",
+                  "type": "date",
+                  "value": "2027-04-01"
+                },
+                {
+                  "column": "BookedOn",
+                  "operator": "lte",
+                  "type": "date",
+                  "value": "2027-04-30"
+                },
+                {
+                  "any": [
+                    {
+                      "column": "状态",
+                      "operator": "eq",
+                      "type": "text",
+                      "value": "已核准"
+                    },
+                    {
+                      "all": [
+                        {
+                          "column": "状态",
+                          "operator": "eq",
+                          "type": "text",
+                          "value": "补交中"
+                        },
+                        {
+                          "column": "可预付",
+                          "operator": "eq",
+                          "type": "text",
+                          "value": "是"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "V3",
+          "input": "V2",
+          "operation": {
+            "op": "derive",
+            "name": "待付（元）",
+            "expression": {
+              "subtract": [
+                {
+                  "column": "申请额（元）"
+                },
+                {
+                  "column": "Settled（元）"
+                }
+              ]
+            },
+            "format": "number",
+            "precision": 8
+          }
+        },
+        {
+          "id": "V4",
+          "input": "V3",
+          "operation": {
+            "op": "filter",
+            "where": {
+              "column": "待付（元）",
+              "operator": "gte",
+              "type": "number",
+              "value": "900"
+            }
+          }
+        },
+        {
+          "id": "V5",
+          "input": "V4",
+          "operation": {
+            "op": "group",
+            "by": [
+              "Team"
+            ],
+            "metrics": [
+              {
+                "function": "sum",
+                "as": "待付合计（元）",
+                "column": "待付（元）"
+              },
+              {
+                "function": "count",
+                "as": "票数"
+              }
+            ]
+          }
+        },
+        {
+          "id": "V6",
+          "input": "V5",
+          "operation": {
+            "op": "sort",
+            "by": [
+              {
+                "column": "待付合计（元）",
+                "direction": "desc",
+                "type": "number"
+              }
+            ]
+          }
+        }
+      ],
+      "finish": {
+        "tool": "finish",
+        "result": "V6",
+        "summaries": [],
+        "display_units": {},
+        "fields": [
+          "Team",
+          "待付合计（元）",
+          "票数"
+        ]
+      },
+      "repairs": [],
+      "planning_stats": {
+        "tokens": 347,
+        "peak_memory_gb": 19.98,
+        "automatic_structure": true,
+        "source_first_dedup": true,
+        "attempted_calls": 6,
+        "calls": 6,
+        "model_seconds": 71.2,
+        "max_input_tokens": 3186
+      },
+      "revision": null,
+      "operation_count": 6,
+      "seconds": 73.42,
+      "model_calls": 7,
+      "model_executed": true,
+      "dependency_blocked": false,
+      "input_tokens": 14978
+    },
+    {
+      "id": "claims_record_followup",
+      "prompt": "只统计单笔申请额不少于2500元的原始登记，仍按Team汇总，其余条件和输出列不变。这次只要表格，不要Word。",
+      "authorized_file_count": 2,
+      "passed": true,
+      "checks": {
+        "incremental_tools": true,
+        "expected_rows": true,
+        "expected_columns": true,
+        "preview_matches_xlsx": true,
+        "csv_matches_xlsx": true,
+        "required_summary": true,
+        "typed_summary_rows": true,
+        "word_if_requested": true,
+        "word_values": true,
+        "no_unrequested_word": true,
+        "completed": true,
+        "checked_delivery": true,
+        "no_original_transaction": true,
+        "originals_unchanged": true
+      },
+      "rows": [
+        [
+          "算力运维",
+          "3200",
+          "1"
+        ],
+        [
+          "行政协调",
+          "3000",
+          "1"
+        ],
+        [
+          "设备支持",
+          "2600",
+          "1"
+        ]
+      ],
+      "columns": [
+        "Team",
+        "待付合计（元）",
+        "票数"
+      ],
+      "summaries": [],
+      "word_text": "",
+      "graph": [
+        {
+          "id": "V1",
+          "input": "V0",
+          "operation": {
+            "op": "distinct",
+            "columns": [
+              "ClaimID"
+            ]
+          }
+        },
+        {
+          "id": "V2",
+          "input": "V1",
+          "operation": {
+            "op": "filter",
+            "where": {
+              "all": [
+                {
+                  "column": "BookedOn",
+                  "operator": "gte",
+                  "type": "date",
+                  "value": "2027-04-01"
+                },
+                {
+                  "column": "BookedOn",
+                  "operator": "lte",
+                  "type": "date",
+                  "value": "2027-04-30"
+                },
+                {
+                  "any": [
+                    {
+                      "column": "状态",
+                      "operator": "eq",
+                      "type": "text",
+                      "value": "已核准"
+                    },
+                    {
+                      "all": [
+                        {
+                          "column": "状态",
+                          "operator": "eq",
+                          "type": "text",
+                          "value": "补交中"
+                        },
+                        {
+                          "column": "可预付",
+                          "operator": "eq",
+                          "type": "text",
+                          "value": "是"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "V3",
+          "input": "V2",
+          "operation": {
+            "op": "derive",
+            "name": "待付（元）",
+            "expression": {
+              "subtract": [
+                {
+                  "column": "申请额（元）"
+                },
+                {
+                  "column": "Settled（元）"
+                }
+              ]
+            },
+            "format": "number",
+            "precision": 8
+          }
+        },
+        {
+          "id": "V4",
+          "input": "V3",
+          "operation": {
+            "op": "filter",
+            "where": {
+              "column": "待付（元）",
+              "operator": "gte",
+              "type": "number",
+              "value": "900"
+            }
+          }
+        },
+        {
+          "id": "V5",
+          "input": "V4",
+          "operation": {
+            "op": "filter",
+            "where": {
+              "column": "申请额（元）",
+              "operator": "gte",
+              "type": "number",
+              "value": "2500"
+            }
+          }
+        },
+        {
+          "id": "V6",
+          "input": "V5",
+          "operation": {
+            "op": "group",
+            "by": [
+              "Team"
+            ],
+            "metrics": [
+              {
+                "function": "sum",
+                "as": "待付合计（元）",
+                "column": "待付（元）"
+              },
+              {
+                "function": "count",
+                "as": "票数"
+              }
+            ]
+          }
+        },
+        {
+          "id": "V7",
+          "input": "V6",
+          "operation": {
+            "op": "sort",
+            "by": [
+              {
+                "column": "待付合计（元）",
+                "direction": "desc",
+                "type": "number"
+              }
+            ]
+          }
+        }
+      ],
+      "finish": {
+        "tool": "finish",
+        "result": "V7",
+        "summaries": [],
+        "display_units": {},
+        "fields": [
+          "Team",
+          "待付合计（元）",
+          "票数"
+        ]
+      },
+      "repairs": [],
+      "planning_stats": {
+        "tokens": 0,
+        "peak_memory_gb": 0
+      },
+      "revision": {
+        "parent_id": "4e4a9d16-a861-4950-8c43-2e36bc74e41f",
+        "edits": [
+          {
+            "kind": "add_shared_filter",
+            "input": "V4",
+            "condition": {
+              "column": "申请额（元）",
+              "operator": "gte",
+              "type": "number",
+              "value": "2500"
+            },
+            "quote": "申请额不少于2500元"
+          }
+        ],
+        "literal_compiler": true,
+        "record_granularity": true,
+        "proof": "Only explicit boundaries changed; all other typed operations retained and replayed."
+      },
+      "operation_count": 7,
+      "seconds": 0.07,
+      "model_calls": 0,
+      "model_executed": false,
+      "dependency_blocked": false,
+      "input_tokens": 0
+    },
+    {
+      "id": "samples_multilevel_mass",
+      "prompt": "只处理样品称量.xlsx的称量表，处理标记必须为可寄送。净寄重按GrossMass减TareMass计算，只保留净寄重不少于1千克的，按Batch升序；只留Batch和净寄重两列，净寄重以kg显示。每条明细保留，另外给净寄重合计和条数，再写一段寄送说明并导出Word。",
+      "authorized_file_count": 4,
+      "passed": true,
+      "checks": {
+        "incremental_tools": true,
+        "expected_rows": true,
+        "expected_columns": true,
+        "preview_matches_xlsx": true,
+        "csv_matches_xlsx": true,
+        "required_summary": true,
+        "typed_summary_rows": true,
+        "word_if_requested": true,
+        "word_values": true,
+        "no_unrequested_word": true,
+        "completed": true,
+        "checked_delivery": true,
+        "no_original_transaction": true,
+        "originals_unchanged": true
+      },
+      "rows": [
+        [
+          "B81",
+          "1.4"
+        ],
+        [
+          "B84",
+          "1.7"
+        ],
+        [
+          "B85",
+          "1"
+        ],
+        [
+          "B87",
+          "1.2"
+        ]
+      ],
+      "columns": [
+        "Batch",
+        "净寄重（kg）"
+      ],
+      "summaries": [
+        {
+          "columns": [
+            "净寄重合计（kg）",
+            "条数"
+          ],
+          "rows": [
+            [
+              "5.3",
+              "4"
+            ]
+          ],
+          "units": {
+            "净寄重合计（kg）": "mass"
+          },
+          "provenance": [
+            [
+              1,
+              2,
+              5,
+              6
+            ]
+          ],
+          "field_types": {
+            "净寄重合计（g）": "number",
+            "条数": "number"
+          },
+          "unit_ledger": {
+            "净寄重合计（g）": {
+              "source_column": "净寄重合计（g）",
+              "canonical_unit": "g"
+            },
+            "条数": {
+              "source_column": "条数",
+              "canonical_unit": ""
+            }
+          }
+        }
+      ],
+      "word_text": "样品称量情况说明\n本次按要求从7条原始记录中整理出4条结果。\n净寄重合计（kg）：5.3；条数：4。\n明细\n汇总\n数据说明\n样品称量.xlsx / 称量：称量 / GrossMass（kg）：按单元格显式单位优先、表头单位兜底，统一为g；未改变原文件。\n资料来源\n【S1】样品称量.xlsx\nBatch | 净寄重（kg）\nB81 | 1.4\nB84 | 1.7\nB85 | 1\nB87 | 1.2\n净寄重合计（kg） | 条数\n5.3 | 4",
+      "graph": [
+        {
+          "id": "V1",
+          "input": "V0",
+          "operation": {
+            "op": "derive",
+            "name": "净寄重（g）",
+            "expression": {
+              "subtract": [
+                {
+                  "column": "称量 / GrossMass（g）"
+                },
+                {
+                  "column": "称量 / TareMass（g）"
+                }
+              ]
+            },
+            "format": "number",
+            "precision": 8
+          }
+        },
+        {
+          "id": "V2",
+          "input": "V1",
+          "operation": {
+            "op": "filter",
+            "where": {
+              "all": [
+                {
+                  "column": "处理标记",
+                  "operator": "eq",
+                  "type": "text",
+                  "value": "可寄送"
+                },
+                {
+                  "column": "净寄重（g）",
+                  "operator": "gte",
+                  "type": "number",
+                  "value": "1000"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "V3",
+          "input": "V2",
+          "operation": {
+            "op": "sort",
+            "by": [
+              {
+                "column": "Batch",
+                "direction": "asc",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        {
+          "id": "V4",
+          "input": "V3",
+          "operation": {
+            "op": "group",
+            "by": [],
+            "metrics": [
+              {
+                "function": "sum",
+                "as": "净寄重合计（g）",
+                "column": "净寄重（g）"
+              },
+              {
+                "function": "count",
+                "as": "条数"
+              }
+            ]
+          }
+        }
+      ],
+      "finish": {
+        "tool": "finish",
+        "result": "V3",
+        "summaries": [
+          "V4"
+        ],
+        "display_units": {
+          "称量 / GrossMass（g）": "kg",
+          "称量 / TareMass（g）": "kg",
+          "净寄重（g）": "kg",
+          "净寄重合计（g）": "kg"
+        },
+        "fields": [
+          "Batch",
+          "净寄重（g）"
+        ]
+      },
+      "repairs": [
+        {
+          "turn": 0,
+          "error": "每个计算字段仅提供name、formula和可选format/precision/display_units。",
+          "available_views": [
+            "V0"
+          ],
+          "action": {
+            "tool": "derive",
+            "input": "V0",
+            "purpose": "计算净寄重（GrossMass - TareMass），单位保持g，后续筛选和展示处理",
+            "fields": [
+              {
+                "name": "净寄重",
+                "formula": "[称量 / GrossMass（g）] - [称量 / TareMass（g）]",
+                "where": {
+                  "field": "处理标记",
+                  "op": "eq",
+                  "value": "可寄送"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "planning_stats": {
+        "tokens": 459,
+        "peak_memory_gb": 19.98,
+        "attempted_calls": 8,
+        "calls": 8,
+        "model_seconds": 73.57,
+        "max_input_tokens": 2739,
+        "structured_calls": 5,
+        "structure_seconds": 10.623,
+        "constraint_escalations": 1
+      },
+      "revision": null,
+      "operation_count": 4,
+      "seconds": 75.69,
+      "model_calls": 9,
+      "model_executed": true,
+      "dependency_blocked": false,
+      "input_tokens": 16136
+    },
+    {
+      "id": "followup_implicit_or_hours",
+      "prompt": "把跟进记录.csv中2027年5月的记录按组别统计，包含月初和月底。只算已完成的，或复核通过并且来源为转介的记录。每组给记录数和用时合计，用小时显示，按用时合计从多到少；只要组别、记录数、用时合计三列，不生成文稿。",
+      "authorized_file_count": 4,
+      "passed": true,
+      "checks": {
+        "incremental_tools": true,
+        "expected_rows": true,
+        "expected_columns": true,
+        "preview_matches_xlsx": true,
+        "csv_matches_xlsx": true,
+        "required_summary": true,
+        "typed_summary_rows": true,
+        "word_if_requested": true,
+        "word_values": true,
+        "no_unrequested_word": true,
+        "completed": true,
+        "checked_delivery": true,
+        "no_original_transaction": true,
+        "originals_unchanged": true
+      },
+      "rows": [
+        [
+          "行政联络",
+          "2",
+          "2.5"
+        ],
+        [
+          "项目支持",
+          "2",
+          "2.25"
+        ],
+        [
+          "技术协作",
+          "2",
+          "2"
+        ]
+      ],
+      "columns": [
+        "组别",
+        "记录数",
+        "用时合计（小时）"
+      ],
+      "summaries": [],
+      "word_text": "",
+      "graph": [
+        {
+          "id": "V1",
+          "input": "V0",
+          "operation": {
+            "op": "filter",
+            "where": {
+              "any": [
+                {
+                  "all": [
+                    {
+                      "column": "登记日",
+                      "operator": "gte",
+                      "type": "date",
+                      "value": "2027-05-01"
+                    },
+                    {
+                      "column": "登记日",
+                      "operator": "lte",
+                      "type": "date",
+                      "value": "2027-05-31"
+                    },
+                    {
+                      "column": "跟进状态",
+                      "operator": "eq",
+                      "type": "text",
+                      "value": "已完成"
+                    }
+                  ]
+                },
+                {
+                  "all": [
+                    {
+                      "column": "登记日",
+                      "operator": "gte",
+                      "type": "date",
+                      "value": "2027-05-01"
+                    },
+                    {
+                      "column": "登记日",
+                      "operator": "lte",
+                      "type": "date",
+                      "value": "2027-05-31"
+                    },
+                    {
+                      "column": "跟进状态",
+                      "operator": "eq",
+                      "type": "text",
+                      "value": "复核通过"
+                    },
+                    {
+                      "column": "来源",
+                      "operator": "eq",
+                      "type": "text",
+                      "value": "转介"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "V2",
+          "input": "V1",
+          "operation": {
+            "op": "group",
+            "by": [
+              "组别"
+            ],
+            "metrics": [
+              {
+                "function": "count",
+                "as": "记录数"
+              },
+              {
+                "function": "sum",
+                "as": "用时合计（分钟）",
+                "column": "用时（分钟）"
+              }
+            ]
+          }
+        },
+        {
+          "id": "V3",
+          "input": "V2",
+          "operation": {
+            "op": "sort",
+            "by": [
+              {
+                "column": "用时合计（分钟）",
+                "direction": "desc",
+                "type": "number"
+              }
+            ]
+          }
+        }
+      ],
+      "finish": {
+        "tool": "finish",
+        "result": "V3",
+        "summaries": [],
+        "display_units": {
+          "用时合计（分钟）": "小时"
+        },
+        "fields": [
+          "组别",
+          "记录数",
+          "用时合计（分钟）"
+        ]
+      },
+      "repairs": [],
+      "planning_stats": {
+        "tokens": 460,
+        "peak_memory_gb": 19.98,
+        "attempted_calls": 6,
+        "calls": 6,
+        "model_seconds": 50.81,
+        "max_input_tokens": 2506,
+        "structured_calls": 1,
+        "structure_seconds": 1.18
+      },
+      "revision": null,
+      "operation_count": 3,
+      "seconds": 51.05,
+      "model_calls": 6,
+      "model_executed": true,
+      "dependency_blocked": false,
+      "input_tokens": 10126
+    }
+  ],
+  "passed": 4,
+  "total": 4,
+  "peak_mlx_gb": 19.982,
+  "peak_process_rss_gb": 10.013,
+  "source_hashes_unchanged": true,
+  "limits": "Known fictional development tasks. v0.22-based backend with general row-retention and displayed-review fixes, common windows, typed tools and repair bounds; native thinking disabled. Developer synthesis is not independent user research. Models differ beyond size. Native GUI and normal user data are not operated."
+}

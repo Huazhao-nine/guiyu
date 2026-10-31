@@ -1,0 +1,9 @@
+{
+  "time": "2026-10-30T20:23:37.678185+08:00",
+  "stage": "documented-calculator-contract",
+  "passed": false,
+  "error": "ValueError: 本地模型参数尚未完整，未执行工具。",
+  "raw_generated_text": "not captured",
+  "source": "qa/private/v0.24/coder-compatibility.log",
+  "office_task_inference_started": false
+}

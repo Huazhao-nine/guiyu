@@ -1,0 +1,399 @@
+{
+  "version": "0.26",
+  "clock": "2026-10-30",
+  "scope": "Public spreadsheet structures populated with fictional inputs; one untouched public requirements document; developer-synthesized goals. Confirmation uses two files not model-evaluated during development. Not independent user research.",
+  "cases": [
+    {
+      "id": "public_stock_detail",
+      "prompt": "处理公开台账_虚构填报.xlsx，时间在2027年8月整月，申领使用备注不包含撤销，剩余数量不少于0且小于6，入库单价非空。现存金额按剩余数量乘入库单价计算，按现存金额降序；只保留耗材名称、剩余数量、现存金额，保留逐条明细并附上现存金额总额和条数。生成Word，标题“八月低库存明细”，不要补充采购建议。",
+      "rows": [
+        [
+          "硒鼓",
+          "3",
+          "540"
+        ],
+        [
+          "U盘",
+          "5",
+          "230"
+        ],
+        [
+          "打印纸",
+          "2",
+          "40"
+        ],
+        [
+          "打印纸",
+          "0",
+          "0"
+        ]
+      ],
+      "columns": [
+        "耗材名称",
+        "剩余数量",
+        "现存金额"
+      ],
+      "summary_values": [
+        "810",
+        4
+      ],
+      "word": true,
+      "word_numbers": [
+        "810"
+      ],
+      "group": "development",
+      "files": [
+        "公开台账_虚构填报.xlsx"
+      ]
+    },
+    {
+      "id": "stock_zero_followup",
+      "prompt": "已经用完的先去掉，其他规则和输出列不变，这次只要表格。",
+      "parent": "public_stock_detail",
+      "rows": [
+        [
+          "硒鼓",
+          "3",
+          "540"
+        ],
+        [
+          "U盘",
+          "5",
+          "230"
+        ],
+        [
+          "打印纸",
+          "2",
+          "40"
+        ]
+      ],
+      "columns": [
+        "耗材名称",
+        "剩余数量",
+        "现存金额"
+      ],
+      "summary_values": [
+        "810",
+        3
+      ],
+      "word": false,
+      "group": "development"
+    },
+    {
+      "id": "public_quote_conditions",
+      "prompt": "处理公开报价_虚构填报.xlsx，单价非空，并且数量不少于3或者所投品牌为海岚。按数量乘单价重新计算合价，用元表示，按合价降序，只保留名称、数量、单价、合价。保留明细，并附加合价总额和条数。生成Word，标题“设备报价摘录”，不添加厂商评价。",
+      "rows": [
+        [
+          "台式电脑",
+          "4",
+          "3550",
+          "14200"
+        ],
+        [
+          "交换机（24口）",
+          "3",
+          "1250",
+          "3750"
+        ],
+        [
+          "机柜",
+          "2",
+          "600",
+          "1200"
+        ]
+      ],
+      "columns": [
+        "名称",
+        "数量",
+        "单价",
+        "合价"
+      ],
+      "summary_values": [
+        19150,
+        3
+      ],
+      "word": true,
+      "word_numbers": [
+        19150
+      ],
+      "group": "development",
+      "files": [
+        "公开报价_虚构填报.xlsx"
+      ]
+    },
+    {
+      "id": "quote_price_followup",
+      "prompt": "单价至少1000元的再单列出来，其他规则、排序和列不变，只要表格。",
+      "parent": "public_quote_conditions",
+      "rows": [
+        [
+          "台式电脑",
+          "4",
+          "3550",
+          "14200"
+        ],
+        [
+          "交换机（24口）",
+          "3",
+          "1250",
+          "3750"
+        ]
+      ],
+      "columns": [
+        "名称",
+        "数量",
+        "单价",
+        "合价"
+      ],
+      "summary_values": [
+        "17950",
+        2
+      ],
+      "word": false,
+      "group": "development"
+    },
+    {
+      "id": "service_mixed_units",
+      "prompt": "处理服务记录.xlsx，按东站、西站的顺序合并，先按VisitID保留首次记录。ServiceDay在2027年12月整月，Phase为已结案，或者Phase为待复核且Remote为是；时长非空，且每条Paid不少于100元。按Team统计累计工时、费用合计和记录数，累计工时用小时、费用用元显示；按费用合计降序。只保留Team、累计工时、费用合计、记录数。生成Word，标题“十二月服务情况”。",
+      "rows": [
+        [
+          "夕组",
+          "3.5",
+          "620",
+          2
+        ],
+        [
+          "晨组",
+          "2.75",
+          "590",
+          2
+        ],
+        [
+          "远组",
+          "0.75",
+          "180",
+          1
+        ]
+      ],
+      "columns": [
+        "Team",
+        "累计工时",
+        "费用合计",
+        "记录数"
+      ],
+      "word": true,
+      "word_numbers": [
+        620,
+        590,
+        180
+      ],
+      "group": "development",
+      "files": [
+        "服务记录.xlsx"
+      ]
+    },
+    {
+      "id": "service_hours_followup",
+      "prompt": "那累计工时至少2小时的组呢？其他规则、排序和列不变，这次只要表格。",
+      "parent": "service_mixed_units",
+      "rows": [
+        [
+          "夕组",
+          "3.5",
+          "620",
+          2
+        ],
+        [
+          "晨组",
+          "2.75",
+          "590",
+          2
+        ]
+      ],
+      "columns": [
+        "Team",
+        "累计工时",
+        "费用合计",
+        "记录数"
+      ],
+      "word": false,
+      "group": "development"
+    },
+    {
+      "id": "event_latest_plan",
+      "prompt": "查找工作区里的读书会方案和变更记录，以最新变更记录为准，计算当前待支付费用总额和剩余预算，核对活动提前7个自然日的确认日期，再整理成一份简短Word筹备说明。说明费用尚未付款，不要写成已支付。",
+      "kind": "office",
+      "group": "development",
+      "files": [
+        "读书会方案.md",
+        "读书会变更记录.txt"
+      ],
+      "numbers": [
+        "3400",
+        "1200"
+      ],
+      "dates": [
+        "2027-03-14",
+        "2027年3月14日",
+        "2027/3/14"
+      ],
+      "required_condition": [
+        "尚未付款",
+        "未付款",
+        "待支付",
+        "尚未支付"
+      ],
+      "word": true
+    },
+    {
+      "id": "public_document_word",
+      "prompt": "根据公开项目需求.docx，提取项目预算、采购设备及数量、交货截止日、质保期和付款比例，整理成一份简短Word。请区分电脑主机与显示器数量，保留资料出处，不添加厂商推荐或投标意见。",
+      "kind": "office",
+      "group": "development",
+      "files": [
+        "公开项目需求.docx"
+      ],
+      "patterns": [
+        "44\\s*万|440[，,]?000",
+        "2026[-/年]0?9[-/月]30",
+        "(?:电脑|主机)[^。\\n]{0,45}56",
+        "显示器[^。\\n]{0,20}55",
+        "机柜[^。\\n]{0,20}2",
+        "95\\s*%|95\\s*％",
+        "5\\s*%|5\\s*％",
+        "质保[^。\\n]{0,20}5"
+      ],
+      "word": true
+    },
+    {
+      "id": "reserved_training",
+      "prompt": "处理培训签到.xlsx，只纳入结束日期在2027-01-01至2027-03-31、签到为是且报名金额不少于700元的记录。按部门汇总累计学习时长、报名金额合计与记录数，学习时长用分钟显示，按累计学习时长降序。只要部门、累计学习时长、报名金额合计、记录数，生成Word，标题“第一季度培训汇总”。",
+      "rows": [
+        [
+          "技术组",
+          "225",
+          "1700",
+          2
+        ],
+        [
+          "支持组",
+          "90",
+          "700",
+          1
+        ],
+        [
+          "运营组",
+          "45",
+          "1000",
+          1
+        ]
+      ],
+      "columns": [
+        "部门",
+        "累计学习时长",
+        "报名金额合计",
+        "记录数"
+      ],
+      "word": true,
+      "word_numbers": [
+        1700,
+        1000,
+        700
+      ],
+      "group": "confirmation",
+      "files": [
+        "培训签到.xlsx"
+      ]
+    },
+    {
+      "id": "reserved_training_march",
+      "prompt": "只保留结束日期在2027年3月整月的，其他规则不变，这次只要表格。",
+      "parent": "reserved_training",
+      "rows": [
+        [
+          "技术组",
+          "90",
+          "800",
+          1
+        ]
+      ],
+      "columns": [
+        "部门",
+        "累计学习时长",
+        "报名金额合计",
+        "记录数"
+      ],
+      "word": false,
+      "group": "confirmation"
+    },
+    {
+      "id": "reserved_dispatch",
+      "prompt": "处理物资配送.csv，只纳入ShipDate在2028年1月整月、Fee非空的记录；Status为已签收，或者Status为待核对且Express为是。按Zone统计总净重、费用合计和条数，净重用克、费用用万元显示。按总净重降序，同重量按Zone升序，只要Zone、总净重、费用合计、条数四列，生成Word，标题“一月配送汇总”。",
+      "rows": [
+        [
+          "南区",
+          "2000",
+          "0.03",
+          2
+        ],
+        [
+          "西区",
+          "2000",
+          "0.018",
+          1
+        ],
+        [
+          "北区",
+          "750",
+          "0.04",
+          2
+        ]
+      ],
+      "columns": [
+        "Zone",
+        "总净重",
+        "费用合计",
+        "条数"
+      ],
+      "word": true,
+      "word_numbers": [
+        "0.03",
+        "0.018",
+        "0.04"
+      ],
+      "group": "confirmation",
+      "files": [
+        "物资配送.csv"
+      ]
+    },
+    {
+      "id": "reserved_dispatch_chat",
+      "prompt": "谢谢。能用一句话解释一下你能帮我做什么吗？",
+      "parent": "reserved_dispatch",
+      "chat": true,
+      "group": "confirmation"
+    },
+    {
+      "id": "reserved_dispatch_north",
+      "prompt": "那北区呢？其他口径、排序和列不变，这次只要表格。",
+      "parent": "reserved_dispatch",
+      "conversation_parent": "reserved_dispatch_chat",
+      "rows": [
+        [
+          "北区",
+          "750",
+          "0.04",
+          2
+        ]
+      ],
+      "columns": [
+        "Zone",
+        "总净重",
+        "费用合计",
+        "条数"
+      ],
+      "word": false,
+      "group": "confirmation"
+    }
+  ]
+}

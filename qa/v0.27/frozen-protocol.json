@@ -1,0 +1,20 @@
+{
+  "version": "0.27",
+  "frozen_before_first_model_run": true,
+  "fixtures": {
+    "fixtures/submission_v27/validation.json": "b9766e960eb24ca6d040faf92515e84a45612546472b2227e9f8612ff050a4c0",
+    "fixtures/submission_v27/tasks.json": "3e1410f5b7f5788fbe5f02ae41afd5c954092f36143e8de4620ee19b18f7b8f3",
+    "fixtures/submission_v27/workspace/共享工位安排.md": "c7d9e2e509f5c2686589ce31388c8b713d31e710f2a780dc9841fd358496836c",
+    "fixtures/submission_v27/workspace/志愿者培训方案.md": "4679ace16ca73f5f5a26c7cc6f0acf5a1c12a5042fb0e8086c178404600133a7",
+    "fixtures/submission_v27/workspace/培训补充通知.txt": "86dadd6ec539cb0761e68f25b25ff1bcfeab50378a6fab8ef834de4a2d13a43a",
+    "fixtures/submission_v27/workspace/客户跟进纪要.md": "067e61be944add836ad8466f9f4c19ea25051629b633ca3de0097118e802a338",
+    "fixtures/submission_v27/workspace/支持日志.xlsx": "63fbbd081f2b158c7333579b20188e178ce83dbc7516db7fc65c81d9bd858b40",
+    "fixtures/submission_v27/workspace/共享工位最新通知.txt": "1ee596eeea393f8137ebfbb416e7fcd4c1d77b305082c15a26a7d68d76d5752d"
+  },
+  "runner_sha256": "4c8421def7a7f10579de96deceedcffc2085ccc28e853b1d571459b544969169",
+  "model": "qwen3.6-35b-a3b",
+  "hardware": "Apple M5 32GB",
+  "goals": 5,
+  "roles": "3 known transfer regression tasks; fresh versioned-training office case; fictional privacy regression. Developer-authored, not independent user testing.",
+  "grading": "Expected values are read only by the checker after generation; completion and Word, table, date, no-mutation, privacy checks all required."
+}

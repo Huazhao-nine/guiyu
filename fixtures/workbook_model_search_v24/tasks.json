@@ -1,0 +1,97 @@
+{
+  "seed": 2026103024,
+  "scope": "New developer-synthesized confirmation, fixed before candidate inference; expected values use independent Decimal logic.",
+  "cases": [
+    {
+      "id": "travel_union_word",
+      "prompt": "汇总差旅报销.xlsx中“纸质”和“线上”的记录，按这个顺序合并。先按ReportID保留首次记录，之后仅纳入2027年7月整月且包含月初月底，状态为已核准，或者状态为待补票且允许预支为是。未付按报销额减已付额计算，只纳入未付不少于600元的，按Department汇总未付合计和单数，未付合计降序；只要Department、未付合计、单数三列。生成Word，标题“七月差旅待付说明”，不新增审核意见。",
+      "rows": [
+        [
+          "技术支持部",
+          "4800",
+          "2"
+        ],
+        [
+          "行政协作部",
+          "2700",
+          "2"
+        ],
+        [
+          "人力运营部",
+          "1000",
+          "1"
+        ]
+      ],
+      "word": true,
+      "word_numbers": [
+        "4800",
+        "2700",
+        "1000"
+      ]
+    },
+    {
+      "id": "travel_short_followup",
+      "parent": "travel_union_word",
+      "prompt": "那技术支持部呢？其他口径不变，这次只要表格。",
+      "rows": [
+        [
+          "技术支持部",
+          "4800",
+          "2"
+        ]
+      ],
+      "word": false
+    },
+    {
+      "id": "english_monthly_duration",
+      "prompt": "从服务登记.csv中选取HandledOn在2027年8月整月的记录，包含两端。Stage为完成，或者Stage为复核通过且Channel为推荐。按Group统计记录数与时长合计，用小时显示；时长合计降序，同小时按Group升序。只要Group、记录数、时长合计三列，不生成文稿。",
+      "rows": [
+        [
+          "B组",
+          "2",
+          "2.5"
+        ],
+        [
+          "A组",
+          "2",
+          "2.25"
+        ],
+        [
+          "C组",
+          "2",
+          "2.25"
+        ]
+      ],
+      "word": false
+    },
+    {
+      "id": "office_stock_detail_word",
+      "prompt": "处理办公室库存.xlsx的库存页，只看启用为是且单价非空、计划数量大于现有数量的物料。缺口按计划数量减现有数量，预计金额按缺口乘UnitPrice计算，只纳入预计金额不少于75元的。按预计金额降序，同金额按ItemCode升序，只保留ItemCode、缺口、预计金额，保留逐条明细并附加预计金额合计和条数。生成Word，标题“办公补充计划”，不添加采购日期或供应商。",
+      "rows": [
+        [
+          "OF84",
+          "7",
+          "175"
+        ],
+        [
+          "OF81",
+          "3",
+          "150"
+        ],
+        [
+          "OF87",
+          "3",
+          "120"
+        ]
+      ],
+      "summary_values": [
+        "445",
+        "3"
+      ],
+      "word_numbers": [
+        "445"
+      ],
+      "word": true
+    }
+  ]
+}

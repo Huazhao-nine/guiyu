@@ -1,0 +1,72 @@
+{
+  "time": "2026-10-30T20:34:51.648596+08:00",
+  "checks": {
+    "travel_union_word": true,
+    "travel_short_followup": true,
+    "english_monthly_duration": true,
+    "office_stock_detail_word": true,
+    "stock_summary": true
+  },
+  "recomputed_rows": {
+    "travel_union_word": [
+      [
+        "技术支持部",
+        "4800",
+        "2"
+      ],
+      [
+        "行政协作部",
+        "2700",
+        "2"
+      ],
+      [
+        "人力运营部",
+        "1000",
+        "1"
+      ]
+    ],
+    "travel_short_followup": [
+      [
+        "技术支持部",
+        "4800",
+        "2"
+      ]
+    ],
+    "english_monthly_duration": [
+      [
+        "B组",
+        "2",
+        "2.5"
+      ],
+      [
+        "A组",
+        "2",
+        "2.25"
+      ],
+      [
+        "C组",
+        "2",
+        "2.25"
+      ]
+    ],
+    "office_stock_detail_word": [
+      [
+        "OF84",
+        "7",
+        "175"
+      ],
+      [
+        "OF81",
+        "3",
+        "150"
+      ],
+      [
+        "OF87",
+        "3",
+        "120"
+      ]
+    ]
+  },
+  "all_passed": true,
+  "method": "Read the actual frozen XLSX and CSV independently with openpyxl/csv/Decimal; no production planning, unit, filter, group or export tools used."
+}

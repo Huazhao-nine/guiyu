@@ -1,0 +1,55 @@
+{
+  "frozen_before_first_model_run": true,
+  "input_hashes": {
+    "物资配送.csv": "676433b09415aff46e90873db61ea3ff9d910ff4431ff7c13c85e3ada0904903",
+    "服务记录.xlsx": "3bf4fe9e94fbd26525b5e35647ba70d034ac6509fa45fdbf80ea59b96a853e40",
+    "公开台账_虚构填报.xlsx": "7cd21185745769b8d0136b0e12250e1fd5fc38ecb9a2ef9a690c164acd88e1d2",
+    "培训签到.xlsx": "0c99edddebeac4c9d96aaf48c28aabea93e0c40134a9b713fb4e533865225f42",
+    "公开报价_虚构填报.xlsx": "765c7006a6f2a9b37ae85fc14af10f9af8161063b43a93c03b17303878351b8f",
+    "读书会方案.md": "c7060c256fa1f05949824a666abcedd60c2f4230f2d3caf5a07d34b8356c7066",
+    "读书会变更记录.txt": "8fb4930cbf6763141cff73e5aac3e07a18cb14a2b37e3fd7e82dff57a4b8f6d4",
+    "公开项目需求.docx": "073dd3f85158cfaee917ac369c2085f06d853e83af0dc1481f529c45cf1960ff"
+  },
+  "tasks_sha256": "0057db8d16a84b628d65518b5af7f85eb0ffa0baa2a4d9edf41b14cea526943d",
+  "development_ids": [
+    "public_stock_detail",
+    "stock_zero_followup",
+    "public_quote_conditions",
+    "quote_price_followup",
+    "service_mixed_units",
+    "service_hours_followup",
+    "event_latest_plan",
+    "public_document_word"
+  ],
+  "reserved_confirmation_ids": [
+    "reserved_training",
+    "reserved_training_march",
+    "reserved_dispatch",
+    "reserved_dispatch_chat",
+    "reserved_dispatch_north"
+  ],
+  "public_sources": [
+    {
+      "file": "出入库记录单.xlsx",
+      "url": "https://ccad.usst.edu.cn/_upload/article/files/09/60/dcceb4a44e97821be3d199ea1bde/295130ad-2450-477c-9d30-7b5232d1c93a.xlsx",
+      "page": "https://ccad.usst.edu.cn/2024/1217/c6911a331983/page.htm",
+      "bytes": 14532,
+      "sha256": "04fae8e1045d34368f80291f2047f0a8b25cefd918bae7f265e8917fe414a2ab"
+    },
+    {
+      "file": "采购报价清单.xlsx",
+      "url": "https://www.naujsc.edu.cn/_upload/article/files/10/20/dc49255248658537182763235cde/66e4939b-a69d-4744-945a-1d9a2770d913.xlsx",
+      "page": "https://www.naujsc.edu.cn/2026/0909/c54a24696/page.htm",
+      "bytes": 13645,
+      "sha256": "a8ed3313e4a1f1f47bb1ddf49cdd0776ef9f782aa1ceb1ddae39a402a6cde793"
+    },
+    {
+      "file": "项目需求.docx",
+      "url": "https://www.naujsc.edu.cn/_upload/article/files/10/20/dc49255248658537182763235cde/c62be1a7-d4bb-4387-b2eb-09a6d00c0263.docx",
+      "page": "https://www.naujsc.edu.cn/2026/0909/c54a24696/page.htm",
+      "bytes": 37329,
+      "sha256": "073dd3f85158cfaee917ac369c2085f06d853e83af0dc1481f529c45cf1960ff"
+    }
+  ],
+  "gold_method": "Independent openpyxl/csv reads, Decimal arithmetic, Gregorian date filters, no product backend functions or model outputs. Cached formula results verified for populated stock rows."
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "suite": "variants",
+    "model": "qwen3.5-9b",
+    "exit_code": 1,
+    "elapsed": 52.262,
+    "report": "qa/v0.24/adaptation/reports/variants-qwen3.5-9b-20261030T205058-a06f39.json"
+  },
+  {
+    "suite": "variants",
+    "model": "qwen3.6-35b-a3b",
+    "exit_code": 0,
+    "elapsed": 50.522,
+    "report": "qa/v0.24/adaptation/reports/variants-qwen3.6-35b-a3b-20261030T205150-abb9b6.json"
+  },
+  {
+    "suite": "fresh",
+    "model": "qwen3.5-9b",
+    "exit_code": 1,
+    "elapsed": 86.202,
+    "report": "qa/v0.24/adaptation/reports/fresh-qwen3.5-9b-20261030T205240-9aed97.json"
+  },
+  {
+    "suite": "fresh",
+    "model": "qwen3.6-35b-a3b",
+    "exit_code": 0,
+    "elapsed": 77.35,
+    "report": "qa/v0.24/adaptation/reports/fresh-qwen3.6-35b-a3b-20261030T205407-897e28.json"
+  },
+  {
+    "suite": "unseen",
+    "model": "qwen3.5-9b",
+    "exit_code": 1,
+    "elapsed": 163.286,
+    "report": "qa/v0.24/adaptation/reports/unseen-qwen3.5-9b-20261030T205524-3a74fc.json"
+  },
+  {
+    "suite": "unseen",
+    "model": "qwen3.6-35b-a3b",
+    "exit_code": 0,
+    "elapsed": 171.767,
+    "report": "qa/v0.24/adaptation/reports/unseen-qwen3.6-35b-a3b-20261030T205808-60bfed.json"
+  },
+  {
+    "suite": "followups",
+    "model": "qwen3.5-9b",
+    "exit_code": 0,
+    "elapsed": 98.586,
+    "report": "qa/v0.24/adaptation/reports/followups-qwen3.5-9b-20261030T210059-a35044.json"
+  },
+  {
+    "suite": "followups",
+    "model": "qwen3.6-35b-a3b",
+    "exit_code": 0,
+    "elapsed": 80.316,
+    "report": "qa/v0.24/adaptation/reports/followups-qwen3.6-35b-a3b-20261030T210238-f283b6.json"
+  }
+]

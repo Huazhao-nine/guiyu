@@ -1,0 +1,38 @@
+[
+  {
+    "id": "month_range",
+    "prompt": "把“登记日在2027年5月整月，包含月初和月底”转成日期范围。只返回JSON对象，键为start、end，值用YYYY-MM-DD。",
+    "expected": {
+      "start": "2027-05-01",
+      "end": "2027-05-31"
+    }
+  },
+  {
+    "id": "boolean_scope",
+    "prompt": "状态为已核准，或者状态为补交中并且可预付为是。分别判断三条记录是否满足：A 状态已核准、可预付否；B 状态补交中、可预付是；C 状态补交中、可预付否。只返回JSON对象，键A、B、C，值为布尔值。",
+    "expected": {
+      "A": true,
+      "B": true,
+      "C": false
+    }
+  },
+  {
+    "id": "mass_units",
+    "prompt": "一件样品毛重1.65kg、皮重250g。净重按毛重减皮重，判断净重是否不少于1千克。只返回JSON对象，键net_kg为净重数值，键passes_minimum为布尔值。",
+    "expected": {
+      "net_kg": 1.4,
+      "passes_minimum": true
+    }
+  },
+  {
+    "id": "dedup_before_dates",
+    "prompt": "按给定顺序有四条记录：R1,2027-02-28,5000元；R1,2027-03-10,9000元；R2,2027-03-01,1200元；R3,2027-03-31,1500元。先按编号保留首次记录，再只取2027年3月且含两端，计算金额合计。只返回JSON对象，键retained_ids为按原顺序的编号数组，键total为元单位金额数值。",
+    "expected": {
+      "retained_ids": [
+        "R2",
+        "R3"
+      ],
+      "total": 2700
+    }
+  }
+]

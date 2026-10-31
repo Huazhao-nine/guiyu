@@ -1,0 +1,771 @@
+{
+  "version": "0.26",
+  "label": "delivery-final",
+  "group": "confirmation",
+  "hardware": "Apple M5 32GB",
+  "model": "qwen3.6-35b-a3b",
+  "seed": 20261030,
+  "network_denied": true,
+  "backend_hashes": {
+    "structured_output.py": "7960a53bd816fbd0f1940a7ab57a3c91da9fd56e4d09deb7c4639b1764deb268",
+    "worker.py": "879bf7cff54b9ad715236926c23899d1433a9d76f0add5dd6db61cb354bd8c8a",
+    "agent_control.py": "978c4603f58173303696e39db589596d92bc9cdb2df42587983f940073b55265",
+    "money_subtotals.py": "3f69877035132e87a756b16cfbb33876eb80d1d9f0edd424b9115debdd2a54ee",
+    "workbook_agent.py": "f47d2ea6c47861b97cc5665d9655497e7e93c54f9cc8c7484c2f767757df34a2",
+    "workbook_writing.py": "5ddd5a39dcb8557d077939a5f0d141147beac2287a457cfad0cf8475cf1826b9",
+    "workbook_edits.py": "7d8dd9169b2739fafa62622a2d2bb8f21518e76152541a761924b638c073d219",
+    "workbook_recovery.py": "ad905941301310128736730e5d931a49ff56d7610ece443ff12136ea731e05d3",
+    "personal_tools.py": "c8ed42cd828d67ebfbd03c2cdf144894b553cb009a0cf2beebe77f590af016e1",
+    "workbook_data.py": "bc6902625ecb69300fd8497fba0d8cb734ea8372ccf97a46d2c6d1a231e5b408",
+    "structured_tables.py": "3ecc86af63b74c35b9b768b780d06db7b33f6f435717457fa44ae382923798f8",
+    "runtime_policy.py": "422cef9d111bca844c37e71ace3b6be37fd9b6b81bbd3b0967e73b4aaaa10a22",
+    "local_query.py": "4f37344fb04fc31bd3537598867b3a27d78d74dc26bae2dbe16a1a5330864f28",
+    "workbook_schema.py": "1f640f62ea196fdb4c038293ac0ee3b69c19cfe10b237891d7bec0bc46e951a1",
+    "privacy_filter.py": "3a65fc2029085463408981b36a7faa2cc8d8cdb19689b3628d11d42ba41b7f1c",
+    "table_program.py": "4033e2c10eabc02461f233ee21b35be7432df3f5f4809d6ff79213a9401561cd",
+    "request_router.py": "6cc7b450900d2042adf313a94c9c480717874d735fe3dfddcf37f3df7c0073ce",
+    "workbook_requirements.py": "cb463959fd78b875dc34481044e5779cf5ceec0760ea75fba6ae65c38f46e83d",
+    "workbook_flow.py": "530fecd628810ec97fd35ab4ff99cd0ce96489785676ea54a71a3059fd5b5cdd",
+    "workbook_intent.py": "39140c0dbe9064d7a687ec568f6bbd14a0be2378b806769fbfd658203248a983",
+    "model_info.py": "f5d5c937a391d1ffd1ab86374c1b8f0794f8fe67870a7b8a54bccb2834ede9ca",
+    "general_assistant.py": "709754ff9ab5e2aa6e81f1281c93212084793b1462d5bcc62dd5391cf5d6cdb8",
+    "workbook_revision.py": "3d7b6fc7542636488dc98421b5827a1f63f99efa50dc609a11347a48fa70b450",
+    "bge_embedding.py": "f51ee3f63d3e46fa08ac7de6ba7380b7e87d8ab8b627338439cf55714efd687d",
+    "general_tools.py": "79fe507a1d2a0a3e8c74cd9889bf4eaece3a01ba61c80b9b388fa1db47d1a7d0",
+    "table_semantics.py": "2d164c333efef02d6188d03d6112ba9834e37a4ed6ed6c95d82697b41eec6a43",
+    "document_tables.py": "ceee11df6cfd07453001aa57f1648a5967b557b322a8c9659e9e19e16f0dcfc7",
+    "workbook_export.py": "e9f2f52986ef54811e8d36eb4c492795557a6d8765885c91e0080e316d6d2c0f",
+    "workbook_qualifiers.py": "0e20093e35c7eb1b3c34516eed78ca76579d3ba5630f60487faacec2af7d4b45",
+    "fact_guard.py": "53150da937578d9188be8fd9d9c97b8668b92c5fff614145d12cefd34b39469e",
+    "privacy_models.py": "dd160bac36ddfb6d6393c5a8bdb90f95571d2e5bbc7374d6d43bcafad9e045b2",
+    "share_agent.py": "b41eb80b564c678fc99bb304391ac4432e78d01d5188cc9eebe7dff44db812d5",
+    "model_output.py": "83fba58b74d38dbe1c4b43f91695e0ea2c3ba2a79d6edc988ddc9c4a2db2c4c5",
+    "workspace_index.py": "4c9038a1c90e24a6b18d8fab96e017088abdd4c81009217e4cbc32f814aa8911",
+    "office_agent.py": "39d13ad150c3248fe7b3c0c6234549134097ce29f412a97c72ed8a775b3c6f69"
+  },
+  "runner_sha256": "0d328c50b191738ec3f8f8289a71edfa26df1b530ae9aefec530f3e4c8b356cb",
+  "client_contract_sha256": "0f80e38fe9fdeab78a3b5b07c3842652f785cdaf83efe6f2b93a52732e602f3a",
+  "fixture_hashes": {
+    "培训签到.xlsx": "0c99edddebeac4c9d96aaf48c28aabea93e0c40134a9b713fb4e533865225f42",
+    "物资配送.csv": "676433b09415aff46e90873db61ea3ff9d910ff4431ff7c13c85e3ada0904903"
+  },
+  "tasks_sha256": "0057db8d16a84b628d65518b5af7f85eb0ffa0baa2a4d9edf41b14cea526943d",
+  "cases": [
+    {
+      "id": "reserved_training",
+      "prompt": "处理培训签到.xlsx，只纳入结束日期在2027-01-01至2027-03-31、签到为是且报名金额不少于700元的记录。按部门汇总累计学习时长、报名金额合计与记录数，学习时长用分钟显示，按累计学习时长降序。只要部门、累计学习时长、报名金额合计、记录数，生成Word，标题“第一季度培训汇总”。",
+      "routing": {
+        "mode": "workspace",
+        "use_previous": false,
+        "reason": "按要求使用指定文件",
+        "source": "explicit_file_reference"
+      },
+      "word_text": "第一季度培训汇总\n本次按要求从8条原始记录中整理出3条结果。\n明细\n数据说明\n培训签到.xlsx / 季度培训：学习时长（小时）：按单元格显式单位优先、表头单位兜底，统一为分钟；未改变原文件。\n资料来源\n【S1】培训签到.xlsx\n部门 | 累计学习时长（分钟） | 报名金额合计（元） | 记录数\n技术组 | 225 | 1700 | 2\n支持组 | 90 | 700 | 1\n运营组 | 45 | 1000 | 1",
+      "tools": [
+        "workbook",
+        "write"
+      ],
+      "source_names": [
+        "培训签到.xlsx"
+      ],
+      "rows": [
+        [
+          "技术组",
+          "225",
+          "1700",
+          "2"
+        ],
+        [
+          "支持组",
+          "90",
+          "700",
+          "1"
+        ],
+        [
+          "运营组",
+          "45",
+          "1000",
+          "1"
+        ]
+      ],
+      "columns": [
+        "部门",
+        "累计学习时长（分钟）",
+        "报名金额合计（元）",
+        "记录数"
+      ],
+      "summaries": [],
+      "graph": [
+        {
+          "id": "V1",
+          "input": "V0",
+          "operation": {
+            "op": "filter",
+            "where": {
+              "all": [
+                {
+                  "column": "结束日期",
+                  "operator": "gte",
+                  "type": "date",
+                  "value": "2027-01-01"
+                },
+                {
+                  "column": "结束日期",
+                  "operator": "lte",
+                  "type": "date",
+                  "value": "2027-03-31"
+                },
+                {
+                  "column": "签到",
+                  "operator": "eq",
+                  "type": "text",
+                  "value": "true"
+                },
+                {
+                  "column": "报名金额（元）",
+                  "operator": "gte",
+                  "type": "number",
+                  "value": "700"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "V2",
+          "input": "V1",
+          "operation": {
+            "op": "group",
+            "by": [
+              "部门"
+            ],
+            "metrics": [
+              {
+                "function": "sum",
+                "as": "累计学习时长（分钟）",
+                "column": "学习时长（分钟）"
+              },
+              {
+                "function": "sum",
+                "as": "报名金额合计（元）",
+                "column": "报名金额（元）"
+              },
+              {
+                "function": "count",
+                "as": "记录数"
+              }
+            ]
+          }
+        },
+        {
+          "id": "V3",
+          "input": "V2",
+          "operation": {
+            "op": "sort",
+            "by": [
+              {
+                "column": "累计学习时长（分钟）",
+                "direction": "desc",
+                "type": "number"
+              }
+            ]
+          }
+        }
+      ],
+      "repairs": [],
+      "revision": null,
+      "checks": {
+        "completed": true,
+        "checked": true,
+        "no_grounded_fallback": true,
+        "word_requested": true,
+        "no_unrequested_word": true,
+        "no_original_mutation": true,
+        "originals_unchanged": true,
+        "expected_rows": true,
+        "expected_columns": true,
+        "preview_matches_xlsx": true,
+        "csv_matches_xlsx": true,
+        "summary_values": true,
+        "word_values": true,
+        "all_required_dates": true
+      },
+      "passed": true,
+      "seconds": 24.4,
+      "model_calls": 7,
+      "model_executed": true
+    },
+    {
+      "id": "reserved_training_march",
+      "prompt": "只保留结束日期在2027年3月整月的，其他规则不变，这次只要表格。",
+      "routing": {
+        "mode": "workspace",
+        "use_previous": true,
+        "source": "native_workbook_followup"
+      },
+      "word_text": "",
+      "tools": [
+        "workbook"
+      ],
+      "source_names": [
+        "培训签到.xlsx"
+      ],
+      "rows": [
+        [
+          "技术组",
+          "90",
+          "800",
+          "1"
+        ]
+      ],
+      "columns": [
+        "部门",
+        "累计学习时长（分钟）",
+        "报名金额合计（元）",
+        "记录数"
+      ],
+      "summaries": [],
+      "graph": [
+        {
+          "id": "V1",
+          "input": "V0",
+          "operation": {
+            "op": "filter",
+            "where": {
+              "all": [
+                {
+                  "column": "结束日期",
+                  "operator": "gte",
+                  "type": "date",
+                  "value": "2027-01-01"
+                },
+                {
+                  "column": "结束日期",
+                  "operator": "lte",
+                  "type": "date",
+                  "value": "2027-03-31"
+                },
+                {
+                  "column": "签到",
+                  "operator": "eq",
+                  "type": "text",
+                  "value": "true"
+                },
+                {
+                  "column": "报名金额（元）",
+                  "operator": "gte",
+                  "type": "number",
+                  "value": "700"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "V2",
+          "input": "V1",
+          "operation": {
+            "op": "filter",
+            "where": {
+              "all": [
+                {
+                  "column": "结束日期",
+                  "operator": "gte",
+                  "type": "date",
+                  "value": "2027-03-01"
+                },
+                {
+                  "column": "结束日期",
+                  "operator": "lte",
+                  "type": "date",
+                  "value": "2027-03-31"
+                },
+                {
+                  "column": "签到",
+                  "operator": "eq",
+                  "type": "text",
+                  "value": "true"
+                },
+                {
+                  "column": "报名金额（元）",
+                  "operator": "gte",
+                  "type": "number",
+                  "value": "700"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "V3",
+          "input": "V2",
+          "operation": {
+            "op": "group",
+            "by": [
+              "部门"
+            ],
+            "metrics": [
+              {
+                "function": "sum",
+                "as": "累计学习时长（分钟）",
+                "column": "学习时长（分钟）"
+              },
+              {
+                "function": "sum",
+                "as": "报名金额合计（元）",
+                "column": "报名金额（元）"
+              },
+              {
+                "function": "count",
+                "as": "记录数"
+              }
+            ]
+          }
+        },
+        {
+          "id": "V4",
+          "input": "V0",
+          "operation": {
+            "op": "filter",
+            "where": {
+              "all": [
+                {
+                  "column": "结束日期",
+                  "operator": "gte",
+                  "type": "date",
+                  "value": "2027-03-01"
+                },
+                {
+                  "column": "结束日期",
+                  "operator": "lte",
+                  "type": "date",
+                  "value": "2027-03-31"
+                },
+                {
+                  "column": "签到",
+                  "operator": "eq",
+                  "type": "text",
+                  "value": "true"
+                },
+                {
+                  "column": "报名金额（元）",
+                  "operator": "gte",
+                  "type": "number",
+                  "value": "700"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "V5",
+          "input": "V4",
+          "operation": {
+            "op": "group",
+            "by": [
+              "部门"
+            ],
+            "metrics": [
+              {
+                "function": "sum",
+                "as": "累计学习时长（分钟）",
+                "column": "学习时长（分钟）"
+              },
+              {
+                "function": "sum",
+                "as": "报名金额合计（元）",
+                "column": "报名金额（元）"
+              },
+              {
+                "function": "count",
+                "as": "记录数"
+              }
+            ]
+          }
+        },
+        {
+          "id": "V6",
+          "input": "V5",
+          "operation": {
+            "op": "sort",
+            "by": [
+              {
+                "column": "累计学习时长（分钟）",
+                "direction": "desc",
+                "type": "number"
+              }
+            ]
+          }
+        }
+      ],
+      "repairs": [],
+      "revision": null,
+      "checks": {
+        "completed": true,
+        "checked": true,
+        "no_grounded_fallback": true,
+        "word_requested": true,
+        "no_unrequested_word": true,
+        "no_original_mutation": true,
+        "originals_unchanged": true,
+        "expected_rows": true,
+        "expected_columns": true,
+        "preview_matches_xlsx": true,
+        "csv_matches_xlsx": true,
+        "summary_values": true,
+        "word_values": true,
+        "all_required_dates": true
+      },
+      "passed": true,
+      "seconds": 39.15,
+      "model_calls": 8,
+      "model_executed": true
+    },
+    {
+      "id": "reserved_dispatch",
+      "prompt": "处理物资配送.csv，只纳入ShipDate在2028年1月整月、Fee非空的记录；Status为已签收，或者Status为待核对且Express为是。按Zone统计总净重、费用合计和条数，净重用克、费用用万元显示。按总净重降序，同重量按Zone升序，只要Zone、总净重、费用合计、条数四列，生成Word，标题“一月配送汇总”。",
+      "routing": {
+        "mode": "workspace",
+        "use_previous": false,
+        "reason": "按要求使用指定文件",
+        "source": "explicit_file_reference"
+      },
+      "word_text": "一月配送汇总\n本次按要求从8条原始记录中整理出3条结果。\n明细\n数据说明\n物资配送.csv：Weight（千克）：按单元格显式单位优先、表头单位兜底，统一为g；未改变原文件。\n物资配送.csv：Fee（元）：按单元格显式单位优先、表头单位兜底，统一为元；未改变原文件。\n资料来源\n【S1】物资配送.csv\nZone | 总净重（克） | 费用合计（万元） | 条数\n南区 | 2000 | 0.03 | 2\n西区 | 2000 | 0.018 | 1\n北区 | 750 | 0.04 | 2",
+      "tools": [
+        "workbook",
+        "write"
+      ],
+      "source_names": [
+        "物资配送.csv"
+      ],
+      "rows": [
+        [
+          "南区",
+          "2000",
+          "0.03",
+          "2"
+        ],
+        [
+          "西区",
+          "2000",
+          "0.018",
+          "1"
+        ],
+        [
+          "北区",
+          "750",
+          "0.04",
+          "2"
+        ]
+      ],
+      "columns": [
+        "Zone",
+        "总净重（克）",
+        "费用合计（万元）",
+        "条数"
+      ],
+      "summaries": [],
+      "graph": [
+        {
+          "id": "V1",
+          "input": "V0",
+          "operation": {
+            "op": "filter",
+            "where": {
+              "all": [
+                {
+                  "column": "ShipDate",
+                  "operator": "gte",
+                  "type": "date",
+                  "value": "2028-01-01"
+                },
+                {
+                  "column": "ShipDate",
+                  "operator": "lte",
+                  "type": "date",
+                  "value": "2028-01-31"
+                },
+                {
+                  "column": "Fee（元）",
+                  "operator": "not_empty",
+                  "type": "number"
+                },
+                {
+                  "any": [
+                    {
+                      "column": "Status",
+                      "operator": "eq",
+                      "type": "text",
+                      "value": "已签收"
+                    },
+                    {
+                      "all": [
+                        {
+                          "column": "Status",
+                          "operator": "eq",
+                          "type": "text",
+                          "value": "待核对"
+                        },
+                        {
+                          "column": "Express",
+                          "operator": "eq",
+                          "type": "text",
+                          "value": "是"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "V2",
+          "input": "V1",
+          "operation": {
+            "op": "group",
+            "by": [
+              "Zone"
+            ],
+            "metrics": [
+              {
+                "function": "sum",
+                "as": "总净重（g）",
+                "column": "Weight（g）"
+              },
+              {
+                "function": "sum",
+                "as": "费用合计（元）",
+                "column": "Fee（元）"
+              },
+              {
+                "function": "count",
+                "as": "条数"
+              }
+            ]
+          }
+        },
+        {
+          "id": "V3",
+          "input": "V2",
+          "operation": {
+            "op": "sort",
+            "by": [
+              {
+                "column": "总净重（g）",
+                "direction": "desc",
+                "type": "number"
+              },
+              {
+                "column": "Zone",
+                "direction": "asc",
+                "type": "text"
+              }
+            ]
+          }
+        }
+      ],
+      "repairs": [],
+      "revision": null,
+      "checks": {
+        "completed": true,
+        "checked": true,
+        "no_grounded_fallback": true,
+        "word_requested": true,
+        "no_unrequested_word": true,
+        "no_original_mutation": true,
+        "originals_unchanged": true,
+        "expected_rows": true,
+        "expected_columns": true,
+        "preview_matches_xlsx": true,
+        "csv_matches_xlsx": true,
+        "summary_values": true,
+        "word_values": true,
+        "all_required_dates": true
+      },
+      "passed": true,
+      "seconds": 24.9,
+      "model_calls": 7,
+      "model_executed": true
+    },
+    {
+      "id": "reserved_dispatch_chat",
+      "prompt": "谢谢。能用一句话解释一下你能帮我做什么吗？",
+      "routing": {
+        "mode": "chat",
+        "use_previous": false,
+        "reason": "用户询问通用功能介绍，属于交流性质，不涉及文件处理或复杂计算。",
+        "source": "local_model"
+      },
+      "text": "我是归屿，一个在本地运行的 AI 助手，专注于通过本机计算和检索工具，为您高效处理文件数据、执行精确统计与格式转换，并生成可直接使用的文档。",
+      "checks": {
+        "chat_route": true,
+        "no_sources": true,
+        "nonempty": true,
+        "all_required_dates": true
+      },
+      "passed": true,
+      "seconds": 4.28,
+      "model_calls": 2,
+      "model_executed": true
+    },
+    {
+      "id": "reserved_dispatch_north",
+      "prompt": "那北区呢？其他口径、排序和列不变，这次只要表格。",
+      "routing": {
+        "mode": "workspace",
+        "use_previous": true,
+        "source": "native_workbook_followup"
+      },
+      "word_text": "",
+      "tools": [
+        "workbook"
+      ],
+      "source_names": [
+        "物资配送.csv"
+      ],
+      "rows": [
+        [
+          "北区",
+          "750",
+          "0.04",
+          "2"
+        ]
+      ],
+      "columns": [
+        "Zone",
+        "总净重（克）",
+        "费用合计（万元）",
+        "条数"
+      ],
+      "summaries": [],
+      "graph": [
+        {
+          "id": "V1",
+          "input": "V0",
+          "operation": {
+            "op": "filter",
+            "where": {
+              "all": [
+                {
+                  "column": "ShipDate",
+                  "operator": "gte",
+                  "type": "date",
+                  "value": "2028-01-01"
+                },
+                {
+                  "column": "ShipDate",
+                  "operator": "lte",
+                  "type": "date",
+                  "value": "2028-01-31"
+                },
+                {
+                  "column": "Fee（元）",
+                  "operator": "not_empty",
+                  "type": "number"
+                },
+                {
+                  "any": [
+                    {
+                      "column": "Status",
+                      "operator": "eq",
+                      "type": "text",
+                      "value": "已签收"
+                    },
+                    {
+                      "all": [
+                        {
+                          "column": "Status",
+                          "operator": "eq",
+                          "type": "text",
+                          "value": "待核对"
+                        },
+                        {
+                          "column": "Express",
+                          "operator": "eq",
+                          "type": "text",
+                          "value": "是"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "V2",
+          "input": "P0",
+          "operation": {
+            "op": "filter",
+            "where": {
+              "column": "Zone",
+              "operator": "eq",
+              "type": "text",
+              "value": "北区"
+            }
+          }
+        },
+        {
+          "id": "V3",
+          "input": "V2",
+          "operation": {
+            "op": "sort",
+            "by": [
+              {
+                "column": "总净重（g）",
+                "direction": "desc",
+                "type": "number"
+              },
+              {
+                "column": "Zone",
+                "direction": "asc",
+                "type": "text"
+              }
+            ]
+          }
+        }
+      ],
+      "repairs": [],
+      "revision": null,
+      "checks": {
+        "completed": true,
+        "checked": true,
+        "no_grounded_fallback": true,
+        "word_requested": true,
+        "no_unrequested_word": true,
+        "no_original_mutation": true,
+        "originals_unchanged": true,
+        "expected_rows": true,
+        "expected_columns": true,
+        "preview_matches_xlsx": true,
+        "csv_matches_xlsx": true,
+        "summary_values": true,
+        "word_values": true,
+        "all_required_dates": true
+      },
+      "passed": true,
+      "seconds": 7.6,
+      "model_calls": 3,
+      "model_executed": true
+    }
+  ],
+  "validation_sha256": "de06ab12ea10606a8f5675c692d5ad708f9f398e9ef62460590452fd6a93c7dd",
+  "load_seconds": 5.15,
+  "runtime_policy": {
+    "name": "extended-32gb",
+    "input_tokens": 10000,
+    "output_tokens": 2200,
+    "prefill_tokens": 256,
+    "memory_bytes": 21474836480,
+    "cache_bytes": 268435456
+  },
+  "passed": 5,
+  "total": 5,
+  "peak_mlx_gb": 20.084,
+  "peak_process_rss_gb": 11.173,
+  "backend_unchanged": true,
+  "limits": "Developer-authored tasks using public structures and fictional records; one public source document. Separate routing, BGE retrieval and typed tools. Native followup client contract mirrored and hashed. No GUI execution or real-user validation."
+}

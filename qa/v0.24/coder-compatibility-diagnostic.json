@@ -1,0 +1,16 @@
+{
+  "network_denied": true,
+  "raw_text": "{\n  \"tool\": \"calculate\",\n  \"expression\": \"180+2import json, math, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re",
+  "last_processor_prefix": [
+    "{\n  \"tool\": \"calculate\",\n  \"expression\": \"180+2import json, math, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re, re"
+  ],
+  "valid_complete_raw": [
+    true,
+    false
+  ],
+  "error": null,
+  "tokens": 120,
+  "finish": "length",
+  "seconds": 4.508,
+  "scope": "Source-free interface diagnostic; no office prompts or backend changed."
+}

@@ -1,0 +1,99 @@
+{
+  "version": "0.19.0",
+  "purpose": "Known development failures from actual v0.18 native conversation, not unseen tests.",
+  "cases": [
+    {
+      "id": "complex_word",
+      "prompt": "在“设备准备.xlsx”中，只处理启用的资产，把现有数量少于需求的找出来，需补数量按需求减现有算，需补金额按需补数量乘单价算。按需补金额从高到低，只保留资产代号、需补数量、需补金额。每条明细要留下，另外给出这批的金额合计和条数，再写一段准备说明并导出Word，不增加采购日期或供应商。",
+      "rows": [
+        [
+          "K41",
+          "3",
+          "51"
+        ],
+        [
+          "K44",
+          "2",
+          "46"
+        ],
+        [
+          "K46",
+          "2",
+          "0"
+        ]
+      ],
+      "summary_values": [
+        "97",
+        "3"
+      ],
+      "word_numbers": [
+        "97"
+      ],
+      "word": true
+    },
+    {
+      "id": "brief_50",
+      "parent": "complex_word",
+      "prompt": "把需补金额门槛改成不少于50元，其他要求不变。",
+      "rows": [
+        [
+          "K41",
+          "3",
+          "51"
+        ]
+      ],
+      "word": true,
+      "word_numbers": [
+        "51"
+      ],
+      "summary_values": [
+        "51",
+        "1"
+      ]
+    },
+    {
+      "id": "ordinary_chat",
+      "parent": "brief_50",
+      "chat": true,
+      "prompt": "你是谁？"
+    },
+    {
+      "id": "return_40",
+      "parent": "brief_50",
+      "conversation_parent": "ordinary_chat",
+      "prompt": "回到刚才的工作簿，沿用启用且现有少于需求的条件，从原始记录重算，把需补金额门槛改成不少于40元，三列和金额合计、条数保持。这次只需要表格，不要Word。",
+      "rows": [
+        [
+          "K41",
+          "3",
+          "51"
+        ],
+        [
+          "K44",
+          "2",
+          "46"
+        ]
+      ],
+      "summary_values": [
+        "97",
+        "2"
+      ]
+    },
+    {
+      "id": "no_matches",
+      "parent": "return_40",
+      "prompt": "把需补金额门槛改成不少于999元，其他要求不变。",
+      "rows": [],
+      "summary_values": [
+        "0"
+      ],
+      "summary_rows": [
+        [
+          "",
+          "0"
+        ]
+      ]
+    }
+  ],
+  "grading_note": "The empty-set sum remains blank and count is zero; validate typed summary rows, not repeated scalar membership."
+}

@@ -1,0 +1,559 @@
+{
+  "version": "0.27",
+  "label": "adapted",
+  "group": "submission",
+  "hardware": "Apple M5 32GB",
+  "model": "qwen3.6-35b-a3b",
+  "seed": 20261030,
+  "network_denied": true,
+  "backend_hashes": {
+    "structured_output.py": "7960a53bd816fbd0f1940a7ab57a3c91da9fd56e4d09deb7c4639b1764deb268",
+    "worker.py": "879bf7cff54b9ad715236926c23899d1433a9d76f0add5dd6db61cb354bd8c8a",
+    "agent_control.py": "dd68d17e288fb994975023187545b05a53e2169abe2bc991d1d47ffc30d07891",
+    "money_subtotals.py": "3f69877035132e87a756b16cfbb33876eb80d1d9f0edd424b9115debdd2a54ee",
+    "workbook_agent.py": "f47d2ea6c47861b97cc5665d9655497e7e93c54f9cc8c7484c2f767757df34a2",
+    "workbook_writing.py": "5ddd5a39dcb8557d077939a5f0d141147beac2287a457cfad0cf8475cf1826b9",
+    "workbook_edits.py": "7d8dd9169b2739fafa62622a2d2bb8f21518e76152541a761924b638c073d219",
+    "workbook_recovery.py": "ad905941301310128736730e5d931a49ff56d7610ece443ff12136ea731e05d3",
+    "personal_tools.py": "c8ed42cd828d67ebfbd03c2cdf144894b553cb009a0cf2beebe77f590af016e1",
+    "workbook_data.py": "bc6902625ecb69300fd8497fba0d8cb734ea8372ccf97a46d2c6d1a231e5b408",
+    "structured_tables.py": "3ecc86af63b74c35b9b768b780d06db7b33f6f435717457fa44ae382923798f8",
+    "runtime_policy.py": "422cef9d111bca844c37e71ace3b6be37fd9b6b81bbd3b0967e73b4aaaa10a22",
+    "local_query.py": "4f37344fb04fc31bd3537598867b3a27d78d74dc26bae2dbe16a1a5330864f28",
+    "workbook_schema.py": "1f640f62ea196fdb4c038293ac0ee3b69c19cfe10b237891d7bec0bc46e951a1",
+    "privacy_filter.py": "3a65fc2029085463408981b36a7faa2cc8d8cdb19689b3628d11d42ba41b7f1c",
+    "table_program.py": "4033e2c10eabc02461f233ee21b35be7432df3f5f4809d6ff79213a9401561cd",
+    "request_router.py": "6cc7b450900d2042adf313a94c9c480717874d735fe3dfddcf37f3df7c0073ce",
+    "workbook_requirements.py": "cb463959fd78b875dc34481044e5779cf5ceec0760ea75fba6ae65c38f46e83d",
+    "workbook_flow.py": "530fecd628810ec97fd35ab4ff99cd0ce96489785676ea54a71a3059fd5b5cdd",
+    "workbook_intent.py": "39140c0dbe9064d7a687ec568f6bbd14a0be2378b806769fbfd658203248a983",
+    "model_info.py": "f5d5c937a391d1ffd1ab86374c1b8f0794f8fe67870a7b8a54bccb2834ede9ca",
+    "general_assistant.py": "eb074624b8c90a6c49956721b31a3b285448cadff13372f642555961b4862890",
+    "workbook_revision.py": "3d7b6fc7542636488dc98421b5827a1f63f99efa50dc609a11347a48fa70b450",
+    "bge_embedding.py": "f51ee3f63d3e46fa08ac7de6ba7380b7e87d8ab8b627338439cf55714efd687d",
+    "general_tools.py": "79fe507a1d2a0a3e8c74cd9889bf4eaece3a01ba61c80b9b388fa1db47d1a7d0",
+    "table_semantics.py": "2d164c333efef02d6188d03d6112ba9834e37a4ed6ed6c95d82697b41eec6a43",
+    "document_tables.py": "ceee11df6cfd07453001aa57f1648a5967b557b322a8c9659e9e19e16f0dcfc7",
+    "workbook_export.py": "e9f2f52986ef54811e8d36eb4c492795557a6d8765885c91e0080e316d6d2c0f",
+    "workbook_qualifiers.py": "0e20093e35c7eb1b3c34516eed78ca76579d3ba5630f60487faacec2af7d4b45",
+    "fact_guard.py": "eaffd90488977ff9245ac95252af681dc1d6aaad447c72464bff75ab6f91b6a3",
+    "privacy_models.py": "dd160bac36ddfb6d6393c5a8bdb90f95571d2e5bbc7374d6d43bcafad9e045b2",
+    "share_agent.py": "b41eb80b564c678fc99bb304391ac4432e78d01d5188cc9eebe7dff44db812d5",
+    "model_output.py": "83fba58b74d38dbe1c4b43f91695e0ea2c3ba2a79d6edc988ddc9c4a2db2c4c5",
+    "workspace_index.py": "4c9038a1c90e24a6b18d8fab96e017088abdd4c81009217e4cbc32f814aa8911",
+    "office_agent.py": "cce70f2e752c81c40a4adac460ac2b9dfceb22ea9da7e111859d9e7a249cd9b4"
+  },
+  "runner_sha256": "4c8421def7a7f10579de96deceedcffc2085ccc28e853b1d571459b544969169",
+  "client_contract_sha256": "0f80e38fe9fdeab78a3b5b07c3842652f785cdaf83efe6f2b93a52732e602f3a",
+  "fixture_hashes": {
+    "共享工位最新通知.txt": "1ee596eeea393f8137ebfbb416e7fcd4c1d77b305082c15a26a7d68d76d5752d",
+    "客户跟进纪要.md": "067e61be944add836ad8466f9f4c19ea25051629b633ca3de0097118e802a338",
+    "支持日志.xlsx": "63fbbd081f2b158c7333579b20188e178ce83dbc7516db7fc65c81d9bd858b40",
+    "共享工位安排.md": "c7d9e2e509f5c2686589ce31388c8b713d31e710f2a780dc9841fd358496836c",
+    "培训补充通知.txt": "86dadd6ec539cb0761e68f25b25ff1bcfeab50378a6fab8ef834de4a2d13a43a",
+    "志愿者培训方案.md": "4679ace16ca73f5f5a26c7cc6f0acf5a1c12a5042fb0e8086c178404600133a7"
+  },
+  "tasks_sha256": "3e1410f5b7f5788fbe5f02ae41afd5c954092f36143e8de4620ee19b18f7b8f3",
+  "cases": [
+    {
+      "id": "transfer_support",
+      "prompt": "处理支持日志.xlsx，按线上、线下的顺序合并，先按TicketID保留首次记录。ClosedDate从2028年4月1日（含）到7月1日（不含），Category为保修，或者Category为回访且Confirmed为true；每条Cost至少50元。按Owner汇总累计时长、支出和记录数，累计时长用小时、支出用万元显示，按支出降序，同金额按Owner升序。只保留Owner、累计时长、支出、记录数四列，另存一份Word，标题“支持工作汇总”。",
+      "routing": {
+        "mode": "workspace",
+        "use_previous": false,
+        "reason": "按要求使用指定文件",
+        "source": "explicit_file_reference"
+      },
+      "word_text": "支持工作汇总\n本次按要求从11条原始记录中整理出3条结果。\n明细\n数据说明\n支持日志.xlsx / 线下：Cost（千元）：按单元格显式单位优先、表头单位兜底，统一为元；未改变原文件。\n支持日志.xlsx / 线下：Minutes（小时）：按单元格显式单位优先、表头单位兜底，统一为分钟；未改变原文件。\n资料来源\n【S1】支持日志.xlsx\nOwner | 累计时长（小时） | 支出（万元） | 记录数\n白组 | 3 | 0.033 | 2\n青组 | 2 | 0.025 | 2\n灰组 | 1 | 0.0145 | 2",
+      "tools": [
+        "workbook",
+        "write"
+      ],
+      "source_names": [
+        "支持日志.xlsx"
+      ],
+      "rows": [
+        [
+          "白组",
+          "3",
+          "0.033",
+          "2"
+        ],
+        [
+          "青组",
+          "2",
+          "0.025",
+          "2"
+        ],
+        [
+          "灰组",
+          "1",
+          "0.0145",
+          "2"
+        ]
+      ],
+      "columns": [
+        "Owner",
+        "累计时长（小时）",
+        "支出（万元）",
+        "记录数"
+      ],
+      "summaries": [],
+      "graph": [
+        {
+          "id": "V1",
+          "input": "V0",
+          "operation": {
+            "op": "distinct",
+            "columns": [
+              "TicketID"
+            ]
+          }
+        },
+        {
+          "id": "V2",
+          "input": "V1",
+          "operation": {
+            "op": "filter",
+            "where": {
+              "all": [
+                {
+                  "column": "ClosedDate",
+                  "operator": "gte",
+                  "type": "date",
+                  "value": "2028-04-01"
+                },
+                {
+                  "column": "ClosedDate",
+                  "operator": "lt",
+                  "type": "date",
+                  "value": "2028-07-01"
+                },
+                {
+                  "any": [
+                    {
+                      "column": "Category",
+                      "operator": "eq",
+                      "type": "text",
+                      "value": "保修"
+                    },
+                    {
+                      "all": [
+                        {
+                          "column": "Category",
+                          "operator": "eq",
+                          "type": "text",
+                          "value": "回访"
+                        },
+                        {
+                          "column": "Confirmed",
+                          "operator": "eq",
+                          "type": "text",
+                          "value": "true"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "column": "Cost（元）",
+                  "operator": "gte",
+                  "type": "number",
+                  "value": "50"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "V3",
+          "input": "V2",
+          "operation": {
+            "op": "group",
+            "by": [
+              "Owner"
+            ],
+            "metrics": [
+              {
+                "function": "sum",
+                "as": "累计时长（分钟）",
+                "column": "Minutes（分钟）"
+              },
+              {
+                "function": "sum",
+                "as": "支出（元）",
+                "column": "Cost（元）"
+              },
+              {
+                "function": "count",
+                "as": "记录数"
+              }
+            ]
+          }
+        },
+        {
+          "id": "V4",
+          "input": "V3",
+          "operation": {
+            "op": "sort",
+            "by": [
+              {
+                "column": "支出（元）",
+                "direction": "desc",
+                "type": "number"
+              },
+              {
+                "column": "Owner",
+                "direction": "asc",
+                "type": "text"
+              }
+            ]
+          }
+        }
+      ],
+      "repairs": [],
+      "revision": null,
+      "checks": {
+        "completed": true,
+        "checked": true,
+        "no_grounded_fallback": true,
+        "word_requested": true,
+        "no_unrequested_word": true,
+        "no_original_mutation": true,
+        "originals_unchanged": true,
+        "expected_rows": true,
+        "expected_columns": true,
+        "preview_matches_xlsx": true,
+        "csv_matches_xlsx": true,
+        "summary_values": true,
+        "word_values": true,
+        "all_required_dates": true
+      },
+      "passed": true,
+      "seconds": 27.26,
+      "model_calls": 7,
+      "model_executed": true
+    },
+    {
+      "id": "transfer_top_followup",
+      "prompt": "只要第一名，其他口径、排序和列不变，不用Word。",
+      "routing": {
+        "mode": "workspace",
+        "use_previous": true,
+        "source": "native_workbook_followup"
+      },
+      "word_text": "",
+      "tools": [
+        "workbook",
+        "write"
+      ],
+      "source_names": [
+        "支持日志.xlsx"
+      ],
+      "rows": [
+        [
+          "白组",
+          "3",
+          "0.033",
+          "2"
+        ]
+      ],
+      "columns": [
+        "Owner",
+        "累计时长（小时）",
+        "支出（万元）",
+        "记录数"
+      ],
+      "summaries": [],
+      "graph": [
+        {
+          "id": "V1",
+          "input": "V0",
+          "operation": {
+            "op": "distinct",
+            "columns": [
+              "TicketID"
+            ]
+          }
+        },
+        {
+          "id": "V2",
+          "input": "V1",
+          "operation": {
+            "op": "filter",
+            "where": {
+              "all": [
+                {
+                  "column": "ClosedDate",
+                  "operator": "gte",
+                  "type": "date",
+                  "value": "2028-04-01"
+                },
+                {
+                  "column": "ClosedDate",
+                  "operator": "lt",
+                  "type": "date",
+                  "value": "2028-07-01"
+                },
+                {
+                  "any": [
+                    {
+                      "column": "Category",
+                      "operator": "eq",
+                      "type": "text",
+                      "value": "保修"
+                    },
+                    {
+                      "all": [
+                        {
+                          "column": "Category",
+                          "operator": "eq",
+                          "type": "text",
+                          "value": "回访"
+                        },
+                        {
+                          "column": "Confirmed",
+                          "operator": "eq",
+                          "type": "text",
+                          "value": "true"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "column": "Cost（元）",
+                  "operator": "gte",
+                  "type": "number",
+                  "value": "50"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "V3",
+          "input": "P0",
+          "operation": {
+            "op": "limit",
+            "count": 1,
+            "offset": 0
+          }
+        },
+        {
+          "id": "V4",
+          "input": "V3",
+          "operation": {
+            "op": "sort",
+            "by": [
+              {
+                "column": "支出（元）",
+                "direction": "desc",
+                "type": "number"
+              },
+              {
+                "column": "Owner",
+                "direction": "asc",
+                "type": "text"
+              }
+            ]
+          }
+        }
+      ],
+      "repairs": [],
+      "revision": null,
+      "checks": {
+        "completed": true,
+        "checked": true,
+        "no_grounded_fallback": true,
+        "word_requested": true,
+        "no_unrequested_word": true,
+        "no_original_mutation": true,
+        "originals_unchanged": true,
+        "expected_rows": true,
+        "expected_columns": true,
+        "preview_matches_xlsx": true,
+        "csv_matches_xlsx": true,
+        "summary_values": true,
+        "word_values": true,
+        "all_required_dates": true
+      },
+      "passed": true,
+      "seconds": 11.72,
+      "model_calls": 5,
+      "model_executed": true
+    },
+    {
+      "id": "transfer_office_notice",
+      "prompt": "结合共享工位安排和最新通知，按最新版本整理一份Word，说明活动费用、预算余额和最晚确认日期。可退押金单独说明，不计入活动费用，保留未付款状态，列出费用明细和出处。",
+      "routing": {
+        "mode": "workspace",
+        "use_previous": false,
+        "reason": "用户要求基于‘共享工位安排’和‘最新通知’等文件内容整理Word文档，涉及从特定文件中提取活动费用、预算余额、确认日期及押金明细等具体事实，必须依赖工作区文件进行查找和统计。",
+        "source": "local_model"
+      },
+      "word_text": "共享工位开放日费用及预算确认说明\n文档版本：基于2028-06-16最新通知整理\n活动日期：2028-07-16（星期四）\n一、 活动费用明细\n根据《共享工位最新通知》（S1）及《共享工位安排》（S2）最新数据，本次活动费用计算如下：\n  资料包费用：7份 × 52元/份 = 364元\n  场地服务费：400元\n  设备租借费：210元\n活动费用总计：364 + 400 + 210 = 974.00元\n> 出处：\n> *   资料包单价及份数：《共享工位最新通知.txt》（S1）“资料包每份改为52元”；《共享工位安排.md》（S2）“共7份”。\n> *   其他费用：《共享工位安排.md》（S2）“场地服务400元，设备租借210元”。\n二、 预算余额\n  总预算：1800元\n  已发生活动费用：974.00元\n预算余额：1800 - 974 = 826.00元\n> 出处：\n> *   总预算：《共享工位安排.md》（S2）“预算1800元”。\n> *   计算依据：《共享工位最新通知.txt》（S1）“预算...沿用原安排”。\n三、 最晚确认日期\n  活动日期：2028-07-16\n  确认规则：需提前3个自然日完成确认\n最晚确认日期：2028-07-13（星期四）\n> 出处：\n> *   活动日期：《共享工位最新通知.txt》（S1）“活动改为2028-07-16”。\n> *   确认规则：《共享工位安排.md》（S2）“需提前3个自然日完成确认”。\n四、 可退押金说明（单独列示）\n可退押金金额：200元\n  状态：未付款（费用尚未支付，押金亦尚未支付）。\n  说明：该笔款项不计入上述活动费用，仅在活动结束后按原安排退还。\n> 出处：\n> *   《共享工位安排.md》（S2）“另有可退押金200元，不计入本次费用，押金也尚未支付”。\n> *   《共享工位最新通知.txt》（S1）“可退押金均沿用原安排，仍未付款”。\n资料来源\n【S1】共享工位最新通知.txt\n【S2】共享工位安排.md",
+      "tools": [
+        "answer",
+        "answer",
+        "table",
+        "calculate",
+        "calendar",
+        "write"
+      ],
+      "source_names": [
+        "共享工位最新通知.txt",
+        "共享工位安排.md"
+      ],
+      "checks": {
+        "completed": true,
+        "checked": true,
+        "no_grounded_fallback": true,
+        "word_requested": true,
+        "no_unrequested_word": true,
+        "no_original_mutation": true,
+        "originals_unchanged": true,
+        "numbers": true,
+        "dates": true,
+        "patterns": true,
+        "condition": true,
+        "all_required_dates": true
+      },
+      "passed": true,
+      "seconds": 111.94,
+      "model_calls": 25,
+      "model_executed": true
+    },
+    {
+      "id": "fresh_training_notice",
+      "prompt": "请结合志愿者培训方案和培训补充通知，以最新安排写一份Word费用说明。核算材料等各项费用、合计和剩余预算，说明培训时间、最晚确认日期和可退押金，保留付款条件，附资料出处。",
+      "routing": {
+        "mode": "workspace",
+        "use_previous": false,
+        "reason": "用户明确要求结合‘志愿者培训方案’和‘培训补充通知’两份文件进行费用核算、预算统计及撰写Word文档，必须读取用户文件内容才能完成提取、计算和写作任务。",
+        "source": "local_model"
+      },
+      "word_text": "志愿者培训费用说明\n编制依据：志愿者培训方案（S1）及培训补充通知（S2）\n一、培训安排与时间节点\n根据最新发布的《培训补充通知》（S2），本次志愿者培训的具体安排如下：\n  培训时间：2027年9月25日\n  最晚确认日期：2027年9月20日（依据“需提前5个自然日确认”的规定计算得出）\n  押金说明：需缴纳可退押金300元，该款项不计入培训费用。\n二、费用核算明细\n依据《培训补充通知》（S2）调整后的标准进行核算，具体费用构成如下：\n1.  培训材料费：单价28元 × 24份 = 672元\n2.  茶歇费：360元（沿用原方案）\n3.  设备租用费：450元（依据S2调整）\n费用合计：\n672 + 360 + 450 = 1482元\n三、预算与付款状态\n  总预算：3200元（依据S1）\n  剩余预算：3200 - 1482 = 1718元\n  付款状态：全部款项及押金尚未支付。\n四、资料出处\n  S1：《志愿者培训方案.md》（版本2027-08-02）\n  S2：《培训补充通知.txt》（版本2027-08-08）\n资料来源\n【S1】志愿者培训方案.md\n【S2】培训补充通知.txt",
+      "tools": [
+        "answer",
+        "answer",
+        "calculate",
+        "calendar",
+        "write"
+      ],
+      "source_names": [
+        "志愿者培训方案.md",
+        "培训补充通知.txt"
+      ],
+      "checks": {
+        "completed": true,
+        "checked": true,
+        "no_grounded_fallback": true,
+        "word_requested": true,
+        "no_unrequested_word": true,
+        "no_original_mutation": true,
+        "originals_unchanged": true,
+        "numbers": true,
+        "dates": true,
+        "patterns": true,
+        "condition": true,
+        "all_required_dates": true
+      },
+      "passed": true,
+      "seconds": 71.64,
+      "model_calls": 22,
+      "model_executed": true
+    },
+    {
+      "id": "local_share_copy",
+      "prompt": "把客户跟进纪要.md整理成可分享版本，保留全部正文、预算、办公日期和尚未付款的条件，给我Word副本。",
+      "routing": {
+        "mode": "workspace",
+        "use_previous": false,
+        "reason": "查找资料并生成本地脱敏副本",
+        "source": "share_contract"
+      },
+      "word_text": "可分享版本\n资料 1\n客户跟进纪要（虚构）\n联系人⟪姓名_d4d4d6dd_1⟫，邮箱⟪邮箱_d4d4d6dd_2⟫，电话⟪手机号_d4d4d6dd_3⟫。\n联系地址⟪地址_d4d4d6dd_4⟫。\n活动预算1280元，办公截止日期2026-10-31。费用尚未付款，先确认交付再安排付款。\napi_key=⟪密钥与密码_d4d4d6dd_5⟫\n待办：核对物料清单，保持预算和截止日期。",
+      "tools": [
+        "share"
+      ],
+      "source_names": [
+        "客户跟进纪要.md"
+      ],
+      "share_check": {
+        "state": "passed",
+        "detector": "AstrLink Guard",
+        "source_count": 1,
+        "characters": 195,
+        "redactions": 5,
+        "counts": {
+          "姓名": 1,
+          "邮箱": 1,
+          "手机号": 1,
+          "地址": 1,
+          "密钥与密码": 1
+        },
+        "writing": "full_text",
+        "review": "完整保留可读取正文和表格文字",
+        "scope": "可读取的正文与表格文字；不复制原附件、图片、批注或文件元数据。",
+        "message": "本地识别与规则复查已完成，分享前请核对预览。"
+      },
+      "checks": {
+        "completed": true,
+        "checked": true,
+        "no_grounded_fallback": true,
+        "word_requested": true,
+        "no_unrequested_word": true,
+        "no_original_mutation": true,
+        "originals_unchanged": true,
+        "privacy_passed": true,
+        "all_three_formats": true,
+        "sensitive_values_absent": true,
+        "office_values_retained": true,
+        "checked_source_count": true,
+        "all_required_dates": true
+      },
+      "passed": true,
+      "seconds": 2.0,
+      "model_calls": 0,
+      "model_executed": false
+    }
+  ],
+  "validation_sha256": "b9766e960eb24ca6d040faf92515e84a45612546472b2227e9f8612ff050a4c0",
+  "load_seconds": 5.44,
+  "runtime_policy": {
+    "name": "extended-32gb",
+    "input_tokens": 10000,
+    "output_tokens": 2200,
+    "prefill_tokens": 256,
+    "memory_bytes": 21474836480,
+    "cache_bytes": 268435456
+  },
+  "passed": 5,
+  "total": 5,
+  "peak_mlx_gb": 20.076,
+  "peak_process_rss_gb": 10.301,
+  "backend_unchanged": true,
+  "limits": "Developer-authored tasks using public structures and fictional records; all fictional source documents. Separate routing, BGE retrieval and typed tools. Native followup client contract mirrored and hashed. No GUI execution or real-user validation.",
+  "grading_correction": {
+    "reason": "Accept equivalent YYYY年M月D日, YYYY/MM/DD and ISO date formats; actual Word reread and matched preserved text. Outputs, required dates, all other checks and backend hashes unchanged.",
+    "original_report": "qa/v0.27/reports/adapted-20261031T102446-2dcf4f.json",
+    "original_report_sha256": "92a83c455758c3a4fe665e862552f1b6c9ef6ecf45af37ab1752e6b051046e4e",
+    "changes": [
+      {
+        "case": "fresh_training_notice",
+        "check": "dates",
+        "before": false,
+        "after": true
+      },
+      {
+        "case": "fresh_training_notice",
+        "check": "all_required_dates",
+        "before": false,
+        "after": true
+      }
+    ],
+    "no_model_regeneration": true,
+    "grader_sha256": "c6e5a4bfd83b2923ba1e2b4cd52701cf0a80660f3a8d4fe3ed4698d9eaa7b636"
+  }
+}

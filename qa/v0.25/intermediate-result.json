@@ -1,0 +1,16 @@
+{
+  "report": "qa/v0.25/reports/primary-qwen3.6-35b-a3b-20261030T225147-66026a.json",
+  "passed": 5,
+  "total": 7,
+  "first_use_reserved_goals": [
+    {
+      "id": "identity_between_tasks",
+      "passed": true
+    },
+    {
+      "id": "return_packaging_threshold",
+      "passed": false
+    }
+  ],
+  "scope": "Development retest4/5; reserved new conversation goals on known files1/2. No scores overwritten."
+}

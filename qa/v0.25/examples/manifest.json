@@ -1,0 +1,52 @@
+[
+  {
+    "case": "tickets_dual_date_word",
+    "path": "qa/v0.25/examples/工单结算_结果.xlsx",
+    "sha256": "23ed4e8b9c41a64f5391b4153af73775d9c0584c12f282f0ddabd84591f1363e"
+  },
+  {
+    "case": "tickets_dual_date_word",
+    "path": "qa/v0.25/examples/工单结算_结果.csv",
+    "sha256": "42004f5f8a95df52d06122263e267624d85762456c093dbda68aa7f8f7f31636"
+  },
+  {
+    "case": "tickets_dual_date_word",
+    "path": "qa/v0.25/examples/工单结算_说明.docx",
+    "sha256": "179cd529853ea05d12c29409278ae3d6ee6010bd486a773da11553381b49aee9"
+  },
+  {
+    "case": "packaging_detail_word",
+    "path": "qa/v0.25/examples/物料补充_结果.xlsx",
+    "sha256": "5aa14e6ba69131f895feca5504e006780d0adcf8d36d9c062295e75b1189cb5f"
+  },
+  {
+    "case": "packaging_detail_word",
+    "path": "qa/v0.25/examples/物料补充_结果.csv",
+    "sha256": "0776beb8f56ab77e07079288ff295ff04302831e8fd8dadd2341a32ca444ab34"
+  },
+  {
+    "case": "packaging_detail_word",
+    "path": "qa/v0.25/examples/物料补充_说明.docx",
+    "sha256": "1caa693caf3524f4853a29431c7036bb06d6c8f7dd4b45152fea263e1c0b5411"
+  },
+  {
+    "case": "visit_region_followup",
+    "path": "qa/v0.25/examples/单独列出区域_结果.xlsx",
+    "sha256": "4bf548e08b408145733d54f10b839f455b60cbe7d87f776f98c7b8707518bdc5"
+  },
+  {
+    "case": "visit_region_followup",
+    "path": "qa/v0.25/examples/单独列出区域_结果.csv",
+    "sha256": "f8ae1a58b13ba18f24763ee227bd1f9c5e800be78ca9263385a4eaca10baf55d"
+  },
+  {
+    "case": "return_packaging_threshold",
+    "path": "qa/v0.25/examples/聊天后调整门槛_结果.xlsx",
+    "sha256": "2ef7e63a2d38887980446769b84dfb610a6b82b9e5ffcce484cf28d76d6c98c2"
+  },
+  {
+    "case": "return_packaging_threshold",
+    "path": "qa/v0.25/examples/聊天后调整门槛_结果.csv",
+    "sha256": "fe0232b4f77b25402a5effe779dfb6d5448481854d5610efe86c867a853d8a50"
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "proposal_docx_pages": 4,
+  "proposal_pdf_pages": 4,
+  "proposal_all_pages_visually_inspected": true,
+  "deck_slides": 8,
+  "deck_all_pages_visually_inspected": true,
+  "unchanged_pages_verified_by_identical_render_pixels": true,
+  "pptx_integrity_geometry_and_first_party_import": "passed",
+  "editable_tables": [
+    3,
+    8
+  ],
+  "budget_sum_explicitly_checked": 8000,
+  "units": "U, proposed future expenditure",
+  "pdf": "Final deck PDF from reviewed16:9 slide renderings; editable text and tables supplied in PPTX.",
+  "files": {
+    "归屿_GCC_Cohort4_申请说明_v0.27.docx": "c69002de17553a745fa5347b0336dfc0e4407f48141fce99fc2b3dbcb8eee58c",
+    "归屿_GCC_Cohort4_路演_v0.27.pptx": "f08899fcb39c31e1f38c0bafe31dba08829bad8d18c8ca5e6f8aeb09bd604a7b",
+    "归屿_GCC_Cohort4_路演_v0.27.pdf": "313242a0c4857d10dd97a1a9f46e8c29b8d1007313b6839d450aec4c1571bc3d",
+    "归屿_GCC_Cohort4_申请说明_v0.27.pdf": "8563e10e681d78a20f0ce2946d18f0c2d964d8063ddab415e92c946debe2c46b"
+  }
+}

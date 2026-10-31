@@ -1,0 +1,29 @@
+{
+  "version": "0.21.0",
+  "purpose": "Independent fictional confirmation inputs authored after first-fresh v21 outcomes became known. No model was run on this suite before the input freeze. Expected answers are evaluation-only and must never enter model context. This suite must not be used for further tuning after its first actual-model run.",
+  "cases": [
+    {
+      "id": "net_mass_kg",
+      "prompt": "只处理“分装称量.xlsx”的“批次”表，复核状态必须为通过。净料按毛重减皮重计算，只保留净料不少于1.25千克的批次。按净料从高到低，只要批号、净料两列，净料以kg显示。不要去重，不写文稿。",
+      "columns": ["批号", "净料"],
+      "rows": [["W01", "2.2"], ["W05", "1.4"], ["W02", "1.25"]]
+    },
+    {
+      "id": "freight_union_word",
+      "prompt": "合并“北线运费.xlsx”和“南线运费.xlsx”的登记表，只处理记录状态为有效、交接日期在2027-01-01至2027-01-31且包含两端的原始登记。按线路汇总运费合计和票数，按运费合计从高到低，只要线路、运费合计、票数三列，运费合计以千元显示，票数保持整数。写一段简短物流费用说明并导出Word，标题为“一月线路费用”。",
+      "columns": ["线路", "运费合计", "票数"],
+      "rows": [["沿江", "0.7", "3"], ["山路", "0.57", "2"], ["海滨", "0.5", "1"]],
+      "word": true,
+      "word_numbers": ["0.7", "0.57", "0.5"]
+    },
+    {
+      "id": "freight_ticket_floor",
+      "parent": "freight_union_word",
+      "prompt": "只统计单票运费不少于200元的原始登记，仍按线路汇总，其他要求不变。",
+      "columns": ["线路", "运费合计", "票数"],
+      "rows": [["沿江", "0.55", "2"], ["海滨", "0.5", "1"], ["山路", "0.45", "1"]],
+      "word": true,
+      "word_numbers": ["0.55", "0.5", "0.45"]
+    }
+  ]
+}

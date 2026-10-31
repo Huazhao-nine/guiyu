@@ -1,0 +1,1537 @@
+{
+  "version": "0.25-primary-model",
+  "suite": "primary",
+  "time": "2026-10-30T22:57:33.167846+08:00",
+  "model": "qwen3.6-35b-a3b",
+  "structured_temperature": 0,
+  "seed": 20261029,
+  "hardware": "Apple M5 32GB; user-selected32GB baseline",
+  "load_seconds": 5.789,
+  "model_info": {
+    "name": "qwen3.6-35b-a3b",
+    "architecture": "qwen3_5_moe",
+    "bits": 4,
+    "bytes": 20402204271,
+    "runtime_policy": {
+      "name": "extended-32gb",
+      "input_tokens": 10000,
+      "output_tokens": 2200,
+      "prefill_tokens": 256,
+      "memory_bytes": 21474836480,
+      "cache_bytes": 268435456
+    }
+  },
+  "thinking_enabled": false,
+  "common_token_limits": {
+    "input": 10000,
+    "output": 2200
+  },
+  "network_denied": true,
+  "source_hashes": {
+    "structured_output.py": "7960a53bd816fbd0f1940a7ab57a3c91da9fd56e4d09deb7c4639b1764deb268",
+    "worker.py": "879bf7cff54b9ad715236926c23899d1433a9d76f0add5dd6db61cb354bd8c8a",
+    "agent_control.py": "7524801210603dab72a6b0b375fd84bfd20750bdca563f2d7cec335a859edf6d",
+    "money_subtotals.py": "3f69877035132e87a756b16cfbb33876eb80d1d9f0edd424b9115debdd2a54ee",
+    "workbook_agent.py": "ac7c93b5b618409da82db2699d5480655e959f68970a65add9b438168108239b",
+    "workbook_writing.py": "5ddd5a39dcb8557d077939a5f0d141147beac2287a457cfad0cf8475cf1826b9",
+    "workbook_edits.py": "7d8dd9169b2739fafa62622a2d2bb8f21518e76152541a761924b638c073d219",
+    "personal_tools.py": "c8ed42cd828d67ebfbd03c2cdf144894b553cb009a0cf2beebe77f590af016e1",
+    "workbook_data.py": "bc6902625ecb69300fd8497fba0d8cb734ea8372ccf97a46d2c6d1a231e5b408",
+    "structured_tables.py": "9868f4316fdba81ddf435bba47b7284343fbafe10b608ff29cadce949580597b",
+    "runtime_policy.py": "422cef9d111bca844c37e71ace3b6be37fd9b6b81bbd3b0967e73b4aaaa10a22",
+    "local_query.py": "bbe2091085564d19740e1bc81c7ca6c59b8fef20ee329e356ff433184b5f0bd3",
+    "workbook_schema.py": "1f640f62ea196fdb4c038293ac0ee3b69c19cfe10b237891d7bec0bc46e951a1",
+    "privacy_filter.py": "3a65fc2029085463408981b36a7faa2cc8d8cdb19689b3628d11d42ba41b7f1c",
+    "table_program.py": "b989f1b9e065f9d856a103299e58dfc4b86c3fa3cf63ce1b3f9b9d939cfb75f1",
+    "request_router.py": "6cc7b450900d2042adf313a94c9c480717874d735fe3dfddcf37f3df7c0073ce",
+    "workbook_requirements.py": "cb463959fd78b875dc34481044e5779cf5ceec0760ea75fba6ae65c38f46e83d",
+    "workbook_flow.py": "a071457b5e26c5b88e8fb90e295f38dbaf74c78a5ac8b52c7546a7a19792c6c5",
+    "workbook_intent.py": "24777623e2228e2f0264ff20f588909c8ea6a7e6b69dc352e2e2caf7979d0567",
+    "model_info.py": "f5d5c937a391d1ffd1ab86374c1b8f0794f8fe67870a7b8a54bccb2834ede9ca",
+    "general_assistant.py": "709754ff9ab5e2aa6e81f1281c93212084793b1462d5bcc62dd5391cf5d6cdb8",
+    "workbook_revision.py": "a634b33b072147edc683aa021b48d6dfabbf23dc7f2c7cd4f7d353d6536cc632",
+    "bge_embedding.py": "f51ee3f63d3e46fa08ac7de6ba7380b7e87d8ab8b627338439cf55714efd687d",
+    "general_tools.py": "79fe507a1d2a0a3e8c74cd9889bf4eaece3a01ba61c80b9b388fa1db47d1a7d0",
+    "table_semantics.py": "2d164c333efef02d6188d03d6112ba9834e37a4ed6ed6c95d82697b41eec6a43",
+    "workbook_export.py": "e9f2f52986ef54811e8d36eb4c492795557a6d8765885c91e0080e316d6d2c0f",
+    "workbook_qualifiers.py": "0e20093e35c7eb1b3c34516eed78ca76579d3ba5630f60487faacec2af7d4b45",
+    "fact_guard.py": "071b2764597edbb9ee79045dddc3b9c2f14d9993c01b0f5887b3b4ac2b2a181c",
+    "privacy_models.py": "dd160bac36ddfb6d6393c5a8bdb90f95571d2e5bbc7374d6d43bcafad9e045b2",
+    "share_agent.py": "b41eb80b564c678fc99bb304391ac4432e78d01d5188cc9eebe7dff44db812d5",
+    "model_output.py": "83fba58b74d38dbe1c4b43f91695e0ea2c3ba2a79d6edc988ddc9c4a2db2c4c5",
+    "workspace_index.py": "4c9038a1c90e24a6b18d8fab96e017088abdd4c81009217e4cbc32f814aa8911",
+    "office_agent.py": "b49adcfd302155180688f505afbef15e76a8650ec000fb4005289aff5e1b0653"
+  },
+  "fixture_hashes": {
+    "包装物料.xlsx": "be14dcd2e46ef49049de6bff0eda60e389fe3b0fed5186b30c21f69c4dfbe66e",
+    "预约随访.csv": "1616873ea0d964b7556e3eb9110b5f640db86d2f475e535ea6a1c6bd73172321",
+    "工单结算.xlsx": "3bcd819c5511f555d83bf1fc6ae2bc61a218f6c43062c9dec39731d65b0666a0"
+  },
+  "suite_hashes": {
+    "fixtures/primary_model_v25/tasks.json": "8da1b8aa87b492cf5bb13c0951ab3785a92f482ea2d330a314665da308366f61"
+  },
+  "runner_sha256": "365b19a09fdddb855a85194aaccdae2f947a6aae12346f1c715e3e0f89a8c9f2",
+  "cases": [
+    {
+      "id": "tickets_dual_date_word",
+      "prompt": "处理工单结算.xlsx，按早班、晚班的顺序合并，先按TicketID保留首次记录。仅纳入ClosedOn在2028年2月整月的工单；Status为已完成，或者Status为待确认且AllowAdvance为是。待结金额按Charge减Paid，只纳入待结金额不少于700元的，按Team汇总待结合计和工单数，待结合计降序。只要Team、待结合计、工单数三列。生成Word，标题“二月工单待结说明”，不添加审批意见。",
+      "authorized_file_count": 3,
+      "passed": true,
+      "checks": {
+        "incremental_tools": true,
+        "expected_rows": true,
+        "expected_columns": true,
+        "preview_matches_xlsx": true,
+        "csv_matches_xlsx": true,
+        "required_summary": true,
+        "typed_summary_rows": true,
+        "word_if_requested": true,
+        "word_values": true,
+        "no_unrequested_word": true,
+        "completed": true,
+        "checked_delivery": true,
+        "no_original_transaction": true,
+        "originals_unchanged": true
+      },
+      "rows": [
+        [
+          "TeamBeta",
+          "4500",
+          "2"
+        ],
+        [
+          "TeamAlpha",
+          "3500",
+          "2"
+        ],
+        [
+          "TeamGamma",
+          "1000",
+          "1"
+        ]
+      ],
+      "columns": [
+        "Team",
+        "待结合计（元）",
+        "工单数"
+      ],
+      "summaries": [],
+      "word_text": "二月工单待结说明\n本次按要求从11条原始记录中整理出3条结果。\n明细\n数据说明\n工单结算.xlsx / 晚班：Charge（千元）：按单元格显式单位优先、表头单位兜底，统一为元；未改变原文件。\n资料来源\n【S1】工单结算.xlsx\nTeam | 待结合计（元） | 工单数\nTeamBeta | 4500 | 2\nTeamAlpha | 3500 | 2\nTeamGamma | 1000 | 1",
+      "graph": [
+        {
+          "id": "V1",
+          "input": "V0",
+          "operation": {
+            "op": "distinct",
+            "columns": [
+              "TicketID"
+            ]
+          }
+        },
+        {
+          "id": "V2",
+          "input": "V1",
+          "operation": {
+            "op": "filter",
+            "where": {
+              "all": [
+                {
+                  "column": "ClosedOn",
+                  "operator": "gte",
+                  "type": "date",
+                  "value": "2028-02-01"
+                },
+                {
+                  "column": "ClosedOn",
+                  "operator": "lte",
+                  "type": "date",
+                  "value": "2028-02-29"
+                },
+                {
+                  "any": [
+                    {
+                      "all": [
+                        {
+                          "column": "Status",
+                          "operator": "eq",
+                          "type": "text",
+                          "value": "已完成"
+                        }
+                      ]
+                    },
+                    {
+                      "all": [
+                        {
+                          "column": "Status",
+                          "operator": "eq",
+                          "type": "text",
+                          "value": "待确认"
+                        },
+                        {
+                          "column": "AllowAdvance",
+                          "operator": "eq",
+                          "type": "text",
+                          "value": "true"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "V3",
+          "input": "V2",
+          "operation": {
+            "op": "filter",
+            "where": {
+              "all": [
+                {
+                  "column": "ClosedOn",
+                  "operator": "gte",
+                  "type": "date",
+                  "value": "2028-02-01"
+                },
+                {
+                  "column": "ClosedOn",
+                  "operator": "lte",
+                  "type": "date",
+                  "value": "2028-02-29"
+                },
+                {
+                  "any": [
+                    {
+                      "column": "Status",
+                      "operator": "eq",
+                      "type": "text",
+                      "value": "已完成"
+                    },
+                    {
+                      "all": [
+                        {
+                          "column": "Status",
+                          "operator": "eq",
+                          "type": "text",
+                          "value": "待确认"
+                        },
+                        {
+                          "column": "AllowAdvance",
+                          "operator": "eq",
+                          "type": "text",
+                          "value": "true"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "V4",
+          "input": "V3",
+          "operation": {
+            "op": "derive",
+            "name": "待结金额（元）",
+            "expression": {
+              "subtract": [
+                {
+                  "column": "Charge（元）"
+                },
+                {
+                  "column": "Paid（元）"
+                }
+              ]
+            },
+            "format": "number",
+            "precision": 8
+          }
+        },
+        {
+          "id": "V5",
+          "input": "V4",
+          "operation": {
+            "op": "filter",
+            "where": {
+              "all": [
+                {
+                  "column": "待结金额（元）",
+                  "operator": "gte",
+                  "type": "number",
+                  "value": "700"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "V6",
+          "input": "V5",
+          "operation": {
+            "op": "group",
+            "by": [
+              "Team"
+            ],
+            "metrics": [
+              {
+                "function": "sum",
+                "as": "待结合计（元）",
+                "column": "待结金额（元）"
+              },
+              {
+                "function": "count",
+                "as": "工单数"
+              }
+            ]
+          }
+        },
+        {
+          "id": "V7",
+          "input": "V6",
+          "operation": {
+            "op": "sort",
+            "by": [
+              {
+                "column": "待结合计（元）",
+                "direction": "desc",
+                "type": "number"
+              }
+            ]
+          }
+        }
+      ],
+      "finish": {
+        "tool": "finish",
+        "result": "V7",
+        "summaries": [],
+        "display_units": {},
+        "fields": [
+          "Team",
+          "待结合计（元）",
+          "工单数"
+        ]
+      },
+      "repairs": [
+        {
+          "turn": 1,
+          "error": "每个计算字段仅提供name、formula和可选format/precision/display_units。",
+          "available_views": [
+            "V0",
+            "V1",
+            "V2"
+          ],
+          "action": {
+            "tool": "derive",
+            "input": "V2",
+            "fields": [
+              {
+                "name": "待结金额",
+                "formula": "[Charge（元）]-[Paid（元）]",
+                "where": {
+                  "all": [
+                    {
+                      "field": "待结金额",
+                      "op": "gte",
+                      "value": 700
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "planning_stats": {
+        "tokens": 739,
+        "peak_memory_gb": 19.99,
+        "attempted_calls": 10,
+        "calls": 10,
+        "model_seconds": 55.92,
+        "max_input_tokens": 3432,
+        "structured_calls": 6,
+        "structure_seconds": 13.064,
+        "source_first_dedup": true,
+        "constraint_escalations": 1
+      },
+      "revision": null,
+      "operation_count": 7,
+      "seconds": 57.01,
+      "model_calls": 11,
+      "model_executed": true,
+      "dependency_blocked": false,
+      "input_tokens": 27272
+    },
+    {
+      "id": "ticket_team_followup",
+      "prompt": "那TeamAlpha呢？其余计算标准照旧，这次只要表格。",
+      "authorized_file_count": 1,
+      "passed": true,
+      "checks": {
+        "incremental_tools": true,
+        "expected_rows": true,
+        "expected_columns": true,
+        "preview_matches_xlsx": true,
+        "csv_matches_xlsx": true,
+        "required_summary": true,
+        "typed_summary_rows": true,
+        "word_if_requested": true,
+        "word_values": true,
+        "no_unrequested_word": true,
+        "completed": true,
+        "checked_delivery": true,
+        "no_original_transaction": true,
+        "originals_unchanged": true
+      },
+      "rows": [
+        [
+          "TeamAlpha",
+          "3500",
+          "2"
+        ]
+      ],
+      "columns": [
+        "Team",
+        "待结合计（元）",
+        "工单数"
+      ],
+      "summaries": [],
+      "word_text": "",
+      "graph": [
+        {
+          "id": "V1",
+          "input": "V0",
+          "operation": {
+            "op": "distinct",
+            "columns": [
+              "TicketID"
+            ]
+          }
+        },
+        {
+          "id": "V2",
+          "input": "V1",
+          "operation": {
+            "op": "filter",
+            "where": {
+              "all": [
+                {
+                  "column": "ClosedOn",
+                  "operator": "gte",
+                  "type": "date",
+                  "value": "2028-02-01"
+                },
+                {
+                  "column": "ClosedOn",
+                  "operator": "lte",
+                  "type": "date",
+                  "value": "2028-02-29"
+                },
+                {
+                  "any": [
+                    {
+                      "all": [
+                        {
+                          "column": "Status",
+                          "operator": "eq",
+                          "type": "text",
+                          "value": "已完成"
+                        }
+                      ]
+                    },
+                    {
+                      "all": [
+                        {
+                          "column": "Status",
+                          "operator": "eq",
+                          "type": "text",
+                          "value": "待确认"
+                        },
+                        {
+                          "column": "AllowAdvance",
+                          "operator": "eq",
+                          "type": "text",
+                          "value": "true"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "V3",
+          "input": "V2",
+          "operation": {
+            "op": "filter",
+            "where": {
+              "all": [
+                {
+                  "column": "ClosedOn",
+                  "operator": "gte",
+                  "type": "date",
+                  "value": "2028-02-01"
+                },
+                {
+                  "column": "ClosedOn",
+                  "operator": "lte",
+                  "type": "date",
+                  "value": "2028-02-29"
+                },
+                {
+                  "any": [
+                    {
+                      "column": "Status",
+                      "operator": "eq",
+                      "type": "text",
+                      "value": "已完成"
+                    },
+                    {
+                      "all": [
+                        {
+                          "column": "Status",
+                          "operator": "eq",
+                          "type": "text",
+                          "value": "待确认"
+                        },
+                        {
+                          "column": "AllowAdvance",
+                          "operator": "eq",
+                          "type": "text",
+                          "value": "true"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "V4",
+          "input": "V3",
+          "operation": {
+            "op": "derive",
+            "name": "待结金额（元）",
+            "expression": {
+              "subtract": [
+                {
+                  "column": "Charge（元）"
+                },
+                {
+                  "column": "Paid（元）"
+                }
+              ]
+            },
+            "format": "number",
+            "precision": 8
+          }
+        },
+        {
+          "id": "V5",
+          "input": "V4",
+          "operation": {
+            "op": "filter",
+            "where": {
+              "all": [
+                {
+                  "column": "待结金额（元）",
+                  "operator": "gte",
+                  "type": "number",
+                  "value": "700"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "V6",
+          "input": "V5",
+          "operation": {
+            "op": "filter",
+            "where": {
+              "column": "Team",
+              "operator": "eq",
+              "type": "text",
+              "value": "TeamAlpha"
+            }
+          }
+        },
+        {
+          "id": "V7",
+          "input": "V6",
+          "operation": {
+            "op": "group",
+            "by": [
+              "Team"
+            ],
+            "metrics": [
+              {
+                "function": "sum",
+                "as": "待结合计（元）",
+                "column": "待结金额（元）"
+              },
+              {
+                "function": "count",
+                "as": "工单数"
+              }
+            ]
+          }
+        },
+        {
+          "id": "V8",
+          "input": "V7",
+          "operation": {
+            "op": "sort",
+            "by": [
+              {
+                "column": "待结合计（元）",
+                "direction": "desc",
+                "type": "number"
+              }
+            ]
+          }
+        }
+      ],
+      "finish": {
+        "tool": "finish",
+        "input": "V7",
+        "purpose": "交付TeamAlpha二月工单待结说明表格",
+        "fields": [
+          "Team",
+          "待结合计（元）",
+          "工单数"
+        ],
+        "display_units": {
+          "待结合计（元）": "元"
+        },
+        "summaries": [],
+        "result": "V8"
+      },
+      "repairs": [],
+      "planning_stats": {
+        "tokens": 221,
+        "peak_memory_gb": 19.99,
+        "attempted_calls": 5,
+        "calls": 5,
+        "model_seconds": 23.49,
+        "max_input_tokens": 3562
+      },
+      "revision": null,
+      "operation_count": 8,
+      "seconds": 23.56,
+      "model_calls": 5,
+      "model_executed": true,
+      "dependency_blocked": false,
+      "input_tokens": 14510
+    },
+    {
+      "id": "visits_range_duration",
+      "prompt": "从预约随访.csv中选取RecordedOn在2028-04-01至2028-04-30且Duration非空的记录；Progress为已完成，或者Progress为复核完成且Channel为线上。按Region统计记录数与时长合计，时长用小时显示。时长合计降序，同小时按Region升序，只要Region、记录数、时长合计三列，不生成文稿。",
+      "authorized_file_count": 3,
+      "passed": true,
+      "checks": {
+        "incremental_tools": true,
+        "expected_rows": true,
+        "expected_columns": true,
+        "preview_matches_xlsx": true,
+        "csv_matches_xlsx": true,
+        "required_summary": true,
+        "typed_summary_rows": true,
+        "word_if_requested": true,
+        "word_values": true,
+        "no_unrequested_word": true,
+        "completed": true,
+        "checked_delivery": true,
+        "no_original_transaction": true,
+        "originals_unchanged": true
+      },
+      "rows": [
+        [
+          "苏区",
+          "2",
+          "2.75"
+        ],
+        [
+          "沪区",
+          "2",
+          "2.5"
+        ],
+        [
+          "浙区",
+          "2",
+          "1.5"
+        ]
+      ],
+      "columns": [
+        "Region",
+        "记录数",
+        "时长合计（小时）"
+      ],
+      "summaries": [],
+      "word_text": "",
+      "graph": [
+        {
+          "id": "V1",
+          "input": "V0",
+          "operation": {
+            "op": "filter",
+            "where": {
+              "all": [
+                {
+                  "column": "RecordedOn",
+                  "operator": "gte",
+                  "type": "date",
+                  "value": "2028-04-01"
+                },
+                {
+                  "column": "RecordedOn",
+                  "operator": "lte",
+                  "type": "date",
+                  "value": "2028-04-30"
+                },
+                {
+                  "column": "Duration（分钟）",
+                  "operator": "not_empty",
+                  "type": "number"
+                },
+                {
+                  "any": [
+                    {
+                      "column": "Progress",
+                      "operator": "eq",
+                      "type": "text",
+                      "value": "已完成"
+                    },
+                    {
+                      "all": [
+                        {
+                          "column": "Progress",
+                          "operator": "eq",
+                          "type": "text",
+                          "value": "复核完成"
+                        },
+                        {
+                          "column": "Channel",
+                          "operator": "eq",
+                          "type": "text",
+                          "value": "线上"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "V2",
+          "input": "V1",
+          "operation": {
+            "op": "group",
+            "by": [
+              "Region"
+            ],
+            "metrics": [
+              {
+                "function": "count",
+                "as": "记录数"
+              },
+              {
+                "function": "sum",
+                "as": "时长合计（分钟）",
+                "column": "Duration（分钟）"
+              }
+            ]
+          }
+        },
+        {
+          "id": "V3",
+          "input": "V2",
+          "operation": {
+            "op": "sort",
+            "by": [
+              {
+                "column": "时长合计（分钟）",
+                "direction": "desc",
+                "type": "number"
+              },
+              {
+                "column": "Region",
+                "direction": "asc",
+                "type": "text"
+              }
+            ]
+          }
+        }
+      ],
+      "finish": {
+        "tool": "finish",
+        "result": "V3",
+        "summaries": [],
+        "display_units": {
+          "时长合计（分钟）": "小时"
+        },
+        "fields": [
+          "Region",
+          "记录数",
+          "时长合计（分钟）"
+        ]
+      },
+      "repairs": [
+        {
+          "turn": 0,
+          "error": "动作JSON格式无效，局部修订尚未完成；请只返回一个完整动作。",
+          "available_views": [
+            "V0"
+          ],
+          "invalid_action": "{\"tool\": \"filter\", \"input\": \"V0\", \"where\": {\"op\": \"all\", \"children\": [{\"field\": \"RecordedOn\", \"op\": \"gte\", \"value\": \"2028-04-01\"}, {\"field\": \"RecordedOn\", \"op\": \"lte\", \"value\": \"2028-04-30\"}, {\"field\": \"Duration（分钟）\", \"op\": \"not_empty\"}, {\"op\": \"any\", \"children\": [{\"field\": \"Progress\", \"op\": \"eq\", \"value\": \"已完成\"}, {\"op\": \"all\", \"children\": [{\"field\": \"Progress\", \"op\": \"eq\", \"value\": \"复核完成\"}, {\"field\": \"Channel\", \"op\": \"eq\", \"value\": \"线上\"}]}]}}}, \"purpose\": \"筛选2028年4月有效随访记录\"}"
+        }
+      ],
+      "planning_stats": {
+        "tokens": 728,
+        "peak_memory_gb": 19.99,
+        "attempted_calls": 7,
+        "calls": 8,
+        "model_seconds": 38.94,
+        "max_input_tokens": 2762,
+        "structured_calls": 4,
+        "structure_seconds": 6.522,
+        "format_repairs": 1,
+        "constraint_escalations": 1
+      },
+      "revision": null,
+      "operation_count": 3,
+      "seconds": 39.0,
+      "model_calls": 8,
+      "model_executed": true,
+      "dependency_blocked": false,
+      "input_tokens": 14283
+    },
+    {
+      "id": "visit_region_followup",
+      "prompt": "把沪区单独列出来，其他处理规则不变，仍然只要表格。",
+      "authorized_file_count": 1,
+      "passed": true,
+      "checks": {
+        "incremental_tools": true,
+        "expected_rows": true,
+        "expected_columns": true,
+        "preview_matches_xlsx": true,
+        "csv_matches_xlsx": true,
+        "required_summary": true,
+        "typed_summary_rows": true,
+        "word_if_requested": true,
+        "word_values": true,
+        "no_unrequested_word": true,
+        "completed": true,
+        "checked_delivery": true,
+        "no_original_transaction": true,
+        "originals_unchanged": true
+      },
+      "rows": [
+        [
+          "沪区",
+          "2",
+          "2.5"
+        ]
+      ],
+      "columns": [
+        "Region",
+        "记录数",
+        "时长合计（小时）"
+      ],
+      "summaries": [],
+      "word_text": "",
+      "graph": [
+        {
+          "id": "V1",
+          "input": "V0",
+          "operation": {
+            "op": "filter",
+            "where": {
+              "all": [
+                {
+                  "column": "RecordedOn",
+                  "operator": "gte",
+                  "type": "date",
+                  "value": "2028-04-01"
+                },
+                {
+                  "column": "RecordedOn",
+                  "operator": "lte",
+                  "type": "date",
+                  "value": "2028-04-30"
+                },
+                {
+                  "column": "Duration（分钟）",
+                  "operator": "not_empty",
+                  "type": "number"
+                },
+                {
+                  "any": [
+                    {
+                      "column": "Progress",
+                      "operator": "eq",
+                      "type": "text",
+                      "value": "已完成"
+                    },
+                    {
+                      "all": [
+                        {
+                          "column": "Progress",
+                          "operator": "eq",
+                          "type": "text",
+                          "value": "复核完成"
+                        },
+                        {
+                          "column": "Channel",
+                          "operator": "eq",
+                          "type": "text",
+                          "value": "线上"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "V2",
+          "input": "V1",
+          "operation": {
+            "op": "group",
+            "by": [
+              "Region"
+            ],
+            "metrics": [
+              {
+                "function": "count",
+                "as": "记录数"
+              },
+              {
+                "function": "sum",
+                "as": "时长合计（分钟）",
+                "column": "Duration（分钟）"
+              }
+            ]
+          }
+        },
+        {
+          "id": "V3",
+          "input": "V2",
+          "operation": {
+            "op": "sort",
+            "by": [
+              {
+                "column": "时长合计（分钟）",
+                "direction": "desc",
+                "type": "number"
+              },
+              {
+                "column": "Region",
+                "direction": "asc",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        {
+          "id": "V4",
+          "input": "V3",
+          "operation": {
+            "op": "filter",
+            "where": {
+              "column": "Region",
+              "operator": "eq",
+              "type": "text",
+              "value": "沪区"
+            }
+          }
+        },
+        {
+          "id": "V5",
+          "input": "V4",
+          "operation": {
+            "op": "filter",
+            "where": {
+              "all": [
+                {
+                  "column": "Region",
+                  "operator": "eq",
+                  "type": "text",
+                  "value": "沪区"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "finish": {
+        "tool": "finish",
+        "result": "V5",
+        "summaries": [],
+        "display_units": {
+          "时长合计（分钟）": "小时"
+        }
+      },
+      "repairs": [
+        {
+          "turn": 3,
+          "error": "没有这个工具，请使用列出的工具。",
+          "available_views": [
+            "V0",
+            "P0",
+            "V1",
+            "V2",
+            "V3",
+            "V4"
+          ],
+          "action": {
+            "tool": "union",
+            "input": [
+              "V4",
+              "V3"
+            ],
+            "purpose": "将沪区单独结果（V4）与其余地区结果（V3）合并，保持原有排序逻辑，生成包含所有区域的完整表格"
+          }
+        },
+        {
+          "turn": 4,
+          "error": "unhashable type: 'list'",
+          "available_views": [
+            "V0",
+            "P0",
+            "V1",
+            "V2",
+            "V3",
+            "V4"
+          ]
+        }
+      ],
+      "planning_stats": {
+        "tokens": 456,
+        "peak_memory_gb": 19.99,
+        "attempted_calls": 8,
+        "calls": 8,
+        "model_seconds": 41.06,
+        "max_input_tokens": 2879,
+        "constraint_repairs": 1,
+        "constraint_escalations": 1,
+        "structured_calls": 1,
+        "structure_seconds": 1.768
+      },
+      "revision": null,
+      "operation_count": 5,
+      "seconds": 41.13,
+      "model_calls": 8,
+      "model_executed": true,
+      "dependency_blocked": false,
+      "input_tokens": 18007
+    },
+    {
+      "id": "packaging_detail_word",
+      "prompt": "处理包装物料.xlsx的包装物料页，只看启用为是、UnitPrice非空且计划大于在库的记录。缺口是计划减在库，预计金额是缺口乘UnitPrice，只纳入预计金额不少于100元的。按预计金额降序，同金额按物料号升序，只保留物料号、缺口、预计金额，保留逐条明细并附加预计金额总额和条数。生成Word，标题“包装物料补充说明”，不添加采购日期或供应商。",
+      "authorized_file_count": 3,
+      "passed": true,
+      "checks": {
+        "incremental_tools": true,
+        "expected_rows": true,
+        "expected_columns": true,
+        "preview_matches_xlsx": true,
+        "csv_matches_xlsx": true,
+        "required_summary": true,
+        "typed_summary_rows": true,
+        "word_if_requested": true,
+        "word_values": true,
+        "no_unrequested_word": true,
+        "completed": true,
+        "checked_delivery": true,
+        "no_original_transaction": true,
+        "originals_unchanged": true
+      },
+      "rows": [
+        [
+          "PK03",
+          "9",
+          "270"
+        ],
+        [
+          "PK02",
+          "6",
+          "180"
+        ],
+        [
+          "PK01",
+          "4",
+          "120"
+        ]
+      ],
+      "columns": [
+        "物料号",
+        "缺口",
+        "预计金额（元）"
+      ],
+      "summaries": [
+        {
+          "columns": [
+            "预计金额总额（元）",
+            "条数"
+          ],
+          "rows": [
+            [
+              "570",
+              "3"
+            ]
+          ],
+          "units": {
+            "预计金额总额（元）": "CNY"
+          },
+          "provenance": [
+            [
+              2,
+              3,
+              5
+            ]
+          ],
+          "field_types": {
+            "预计金额总额（元）": "number",
+            "条数": "number"
+          },
+          "unit_ledger": {
+            "预计金额总额（元）": {
+              "source_column": "预计金额总额（元）",
+              "canonical_unit": "元"
+            },
+            "条数": {
+              "source_column": "条数",
+              "canonical_unit": ""
+            }
+          }
+        }
+      ],
+      "word_text": "包装物料补充说明\n本次按要求从7条原始记录中整理出3条结果。\n预计金额总额（元）：570元；条数：3。\n明细\n汇总\n资料来源\n【S1】包装物料.xlsx\n物料号 | 缺口 | 预计金额（元）\nPK03 | 9 | 270\nPK02 | 6 | 180\nPK01 | 4 | 120\n预计金额总额（元） | 条数\n570 | 3",
+      "graph": [
+        {
+          "id": "V1",
+          "input": "V0",
+          "operation": {
+            "op": "filter",
+            "where": {
+              "all": [
+                {
+                  "column": "启用",
+                  "operator": "eq",
+                  "type": "text",
+                  "value": "true"
+                },
+                {
+                  "column": "UnitPrice（元）",
+                  "operator": "not_empty",
+                  "type": "number"
+                },
+                {
+                  "column": "数量 / 计划",
+                  "operator": "gt",
+                  "type": "number",
+                  "value_column": "数量 / 在库"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "V2",
+          "input": "V1",
+          "operation": {
+            "op": "derive",
+            "name": "缺口",
+            "expression": {
+              "subtract": [
+                {
+                  "column": "数量 / 计划"
+                },
+                {
+                  "column": "数量 / 在库"
+                }
+              ]
+            },
+            "format": "number",
+            "precision": 8
+          }
+        },
+        {
+          "id": "V3",
+          "input": "V2",
+          "operation": {
+            "op": "derive",
+            "name": "预计金额（元）",
+            "expression": {
+              "multiply": [
+                {
+                  "column": "缺口"
+                },
+                {
+                  "column": "UnitPrice（元）"
+                }
+              ]
+            },
+            "format": "number",
+            "precision": 8
+          }
+        },
+        {
+          "id": "V4",
+          "input": "V3",
+          "operation": {
+            "op": "filter",
+            "where": {
+              "column": "预计金额（元）",
+              "operator": "gte",
+              "type": "number",
+              "value": "100"
+            }
+          }
+        },
+        {
+          "id": "V5",
+          "input": "V4",
+          "operation": {
+            "op": "sort",
+            "by": [
+              {
+                "column": "预计金额（元）",
+                "direction": "desc",
+                "type": "number"
+              },
+              {
+                "column": "物料号",
+                "direction": "asc",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        {
+          "id": "V6",
+          "input": "V5",
+          "operation": {
+            "op": "group",
+            "by": [],
+            "metrics": [
+              {
+                "function": "sum",
+                "as": "预计金额总额（元）",
+                "column": "预计金额（元）"
+              },
+              {
+                "function": "count",
+                "as": "条数"
+              }
+            ]
+          }
+        }
+      ],
+      "finish": {
+        "tool": "finish",
+        "result": "V5",
+        "summaries": [
+          "V6"
+        ],
+        "display_units": {},
+        "fields": [
+          "物料号",
+          "缺口",
+          "预计金额（元）"
+        ]
+      },
+      "repairs": [],
+      "planning_stats": {
+        "tokens": 392,
+        "peak_memory_gb": 19.99,
+        "attempted_calls": 8,
+        "calls": 8,
+        "model_seconds": 36.53,
+        "max_input_tokens": 2807,
+        "structured_calls": 1,
+        "structure_seconds": 0.92
+      },
+      "revision": null,
+      "operation_count": 6,
+      "seconds": 37.67,
+      "model_calls": 9,
+      "model_executed": true,
+      "dependency_blocked": false,
+      "input_tokens": 16724
+    },
+    {
+      "id": "identity_between_tasks",
+      "prompt": "你是谁？请用一句话回答。",
+      "authorized_file_count": 1,
+      "passed": true,
+      "checks": {
+        "chat_route": true,
+        "no_source_reads": true
+      },
+      "text": "我是归屿，你的本地 AI 助手。",
+      "seconds": 3.0,
+      "model_calls": 2,
+      "model_executed": true
+    },
+    {
+      "id": "return_packaging_threshold",
+      "prompt": "回到刚才的库存任务，把预计金额门槛改为不少于150元，其他处理规则不变，这次只要表格。",
+      "authorized_file_count": 1,
+      "passed": true,
+      "checks": {
+        "incremental_tools": true,
+        "expected_rows": true,
+        "expected_columns": true,
+        "preview_matches_xlsx": true,
+        "csv_matches_xlsx": true,
+        "required_summary": true,
+        "typed_summary_rows": true,
+        "word_if_requested": true,
+        "word_values": true,
+        "no_unrequested_word": true,
+        "completed": true,
+        "checked_delivery": true,
+        "no_original_transaction": true,
+        "originals_unchanged": true
+      },
+      "rows": [
+        [
+          "PK03",
+          "9",
+          "270"
+        ],
+        [
+          "PK02",
+          "6",
+          "180"
+        ]
+      ],
+      "columns": [
+        "物料号",
+        "缺口",
+        "预计金额（元）"
+      ],
+      "summaries": [
+        {
+          "columns": [
+            "预计金额总额（元）",
+            "条数"
+          ],
+          "rows": [
+            [
+              "450",
+              "2"
+            ]
+          ],
+          "units": {
+            "预计金额总额（元）": "CNY"
+          },
+          "provenance": [
+            [
+              3,
+              5
+            ]
+          ],
+          "field_types": {
+            "预计金额总额（元）": "number",
+            "条数": "number"
+          },
+          "unit_ledger": {
+            "预计金额总额（元）": {
+              "source_column": "预计金额总额（元）",
+              "canonical_unit": "元"
+            },
+            "条数": {
+              "source_column": "条数",
+              "canonical_unit": ""
+            }
+          }
+        }
+      ],
+      "word_text": "",
+      "graph": [
+        {
+          "id": "V1",
+          "input": "V0",
+          "operation": {
+            "op": "filter",
+            "where": {
+              "all": [
+                {
+                  "column": "启用",
+                  "operator": "eq",
+                  "type": "text",
+                  "value": "true"
+                },
+                {
+                  "column": "UnitPrice（元）",
+                  "operator": "not_empty",
+                  "type": "number"
+                },
+                {
+                  "column": "数量 / 计划",
+                  "operator": "gt",
+                  "type": "number",
+                  "value_column": "数量 / 在库"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "V2",
+          "input": "V1",
+          "operation": {
+            "op": "derive",
+            "name": "缺口",
+            "expression": {
+              "subtract": [
+                {
+                  "column": "数量 / 计划"
+                },
+                {
+                  "column": "数量 / 在库"
+                }
+              ]
+            },
+            "format": "number",
+            "precision": 8
+          }
+        },
+        {
+          "id": "V3",
+          "input": "V2",
+          "operation": {
+            "op": "derive",
+            "name": "预计金额（元）",
+            "expression": {
+              "multiply": [
+                {
+                  "column": "缺口"
+                },
+                {
+                  "column": "UnitPrice（元）"
+                }
+              ]
+            },
+            "format": "number",
+            "precision": 8
+          }
+        },
+        {
+          "id": "V4",
+          "input": "V3",
+          "operation": {
+            "op": "filter",
+            "where": {
+              "column": "预计金额（元）",
+              "operator": "gte",
+              "type": "number",
+              "value": "150"
+            }
+          }
+        },
+        {
+          "id": "V5",
+          "input": "V4",
+          "operation": {
+            "op": "sort",
+            "by": [
+              {
+                "column": "预计金额（元）",
+                "direction": "desc",
+                "type": "number"
+              },
+              {
+                "column": "物料号",
+                "direction": "asc",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        {
+          "id": "V6",
+          "input": "V5",
+          "operation": {
+            "op": "group",
+            "by": [],
+            "metrics": [
+              {
+                "function": "sum",
+                "as": "预计金额总额（元）",
+                "column": "预计金额（元）"
+              },
+              {
+                "function": "count",
+                "as": "条数"
+              }
+            ]
+          }
+        }
+      ],
+      "finish": {
+        "tool": "finish",
+        "result": "V5",
+        "summaries": [
+          "V6"
+        ],
+        "display_units": {},
+        "fields": [
+          "物料号",
+          "缺口",
+          "预计金额（元）"
+        ]
+      },
+      "repairs": [],
+      "planning_stats": {
+        "tokens": 0,
+        "peak_memory_gb": 0
+      },
+      "revision": {
+        "parent_id": "86ec72dd-9a45-4afe-a151-498f69ebb524",
+        "edits": [
+          {
+            "kind": "replace_boundary",
+            "occurrences": 1,
+            "condition": {
+              "column": "预计金额（元）",
+              "operator": "gte",
+              "type": "number",
+              "value": "150"
+            },
+            "quote": "把预计金额门槛改为不少于150元"
+          }
+        ],
+        "literal_compiler": true,
+        "record_granularity": false,
+        "proof": "Only explicit boundaries changed; all other typed operations retained and replayed."
+      },
+      "operation_count": 6,
+      "seconds": 0.03,
+      "model_calls": 0,
+      "model_executed": false,
+      "dependency_blocked": false,
+      "input_tokens": 0
+    }
+  ],
+  "passed": 7,
+  "total": 7,
+  "peak_mlx_gb": 19.99,
+  "peak_process_rss_gb": 10.53,
+  "source_hashes_unchanged": true,
+  "limits": "Primary-model production-policy evaluation; novelty is declared in the stage protocol. v0.24 release backend with row/column, calendar, continuity and file-stage contracts, common windows, typed tools and repair bounds; native thinking disabled. Developer synthesis is not independent user research. Models differ beyond size. Native GUI and normal user data are not operated."
+}

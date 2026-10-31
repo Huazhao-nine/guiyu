@@ -1,0 +1,98 @@
+{
+  "version": "0.26-transfer",
+  "scope": "Additional developer-authored new files, frozen after the general parser fix and before model first use. No product changes allowed during first transfer run.",
+  "cases": [
+    {
+      "id": "transfer_support",
+      "group": "confirmation",
+      "files": [
+        "支持日志.xlsx"
+      ],
+      "prompt": "处理支持日志.xlsx，按线上、线下的顺序合并，先按TicketID保留首次记录。ClosedDate从2028年4月1日（含）到7月1日（不含），Category为保修，或者Category为回访且Confirmed为true；每条Cost至少50元。按Owner汇总累计时长、支出和记录数，累计时长用小时、支出用万元显示，按支出降序，同金额按Owner升序。只保留Owner、累计时长、支出、记录数四列，另存一份Word，标题“支持工作汇总”。",
+      "rows": [
+        [
+          "白组",
+          "3.0",
+          "0.033",
+          2
+        ],
+        [
+          "青组",
+          "2.0",
+          "0.025",
+          2
+        ],
+        [
+          "灰组",
+          "1.00",
+          "0.0145",
+          2
+        ]
+      ],
+      "columns": [
+        "Owner",
+        "累计时长",
+        "支出",
+        "记录数"
+      ],
+      "word": true,
+      "word_numbers": [
+        "0.033",
+        "0.025",
+        "0.0145"
+      ]
+    },
+    {
+      "id": "transfer_top_followup",
+      "group": "confirmation",
+      "parent": "transfer_support",
+      "files": [
+        "支持日志.xlsx"
+      ],
+      "prompt": "只要第一名，其他口径、排序和列不变，不用Word。",
+      "rows": [
+        [
+          "白组",
+          "3.0",
+          "0.033",
+          2
+        ]
+      ],
+      "columns": [
+        "Owner",
+        "累计时长",
+        "支出",
+        "记录数"
+      ],
+      "word": false
+    },
+    {
+      "id": "transfer_office_notice",
+      "kind": "office",
+      "group": "confirmation",
+      "files": [
+        "共享工位安排.md",
+        "共享工位最新通知.txt"
+      ],
+      "prompt": "结合共享工位安排和最新通知，按最新版本整理一份Word，说明活动费用、预算余额和最晚确认日期。可退押金单独说明，不计入活动费用，保留未付款状态，列出费用明细和出处。",
+      "word": true,
+      "numbers": [
+        "974",
+        "826",
+        "200"
+      ],
+      "dates": [
+        "2028-07-13"
+      ],
+      "required_condition": [
+        "未付款",
+        "尚未支付",
+        "尚未付款",
+        "未支付"
+      ],
+      "patterns": [
+        "押金"
+      ]
+    }
+  ]
+}

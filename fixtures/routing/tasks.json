@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "note": "Synthetic developer cases. Expected decisions fixed before real-model runs.",
+  "cases": [
+    {"id":"identity","prompt":"你是谁？","mode":"chat"},
+    {"id":"greeting","prompt":"你好，今天有点累，陪我聊两句吧。","mode":"chat"},
+    {"id":"capabilities","prompt":"除了查文档，你还能帮我做什么？","mode":"chat"},
+    {"id":"explanation","prompt":"用一个生活例子解释什么是开源软件。","mode":"chat"},
+    {"id":"general_comparison","prompt":"番茄工作法和时间块有什么区别，怎样选择？","mode":"chat"},
+    {"id":"short_writing","prompt":"帮我写一句感谢同事配合的消息，语气自然一点。","mode":"chat"},
+    {"id":"translation","prompt":"把这句话翻译成英文：请在周五前反馈。","mode":"chat"},
+    {"id":"pasted_summary","prompt":"帮我总结这句话：周一完成设计，周三评审，周五上线。","mode":"chat"},
+    {"id":"personal_advice","prompt":"我一到下午就容易分心，给我三个简单的改善建议。","mode":"chat"},
+    {"id":"export_writing","prompt":"帮我制定一份下周的五天读书计划，每天20分钟，导出为Word文档。","mode":"task"},
+    {"id":"policy","prompt":"在工作区查找差旅报销制度，单笔超过500元需要谁审批？","mode":"workspace"},
+    {"id":"statistics","prompt":"社区费用台账中只统计状态包含待报销且金额大于100元，按经办人分组统计。","mode":"workspace"},
+    {"id":"source_write","prompt":"根据项目例会纪要，起草一封列出负责人和截止日期的跟进邮件。","mode":"workspace"},
+    {"id":"source_compare","prompt":"比较工作区里的两份场地方案，哪个有投影仪？","mode":"workspace"},
+    {"id":"missing_id","prompt":"在社区费用台账中查找编号BX-999的记录，直接回答是否找到。","mode":"workspace"},
+    {"id":"missing_document","prompt":"查一下合同HT-999的违约金。","mode":"workspace"},
+    {"id":"followup","prompt":"那陈雨呢？","mode":"workspace","prior":true,"reuse":true},
+    {"id":"unrelated_after_sources","prompt":"不用看文件，给我解释什么是隐私保护。","mode":"chat","prior":true}
+  ]
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "suite": "regression",
+    "model": "qwen3.6-35b-a3b",
+    "report": "qa/v0.24/release/reports/regression-qwen3.6-35b-a3b-20261030T214831-7aa1ff.json",
+    "exit_code": 0,
+    "elapsed": 62.228
+  },
+  {
+    "suite": "novel",
+    "model": "qwen3.6-35b-a3b",
+    "report": "qa/v0.24/release/reports/novel-qwen3.6-35b-a3b-20261030T214933-634187.json",
+    "exit_code": 0,
+    "elapsed": 198.114
+  }
+]

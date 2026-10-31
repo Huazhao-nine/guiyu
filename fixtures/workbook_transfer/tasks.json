@@ -1,0 +1,8 @@
+{
+  "frozen_before_first_execution":true,
+  "purpose":"Two additional transfer checks with renamed fields and units; failures will be reported without tuning this version against them.",
+  "cases":[
+    {"id":"renamed_units","prompt":"在资金结算中，不含作废记录，计算合同额减到账额的未结算金额。筛出还有尾款且未结算金额不少于8000元的，按登记日从晚到早，只保留单号和未结算金额（元）。","rows":[["A03","20000"],["A01","10000"]]},
+    {"id":"chinese_goal_english_fields","prompt":"工作坊登记中，把已经确认报名且留了联系方式、单位名称带研究院的参与者提出来，按加入日期由早到晚，只保留参与者姓名和联系方式。","rows":[["周宁","z@example.com"],["唐梨","t@example.com"]]}
+  ]
+}

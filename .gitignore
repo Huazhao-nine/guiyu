@@ -1,0 +1,13 @@
+.DS_Store
+.venv/
+.build/
+dist/
+releases/
+qa/private/
+__pycache__/
+*.pyc
+*.safetensors
+*.onnx
+*.onnx_data
+*.whl
+*.jsonl

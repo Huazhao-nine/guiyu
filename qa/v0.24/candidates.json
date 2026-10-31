@@ -1,0 +1,25 @@
+{
+  "hardware": "Apple M5 32GB",
+  "candidates": [
+    {
+      "id": "glm-4.7-flash",
+      "repository": "mlx-community/GLM-4.7-Flash-4bit",
+      "revision": "1454cffb1a21737e162f508e5bc70be9def89276",
+      "weight_bytes": 16852441819,
+      "architecture": "glm4_moe_lite",
+      "reason": "Different model family; Chinese/English, MoE30B-A3B; native nonthinking flag supported."
+    },
+    {
+      "id": "qwen3-coder-30b-a3b",
+      "repository": "mlx-community/Qwen3-Coder-30B-A3B-Instruct-4bit",
+      "revision": "6e302ea604ad9ab206367e2c501d1571023e7b6d",
+      "weight_bytes": 17181071994,
+      "architecture": "qwen3_moe",
+      "reason": "Native nonthinking MoE Instruct with explicit function-call training."
+    }
+  ],
+  "excluded": {
+    "Qwen3.6-35B-A3B": "20.4GB weights reduce headroom and retain the earlier Qwen3.5-style interface; prioritize distinct/lighter candidates first."
+  },
+  "notes": "Research selection from primary model cards and pinned hub metadata. No performance claim before actual tests."
+}

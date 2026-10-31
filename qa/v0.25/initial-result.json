@@ -1,0 +1,9 @@
+{
+  "report": "qa/v0.25/reports/primary-qwen3.6-35b-a3b-20261030T223527-b546c5.json",
+  "passed": 3,
+  "total": 5,
+  "model": "qwen3.6-35b-a3b",
+  "scope": "Five first-use development goals. Two reserved conversation goals not run.",
+  "source_hashes_unchanged": true,
+  "network_denied": true
+}

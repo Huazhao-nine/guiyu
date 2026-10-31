@@ -1,0 +1,8 @@
+{
+  "clock":"2026-10-28",
+  "cases":[
+    {"id":"source_budget_date_write","prompt":"只用活动方案.md，计算全部筹备费用和剩余预算，核对活动日期提前7天是哪一天，再写一份简短筹备说明，导出Word。保留费用尚未付款这一条件。","files":["活动方案.md"],"tools":["calculate","calendar","write"],"numbers":["2520","1080"],"dates":["2026-10-30","10月30日","10-30"],"required_condition":["未付款","尚未付款","未支付","不表示已经付款"],"minimum_docx":1},
+    {"id":"statistics_budget_date_write","prompt":"只用已支付费用.csv，统计全部已支付费用的合计。我的预算是4000元，计算剩余预算，再核对2026-11-06的7天前是哪一天。写一份简短预算与日期说明，导出Word。","files":["已支付费用.csv"],"tools":["statistics","calculate","calendar","write"],"numbers":["2520","1480"],"dates":["2026-10-30","10月30日","10-30"],"minimum_docx":1},
+    {"id":"conditional_date_followup","prompt":"只用活动方案.md，先计算全部筹备费用和剩余预算，写一份简短说明。若资料有提前确认要求，请把确认日期也核对后写入。","files":["活动方案.md"],"tools":["calculate","calendar","write"],"numbers":["2520","1080"],"dates":["2026-10-30","10月30日","10-30"],"minimum_docx":1}
+  ]
+}

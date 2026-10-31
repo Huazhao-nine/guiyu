@@ -1,0 +1,145 @@
+{
+  "version": "0.19.0",
+  "frozen_before_first_model_execution": true,
+  "purpose": "Four new fictional workbooks with six tasks; mixed explicit units, schema/column-order changes, boundaries, aggregate and detail followups. Not independent user research.",
+  "metamorphic_pair": {
+    "before": "new_quota_word",
+    "after": "new_quota_changed",
+    "expected_total_delta": "-500",
+    "same_ids": true
+  },
+  "cases": [
+    {
+      "id": "new_multisheet_dedup",
+      "prompt": "城市活动登记的两个场次合并，剔除取消和联系方式没填的记录；同一联系方式只留原表第一次出现的，不要先排序。按片区汇总独立人数和服务时长合计，时长用小时显示；结果按时长由多到少排列，只要片区、人数、时长三列。",
+      "rows": [
+        [
+          "西片",
+          "2",
+          "4.5"
+        ],
+        [
+          "东片",
+          "3",
+          "2.5"
+        ]
+      ]
+    },
+    {
+      "id": "new_aggregate_followup",
+      "parent": "new_multisheet_dedup",
+      "prompt": "只保留累计时长不少于3小时的片区，其他要求不变。",
+      "rows": [
+        [
+          "西片",
+          "2",
+          "4.5"
+        ]
+      ]
+    },
+    {
+      "id": "new_quota_word",
+      "prompt": "在“差旅领用.xlsx”中，只处理启用且未作废的登记。剩余额度按总额度减已用额度算，统一为元。只要剩余额度不少于3200元的，按剩余额度从高到低，只保留登记号和剩余额度。每条明细保留，再给这批剩余额度合计和条数，写一段简短情况说明并导出Word，不增加审批结论。",
+      "rows": [
+        [
+          "T201",
+          "5500"
+        ],
+        [
+          "T207",
+          "3300"
+        ],
+        [
+          "T204",
+          "3200"
+        ]
+      ],
+      "summary_values": [
+        "12000",
+        "3"
+      ],
+      "word": true,
+      "word_numbers": [
+        "12000"
+      ]
+    },
+    {
+      "id": "new_quota_brief_followup",
+      "parent": "new_quota_word",
+      "prompt": "门槛改成不少于2000元，其他要求不变。",
+      "rows": [
+        [
+          "T201",
+          "5500"
+        ],
+        [
+          "T207",
+          "3300"
+        ],
+        [
+          "T204",
+          "3200"
+        ],
+        [
+          "T202",
+          "2500"
+        ]
+      ],
+      "summary_values": [
+        "14500",
+        "4"
+      ],
+      "word": true,
+      "word_numbers": [
+        "14500"
+      ]
+    },
+    {
+      "id": "new_quota_changed",
+      "prompt": "在“差旅领用调整.xlsx”中，只处理启用且未作废的登记。剩余额度按总额度减已用额度算，统一为元。只要剩余额度不少于3200元的，按剩余额度从高到低，只保留登记号和剩余额度。每条明细保留，再给这批剩余额度合计和条数，写一段简短情况说明并导出Word，不增加审批结论。",
+      "rows": [
+        [
+          "T201",
+          "5000"
+        ],
+        [
+          "T207",
+          "3300"
+        ],
+        [
+          "T204",
+          "3200"
+        ]
+      ],
+      "summary_values": [
+        "11500",
+        "3"
+      ],
+      "word": true,
+      "word_numbers": [
+        "11500"
+      ]
+    },
+    {
+      "id": "new_calendar_range",
+      "prompt": "合同付款日历里，只看有效合同，付款截止在2026-11-01至2026-11-30（含两端）。未付款按应付金额减已付金额算，统一为元；只留未付款不少于5000元的，按付款截止从早到晚，只保留合同编码、付款截止、未付款。这次只要明细表，不写文稿。",
+      "rows": [
+        [
+          "C306",
+          "2026-11-01",
+          "5000"
+        ],
+        [
+          "C301",
+          "2026-11-02",
+          "6000"
+        ],
+        [
+          "C303",
+          "2026-11-30",
+          "7000"
+        ]
+      ]
+    }
+  ]
+}

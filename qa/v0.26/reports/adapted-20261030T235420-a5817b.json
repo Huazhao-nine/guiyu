@@ -1,0 +1,896 @@
+{
+  "version": "0.26",
+  "label": "adapted",
+  "group": "development",
+  "hardware": "Apple M5 32GB",
+  "model": "qwen3.6-35b-a3b",
+  "seed": 20261030,
+  "network_denied": true,
+  "backend_hashes": {
+    "structured_output.py": "7960a53bd816fbd0f1940a7ab57a3c91da9fd56e4d09deb7c4639b1764deb268",
+    "worker.py": "879bf7cff54b9ad715236926c23899d1433a9d76f0add5dd6db61cb354bd8c8a",
+    "agent_control.py": "7524801210603dab72a6b0b375fd84bfd20750bdca563f2d7cec335a859edf6d",
+    "money_subtotals.py": "3f69877035132e87a756b16cfbb33876eb80d1d9f0edd424b9115debdd2a54ee",
+    "workbook_agent.py": "ac7c93b5b618409da82db2699d5480655e959f68970a65add9b438168108239b",
+    "workbook_writing.py": "5ddd5a39dcb8557d077939a5f0d141147beac2287a457cfad0cf8475cf1826b9",
+    "workbook_edits.py": "7d8dd9169b2739fafa62622a2d2bb8f21518e76152541a761924b638c073d219",
+    "personal_tools.py": "c8ed42cd828d67ebfbd03c2cdf144894b553cb009a0cf2beebe77f590af016e1",
+    "workbook_data.py": "bc6902625ecb69300fd8497fba0d8cb734ea8372ccf97a46d2c6d1a231e5b408",
+    "structured_tables.py": "3ecc86af63b74c35b9b768b780d06db7b33f6f435717457fa44ae382923798f8",
+    "runtime_policy.py": "422cef9d111bca844c37e71ace3b6be37fd9b6b81bbd3b0967e73b4aaaa10a22",
+    "local_query.py": "4f37344fb04fc31bd3537598867b3a27d78d74dc26bae2dbe16a1a5330864f28",
+    "workbook_schema.py": "1f640f62ea196fdb4c038293ac0ee3b69c19cfe10b237891d7bec0bc46e951a1",
+    "privacy_filter.py": "3a65fc2029085463408981b36a7faa2cc8d8cdb19689b3628d11d42ba41b7f1c",
+    "table_program.py": "b989f1b9e065f9d856a103299e58dfc4b86c3fa3cf63ce1b3f9b9d939cfb75f1",
+    "request_router.py": "6cc7b450900d2042adf313a94c9c480717874d735fe3dfddcf37f3df7c0073ce",
+    "workbook_requirements.py": "cb463959fd78b875dc34481044e5779cf5ceec0760ea75fba6ae65c38f46e83d",
+    "workbook_flow.py": "5c39acca9c002df7ef5df0715571c4692a390bf091ff24326aa5e7f016ccab70",
+    "workbook_intent.py": "35138ca959eff91f167e4758176eb9ba42632ac09829b4548a1a94c8c3427269",
+    "model_info.py": "f5d5c937a391d1ffd1ab86374c1b8f0794f8fe67870a7b8a54bccb2834ede9ca",
+    "general_assistant.py": "709754ff9ab5e2aa6e81f1281c93212084793b1462d5bcc62dd5391cf5d6cdb8",
+    "workbook_revision.py": "a634b33b072147edc683aa021b48d6dfabbf23dc7f2c7cd4f7d353d6536cc632",
+    "bge_embedding.py": "f51ee3f63d3e46fa08ac7de6ba7380b7e87d8ab8b627338439cf55714efd687d",
+    "general_tools.py": "79fe507a1d2a0a3e8c74cd9889bf4eaece3a01ba61c80b9b388fa1db47d1a7d0",
+    "table_semantics.py": "2d164c333efef02d6188d03d6112ba9834e37a4ed6ed6c95d82697b41eec6a43",
+    "document_tables.py": "84d59208475d3a6f0c19ecfbb44d2089a07680f235d05d2e16302d5252757c92",
+    "workbook_export.py": "e9f2f52986ef54811e8d36eb4c492795557a6d8765885c91e0080e316d6d2c0f",
+    "workbook_qualifiers.py": "0e20093e35c7eb1b3c34516eed78ca76579d3ba5630f60487faacec2af7d4b45",
+    "fact_guard.py": "071b2764597edbb9ee79045dddc3b9c2f14d9993c01b0f5887b3b4ac2b2a181c",
+    "privacy_models.py": "dd160bac36ddfb6d6393c5a8bdb90f95571d2e5bbc7374d6d43bcafad9e045b2",
+    "share_agent.py": "b41eb80b564c678fc99bb304391ac4432e78d01d5188cc9eebe7dff44db812d5",
+    "model_output.py": "83fba58b74d38dbe1c4b43f91695e0ea2c3ba2a79d6edc988ddc9c4a2db2c4c5",
+    "workspace_index.py": "4c9038a1c90e24a6b18d8fab96e017088abdd4c81009217e4cbc32f814aa8911",
+    "office_agent.py": "4189c5a6a40638b2cd30cbbd375e506e451b64ef9e86891a34a1a41dade699cb"
+  },
+  "runner_sha256": "0d328c50b191738ec3f8f8289a71edfa26df1b530ae9aefec530f3e4c8b356cb",
+  "client_contract_sha256": "0f80e38fe9fdeab78a3b5b07c3842652f785cdaf83efe6f2b93a52732e602f3a",
+  "fixture_hashes": {
+    "读书会方案.md": "c7060c256fa1f05949824a666abcedd60c2f4230f2d3caf5a07d34b8356c7066",
+    "读书会变更记录.txt": "8fb4930cbf6763141cff73e5aac3e07a18cb14a2b37e3fd7e82dff57a4b8f6d4",
+    "服务记录.xlsx": "3bf4fe9e94fbd26525b5e35647ba70d034ac6509fa45fdbf80ea59b96a853e40",
+    "公开台账_虚构填报.xlsx": "7cd21185745769b8d0136b0e12250e1fd5fc38ecb9a2ef9a690c164acd88e1d2",
+    "公开项目需求.docx": "073dd3f85158cfaee917ac369c2085f06d853e83af0dc1481f529c45cf1960ff",
+    "公开报价_虚构填报.xlsx": "765c7006a6f2a9b37ae85fc14af10f9af8161063b43a93c03b17303878351b8f"
+  },
+  "tasks_sha256": "0057db8d16a84b628d65518b5af7f85eb0ffa0baa2a4d9edf41b14cea526943d",
+  "cases": [
+    {
+      "id": "public_stock_detail",
+      "prompt": "处理公开台账_虚构填报.xlsx，时间在2027年8月整月，申领使用备注不包含撤销，剩余数量不少于0且小于6，入库单价非空。现存金额按剩余数量乘入库单价计算，按现存金额降序；只保留耗材名称、剩余数量、现存金额，保留逐条明细并附上现存金额总额和条数。生成Word，标题“八月低库存明细”，不要补充采购建议。",
+      "routing": {
+        "mode": "workspace",
+        "use_previous": false,
+        "reason": "按要求使用指定文件",
+        "source": "explicit_file_reference"
+      },
+      "word_text": "八月低库存明细\n本次按要求从109条原始记录中整理出4条结果。\n现存金额总额：810；条数：4。\n明细\n汇总\n资料来源\n【S1】公开台账_虚构填报.xlsx\n耗材名称 | 剩余数量 | 现存金额\n硒鼓 | 3 | 540\nU盘 | 5 | 230\n打印纸 | 2 | 40\n打印纸 | 0 | 0\n现存金额总额 | 条数\n810 | 4",
+      "tools": [
+        "workbook",
+        "write"
+      ],
+      "source_names": [
+        "公开台账_虚构填报.xlsx"
+      ],
+      "rows": [
+        [
+          "硒鼓",
+          "3",
+          "540"
+        ],
+        [
+          "U盘",
+          "5",
+          "230"
+        ],
+        [
+          "打印纸",
+          "2",
+          "40"
+        ],
+        [
+          "打印纸",
+          "0",
+          "0"
+        ]
+      ],
+      "columns": [
+        "耗材名称",
+        "剩余数量",
+        "现存金额"
+      ],
+      "summaries": [
+        {
+          "columns": [
+            "现存金额总额",
+            "条数"
+          ],
+          "rows": [
+            [
+              "810",
+              "4"
+            ]
+          ],
+          "units": {},
+          "provenance": [
+            [
+              0,
+              4,
+              6,
+              7
+            ]
+          ],
+          "field_types": {
+            "现存金额总额": "number",
+            "条数": "number"
+          },
+          "unit_ledger": {
+            "现存金额总额": {
+              "source_column": "现存金额总额",
+              "canonical_unit": ""
+            },
+            "条数": {
+              "source_column": "条数",
+              "canonical_unit": ""
+            }
+          }
+        }
+      ],
+      "graph": [
+        {
+          "id": "V1",
+          "input": "V0",
+          "operation": {
+            "op": "filter",
+            "where": {
+              "all": [
+                {
+                  "column": "时间 / 年/月/日",
+                  "operator": "gte",
+                  "type": "date",
+                  "value": "2027-08-01"
+                },
+                {
+                  "column": "时间 / 年/月/日",
+                  "operator": "lte",
+                  "type": "date",
+                  "value": "2027-08-31"
+                },
+                {
+                  "column": "申领使用备注",
+                  "operator": "not_contains",
+                  "type": "text",
+                  "value": "撤销"
+                },
+                {
+                  "column": "剩余数量",
+                  "operator": "gte",
+                  "type": "number",
+                  "value": "0"
+                },
+                {
+                  "column": "剩余数量",
+                  "operator": "lt",
+                  "type": "number",
+                  "value": "6"
+                },
+                {
+                  "column": "入库数量 / 单价",
+                  "operator": "not_empty",
+                  "type": "number"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "V2",
+          "input": "V1",
+          "operation": {
+            "op": "derive",
+            "name": "现存金额",
+            "expression": {
+              "multiply": [
+                {
+                  "column": "剩余数量"
+                },
+                {
+                  "column": "入库数量 / 单价"
+                }
+              ]
+            },
+            "format": "number",
+            "precision": 8
+          }
+        },
+        {
+          "id": "V3",
+          "input": "V2",
+          "operation": {
+            "op": "sort",
+            "by": [
+              {
+                "column": "现存金额",
+                "direction": "desc",
+                "type": "number"
+              }
+            ]
+          }
+        },
+        {
+          "id": "V4",
+          "input": "V3",
+          "operation": {
+            "op": "group",
+            "by": [],
+            "metrics": [
+              {
+                "function": "sum",
+                "as": "现存金额总额",
+                "column": "现存金额"
+              },
+              {
+                "function": "count",
+                "as": "条数"
+              }
+            ]
+          }
+        }
+      ],
+      "repairs": [],
+      "revision": null,
+      "checks": {
+        "completed": true,
+        "checked": true,
+        "no_grounded_fallback": true,
+        "word_requested": true,
+        "no_unrequested_word": true,
+        "no_original_mutation": true,
+        "originals_unchanged": true,
+        "expected_rows": true,
+        "expected_columns": true,
+        "preview_matches_xlsx": true,
+        "csv_matches_xlsx": true,
+        "summary_values": true,
+        "word_values": true,
+        "all_required_dates": true
+      },
+      "passed": true,
+      "seconds": 31.93,
+      "model_calls": 8,
+      "model_executed": true
+    },
+    {
+      "id": "stock_zero_followup",
+      "prompt": "已经用完的先去掉，其他规则和输出列不变，这次只要表格。",
+      "routing": {
+        "mode": "workspace",
+        "use_previous": true,
+        "source": "native_workbook_followup"
+      },
+      "passed": false,
+      "error": "这次资料任务尚未完成，请补充或调整要求。最后遇到：已连续复用相同结果而没有新进展，请直接finish交付已有正确结果或补齐明确缺项，不重复同一动作。",
+      "dependency_blocked": false,
+      "seconds": 69.12,
+      "model_calls": 15,
+      "model_executed": true
+    },
+    {
+      "id": "public_quote_conditions",
+      "prompt": "处理公开报价_虚构填报.xlsx，单价非空，并且数量不少于3或者所投品牌为海岚。按数量乘单价重新计算合价，用元表示，按合价降序，只保留名称、数量、单价、合价。保留明细，并附加合价总额和条数。生成Word，标题“设备报价摘录”，不添加厂商评价。",
+      "routing": {
+        "mode": "workspace",
+        "use_previous": false,
+        "reason": "按要求使用指定文件",
+        "source": "explicit_file_reference"
+      },
+      "passed": false,
+      "error": "这次资料任务尚未完成，请补充或调整要求。最后遇到：已连续复用相同结果而没有新进展，请直接finish交付已有正确结果或补齐明确缺项，不重复同一动作。",
+      "dependency_blocked": false,
+      "seconds": 41.42,
+      "model_calls": 9,
+      "model_executed": true
+    },
+    {
+      "id": "quote_price_followup",
+      "prompt": "单价至少1000元的再单列出来，其他规则、排序和列不变，只要表格。",
+      "passed": false,
+      "error": "Parent task failed; no fabricated source lineage.",
+      "dependency_blocked": true,
+      "seconds": 0.0,
+      "model_calls": 0,
+      "model_executed": false
+    },
+    {
+      "id": "service_mixed_units",
+      "prompt": "处理服务记录.xlsx，按东站、西站的顺序合并，先按VisitID保留首次记录。ServiceDay在2027年12月整月，Phase为已结案，或者Phase为待复核且Remote为是；时长非空，且每条Paid不少于100元。按Team统计累计工时、费用合计和记录数，累计工时用小时、费用用元显示；按费用合计降序。只保留Team、累计工时、费用合计、记录数。生成Word，标题“十二月服务情况”。",
+      "routing": {
+        "mode": "workspace",
+        "use_previous": false,
+        "reason": "按要求使用指定文件",
+        "source": "explicit_file_reference"
+      },
+      "word_text": "十二月服务情况\n本次按要求从11条原始记录中整理出3条结果。\n明细\n数据说明\n服务记录.xlsx / 东站：Paid（千元）：按单元格显式单位优先、表头单位兜底，统一为元；未改变原文件。\n服务记录.xlsx / 西站：Minutes（小时）：按单元格显式单位优先、表头单位兜底，统一为分钟；未改变原文件。\n资料来源\n【S1】服务记录.xlsx\nTeam | 累计工时（小时） | 费用合计（元） | 记录数\n夕组 | 3.5 | 620 | 2\n晨组 | 2.75 | 590 | 2\n远组 | 0.75 | 180 | 1",
+      "tools": [
+        "workbook",
+        "write"
+      ],
+      "source_names": [
+        "服务记录.xlsx"
+      ],
+      "rows": [
+        [
+          "夕组",
+          "3.5",
+          "620",
+          "2"
+        ],
+        [
+          "晨组",
+          "2.75",
+          "590",
+          "2"
+        ],
+        [
+          "远组",
+          "0.75",
+          "180",
+          "1"
+        ]
+      ],
+      "columns": [
+        "Team",
+        "累计工时（小时）",
+        "费用合计（元）",
+        "记录数"
+      ],
+      "summaries": [],
+      "graph": [
+        {
+          "id": "V1",
+          "input": "V0",
+          "operation": {
+            "op": "distinct",
+            "columns": [
+              "VisitID"
+            ]
+          }
+        },
+        {
+          "id": "V2",
+          "input": "V1",
+          "operation": {
+            "op": "filter",
+            "where": {
+              "all": [
+                {
+                  "column": "ServiceDay",
+                  "operator": "gte",
+                  "type": "date",
+                  "value": "2027-12-01"
+                },
+                {
+                  "column": "ServiceDay",
+                  "operator": "lte",
+                  "type": "date",
+                  "value": "2027-12-31"
+                },
+                {
+                  "any": [
+                    {
+                      "column": "Phase",
+                      "operator": "eq",
+                      "type": "text",
+                      "value": "已结案"
+                    },
+                    {
+                      "all": [
+                        {
+                          "column": "Phase",
+                          "operator": "eq",
+                          "type": "text",
+                          "value": "待复核"
+                        },
+                        {
+                          "column": "Remote",
+                          "operator": "eq",
+                          "type": "text",
+                          "value": "true"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "column": "Minutes（分钟）",
+                  "operator": "not_empty",
+                  "type": "number"
+                },
+                {
+                  "column": "Paid（元）",
+                  "operator": "gte",
+                  "type": "number",
+                  "value": "100"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "V3",
+          "input": "V2",
+          "operation": {
+            "op": "derive",
+            "name": "累计工时（分钟）",
+            "expression": {
+              "divide": [
+                {
+                  "column": "Minutes（分钟）"
+                },
+                {
+                  "constant": "1"
+                }
+              ]
+            },
+            "format": "number",
+            "precision": 8
+          }
+        },
+        {
+          "id": "V4",
+          "input": "V3",
+          "operation": {
+            "op": "group",
+            "by": [
+              "Team"
+            ],
+            "metrics": [
+              {
+                "function": "sum",
+                "as": "累计工时（分钟）",
+                "column": "累计工时（分钟）"
+              },
+              {
+                "function": "sum",
+                "as": "费用合计（元）",
+                "column": "Paid（元）"
+              },
+              {
+                "function": "count",
+                "as": "记录数"
+              }
+            ]
+          }
+        },
+        {
+          "id": "V5",
+          "input": "V4",
+          "operation": {
+            "op": "sort",
+            "by": [
+              {
+                "column": "费用合计（元）",
+                "direction": "desc",
+                "type": "number"
+              }
+            ]
+          }
+        }
+      ],
+      "repairs": [
+        {
+          "turn": 0,
+          "error": "操作index=0（filter）失败：集合条件需要1–30个值。",
+          "available_views": [
+            "V0",
+            "V1"
+          ],
+          "action": {
+            "tool": "filter",
+            "input": "V1",
+            "where": {
+              "op": "all",
+              "children": [
+                {
+                  "op": "in",
+                  "field": "ServiceDay",
+                  "value": [
+                    "2027-12-01",
+                    "2027-12-02",
+                    "2027-12-03",
+                    "2027-12-04",
+                    "2027-12-05",
+                    "2027-12-06",
+                    "2027-12-07",
+                    "2027-12-08",
+                    "2027-12-09",
+                    "2027-12-10",
+                    "2027-12-11",
+                    "2027-12-12",
+                    "2027-12-13",
+                    "2027-12-14",
+                    "2027-12-15",
+                    "2027-12-16",
+                    "2027-12-17",
+                    "2027-12-18",
+                    "2027-12-19",
+                    "2027-12-20",
+                    "2027-12-21",
+                    "2027-12-22",
+                    "2027-12-23",
+                    "2027-12-24",
+                    "2027-12-25",
+                    "2027-12-26",
+                    "2027-12-27",
+                    "2027-12-28",
+                    "2027-12-29",
+                    "2027-12-30",
+                    "2027-12-31"
+                  ]
+                },
+                {
+                  "op": "any",
+                  "children": [
+                    {
+                      "op": "eq",
+                      "field": "Phase",
+                      "value": "已结案"
+                    },
+                    {
+                      "op": "all",
+                      "children": [
+                        {
+                          "op": "eq",
+                          "field": "Phase",
+                          "value": "待复核"
+                        },
+                        {
+                          "op": "eq",
+                          "field": "Remote",
+                          "value": true
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "op": "not_empty",
+                  "field": "Minutes（分钟）"
+                },
+                {
+                  "op": "gte",
+                  "field": "Paid（元）",
+                  "value": 100
+                }
+              ]
+            },
+            "purpose": "筛选ServiceDay在2027年12月，Phase为已结案或(待复核且Remote为是)，时长非空且Paid>=100元的记录"
+          }
+        }
+      ],
+      "revision": null,
+      "checks": {
+        "completed": true,
+        "checked": true,
+        "no_grounded_fallback": true,
+        "word_requested": true,
+        "no_unrequested_word": true,
+        "no_original_mutation": true,
+        "originals_unchanged": true,
+        "expected_rows": true,
+        "expected_columns": true,
+        "preview_matches_xlsx": true,
+        "csv_matches_xlsx": true,
+        "summary_values": true,
+        "word_values": true,
+        "all_required_dates": true
+      },
+      "passed": true,
+      "seconds": 52.14,
+      "model_calls": 9,
+      "model_executed": true
+    },
+    {
+      "id": "service_hours_followup",
+      "prompt": "那累计工时至少2小时的组呢？其他规则、排序和列不变，这次只要表格。",
+      "routing": {
+        "mode": "workspace",
+        "use_previous": true,
+        "source": "native_workbook_followup"
+      },
+      "word_text": "",
+      "tools": [
+        "workbook"
+      ],
+      "source_names": [
+        "服务记录.xlsx"
+      ],
+      "rows": [
+        [
+          "夕组",
+          "2",
+          "360",
+          "1"
+        ]
+      ],
+      "columns": [
+        "Team",
+        "累计工时（小时）",
+        "费用合计（元）",
+        "记录数"
+      ],
+      "summaries": [],
+      "graph": [
+        {
+          "id": "V1",
+          "input": "V0",
+          "operation": {
+            "op": "distinct",
+            "columns": [
+              "VisitID"
+            ]
+          }
+        },
+        {
+          "id": "V2",
+          "input": "V1",
+          "operation": {
+            "op": "filter",
+            "where": {
+              "all": [
+                {
+                  "column": "ServiceDay",
+                  "operator": "gte",
+                  "type": "date",
+                  "value": "2027-12-01"
+                },
+                {
+                  "column": "ServiceDay",
+                  "operator": "lte",
+                  "type": "date",
+                  "value": "2027-12-31"
+                },
+                {
+                  "any": [
+                    {
+                      "column": "Phase",
+                      "operator": "eq",
+                      "type": "text",
+                      "value": "已结案"
+                    },
+                    {
+                      "all": [
+                        {
+                          "column": "Phase",
+                          "operator": "eq",
+                          "type": "text",
+                          "value": "待复核"
+                        },
+                        {
+                          "column": "Remote",
+                          "operator": "eq",
+                          "type": "text",
+                          "value": "true"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "column": "Minutes（分钟）",
+                  "operator": "not_empty",
+                  "type": "number"
+                },
+                {
+                  "column": "Paid（元）",
+                  "operator": "gte",
+                  "type": "number",
+                  "value": "100"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "V3",
+          "input": "V2",
+          "operation": {
+            "op": "derive",
+            "name": "累计工时（分钟）",
+            "expression": {
+              "divide": [
+                {
+                  "column": "Minutes（分钟）"
+                },
+                {
+                  "constant": "1"
+                }
+              ]
+            },
+            "format": "number",
+            "precision": 8
+          }
+        },
+        {
+          "id": "V4",
+          "input": "V3",
+          "operation": {
+            "op": "filter",
+            "where": {
+              "column": "累计工时（分钟）",
+              "operator": "gte",
+              "type": "number",
+              "value": "120"
+            }
+          }
+        },
+        {
+          "id": "V5",
+          "input": "V4",
+          "operation": {
+            "op": "group",
+            "by": [
+              "Team"
+            ],
+            "metrics": [
+              {
+                "function": "sum",
+                "as": "累计工时（分钟）",
+                "column": "累计工时（分钟）"
+              },
+              {
+                "function": "sum",
+                "as": "费用合计（元）",
+                "column": "Paid（元）"
+              },
+              {
+                "function": "count",
+                "as": "记录数"
+              }
+            ]
+          }
+        },
+        {
+          "id": "V6",
+          "input": "V5",
+          "operation": {
+            "op": "filter",
+            "where": {
+              "column": "累计工时（分钟）",
+              "operator": "gte",
+              "type": "number",
+              "value": "120"
+            }
+          }
+        },
+        {
+          "id": "V7",
+          "input": "V6",
+          "operation": {
+            "op": "sort",
+            "by": [
+              {
+                "column": "费用合计（元）",
+                "direction": "desc",
+                "type": "number"
+              }
+            ]
+          }
+        }
+      ],
+      "repairs": [],
+      "revision": null,
+      "checks": {
+        "completed": true,
+        "checked": true,
+        "no_grounded_fallback": true,
+        "word_requested": true,
+        "no_unrequested_word": true,
+        "no_original_mutation": true,
+        "originals_unchanged": true,
+        "expected_rows": false,
+        "expected_columns": true,
+        "preview_matches_xlsx": true,
+        "csv_matches_xlsx": true,
+        "summary_values": true,
+        "word_values": true,
+        "all_required_dates": true
+      },
+      "passed": false,
+      "seconds": 29.08,
+      "model_calls": 6,
+      "model_executed": true
+    },
+    {
+      "id": "event_latest_plan",
+      "prompt": "查找工作区里的读书会方案和变更记录，以最新变更记录为准，计算当前待支付费用总额和剩余预算，核对活动提前7个自然日的确认日期，再整理成一份简短Word筹备说明。说明费用尚未付款，不要写成已支付。",
+      "routing": {
+        "mode": "workspace",
+        "use_previous": false,
+        "reason": "用户明确要求查找工作区内的特定文件（读书会方案和变更记录），并基于这些文件中的数据进行计算（费用、预算、日期）和生成文档。这属于必须依赖用户文件内容的操作，且涉及对文件数据的提取、统计和对比，符合wo",
+        "source": "local_model"
+      },
+      "word_text": "社区读书会筹备说明\n一、 活动基本信息\n根据最新变更记录，本次社区读书会活动日期已调整为 2027-03-21【S1】。\n二、 费用核算与支付状态\n依据原方案标准及最新场地费调整，当前待支付费用明细如下：\n1. 场地费：1800元【S1】\n2. 资料包：18元/套 × 35套 = 630元【S2】\n3. 茶水费：420元【S2】\n4. 交通费：550元【S2】\n费用总计：3400.00元\n预算总额：4600元\n剩余预算：1200.00元\n重要提示：上述费用尚未支付，目前状态为待支付。\n三、 日期确认\n根据活动提前7个自然日完成确认的规则，活动日期为2027-03-21，对应的确认截止日期为 2027-03-14（星期日）。\n四、 结论\n当前预算充足，剩余1200.00元。费用尚未支付，需确保在2027-03-14前完成活动确认工作。\n资料来源\n【S1】读书会变更记录.txt\n【S2】读书会方案.md",
+      "tools": [
+        "search",
+        "answer",
+        "calculate",
+        "calendar",
+        "write"
+      ],
+      "source_names": [
+        "读书会变更记录.txt",
+        "读书会方案.md"
+      ],
+      "checks": {
+        "completed": true,
+        "checked": true,
+        "no_grounded_fallback": true,
+        "word_requested": true,
+        "no_unrequested_word": true,
+        "no_original_mutation": true,
+        "originals_unchanged": true,
+        "numbers": true,
+        "dates": true,
+        "patterns": true,
+        "condition": true,
+        "all_required_dates": true
+      },
+      "passed": true,
+      "seconds": 55.98,
+      "model_calls": 19,
+      "model_executed": true
+    },
+    {
+      "id": "public_document_word",
+      "prompt": "根据公开项目需求.docx，提取项目预算、采购设备及数量、交货截止日、质保期和付款比例，整理成一份简短Word。请区分电脑主机与显示器数量，保留资料出处，不添加厂商推荐或投标意见。",
+      "routing": {
+        "mode": "workspace",
+        "use_previous": false,
+        "reason": "按要求使用指定文件",
+        "source": "explicit_file_reference"
+      },
+      "word_text": "信息学院D北201实验室设备采购项目关键要素提取\n项目预算：44万元【S1】\n采购设备数量：\n*   电脑主机：56台【S1】\n*   显示器：55台【S1】\n交货截止日：2026年9月30日前【S1】\n质保期：5年（自验收合格之日起计）【S1】\n付款比例：95%（余款5%于一年后无息支付）【S1】\n资料来源\n【S1】公开项目需求.docx",
+      "tools": [
+        "table",
+        "write"
+      ],
+      "source_names": [
+        "公开项目需求.docx"
+      ],
+      "checks": {
+        "completed": true,
+        "checked": true,
+        "no_grounded_fallback": true,
+        "word_requested": true,
+        "no_unrequested_word": true,
+        "no_original_mutation": true,
+        "originals_unchanged": true,
+        "numbers": true,
+        "dates": true,
+        "patterns": false,
+        "condition": true,
+        "all_required_dates": true
+      },
+      "passed": false,
+      "seconds": 30.82,
+      "model_calls": 7,
+      "model_executed": true
+    }
+  ],
+  "validation_sha256": "de06ab12ea10606a8f5675c692d5ad708f9f398e9ef62460590452fd6a93c7dd",
+  "load_seconds": 5.63,
+  "runtime_policy": {
+    "name": "extended-32gb",
+    "input_tokens": 10000,
+    "output_tokens": 2200,
+    "prefill_tokens": 256,
+    "memory_bytes": 21474836480,
+    "cache_bytes": 268435456
+  },
+  "passed": 3,
+  "total": 8,
+  "peak_mlx_gb": 20.084,
+  "peak_process_rss_gb": 9.82,
+  "backend_unchanged": true,
+  "limits": "Developer-authored tasks using public structures and fictional records; one public source document. Separate routing, BGE retrieval and typed tools. Native followup client contract mirrored and hashed. No GUI execution or real-user validation."
+}

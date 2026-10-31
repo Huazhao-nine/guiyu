@@ -1,0 +1,19 @@
+{
+  "docx_count": 8,
+  "rendered_pages": 8,
+  "all_pages_visually_inspected": true,
+  "docx_text_and_tables_checked_by_model_suite": true,
+  "pdf_page_counts_match_pngs": true,
+  "cjk_fonts_configured_for_renderer": true,
+  "generated_content_not_manually_changed": true,
+  "font_names": [
+    "Noto Sans CJK SC Regular",
+    "Noto Sans CJK SC Bold"
+  ],
+  "font_sha256": {
+    "NotoSansCJKsc-Bold.otf": "b5f0d1a190a7f9b43c310a8850630af12553df32c4c050543f9059732d9b4c0a",
+    "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b"
+  },
+  "manifest": "qa/v0.26/examples/manifest.json",
+  "renderer_note": "Word content copied byte-for-byte from actual completed tasks. Export layout changed in final source; extra transfer Word retains its first-use export, as recorded in its report."
+}

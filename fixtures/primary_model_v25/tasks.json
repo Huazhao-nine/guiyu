@@ -1,0 +1,139 @@
+{
+  "seed": 2026103025,
+  "scope": "Five first-use development goals and two reserved first-use conversation goals on the same frozen files. Not independent user research.",
+  "cases": [
+    {
+      "id": "tickets_dual_date_word",
+      "prompt": "处理工单结算.xlsx，按早班、晚班的顺序合并，先按TicketID保留首次记录。仅纳入ClosedOn在2028年2月整月的工单；Status为已完成，或者Status为待确认且AllowAdvance为是。待结金额按Charge减Paid，只纳入待结金额不少于700元的，按Team汇总待结合计和工单数，待结合计降序。只要Team、待结合计、工单数三列。生成Word，标题“二月工单待结说明”，不添加审批意见。",
+      "rows": [
+        [
+          "TeamBeta",
+          "4500",
+          "2"
+        ],
+        [
+          "TeamAlpha",
+          "3500",
+          "2"
+        ],
+        [
+          "TeamGamma",
+          "1000",
+          "1"
+        ]
+      ],
+      "word": true,
+      "word_numbers": [
+        "4500",
+        "3500",
+        "1000"
+      ]
+    },
+    {
+      "id": "ticket_team_followup",
+      "parent": "tickets_dual_date_word",
+      "prompt": "那TeamAlpha呢？其余计算标准照旧，这次只要表格。",
+      "rows": [
+        [
+          "TeamAlpha",
+          "3500",
+          "2"
+        ]
+      ],
+      "word": false
+    },
+    {
+      "id": "visits_range_duration",
+      "prompt": "从预约随访.csv中选取RecordedOn在2028-04-01至2028-04-30且Duration非空的记录；Progress为已完成，或者Progress为复核完成且Channel为线上。按Region统计记录数与时长合计，时长用小时显示。时长合计降序，同小时按Region升序，只要Region、记录数、时长合计三列，不生成文稿。",
+      "rows": [
+        [
+          "苏区",
+          "2",
+          "2.75"
+        ],
+        [
+          "沪区",
+          "2",
+          "2.5"
+        ],
+        [
+          "浙区",
+          "2",
+          "1.5"
+        ]
+      ],
+      "word": false
+    },
+    {
+      "id": "visit_region_followup",
+      "parent": "visits_range_duration",
+      "prompt": "把沪区单独列出来，其他处理规则不变，仍然只要表格。",
+      "rows": [
+        [
+          "沪区",
+          "2",
+          "2.5"
+        ]
+      ],
+      "word": false
+    },
+    {
+      "id": "packaging_detail_word",
+      "prompt": "处理包装物料.xlsx的包装物料页，只看启用为是、UnitPrice非空且计划大于在库的记录。缺口是计划减在库，预计金额是缺口乘UnitPrice，只纳入预计金额不少于100元的。按预计金额降序，同金额按物料号升序，只保留物料号、缺口、预计金额，保留逐条明细并附加预计金额总额和条数。生成Word，标题“包装物料补充说明”，不添加采购日期或供应商。",
+      "rows": [
+        [
+          "PK03",
+          "9",
+          "270"
+        ],
+        [
+          "PK02",
+          "6",
+          "180"
+        ],
+        [
+          "PK01",
+          "4",
+          "120"
+        ]
+      ],
+      "summary_values": [
+        "570",
+        "3"
+      ],
+      "word_numbers": [
+        "570"
+      ],
+      "word": true
+    },
+    {
+      "id": "identity_between_tasks",
+      "parent": "packaging_detail_word",
+      "chat": true,
+      "prompt": "你是谁？请用一句话回答。"
+    },
+    {
+      "id": "return_packaging_threshold",
+      "parent": "packaging_detail_word",
+      "conversation_parent": "identity_between_tasks",
+      "prompt": "回到刚才的库存任务，把预计金额门槛改为不少于150元，其他处理规则不变，这次只要表格。",
+      "rows": [
+        [
+          "PK03",
+          "9",
+          "270"
+        ],
+        [
+          "PK02",
+          "6",
+          "180"
+        ]
+      ],
+      "summary_values": [
+        "450",
+        "2"
+      ],
+      "word": false
+    }
+  ]
+}

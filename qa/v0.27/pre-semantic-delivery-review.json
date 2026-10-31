@@ -1,0 +1,17 @@
+{
+  "basis": "Additional delivery review after the date-format corrected5/5; no source or output edits.",
+  "original_report": "qa/v0.27/reports/adapted-date-formats.json",
+  "findings": {
+    "transfer_support": [],
+    "transfer_top_followup": [],
+    "transfer_office_notice": [
+      "2028-07-16实际为星期日，草稿写成星期四，请修正日期和星期的对应关系。",
+      "退还条件“活动结束”未在当前退款或押金依据中找到，不能自行补写退还时间；请只保留已有性质与条件。"
+    ],
+    "fresh_training_notice": [],
+    "local_share_copy": []
+  },
+  "passed": 4,
+  "total": 5,
+  "note": "Weekday and invented refund event conditions were absent from the initial checker. Keep the narrower score and record this stricter review separately."
+}

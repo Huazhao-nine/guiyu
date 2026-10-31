@@ -1,0 +1,20 @@
+{
+  "version": "0.27.0",
+  "status": "PASS_EXTRACTED_SOURCE_TESTS_NATIVE_REBUILD_SIGNATURES_AND_PRIVACY_BOUNDARIES",
+  "unit_tests": 701,
+  "shipped_app": {
+    "signature_verified": true,
+    "network_denied": true,
+    "helper_private_reads_denied": true
+  },
+  "independently_rebuilt_app": {
+    "signature_verified": true,
+    "network_denied": true,
+    "helper_private_reads_denied": true
+  },
+  "all_archive_crcs_and_hashes_verified": true,
+  "both_previous_v27_backend_snapshots_verified": true,
+  "four_bundled_fictional_sources_match": true,
+  "normal_app_history_and_workspaces_not_opened": true,
+  "scope": "Packaged sources and native code/probes; GUI task execution remains separately reported."
+}

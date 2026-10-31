@@ -1,0 +1,45 @@
+{
+  "selected": "qwen3.6-35b-a3b",
+  "hardware": "Apple M5 32GB; user-selected32GB baseline",
+  "baseline_gb": 32,
+  "initial": {
+    "report": "qa/v0.25/reports/primary-qwen3.6-35b-a3b-20261030T223527-b546c5.json",
+    "passed": 3,
+    "total": 5,
+    "model": "qwen3.6-35b-a3b",
+    "scope": "Five first-use development goals. Two reserved conversation goals not run.",
+    "source_hashes_unchanged": true,
+    "network_denied": true
+  },
+  "intermediate": {
+    "report": "qa/v0.25/reports/primary-qwen3.6-35b-a3b-20261030T225147-66026a.json",
+    "passed": 5,
+    "total": 7,
+    "first_use_reserved_goals": [
+      {
+        "id": "identity_between_tasks",
+        "passed": true
+      },
+      {
+        "id": "return_packaging_threshold",
+        "passed": false
+      }
+    ],
+    "scope": "Development retest4/5; reserved new conversation goals on known files1/2. No scores overwritten."
+  },
+  "final": {
+    "report": "qa/v0.25/reports/primary-qwen3.6-35b-a3b-20261030T225727-112c37.json",
+    "passed": 7,
+    "total": 7,
+    "model_executed": 6,
+    "deterministic": 1,
+    "median_model_task_seconds": 38.34,
+    "peak_mlx_gb": 19.99,
+    "peak_process_rss_gb": 10.53,
+    "wrong_delivered_tables": 0,
+    "source_hashes_unchanged": true,
+    "network_denied": true
+  },
+  "unit_tests": 660,
+  "scope": "Final7/7 is a development retest, not unseen evaluation or user success rate. Reserved goals first appeared in intermediate run and scored1/2. MLX and RSS overlap; neither is whole-system memory."
+}

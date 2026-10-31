@@ -1,0 +1,30 @@
+[
+  {
+    "suite": "variants",
+    "model": "qwen3.6-35b-a3b",
+    "exit_code": 1,
+    "elapsed": 46.239,
+    "report": "qa/v0.24/reports/variants-qwen3.6-35b-a3b-20261030T203839-add6a4.json"
+  },
+  {
+    "suite": "fresh",
+    "model": "qwen3.6-35b-a3b",
+    "exit_code": 1,
+    "elapsed": 63.908,
+    "report": "qa/v0.24/reports/fresh-qwen3.6-35b-a3b-20261030T203926-4c9e19.json"
+  },
+  {
+    "suite": "unseen",
+    "model": "qwen3.6-35b-a3b",
+    "exit_code": 1,
+    "elapsed": 163.887,
+    "report": "qa/v0.24/reports/unseen-qwen3.6-35b-a3b-20261030T204029-060b69.json"
+  },
+  {
+    "suite": "followups",
+    "model": "qwen3.6-35b-a3b",
+    "exit_code": 0,
+    "elapsed": 140.124,
+    "report": "qa/v0.24/reports/followups-qwen3.6-35b-a3b-20261030T204313-67df16.json"
+  }
+]

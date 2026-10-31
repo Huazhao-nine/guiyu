@@ -1,0 +1,329 @@
+{
+  "version": "0.24-model-search",
+  "suite": "followups",
+  "time": "2026-10-30T20:29:17.344735+08:00",
+  "model": "glm-4.7-flash",
+  "structured_temperature": 0,
+  "seed": 20261029,
+  "hardware": "Apple M5 32GB; user-selected32GB baseline",
+  "load_seconds": 6.752,
+  "model_info": {
+    "name": "glm-4.7-flash",
+    "architecture": "glm4_moe_lite",
+    "bits": 4,
+    "bytes": 16852441819,
+    "runtime_policy": {
+      "name": "extended-32gb",
+      "input_tokens": 8192,
+      "output_tokens": 1800,
+      "prefill_tokens": 256,
+      "memory_bytes": 21474836480,
+      "cache_bytes": 268435456
+    }
+  },
+  "thinking_enabled": false,
+  "common_token_limits": {
+    "input": 8192,
+    "output": 1800
+  },
+  "network_denied": true,
+  "source_hashes": {
+    "structured_output.py": "7960a53bd816fbd0f1940a7ab57a3c91da9fd56e4d09deb7c4639b1764deb268",
+    "worker.py": "930b5109619e44913f7f16dafeb11e9654aa901f6b1f939380acd4050214dc79",
+    "agent_control.py": "7524801210603dab72a6b0b375fd84bfd20750bdca563f2d7cec335a859edf6d",
+    "money_subtotals.py": "3f69877035132e87a756b16cfbb33876eb80d1d9f0edd424b9115debdd2a54ee",
+    "workbook_agent.py": "51c7fbbc7a312f4896c2643a0a490734fcb76cecd31d5184316e7bed7951e62e",
+    "workbook_writing.py": "5ddd5a39dcb8557d077939a5f0d141147beac2287a457cfad0cf8475cf1826b9",
+    "workbook_edits.py": "7d8dd9169b2739fafa62622a2d2bb8f21518e76152541a761924b638c073d219",
+    "personal_tools.py": "c8ed42cd828d67ebfbd03c2cdf144894b553cb009a0cf2beebe77f590af016e1",
+    "workbook_data.py": "bc6902625ecb69300fd8497fba0d8cb734ea8372ccf97a46d2c6d1a231e5b408",
+    "structured_tables.py": "9868f4316fdba81ddf435bba47b7284343fbafe10b608ff29cadce949580597b",
+    "runtime_policy.py": "e9bfb35041802aa961f39a674cea6bd59c85a65bf7c6ceac0841a33ec7d19bbb",
+    "local_query.py": "bbe2091085564d19740e1bc81c7ca6c59b8fef20ee329e356ff433184b5f0bd3",
+    "workbook_schema.py": "1f640f62ea196fdb4c038293ac0ee3b69c19cfe10b237891d7bec0bc46e951a1",
+    "privacy_filter.py": "3a65fc2029085463408981b36a7faa2cc8d8cdb19689b3628d11d42ba41b7f1c",
+    "table_program.py": "b989f1b9e065f9d856a103299e58dfc4b86c3fa3cf63ce1b3f9b9d939cfb75f1",
+    "request_router.py": "6cc7b450900d2042adf313a94c9c480717874d735fe3dfddcf37f3df7c0073ce",
+    "workbook_requirements.py": "cb463959fd78b875dc34481044e5779cf5ceec0760ea75fba6ae65c38f46e83d",
+    "workbook_flow.py": "7ebe5fb1b411558c0f058c96c66a5c25d1a1718fe8f188b7cfdfd1b5fbe248a6",
+    "workbook_intent.py": "2c7d6407b6da8e58122890beabc0eb334b251a76920694eb648c2b0f3b6407fb",
+    "model_info.py": "f5d5c937a391d1ffd1ab86374c1b8f0794f8fe67870a7b8a54bccb2834ede9ca",
+    "general_assistant.py": "709754ff9ab5e2aa6e81f1281c93212084793b1462d5bcc62dd5391cf5d6cdb8",
+    "workbook_revision.py": "4f09083b8aef2b8993d9e55c8baf2ce53f16d8e154a27742f8ec929e7d1677d7",
+    "bge_embedding.py": "f51ee3f63d3e46fa08ac7de6ba7380b7e87d8ab8b627338439cf55714efd687d",
+    "general_tools.py": "79fe507a1d2a0a3e8c74cd9889bf4eaece3a01ba61c80b9b388fa1db47d1a7d0",
+    "table_semantics.py": "2d164c333efef02d6188d03d6112ba9834e37a4ed6ed6c95d82697b41eec6a43",
+    "workbook_export.py": "e9f2f52986ef54811e8d36eb4c492795557a6d8765885c91e0080e316d6d2c0f",
+    "workbook_qualifiers.py": "0e20093e35c7eb1b3c34516eed78ca76579d3ba5630f60487faacec2af7d4b45",
+    "fact_guard.py": "071b2764597edbb9ee79045dddc3b9c2f14d9993c01b0f5887b3b4ac2b2a181c",
+    "privacy_models.py": "dd160bac36ddfb6d6393c5a8bdb90f95571d2e5bbc7374d6d43bcafad9e045b2",
+    "share_agent.py": "b41eb80b564c678fc99bb304391ac4432e78d01d5188cc9eebe7dff44db812d5",
+    "model_output.py": "83fba58b74d38dbe1c4b43f91695e0ea2c3ba2a79d6edc988ddc9c4a2db2c4c5",
+    "workspace_index.py": "4c9038a1c90e24a6b18d8fab96e017088abdd4c81009217e4cbc32f814aa8911",
+    "office_agent.py": "b49adcfd302155180688f505afbef15e76a8650ec000fb4005289aff5e1b0653"
+  },
+  "fixture_hashes": {
+    "微光项目拨付.xlsx": "5516a5480948c6ef281f3cd308114f04ddacbd6d917c696484c26e569ca9a030",
+    "设备准备.xlsx": "5ad792d0c6b3626c47a74d6d1f0d130e2b7e5974b53a485dc73be915ef0e9ef5",
+    "设备准备调整.xlsx": "cfa47b80431cbd2007ff1d7c5b48921524f510f5db68bd6c0e8da07f26f63180",
+    "社区服务签到.xlsx": "f65088f5f4d8dc0dd52b9b77c2e1395be5d83e389cce9a06c1f9098d4e2fb3cd"
+  },
+  "suite_hashes": {
+    "fixtures/workbook_adaptation/tasks.json": "e2d10dd60c1e4a7689ac63226eaeb2b885f0416926f3c349da8916aa6008c676",
+    "fixtures/workbook_followups/tasks.json": "a3fcd2ef98d6f466098c52acb40d9cfbdcb3db331afe917f000ad21bd557370d"
+  },
+  "runner_sha256": "7a7516e790bc9833c0f330510dfdaf09cb60825d543ac9d19396c69ccae857ed",
+  "cases": [
+    {
+      "id": "complex_word",
+      "prompt": "在“设备准备.xlsx”中，只处理启用的资产，把现有数量少于需求的找出来，需补数量按需求减现有算，需补金额按需补数量乘单价算。按需补金额从高到低，只保留资产代号、需补数量、需补金额。每条明细要留下，另外给出这批的金额合计和条数，再写一段准备说明并导出Word，不增加采购日期或供应商。",
+      "authorized_file_count": 4,
+      "passed": false,
+      "checks": {
+        "incremental_tools": true,
+        "expected_rows": false,
+        "expected_columns": true,
+        "preview_matches_xlsx": true,
+        "csv_matches_xlsx": true,
+        "required_summary": false,
+        "typed_summary_rows": true,
+        "word_if_requested": true,
+        "word_values": false,
+        "no_unrequested_word": true,
+        "completed": true,
+        "checked_delivery": true,
+        "no_original_transaction": true,
+        "originals_unchanged": true
+      },
+      "rows": [
+        [
+          "K44",
+          "1",
+          "46"
+        ],
+        [
+          "K46",
+          "0",
+          "0"
+        ]
+      ],
+      "columns": [
+        "AssetCode / K41 / K42",
+        "Available / 2 / 10",
+        "需补金额（元）"
+      ],
+      "summaries": [
+        {
+          "columns": [
+            "金额合计（元）",
+            "条数"
+          ],
+          "rows": [
+            [
+              "46",
+              "2"
+            ]
+          ],
+          "units": {
+            "金额合计（元）": "CNY"
+          },
+          "provenance": [
+            [
+              1,
+              3
+            ]
+          ],
+          "field_types": {
+            "金额合计（元）": "number",
+            "条数": "number"
+          },
+          "unit_ledger": {
+            "金额合计（元）": {
+              "source_column": "金额合计（元）",
+              "canonical_unit": "元"
+            },
+            "条数": {
+              "source_column": "条数",
+              "canonical_unit": ""
+            }
+          }
+        }
+      ],
+      "word_text": "设备准备情况说明\n本次按要求从4条原始记录中整理出2条结果。\n金额合计（元）：46元；条数：2。\n明细\n汇总\n数据说明\n设备准备.xlsx / Readiness：Rate(CNY) / 17 / 11：按单元格显式单位优先、表头单位兜底，统一为元；未改变原文件。\n资料来源\n【S1】设备准备.xlsx\nAssetCode / K41 / K42 | Available / 2 / 10 | 需补金额（元）\nK44 | 1 | 46\nK46 | 0 | 0\n金额合计（元） | 条数\n46 | 2",
+      "graph": [
+        {
+          "id": "V1",
+          "input": "V0",
+          "operation": {
+            "op": "derive",
+            "name": "需补数量",
+            "expression": {
+              "subtract": [
+                {
+                  "column": "Needed / 5 / 8"
+                },
+                {
+                  "column": "Available / 2 / 10"
+                }
+              ]
+            },
+            "format": "number",
+            "precision": 5
+          }
+        },
+        {
+          "id": "V2",
+          "input": "V1",
+          "operation": {
+            "op": "filter",
+            "where": {
+              "all": [
+                {
+                  "column": "IsEnabled / True",
+                  "operator": "eq",
+                  "type": "text",
+                  "value": "true"
+                },
+                {
+                  "column": "需补数量",
+                  "operator": "gt",
+                  "type": "number",
+                  "value": "0"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "V3",
+          "input": "V2",
+          "operation": {
+            "op": "derive",
+            "name": "需补金额（元）",
+            "expression": {
+              "multiply": [
+                {
+                  "column": "需补数量"
+                },
+                {
+                  "column": "Rate / 17 / 11（元）"
+                }
+              ]
+            },
+            "format": "number",
+            "precision": 8
+          }
+        },
+        {
+          "id": "V4",
+          "input": "V3",
+          "operation": {
+            "op": "sort",
+            "by": [
+              {
+                "column": "需补金额（元）",
+                "direction": "desc",
+                "type": "number"
+              }
+            ]
+          }
+        },
+        {
+          "id": "V5",
+          "input": "V4",
+          "operation": {
+            "op": "group",
+            "by": [],
+            "metrics": [
+              {
+                "function": "sum",
+                "as": "金额合计（元）",
+                "column": "需补金额（元）"
+              },
+              {
+                "function": "count",
+                "as": "条数"
+              }
+            ]
+          }
+        }
+      ],
+      "finish": {
+        "tool": "finish",
+        "result": "V4",
+        "summaries": [
+          "V5"
+        ],
+        "display_units": {},
+        "fields": [
+          "AssetCode / K41 / K42",
+          "Available / 2 / 10",
+          "需补金额（元）"
+        ]
+      },
+      "repairs": [
+        {
+          "turn": 0,
+          "error": "工具参数封装需要一个对象，一次只执行一个动作。",
+          "available_views": [
+            "V0"
+          ],
+          "action": {
+            "action": "derive",
+            "purpose": "计算需补数量和需补金额，并筛选启用的资产",
+            "fields": [
+              {
+                "name": "需补数量",
+                "formula": "if([Available / 2 / 10] < [Needed / 5 / 8], [Needed / 5 / 8] - [Available / 2 / 10], 0)",
+                "format": "number"
+              },
+              {
+                "name": "需补金额",
+                "formula": "[需补数量] * [Rate / 17 / 11（元）]",
+                "format": "number"
+              }
+            ],
+            "where": {
+              "all": [
+                {
+                  "field": "IsEnabled / True",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "需补数量",
+                  "op": "gt",
+                  "value": 0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "planning_stats": {
+        "tokens": 687,
+        "peak_memory_gb": 17.52,
+        "attempted_calls": 9,
+        "calls": 10,
+        "model_seconds": 113.93,
+        "max_input_tokens": 3180,
+        "structured_calls": 6,
+        "structure_seconds": 12.186,
+        "constraint_escalations": 1
+      },
+      "revision": null,
+      "operation_count": 5,
+      "seconds": 116.01,
+      "model_calls": 11,
+      "model_executed": true,
+      "dependency_blocked": false,
+      "input_tokens": 21151
+    }
+  ],
+  "passed": 0,
+  "total": 1,
+  "peak_mlx_gb": 17.518,
+  "peak_process_rss_gb": 9.459,
+  "source_hashes_unchanged": true,
+  "limits": "Paired known fictional tasks on the unchanged v0.22 backend. Same prompts, tools, temperature0, seed, argument validation and repair limits; thinking disabled as in current product. All tasks are now known, not fresh holdout or user research. Checkpoint generation, size, tokenizer and quantization differ; this is not a pure parameter-count causal experiment. Native GUI and normal user data are not operated."
+}

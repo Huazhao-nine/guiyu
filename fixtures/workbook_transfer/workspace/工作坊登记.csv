@@ -1,0 +1,7 @@
+Participant,Organization,Contact,Flag,JoinDate
+周宁,数字研究院,z@example.com,OK,2026-10-02
+陈雨,开源研究院,,OK,2026-10-01
+林晓,公共实验室,l@example.com,OK,2026-10-03
+郭宁,隐私研究院,g@example.com,PENDING,2026-10-04
+唐梨,安全研究院,t@example.com,OK,2026-10-05
+廖安,开放研究院,a@example.com,DROPPED,2026-10-06

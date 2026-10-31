@@ -1,0 +1,9 @@
+{
+  "time": "2026-10-30T20:17:00.935179+08:00",
+  "model": "qwen3-coder-30b-a3b",
+  "passed": false,
+  "stage": "calculator_expression_validation",
+  "error": "ValueError: 只支持十进制数字、加减乘除和括号。",
+  "initial_structured_answer_not_captured": true,
+  "scope": "Source-free compatibility prompt did not specify the calculator expression character contract; no office tasks were run. Preserve the failure and test both candidates with the same explicit interface documentation."
+}

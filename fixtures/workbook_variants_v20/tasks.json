@@ -1,0 +1,100 @@
+{
+  "version": "0.20.0",
+  "purpose": "Two fresh fictional workbooks and4fixed tasks, frozen before first model execution; structural/date/unit/projection and detail/aggregate followups, not independent user research.",
+  "cases": [
+    {
+      "id": "repair_dates_word",
+      "prompt": "在“园区维修.xlsx”中，只处理开放且未归档的工单，截止日期在2026-12-01到2026-12-31，包含两端。可用余额等于额度减已付，全部用元；余额不少于2100元，按截止日期从早到晚，输出只保留工单编号、可用余额、截止日期三列。逐条明细留下，并附这批余额合计与条数，写一段简短情况说明导出Word，不增加维修结论。",
+      "rows": [
+        [
+          "M807",
+          "2200",
+          "2026-12-01"
+        ],
+        [
+          "M801",
+          "4500",
+          "2026-12-03"
+        ],
+        [
+          "M804",
+          "2100",
+          "2026-12-31"
+        ]
+      ],
+      "summary_values": [
+        "8800",
+        "3"
+      ],
+      "word": true,
+      "word_numbers": [
+        "8800"
+      ]
+    },
+    {
+      "id": "repair_relaxed",
+      "parent": "repair_dates_word",
+      "prompt": "把余额门槛放宽到1800元，其余筛选条件、排序和输出字段保持不变。",
+      "rows": [
+        [
+          "M807",
+          "2200",
+          "2026-12-01"
+        ],
+        [
+          "M801",
+          "4500",
+          "2026-12-03"
+        ],
+        [
+          "M802",
+          "1800",
+          "2026-12-10"
+        ],
+        [
+          "M804",
+          "2100",
+          "2026-12-31"
+        ]
+      ],
+      "summary_values": [
+        "10600",
+        "4"
+      ],
+      "word": true,
+      "word_numbers": [
+        "10600"
+      ]
+    },
+    {
+      "id": "hours_count_projection",
+      "prompt": "译稿工时的两张登记表放在一起，排除退出与员工号空白的记录。员工号相同只留原表首次出现的，不要先排序；按小组统计独立人数和工时合计，以小时显示，按工时合计从高到低。最后只要小组、人数、累计工时三列，写一段简短工时说明并导出Word。",
+      "rows": [
+        [
+          "审校",
+          "3",
+          "4"
+        ],
+        [
+          "翻译",
+          "2",
+          "2"
+        ]
+      ],
+      "word": true
+    },
+    {
+      "id": "hours_short",
+      "parent": "hours_count_projection",
+      "prompt": "只保留累计工时不少于3小时的小组，其他要求不变。",
+      "rows": [
+        [
+          "审校",
+          "3",
+          "4"
+        ]
+      ],
+      "word": true
+    }
+  ]
+}

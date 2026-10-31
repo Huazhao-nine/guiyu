@@ -1,0 +1,464 @@
+{
+  "version": "0.24-model-adaptation",
+  "suite": "variants",
+  "time": "2026-10-30T20:51:00.289317+08:00",
+  "model": "qwen3.5-9b",
+  "structured_temperature": 0,
+  "seed": 20261029,
+  "hardware": "Apple M5 32GB; user-selected32GB baseline",
+  "load_seconds": 2.17,
+  "model_info": {
+    "name": "qwen3.5-9b",
+    "architecture": "qwen3_5",
+    "bits": 4,
+    "bytes": 5950221072,
+    "runtime_policy": {
+      "name": "standard-16gb",
+      "input_tokens": 8192,
+      "output_tokens": 1800,
+      "prefill_tokens": 256,
+      "memory_bytes": 9663676416,
+      "cache_bytes": 268435456
+    }
+  },
+  "thinking_enabled": false,
+  "common_token_limits": {
+    "input": 8192,
+    "output": 1800
+  },
+  "network_denied": true,
+  "source_hashes": {
+    "structured_output.py": "7960a53bd816fbd0f1940a7ab57a3c91da9fd56e4d09deb7c4639b1764deb268",
+    "worker.py": "930b5109619e44913f7f16dafeb11e9654aa901f6b1f939380acd4050214dc79",
+    "agent_control.py": "7524801210603dab72a6b0b375fd84bfd20750bdca563f2d7cec335a859edf6d",
+    "money_subtotals.py": "3f69877035132e87a756b16cfbb33876eb80d1d9f0edd424b9115debdd2a54ee",
+    "workbook_agent.py": "1b9a8f34dac8908a266c09b8ed95b7fa0fadd5a5c4aaf49cd5fb86900312c3f9",
+    "workbook_writing.py": "5ddd5a39dcb8557d077939a5f0d141147beac2287a457cfad0cf8475cf1826b9",
+    "workbook_edits.py": "7d8dd9169b2739fafa62622a2d2bb8f21518e76152541a761924b638c073d219",
+    "personal_tools.py": "c8ed42cd828d67ebfbd03c2cdf144894b553cb009a0cf2beebe77f590af016e1",
+    "workbook_data.py": "bc6902625ecb69300fd8497fba0d8cb734ea8372ccf97a46d2c6d1a231e5b408",
+    "structured_tables.py": "9868f4316fdba81ddf435bba47b7284343fbafe10b608ff29cadce949580597b",
+    "runtime_policy.py": "e9bfb35041802aa961f39a674cea6bd59c85a65bf7c6ceac0841a33ec7d19bbb",
+    "local_query.py": "bbe2091085564d19740e1bc81c7ca6c59b8fef20ee329e356ff433184b5f0bd3",
+    "workbook_schema.py": "1f640f62ea196fdb4c038293ac0ee3b69c19cfe10b237891d7bec0bc46e951a1",
+    "privacy_filter.py": "3a65fc2029085463408981b36a7faa2cc8d8cdb19689b3628d11d42ba41b7f1c",
+    "table_program.py": "b989f1b9e065f9d856a103299e58dfc4b86c3fa3cf63ce1b3f9b9d939cfb75f1",
+    "request_router.py": "6cc7b450900d2042adf313a94c9c480717874d735fe3dfddcf37f3df7c0073ce",
+    "workbook_requirements.py": "cb463959fd78b875dc34481044e5779cf5ceec0760ea75fba6ae65c38f46e83d",
+    "workbook_flow.py": "1450efa906bd8ef68944d9ad8238907c139115e06c86a1d4358ba23727e2b9dd",
+    "workbook_intent.py": "2c7d6407b6da8e58122890beabc0eb334b251a76920694eb648c2b0f3b6407fb",
+    "model_info.py": "f5d5c937a391d1ffd1ab86374c1b8f0794f8fe67870a7b8a54bccb2834ede9ca",
+    "general_assistant.py": "709754ff9ab5e2aa6e81f1281c93212084793b1462d5bcc62dd5391cf5d6cdb8",
+    "workbook_revision.py": "4f09083b8aef2b8993d9e55c8baf2ce53f16d8e154a27742f8ec929e7d1677d7",
+    "bge_embedding.py": "f51ee3f63d3e46fa08ac7de6ba7380b7e87d8ab8b627338439cf55714efd687d",
+    "general_tools.py": "79fe507a1d2a0a3e8c74cd9889bf4eaece3a01ba61c80b9b388fa1db47d1a7d0",
+    "table_semantics.py": "2d164c333efef02d6188d03d6112ba9834e37a4ed6ed6c95d82697b41eec6a43",
+    "workbook_export.py": "e9f2f52986ef54811e8d36eb4c492795557a6d8765885c91e0080e316d6d2c0f",
+    "workbook_qualifiers.py": "0e20093e35c7eb1b3c34516eed78ca76579d3ba5630f60487faacec2af7d4b45",
+    "fact_guard.py": "071b2764597edbb9ee79045dddc3b9c2f14d9993c01b0f5887b3b4ac2b2a181c",
+    "privacy_models.py": "dd160bac36ddfb6d6393c5a8bdb90f95571d2e5bbc7374d6d43bcafad9e045b2",
+    "share_agent.py": "b41eb80b564c678fc99bb304391ac4432e78d01d5188cc9eebe7dff44db812d5",
+    "model_output.py": "83fba58b74d38dbe1c4b43f91695e0ea2c3ba2a79d6edc988ddc9c4a2db2c4c5",
+    "workspace_index.py": "4c9038a1c90e24a6b18d8fab96e017088abdd4c81009217e4cbc32f814aa8911",
+    "office_agent.py": "b49adcfd302155180688f505afbef15e76a8650ec000fb4005289aff5e1b0653"
+  },
+  "fixture_hashes": {
+    "合同付款日历.xlsx": "3eb17795ac8c3d04ba103602953cfbd62d6480a1609095365a92f9b1f0a9bce8",
+    "城市活动登记.xlsx": "8a35dafedaf7ae72e44755e76be13ba8043b3d3a5a7159049394281dd040200b",
+    "差旅领用.xlsx": "2e9222f7dafb5aac23942d73b793afaa92b779dd1aec58000dedf75433eb0589",
+    "差旅领用调整.xlsx": "48121046857b3b80b5b24432631768f1b38fae2f7ae6be690f3e7f5be0284af7"
+  },
+  "suite_hashes": {
+    "fixtures/workbook_variants_v19/tasks.json": "891fa52a9a99557583b4b8a7a3d13b868b6c734d174896c34e10bee73221e7c3"
+  },
+  "runner_sha256": "d02bc6ee8252b37d6213afc38bd2fa187c31c24ea6d133bc7593714b8fecb6cb",
+  "cases": [
+    {
+      "id": "new_multisheet_dedup",
+      "prompt": "城市活动登记的两个场次合并，剔除取消和联系方式没填的记录；同一联系方式只留原表第一次出现的，不要先排序。按片区汇总独立人数和服务时长合计，时长用小时显示；结果按时长由多到少排列，只要片区、人数、时长三列。",
+      "authorized_file_count": 4,
+      "passed": false,
+      "checks": {
+        "incremental_tools": true,
+        "expected_rows": false,
+        "expected_columns": true,
+        "preview_matches_xlsx": true,
+        "csv_matches_xlsx": true,
+        "required_summary": true,
+        "typed_summary_rows": true,
+        "word_if_requested": true,
+        "word_values": true,
+        "no_unrequested_word": true,
+        "completed": true,
+        "checked_delivery": true,
+        "no_original_transaction": true,
+        "originals_unchanged": true
+      },
+      "rows": [
+        [
+          "西片",
+          "4.5",
+          "4.5"
+        ],
+        [
+          "东片",
+          "2.5",
+          "2.5"
+        ]
+      ],
+      "columns": [
+        "片区",
+        "人数（小时）",
+        "服务时长合计（小时）"
+      ],
+      "summaries": [],
+      "word_text": "",
+      "graph": [
+        {
+          "id": "V1",
+          "input": "V0",
+          "operation": {
+            "op": "filter",
+            "where": {
+              "all": [
+                {
+                  "column": "参加状态",
+                  "operator": "ne",
+                  "type": "text",
+                  "value": "取消"
+                },
+                {
+                  "column": "联系方式",
+                  "operator": "not_empty",
+                  "type": "text"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "V2",
+          "input": "V1",
+          "operation": {
+            "op": "distinct",
+            "columns": [
+              "联系方式"
+            ]
+          },
+          "intent_corrections": [
+            {
+              "kind": "literal_dedup_keys",
+              "before": [
+                "登记码",
+                "片区",
+                "联系方式",
+                "服务时长（分钟）",
+                "参加状态"
+              ],
+              "after": [
+                "联系方式"
+              ],
+              "evidence": "explicit user key clause matched actual columns"
+            }
+          ]
+        },
+        {
+          "id": "V3",
+          "input": "V2",
+          "operation": {
+            "op": "group",
+            "by": [
+              "片区"
+            ],
+            "metrics": [
+              {
+                "function": "sum",
+                "as": "人数（分钟）",
+                "column": "服务时长（分钟）"
+              },
+              {
+                "function": "sum",
+                "as": "服务时长合计（分钟）",
+                "column": "服务时长（分钟）"
+              }
+            ]
+          }
+        },
+        {
+          "id": "V4",
+          "input": "V3",
+          "operation": {
+            "op": "sort",
+            "by": [
+              {
+                "column": "服务时长合计（分钟）",
+                "direction": "desc",
+                "type": "number"
+              }
+            ]
+          }
+        }
+      ],
+      "finish": {
+        "tool": "finish",
+        "result": "V4",
+        "summaries": [],
+        "display_units": {
+          "人数（分钟）": "小时",
+          "服务时长合计（分钟）": "小时"
+        },
+        "fields": [
+          "片区",
+          "人数（分钟）",
+          "服务时长合计（分钟）"
+        ]
+      },
+      "repairs": [
+        {
+          "turn": 2,
+          "error": "工具group不接受参数fields,summaries；多个筛选条件写入where的all/any，写作和文件交付由程序在finish后完成。",
+          "available_views": [
+            "V0",
+            "V1",
+            "V2"
+          ],
+          "action": {
+            "tool": "group",
+            "purpose": "按片区汇总人数和服务时长，时长单位后续统一",
+            "input": "V2",
+            "fields": [
+              {
+                "name": "人数",
+                "formula": "count"
+              },
+              {
+                "name": "服务时长（分钟）",
+                "formula": "sum([服务时长（分钟）])"
+              }
+            ],
+            "by": [
+              "片区"
+            ],
+            "metrics": [
+              {
+                "function": "count",
+                "name": "人数"
+              },
+              {
+                "function": "sum",
+                "field": "服务时长（分钟）",
+                "name": "服务时长（分钟）"
+              }
+            ],
+            "summaries": [
+              "V3"
+            ]
+          }
+        }
+      ],
+      "planning_stats": {
+        "tokens": 559,
+        "peak_memory_gb": 5.7,
+        "attempted_calls": 9,
+        "calls": 10,
+        "model_seconds": 49.64,
+        "max_input_tokens": 2682,
+        "structured_calls": 4,
+        "structure_seconds": 7.612,
+        "constraint_escalations": 1
+      },
+      "revision": null,
+      "operation_count": 4,
+      "seconds": 49.73,
+      "model_calls": 10,
+      "model_executed": true,
+      "dependency_blocked": false,
+      "input_tokens": 17754
+    },
+    {
+      "id": "new_aggregate_followup",
+      "prompt": "只保留累计时长不少于3小时的片区，其他要求不变。",
+      "authorized_file_count": 1,
+      "passed": false,
+      "checks": {
+        "incremental_tools": true,
+        "expected_rows": false,
+        "expected_columns": true,
+        "preview_matches_xlsx": true,
+        "csv_matches_xlsx": true,
+        "required_summary": true,
+        "typed_summary_rows": true,
+        "word_if_requested": true,
+        "word_values": true,
+        "no_unrequested_word": true,
+        "completed": true,
+        "checked_delivery": true,
+        "no_original_transaction": true,
+        "originals_unchanged": true
+      },
+      "rows": [
+        [
+          "西片",
+          "4.5",
+          "4.5"
+        ]
+      ],
+      "columns": [
+        "片区",
+        "人数（小时）",
+        "服务时长合计（小时）"
+      ],
+      "summaries": [],
+      "word_text": "",
+      "graph": [
+        {
+          "id": "V1",
+          "input": "V0",
+          "operation": {
+            "op": "filter",
+            "where": {
+              "all": [
+                {
+                  "column": "参加状态",
+                  "operator": "ne",
+                  "type": "text",
+                  "value": "取消"
+                },
+                {
+                  "column": "联系方式",
+                  "operator": "not_empty",
+                  "type": "text"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "V2",
+          "input": "V1",
+          "operation": {
+            "op": "distinct",
+            "columns": [
+              "联系方式"
+            ]
+          },
+          "intent_corrections": [
+            {
+              "kind": "literal_dedup_keys",
+              "before": [
+                "登记码",
+                "片区",
+                "联系方式",
+                "服务时长（分钟）",
+                "参加状态"
+              ],
+              "after": [
+                "联系方式"
+              ],
+              "evidence": "explicit user key clause matched actual columns"
+            }
+          ]
+        },
+        {
+          "id": "V3",
+          "input": "V2",
+          "operation": {
+            "op": "group",
+            "by": [
+              "片区"
+            ],
+            "metrics": [
+              {
+                "function": "sum",
+                "as": "人数（分钟）",
+                "column": "服务时长（分钟）"
+              },
+              {
+                "function": "sum",
+                "as": "服务时长合计（分钟）",
+                "column": "服务时长（分钟）"
+              }
+            ]
+          }
+        },
+        {
+          "id": "V4",
+          "input": "V3",
+          "operation": {
+            "op": "sort",
+            "by": [
+              {
+                "column": "服务时长合计（分钟）",
+                "direction": "desc",
+                "type": "number"
+              }
+            ]
+          }
+        },
+        {
+          "id": "V5",
+          "input": "V4",
+          "operation": {
+            "op": "filter",
+            "where": {
+              "column": "服务时长合计（分钟）",
+              "operator": "gte",
+              "type": "number",
+              "value": "180"
+            }
+          }
+        }
+      ],
+      "finish": {
+        "tool": "finish",
+        "result": "V5",
+        "summaries": [],
+        "display_units": {
+          "人数（分钟）": "小时",
+          "服务时长合计（分钟）": "小时"
+        },
+        "fields": [
+          "片区",
+          "人数（分钟）",
+          "服务时长合计（分钟）"
+        ]
+      },
+      "repairs": [],
+      "planning_stats": {
+        "tokens": 0,
+        "peak_memory_gb": 0
+      },
+      "revision": {
+        "parent_id": "589343d8-b0b1-403c-b0c3-ee9705d05a25",
+        "edits": [
+          {
+            "kind": "add_shared_filter",
+            "input": "V4",
+            "condition": {
+              "column": "服务时长合计（分钟）",
+              "operator": "gte",
+              "type": "number",
+              "value": "180"
+            },
+            "quote": "只保留累计时长不少于3小时的片区"
+          }
+        ],
+        "literal_compiler": true,
+        "record_granularity": false,
+        "proof": "Only explicit boundaries changed; all other typed operations retained and replayed."
+      },
+      "operation_count": 5,
+      "seconds": 0.03,
+      "model_calls": 0,
+      "model_executed": false,
+      "dependency_blocked": false,
+      "input_tokens": 0
+    }
+  ],
+  "passed": 0,
+  "total": 2,
+  "peak_mlx_gb": 5.696,
+  "peak_process_rss_gb": 4.941,
+  "source_hashes_unchanged": true,
+  "limits": "Known fictional development tasks. v0.22-based backend with general row-retention and displayed-review fixes, common windows, typed tools and repair bounds; native thinking disabled. Developer synthesis is not independent user research. Models differ beyond size. Native GUI and normal user data are not operated."
+}

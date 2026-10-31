@@ -1,0 +1,240 @@
+[
+  {
+    "id": "qwen3.6-35b-a3b",
+    "name": "Qwen3.6 35B A3B",
+    "badge": "默认搭档",
+    "summary": "理解目标、组合本地工具并核对表格与文稿。以 32 GB 内存为基础配置，全程在本机运行。",
+    "memory": "32 GB 设备 · 本机流程测试约20 GB MLX分配",
+    "repository": "mlx-community/Qwen3.6-35B-A3B-4bit",
+    "revision": "38740b847e4cb78f352aba30aa41c76e08e6eb46",
+    "license": "Apache-2.0",
+    "files": [
+      {
+        "name": "chat_template.jinja",
+        "bytes": 7764,
+        "sha256": "e84f32a23fdda27689f868aa4a1a5621f41133e51a48d7f3efcbea2839574259"
+      },
+      {
+        "name": "config.json",
+        "bytes": 23591,
+        "sha256": "a822a9e48b0aafbe3144ec37d4fb067e178ed96615ce6e4420b3149893cc5767"
+      },
+      {
+        "name": "configuration.json",
+        "bytes": 58,
+        "sha256": "c1b09db419119513247e9b8b912c4b9897106c9b20c6cada7e107d993c5435eb"
+      },
+      {
+        "name": "generation_config.json",
+        "bytes": 202,
+        "sha256": "e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e"
+      },
+      {
+        "name": "model-00001-of-00004.safetensors",
+        "bytes": 5288196018,
+        "sha256": "09f3e6ecb0b7af6e6a38bc8169a134c821b0924c2679b2bb8f4426ad38d032b8"
+      },
+      {
+        "name": "model-00002-of-00004.safetensors",
+        "bytes": 5368472749,
+        "sha256": "31dcdb1c49eebdb1505bd14e3cb33f9cf900bd2546b638f2464694ae763a033f"
+      },
+      {
+        "name": "model-00003-of-00004.safetensors",
+        "bytes": 5368324139,
+        "sha256": "3e66de06a1f03dade16a612a368cfce4a4c9caa4efd7d28185454384082cec03"
+      },
+      {
+        "name": "model-00004-of-00004.safetensors",
+        "bytes": 4377211365,
+        "sha256": "a5d0cf03519c26f8b506df6b0ba60526e5c08c8cea22d0c21ce92950e58a5422"
+      },
+      {
+        "name": "model.safetensors.index.json",
+        "bytes": 215755,
+        "sha256": "0b28df60e33753a14e816d3b31577ae2c93884c58430a4a6de6ae9ea483842ea"
+      },
+      {
+        "name": "preprocessor_config.json",
+        "bytes": 390,
+        "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+      },
+      {
+        "name": "processor_config.json",
+        "bytes": 1312,
+        "sha256": "51c5f33646392e0bf1ed3e96be02504da47406c21c6cb86925d8908d1a6c4da7"
+      },
+      {
+        "name": "tokenizer.json",
+        "bytes": 19989343,
+        "sha256": "87a7830d63fcf43bf241c3c5242e96e62dd3fdc29224ca26fed8ea333db72de4"
+      },
+      {
+        "name": "tokenizer_config.json",
+        "bytes": 1139,
+        "sha256": "e98f1901ac6f0adff67b1d540bfa0c36ac1a0cf59eb72ed78146ef89aafa1182"
+      },
+      {
+        "name": "video_preprocessor_config.json",
+        "bytes": 385,
+        "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13"
+      },
+      {
+        "name": "vocab.json",
+        "bytes": 6722759,
+        "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+      }
+    ],
+    "purpose": "chat",
+    "advanced": false,
+    "recommended": true
+  },
+  {
+    "id": "bge-small-zh-v1.5",
+    "name": "BGE 中文语义检索",
+    "badge": "工作区检索",
+    "summary": "让归屿理解近义表达，从整个工作区找到相关段落。",
+    "memory": "0.3–0.6 GB",
+    "repository": "BAAI/bge-small-zh-v1.5",
+    "revision": "7999e1d3359715c523056ef9478215996d62a620",
+    "license": "MIT",
+    "purpose": "embedding",
+    "files": [
+      {
+        "name": "README.md",
+        "bytes": 27670,
+        "sha256": "c48a4eeea77f6b1d38b48ec1c5b8d4f86d5550cc43fa345a0db1b2ca1d082369"
+      },
+      {
+        "name": "config.json",
+        "bytes": 776,
+        "sha256": "3853a7979202c348751b753e36f579c41d8da7d36af617d3d907e1fc9b441f2a"
+      },
+      {
+        "name": "model.safetensors",
+        "bytes": 95827648,
+        "sha256": "354763b9b1357bc9c44f62c6be2276321081ed2567773608c0d0785b61d5a026"
+      },
+      {
+        "name": "special_tokens_map.json",
+        "bytes": 125,
+        "sha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3"
+      },
+      {
+        "name": "tokenizer.json",
+        "bytes": 439125,
+        "sha256": "48cea5d44424912a6fd1ea647bf4fe50b55ab8b1e5879c3275f80e339e8fae26"
+      },
+      {
+        "name": "tokenizer_config.json",
+        "bytes": 367,
+        "sha256": "e6f3b96db926a37d4039995fbf5ad17de158dfb8f6343d607e4dbaad18d75f5a"
+      },
+      {
+        "name": "vocab.txt",
+        "bytes": 109540,
+        "sha256": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c"
+      }
+    ],
+    "recommended": false,
+    "advanced": false
+  },
+  {
+    "id": "astrlink-guard",
+    "name": "AstrLink Guard",
+    "badge": "轻量中文",
+    "summary": "在本机识别姓名、地址等隐私，与规则共同检查；下载后仍需预览核对。",
+    "memory": "约 0.3 GB 起，按需运行",
+    "repository": "QuantumNous/astrlink-guard",
+    "revision": "7216b6a3b897ef903d4b1ba367ae6fb95b0fa5e4",
+    "license": "Apache-2.0",
+    "purpose": "privacy",
+    "files": [
+      {
+        "name": "model_int8.onnx",
+        "remotePath": "int8/model_int8.onnx",
+        "bytes": 330781,
+        "sha256": "0a070d3113615e33ba3b84d6bd486f663a377c04c4b056e7381732179f51832a"
+      },
+      {
+        "name": "model_int8.onnx_data",
+        "remotePath": "int8/model_int8.onnx_data",
+        "bytes": 37124608,
+        "sha256": "0ba34216ceead01e0ae2dfd8e46d52b67e7aee80b04f722d9b758613a91c0067"
+      },
+      {
+        "name": "tokenizer.json",
+        "remotePath": "int8/tokenizer.json",
+        "bytes": 1502881,
+        "sha256": "0cf3b235ef125658015a6c8026a5fe6f28088bf825101a990ec18a10200feef4"
+      },
+      {
+        "name": "config.json",
+        "remotePath": "int8/config.json",
+        "bytes": 1804,
+        "sha256": "2c20003590d642e273c03c4c7c82d9849fa75f64bf29a71ec0a0c9a20ba4a150"
+      },
+      {
+        "name": "LICENSE",
+        "remotePath": "LICENSE",
+        "bytes": 11357,
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      },
+      {
+        "name": "onnxruntime-1.24.4-cp313-cp313-macosx_14_0_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/e9/f0/8a21ec0a97e40abb7d8da1e8b20fb9e1af509cc6d191f6faa75f73622fb2/onnxruntime-1.24.4-cp313-cp313-macosx_14_0_arm64.whl",
+        "bytes": 17341922,
+        "sha256": "e99a48078baaefa2b50fe5836c319499f71f13f76ed32d0211f39109147a49e0"
+      }
+    ]
+  },
+  {
+    "id": "openai-privacy-filter",
+    "name": "OpenAI Privacy Filter",
+    "badge": "增强识别",
+    "summary": "在本机识别姓名、地址等隐私，与规则共同检查；下载后仍需预览核对。",
+    "memory": "约 2.2 GB（组件进程实测，M5 32 GB）",
+    "repository": "openai/privacy-filter",
+    "revision": "7ffa9a043d54d1be65afb281eddf0ffbe629385b",
+    "license": "Apache-2.0",
+    "purpose": "privacy",
+    "files": [
+      {
+        "name": "model_quantized.onnx",
+        "remotePath": "onnx/model_quantized.onnx",
+        "bytes": 162239,
+        "sha256": "a325fb5341567a73c94e91ec5e49060d38d9b16111f518ad34773039a0c9c098"
+      },
+      {
+        "name": "model_quantized.onnx_data",
+        "remotePath": "onnx/model_quantized.onnx_data",
+        "bytes": 1618042064,
+        "sha256": "50f4c8c7f3c27fbc1fe16d4f74f6f7c3b74ba8f18a262e8b6911854c64c33a6d"
+      },
+      {
+        "name": "tokenizer.json",
+        "remotePath": "tokenizer.json",
+        "bytes": 27868174,
+        "sha256": "0614fe83cadab421296e664e1f48f4261fa8fef6e03e63bb75c20f38e37d07d3"
+      },
+      {
+        "name": "config.json",
+        "remotePath": "config.json",
+        "bytes": 3039,
+        "sha256": "b2b26a4a4a000639ad30b0c264adbefe365bdb567fbd7bb27303b8c438375bd1"
+      },
+      {
+        "name": "viterbi_calibration.json",
+        "remotePath": "viterbi_calibration.json",
+        "bytes": 372,
+        "sha256": "bbc8611ef08a55ed72d64856cbbbb9a91db8dfa881f0a92e2afbad6e4bbc775a"
+      },
+      {
+        "name": "onnxruntime-1.24.4-cp313-cp313-macosx_14_0_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/e9/f0/8a21ec0a97e40abb7d8da1e8b20fb9e1af509cc6d191f6faa75f73622fb2/onnxruntime-1.24.4-cp313-cp313-macosx_14_0_arm64.whl",
+        "bytes": 17341922,
+        "sha256": "e99a48078baaefa2b50fe5836c319499f71f13f76ed32d0211f39109147a49e0"
+      }
+    ]
+  }
+]
