@@ -1,0 +1,176 @@
+{
+  "version": "0.27.0",
+  "status": "THREE_PASSED_ONE_NATIVE_DELIVERY_FAILURE_RETAINED",
+  "backend_hashes": {
+    "agent_control.py": "c2097da4729359c39485d82e954e811bddd6bb38ef32763188a2c3e5d2ae5574",
+    "bge_embedding.py": "f51ee3f63d3e46fa08ac7de6ba7380b7e87d8ab8b627338439cf55714efd687d",
+    "document_tables.py": "ceee11df6cfd07453001aa57f1648a5967b557b322a8c9659e9e19e16f0dcfc7",
+    "fact_guard.py": "45ace387a98d874bbb5d075eeb7b345409531254b508031bb40bbbc6f4382cd6",
+    "general_assistant.py": "eb074624b8c90a6c49956721b31a3b285448cadff13372f642555961b4862890",
+    "general_tools.py": "79fe507a1d2a0a3e8c74cd9889bf4eaece3a01ba61c80b9b388fa1db47d1a7d0",
+    "local_query.py": "4f37344fb04fc31bd3537598867b3a27d78d74dc26bae2dbe16a1a5330864f28",
+    "model_info.py": "f5d5c937a391d1ffd1ab86374c1b8f0794f8fe67870a7b8a54bccb2834ede9ca",
+    "model_output.py": "83fba58b74d38dbe1c4b43f91695e0ea2c3ba2a79d6edc988ddc9c4a2db2c4c5",
+    "money_subtotals.py": "3f69877035132e87a756b16cfbb33876eb80d1d9f0edd424b9115debdd2a54ee",
+    "office_agent.py": "9b159d934dae02cab4863c364aa8387d3d7504097d601cdb91b147901c000c4e",
+    "personal_tools.py": "c8ed42cd828d67ebfbd03c2cdf144894b553cb009a0cf2beebe77f590af016e1",
+    "privacy_filter.py": "3a65fc2029085463408981b36a7faa2cc8d8cdb19689b3628d11d42ba41b7f1c",
+    "privacy_models.py": "dd160bac36ddfb6d6393c5a8bdb90f95571d2e5bbc7374d6d43bcafad9e045b2",
+    "request_router.py": "6cc7b450900d2042adf313a94c9c480717874d735fe3dfddcf37f3df7c0073ce",
+    "runtime_policy.py": "422cef9d111bca844c37e71ace3b6be37fd9b6b81bbd3b0967e73b4aaaa10a22",
+    "share_agent.py": "b41eb80b564c678fc99bb304391ac4432e78d01d5188cc9eebe7dff44db812d5",
+    "structured_output.py": "7960a53bd816fbd0f1940a7ab57a3c91da9fd56e4d09deb7c4639b1764deb268",
+    "structured_tables.py": "3ecc86af63b74c35b9b768b780d06db7b33f6f435717457fa44ae382923798f8",
+    "table_program.py": "4033e2c10eabc02461f233ee21b35be7432df3f5f4809d6ff79213a9401561cd",
+    "table_semantics.py": "2d164c333efef02d6188d03d6112ba9834e37a4ed6ed6c95d82697b41eec6a43",
+    "workbook_agent.py": "f47d2ea6c47861b97cc5665d9655497e7e93c54f9cc8c7484c2f767757df34a2",
+    "workbook_data.py": "bc6902625ecb69300fd8497fba0d8cb734ea8372ccf97a46d2c6d1a231e5b408",
+    "workbook_edits.py": "7d8dd9169b2739fafa62622a2d2bb8f21518e76152541a761924b638c073d219",
+    "workbook_export.py": "e9f2f52986ef54811e8d36eb4c492795557a6d8765885c91e0080e316d6d2c0f",
+    "workbook_flow.py": "530fecd628810ec97fd35ab4ff99cd0ce96489785676ea54a71a3059fd5b5cdd",
+    "workbook_intent.py": "39140c0dbe9064d7a687ec568f6bbd14a0be2378b806769fbfd658203248a983",
+    "workbook_qualifiers.py": "0e20093e35c7eb1b3c34516eed78ca76579d3ba5630f60487faacec2af7d4b45",
+    "workbook_recovery.py": "ad905941301310128736730e5d931a49ff56d7610ece443ff12136ea731e05d3",
+    "workbook_requirements.py": "cb463959fd78b875dc34481044e5779cf5ceec0760ea75fba6ae65c38f46e83d",
+    "workbook_revision.py": "3d7b6fc7542636488dc98421b5827a1f63f99efa50dc609a11347a48fa70b450",
+    "workbook_schema.py": "1f640f62ea196fdb4c038293ac0ee3b69c19cfe10b237891d7bec0bc46e951a1",
+    "workbook_writing.py": "5ddd5a39dcb8557d077939a5f0d141147beac2287a457cfad0cf8475cf1826b9",
+    "worker.py": "879bf7cff54b9ad715236926c23899d1433a9d76f0add5dd6db61cb354bd8c8a",
+    "workspace_index.py": "4c9038a1c90e24a6b18d8fab96e017088abdd4c81009217e4cbc32f814aa8911"
+  },
+  "cases": [
+    {
+      "id": "51ffc8fd-1132-4712-b0a5-984460227ff4",
+      "prompt": "处理支持日志.xlsx，按线上、线下的顺序合并，先按TicketID保留首次记录。ClosedDate从2028年4月1日（含）到7月1日（不含），Category为保修，或者Category为回访且Confirmed为true；每条Cost至少50元。按Owner汇总累计时长、支出和记录数，累计时长用小时、支出用万元显示，按支出降序，同金额按Owner升序。只保留Owner、累计时长、支出、记录数四列，另存一份Word，标题“支持工作汇总”。",
+      "kind": "workflow",
+      "rows": [
+        [
+          "白组",
+          "3",
+          "0.033",
+          "2"
+        ],
+        [
+          "青组",
+          "2",
+          "0.025",
+          "2"
+        ],
+        [
+          "灰组",
+          "1",
+          "0.0145",
+          "2"
+        ]
+      ],
+      "columns": [
+        "Owner",
+        "累计时长（小时）",
+        "支出（万元）",
+        "记录数"
+      ],
+      "seconds": 39.99,
+      "source_parent_id": null,
+      "source_count": 1,
+      "artifact_names": [
+        "工作簿处理结果.xlsx",
+        "工作簿处理结果.csv",
+        "工作簿说明.docx",
+        "工作簿说明.md"
+      ],
+      "passed": true
+    },
+    {
+      "id": "a730e566-0721-4e5f-8a99-3488e75b8089",
+      "prompt": "只要第一名，其他口径、排序和列不变，不用Word。",
+      "kind": "workflow",
+      "rows": [
+        [
+          "白组",
+          "3",
+          "0.033",
+          "2"
+        ]
+      ],
+      "columns": [
+        "Owner",
+        "累计时长（小时）",
+        "支出（万元）",
+        "记录数"
+      ],
+      "seconds": 18.85,
+      "source_parent_id": "51ffc8fd-1132-4712-b0a5-984460227ff4",
+      "source_count": 1,
+      "artifact_names": [
+        "工作簿处理结果.xlsx",
+        "工作簿处理结果.csv",
+        "工作簿说明.md"
+      ],
+      "passed": true
+    },
+    {
+      "id": "89CE40FD-065B-44CA-85F6-DDFAFED41A42",
+      "prompt": "你是谁？",
+      "kind": "chat",
+      "rows": [],
+      "columns": [],
+      "seconds": 2.83,
+      "source_parent_id": null,
+      "source_count": 0,
+      "artifact_names": [],
+      "passed": true
+    },
+    {
+      "id": "33c9c20c-64e7-457c-bc5e-f653552a43df",
+      "prompt": "回到刚才的支持汇总，给第一名的结果再导出一份Word，其他口径和列不变。",
+      "kind": "workflow",
+      "rows": [
+        [
+          "青组",
+          "3.666666666666666666666666667",
+          "0.042",
+          "4"
+        ],
+        [
+          "灰组",
+          "1.9",
+          "0.0385",
+          "4"
+        ],
+        [
+          "白组",
+          "3",
+          "0.033",
+          "2"
+        ]
+      ],
+      "columns": [
+        "Owner",
+        "累计时长（小时）",
+        "支出（万元）",
+        "记录数"
+      ],
+      "seconds": 24.96,
+      "source_parent_id": "a730e566-0721-4e5f-8a99-3488e75b8089",
+      "source_count": 1,
+      "artifact_names": [
+        "工作簿处理结果.xlsx",
+        "工作簿处理结果.csv",
+        "工作簿说明.docx",
+        "工作簿说明.md"
+      ],
+      "passed": false
+    }
+  ],
+  "failure": "Correct source parent retained after chat, but short-goal replanning lost the prior filtered ranked result. Subsequent exact-result delivery reuse patch and verification reported separately.",
+  "fictional_sources_only": true,
+  "normal_user_history_not_opened": true,
+  "desktop_locked_again_after_sequence": true,
+  "screenshots": [
+    "qa/v0.27/native/home.png",
+    "qa/v0.27/native/workspace.png",
+    "qa/v0.27/native/workbook-table.png",
+    "qa/v0.27/native/followup.png",
+    "qa/v0.27/native/chat.png"
+  ]
+}

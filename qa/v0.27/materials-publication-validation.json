@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "application_pages": 4,
+  "deck_slides": 8,
+  "editable_native_tables": [
+    3,
+    8
+  ],
+  "native_table_arithmetic": true,
+  "every_final_page_visually_inspected": true,
+  "application_page_two_shortened_to_keep_repository_link_clear_of_footer": true,
+  "confirmed_amount_u": 8000,
+  "weeks": 12,
+  "hours_per_week": 20,
+  "funded_direct_hours": 200,
+  "support_hours": 40,
+  "tranches_u": [
+    2400,
+    1600,
+    2000,
+    2000
+  ],
+  "no_other_funding_or_gcc_history": true,
+  "maintenance_after_grant_months": 6,
+  "evm_address": null,
+  "application_submitted": false,
+  "public_repository": "https://github.com/Huazhao-nine/guiyu",
+  "deck_pdf": "PDF assembled from final rendered slides; editable PPTX retained",
+  "hashes": {
+    "grant/归屿_GCC_Cohort4_申请说明_v0.27.docx": "26f489b80ab88aa5684ebced35be143e0a28ca8f9c5fbf0bd91e17eed72b19a1",
+    "grant/归屿_GCC_Cohort4_申请说明_v0.27.pdf": "e5d2b8221244b9b92312f5d80c70ffbdc95d135ba085f318df7ed69cac5c40bb",
+    "grant/归屿_GCC_Cohort4_路演_v0.27.pptx": "9fd973b73b0dbb1d3fec79a65ceaec186f41211fef60e9a34bffbde8ed6d3dd9",
+    "grant/归屿_GCC_Cohort4_路演_v0.27.pdf": "e1e56e8db84dd5164a25e00f246c8dfa1915fd3a208aa01b81657bfbd9b7a5ff"
+  }
+}

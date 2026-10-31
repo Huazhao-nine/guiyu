@@ -1,6 +1,6 @@
 # 归屿0.27提交演示说明
 
-0.27.0是2026年10月31日的提交演示候选版本。以Apple Silicon 32GB为基础，实测M5 32GB、macOS27.2，默认Qwen3.6 35B A3B MLX 4bit。资料、推理、索引、工具和隐私识别在本机完成，原文件修改须预览及独立确认。
+0.27.0是2026年10月31日的提交演示版本。以Apple Silicon 32GB为基础，实测M5 32GB、macOS27.2，默认Qwen3.6 35B A3B MLX 4bit。资料、推理、索引、工具和隐私识别在本机完成，原文件修改须预览及独立确认。
 
 ## 打开与体验
 
@@ -28,22 +28,22 @@
 
 本轮五项固定交付首次3/5，第二轮实际生成五项完整成果。原评分器将“2027年9月20日”与ISO日期视为不同，原始4/5报告保留；重新读取原Word并仅归一化日期格式后为5/5，无重新生成、无修改期望值。逐页审阅随后发现一份文稿的星期对应和未经原文支持的退还时间，补充语义检查后另行重新生成，最终五项交付5/5；早期较窄的评分与追加审阅分别保留。两项版本文稿是重点修正；工作簿与追问为已知迁移回归，另一个培训资料为本轮新编写案例，分享任务为虚构回归。
 
-另外七项已知回归通过，包含聊天后返回资料任务。701项Python检查和原生代码检查通过。实际模型峰值MLX20.100GB、进程RSS11.635GB，二者重叠，不能相加，也不是整机内存；隐私子进程不计入父进程RSS。费用文稿116.87秒，新培训文稿68.75秒，工作簿27.18秒，短追问11.35秒，脱敏副本2秒。首次加载、系统状态与资料大小会影响等待时间。
+另外七项已知回归通过，包含聊天后返回资料任务。707项Python检查和原生代码检查通过。实际模型峰值MLX20.100GB、进程RSS11.635GB，二者重叠，不能相加，也不是整机内存；隐私子进程不计入父进程RSS。费用文稿116.87秒，新培训文稿68.75秒，工作簿27.18秒，短追问11.35秒，脱敏副本2秒。首次加载、系统状态与资料大小会影响等待时间。
 
 真实导出成果见 [结果目录](../qa/v0.27/examples/README.md) 或 [本地成果页面](../qa/v0.27/examples/index.html)，总计五个目标、十五份原始成果。另附渲染PDF用于快速阅读；原始Word/XLSX仍可编辑。
 
-本轮电脑锁屏，原生点击任务与新界面截图没有执行。独立验收App已构建、签名并配置临时数据；原生代码、实际后端模型与导出验证分别记录，不能替代未执行的GUI验收。没有录制本轮视频，也未打开正常用户的工作记录。
+本轮真实GUI使用独立签名验收App和临时虚构资料，不打开正常用户工作记录。工作簿、短追问与聊天已在原生界面运行；首次返回资料导出Word暴露出丢失旧筛选条件的问题。旧失败保留，新增只改交付格式的精确复用：重放已保存的步骤与来源证明，核对最终结果一致后才变更Word交付。当前源码707项检查和完整OfficeAgent CPU复用回归通过，真实GUI复测与截图记录见 `qa/v0.27-native-report.json`。CPU回归的文稿事实选择使用受限桩，不能代替GUI实测。修复后的原生界面复测因再次锁屏暂未执行，这一项保持未验证状态。
 
 ## 构建与复现
 
-运行 `zsh scripts/build_model_demo_v27.sh` 构建独立的 `dist/Guiyu-0.27.0.app`。Python检查使用安装了requirements.lock的环境运行 `python -m unittest discover -s tests -q`；原生检查使用 `zsh scripts/check_native.sh`。
+运行 `zsh scripts/build_model_demo_v27.sh` 构建独立的 `dist/Guiyu-0.27.0.app`。Python检查使用安装了requirements.lock的环境运行 `python -m unittest discover -s tests -q`；原生检查使用 `zsh scripts/check_native.sh`。无需模型的完整OfficeAgent交付复用回放可运行 `python scripts/check_delivery_reuse_v27.py`：读取公开且已去除本机路径的虚构原生前序计划，在临时目录导出并核对XLSX与Word，只有文稿事实ID选择使用桩。
 
 在已经准备好35B和BGE的机器上，使用GuiyuRuntime的Python运行 `scripts/check_submission_v27.py --label reproduction`，创建新的独立虚构工作区并在禁网沙箱内执行。期望值只供执行后的评分器读取，不传入模型。回归使用 `scripts/check_submission_regression_v27.py --suite primary`。GPU任务应串行，关闭其他已加载本地模型的应用。
 
-当前源码和模型都记录版本与哈希。历史源码包与本地App保留，独立解包重建记录见 `qa/v0.27-delivery-checks.json`。包内不含模型权重、Python运行环境、正常工作记录或私有原始轨迹。
+当前源码和模型都记录版本与哈希。历史源码包与本地App保留，候选包独立解包重建记录见 `qa/v0.27-delivery-checks.json`；公开版本另用 `scripts/package_publication_v27.py` 和 `scripts/check_publication_v27.py` 打包与验证，收据随Release提供。包内不含模型权重、Python运行环境、正常工作记录或私有原始轨迹。
 
 ## 申请材料
 
 当前字段稿为 `grant/FORM_DRAFT_COHORT4_V0_27.md`，预算为 `grant/BUDGET_COHORT4_V0_27.md`，路演与申请说明有Word/PPTX及PDF。旧16GB与早期模型材料是历史记录，正式提交使用0.27材料。
 
-核心Apache-2.0源码包已在本地整理，公开仓库尚需申请人确认发布。当前没有虚构的官网、仓库、视频、合作方或资助历史。每周投入、其他资助/GCC历史、EVM地址与未来承诺仍须本人补齐。此版本是本地交付，不表示已经提交GCC申请或发布到外部。
+核心Apache-2.0源码与可复用资料公开于 https://github.com/Huazhao-nine/guiyu ，版本附件见 https://github.com/Huazhao-nine/guiyu/releases/tag/v0.27.0 。申请人确认8,000 U、十二周、每周计划20小时、无其他资助及GCC经历、资助后至少六个月维护；EVM地址由本人另行提供。公开发布不表示已经提交GCC申请。

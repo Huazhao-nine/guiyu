@@ -1,0 +1,86 @@
+{
+  "format": "Actual CUA native-operation screenshots composed into a silent video, not a continuous screen recording. Fictional materials; waits compressed. No generated UI screenshots.",
+  "frames": [
+    {
+      "order": 0,
+      "captured_at_ms": 1793417710391,
+      "label": "独立验收空间，使用虚构资料",
+      "screenshot_sha256": "c17ec3641ff49fcc8d53710a6c12c23b0ef7d5cc62a16fdb627a657998b582c6",
+      "phase": "initial-native-sequence"
+    },
+    {
+      "order": 1,
+      "captured_at_ms": 1793417744343,
+      "label": "首页：用中文交代目标，资料留在本机",
+      "screenshot_sha256": "5e7a7ae84439c2b4c550c873b97f44a954dab275e78934b3169f84d917e6a76e",
+      "phase": "initial-native-sequence"
+    },
+    {
+      "order": 2,
+      "captured_at_ms": 1793417769309,
+      "label": "四份虚构资料：工作簿、活动变更和隐私纪要",
+      "screenshot_sha256": "d083a0b694be4f0b35eedff45e1e4b84fa6db6c99d60310f8c6e7c326e189e38",
+      "phase": "initial-native-sequence"
+    },
+    {
+      "order": 3,
+      "captured_at_ms": 1793417780097,
+      "label": "用中文说明复杂条件，按回车发送",
+      "screenshot_sha256": "a735686ae94a8dc674d840f9ddb8f45b8e178b688a937deb49197b7431ecfd97",
+      "phase": "initial-native-sequence"
+    },
+    {
+      "order": 4,
+      "captured_at_ms": 1793417803709,
+      "label": "归屿自主检索并检查表结构，处理中间结果",
+      "screenshot_sha256": "7b8c790ab4639674ccb17573de837960e3d3b6c2b9b510a0e5ce0f097f8af276",
+      "phase": "initial-native-sequence"
+    },
+    {
+      "order": 5,
+      "captured_at_ms": 1793417879356,
+      "label": "工作簿已交付：三组统计与可编辑Word",
+      "screenshot_sha256": "f4e4f44d650a1d6c1555dcf616b77571082faf6fd10491379c2ae64a010ec7bc",
+      "phase": "initial-native-sequence"
+    },
+    {
+      "order": 6,
+      "captured_at_ms": 1793417906988,
+      "label": "工作簿汇总：复杂条件、单位换算与三组结果",
+      "screenshot_sha256": "7645f81ee5e04cae6e63bad413fdbbfa1c94da9e0d6c73a234c8849630670a51",
+      "phase": "initial-native-sequence"
+    },
+    {
+      "order": 7,
+      "captured_at_ms": 1793418000036,
+      "label": "短追问：只保留第一名，延续原统计口径",
+      "screenshot_sha256": "8a7a0a686a2f6735f4b9eeddca892634e3f0c83b95625fea84d8f70a46187f63",
+      "phase": "initial-native-sequence"
+    },
+    {
+      "order": 8,
+      "captured_at_ms": 1793418083179,
+      "label": "普通聊天：自我介绍不读取工作区资料",
+      "screenshot_sha256": "48b1abe35015f0dc158cebd237aa3b869df0a0a658de0e002dac03e65a8439a8",
+      "phase": "initial-native-sequence"
+    }
+  ],
+  "video": "qa/v0.27/native/Guiyu-0.27.0-demo.mp4",
+  "video_sha256": "4871445cbe592a662ac873508fe1c1361e8ae9170d89e3982b914ae8ce79b278",
+  "metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1920,
+        "height": 1360
+      }
+    ],
+    "format": {
+      "duration": "55.000000",
+      "size": "1097493"
+    }
+  },
+  "normal_user_files_not_shown": true
+}

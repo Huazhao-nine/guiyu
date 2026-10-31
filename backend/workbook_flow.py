@@ -1475,8 +1475,8 @@ def plan_workbook_flow(office,request,scope,files,parent):
     previous=old.get('result_table') if old else None
     recipes=old.get('row_derivations',[]) if old and old.get('mode')=='flow' else []
     previous_shape=old.get('result_shape') if old else None
-    from workbook_revision import try_revision,retained_scope_flow
-    revised=try_revision(office,source,goal,parent,old)
+    from workbook_revision import try_revision,retained_scope_flow,try_delivery_reuse
+    revised=try_delivery_reuse(source,goal,parent,old) or try_revision(office,source,goal,parent,old)
     previous_goal=old.get('goal','') if old else (parent or {}).get('prompt','')
     resume=retained_scope_flow(source,goal,parent,previous,previous_goal) if old and not revised else None
     old_contract=deepcopy(old.get('delivery_contract') or {}) if old else None

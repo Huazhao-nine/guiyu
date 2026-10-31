@@ -59,6 +59,55 @@ def build_flow(source,config,goal):
     return flow
 
 
+def delivery_only_request(goal,row_count):
+    """Recognize a fully covered export request, never a new data operation."""
+    from workbook_intent import normalize_continuity,writing_intent
+    from general_assistant import chinese_integer
+    text=normalize_continuity(goal)
+    writing,denied,no_word=writing_intent(text)
+    if not (writing or no_word or denied):return False
+    if re.search(r'另外|另一份|换.{0,8}(?:文件|资料|工作簿)|不要沿用|不沿用|取消.{0,8}(?:条件|筛选)',text):return False
+    # A reference to the already singular result is metadata, not permission
+    # to choose the first row out of a larger result.
+    for m in list(re.finditer(r'(?:只要|只留|给)?(?:前([0-9零一二两三四五六七八九十]+)名|第([0-9零一二两三四五六七八九十]+)名)(?:的)?(?:结果)?',text))[::-1]:
+        n=int(m[1] or m[2]) if (m[1] or m[2]).isdigit() else chinese_integer(m[1] or m[2])
+        if not n==row_count==1:return False
+        text=text[:m.start()]+text[m.end():]
+    text=re.sub(r'回到(?:刚才|上次|上轮)(?:的)?[^，,。；;\n]{0,24}?(?:汇总|结果|表格|数据|明细|工作簿)(?=[，,。；;\n])','',text)
+    text=re.sub(r'(?:其他|其它|其余)(?:的)?条件不变','',text)
+    text=re.sub(r'(?:上轮|上次|刚才|当前|这个|这份|这些|原来|原有)(?:的)?(?:结果|汇总|明细|表格|数据)','',text)
+    text=re.sub(r'(?:不要|不用|无需|不必|不需要)(?:再)?(?:导出|另存|生成|保存|写|给我)?\s*(?:一份|一版|一个)?\s*(?:Word|DOCX)','',text,flags=re.I)
+    text=re.sub(r'(?:导出|另存|生成|保存|给我|写)(?:为|成|一份|一版|一个|成一份|为一份|成一个|为一个|成一版|为一版)?\s*(?:Word|DOCX)(?:文档|文稿|副本|文件)?','',text,flags=re.I)
+    return not re.sub(r'[\s，,。；;！!？?、请把将给我再也的]','',text)
+
+
+def try_delivery_reuse(source,goal,parent,old):
+    """Replay a checked final view when only its Word delivery changes.
+
+    The caller admits old state only for the unchanged source snapshot. Every
+    old operation and prior-result proof is replayed before reusing its result.
+    """
+    if not old or not parent or old.get('snapshot')!=parent.get('snapshot'):return None
+    previous=old.get('result_table') or {}
+    if not delivery_only_request(goal,len(previous.get('rows',[]))):return None
+    config=parent.get('workbook') or {}
+    if config.get('mode')!='flow' or not config.get('flow'):return None
+    from workbook_flow import fingerprint,freeze_finish
+    from workbook_intent import writing_intent
+    try:
+        flow=build_flow(source,config,goal)
+        finish=deepcopy(config['flow']['finish']);contract=deepcopy(config['flow']['contract'])
+        result=flow.finish(finish,contract,check_intent=False)
+        if fingerprint(result)!=config['flow']['expected'] or fingerprint(result)!=fingerprint(previous):return None
+        writing,denied,no_word=writing_intent(goal)
+        contract.update(docx=bool(writing and not no_word),write=goal[writing.start():] if writing and not no_word else '')
+        contract['requirements']=list(dict.fromkeys(list(contract.get('requirements',[]))+[goal]))[-16:]
+        contract['delivery_revision']={'parent_id':parent['id'],'data_unchanged':True,'proof':'Exact previous final view and typed graph replayed from unchanged sources before changing export only.'}
+        result=flow.finish(finish,contract)
+        return flow,contract,freeze_finish(flow,finish),result,[]
+    except (ValueError,TypeError,KeyError,StopIteration):return None
+
+
 def retained_scope_flow(source,goal,parent,previous,previous_goal):
     """Replay a verified detail scope for an explicit keep-filters follow-up.
 

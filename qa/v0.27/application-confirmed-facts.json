@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-31",
+  "timezone": "Asia/Shanghai",
+  "name": "Huazhao",
+  "education": "中国科学院大学计算机软件与理论研究生在读",
+  "email": "denghongxin26@mails.ucas.ac.cn",
+  "grant_amount_u": 8000,
+  "weeks": 12,
+  "planned_hours_per_week": 20,
+  "direct_budgeted_hours": 200,
+  "coordination_and_support_hours": 40,
+  "other_investment_grants_or_parallel_applications": "none",
+  "gcc_grants_or_activities": "none",
+  "post_grant_maintenance_months": 6,
+  "evm_address": null,
+  "github_publication_authorized": {
+    "account": "Huazhao-nine",
+    "repository": "guiyu",
+    "release": true
+  },
+  "online_form_submitted": false
+}

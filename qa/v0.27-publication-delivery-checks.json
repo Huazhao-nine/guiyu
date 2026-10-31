@@ -1,0 +1,22 @@
+{
+  "version": "0.27.0",
+  "status": "PASS_PUBLICATION_ARCHIVES_EXTRACTED_SOURCE_TESTS_NATIVE_REBUILD_AND_PRIVACY_PROBES",
+  "unit_tests": 707,
+  "shipped_app": {
+    "signature_verified": true,
+    "network_denied": true,
+    "helper_private_reads_denied": true
+  },
+  "independently_rebuilt_app": {
+    "signature_verified": true,
+    "network_denied": true,
+    "helper_private_reads_denied": true
+  },
+  "portable_office_agent_xlsx_word_replay": true,
+  "all_archive_crcs_and_hashes_verified": true,
+  "historical_source_snapshots_verified": true,
+  "four_bundled_fictional_sources_match": true,
+  "normal_user_data_not_opened": true,
+  "native_status": "PARTIAL_NATIVE_PATCH_RETEST_PENDING_LOCK",
+  "native_execution": "qa/v0.27-native-report.json; separate real UI validation using fictional sources. A pending UI retest is never counted as passed."
+}

@@ -1,0 +1,31 @@
+{
+  "version": "0.27.0",
+  "archives": {
+    "source": {
+      "path": "releases/v0.27.0-published/Guiyu-0.27.0-source.zip",
+      "bytes": 8813667,
+      "sha256": "dc4cfe64d3a01431e24c54d6274f4ad843287f078146654f0c371d3617957c5a",
+      "members": 788,
+      "crc_and_hashes_verified": true
+    },
+    "demo": {
+      "path": "releases/v0.27.0-published/Guiyu-0.27.0-AppleSilicon-32GB.zip",
+      "bytes": 4939232,
+      "sha256": "f2310277fb7bd42d84742cfb5d6f378c8c7a9fa8c2aa01199c66eded6edf719f",
+      "members": 163,
+      "crc_and_hashes_verified": true
+    },
+    "application": {
+      "path": "releases/v0.27.0-published/Guiyu-GCC-Cohort4-application-v0.27.0.zip",
+      "bytes": 3887376,
+      "sha256": "a32c45d565ac3106ac8cbe8c7aeacab65736dad4066874c875e29765405332ac",
+      "members": 52,
+      "crc_and_hashes_verified": true
+    }
+  },
+  "candidate_and_historical_archives_preserved": true,
+  "models_runtime_user_history_and_private_traces_excluded": true,
+  "native_status": "PARTIAL_NATIVE_PATCH_RETEST_PENDING_LOCK",
+  "native_ui_gap_explicitly_retained": true,
+  "distribution": "Apple Silicon32GB prerelease; ad hoc signed, not Apple-notarized. Public release authorized; GCC application not submitted."
+}

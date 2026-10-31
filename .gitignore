@@ -1,11 +1,12 @@
 .DS_Store
-.venv/
 .build/
-dist/
-releases/
-qa/private/
+.venv/
 __pycache__/
 *.pyc
+dist/
+releases/
+submission/
+qa/private/
 *.safetensors
 *.onnx
 *.onnx_data
